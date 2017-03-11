@@ -1,0 +1,7 @@
+#!/bin/bash
+
+unclutter &
+xset r rate 250 50 &
+setxkbmap -option caps:escape &
+
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=xautostart
+Type=Application
+Comment=Autostart script
+Exec=/home/meadow/.xautostart
+Hidden=false
+X-GNOME-Autostart-enabled=true
