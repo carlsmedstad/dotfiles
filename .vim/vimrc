@@ -1,0 +1,105 @@
+"" Vim Init Script
+
+"unlet! skip_defaults_vim
+"source $VIMRUNTIME/defaults.vim
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-syntastic/syntastic'
+call plug#end()
+
+let g:airline_symbols_ascii = 1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Vim-files locations
+set backup
+set undofile
+set backupdir=$HOME/.vim/backup
+set directory=$HOME/.vim/backup
+set undodir=$HOME/.vim/backup
+set viminfo+=h,n~/.vim/viminfo
+
+" Colorscheme & Highlighting
+if &t_Co > 2 || has("gui_running")
+  colorscheme solarized
+  set background=dark
+  set hlsearch
+  let g:airline_theme='solarized'
+endif
+
+" Search
+set ignorecase
+set smartcase
+
+" Editor look and features
+set nowrap
+set numberwidth=2
+set number
+set cursorline
+set colorcolumn=+1,+3,+5
+set list
+
+" Wildcards
+set wildmode=longest:full,full
+set wildignore=*.o,*.obj,*.bak,*.exe,*.class
+
+" Global indent settings
+set tabstop=4
+set softtabstop=4
+set expandtab
+set shiftwidth=4
+
+" Mappings
+let mapleader=","
+
+" leader + s/v to source/edit $MYVIMRC
+nnoremap <silent><Leader>s :source $MYVIMRC<CR>
+nnoremap <silent><Leader>v :tabe $MYVIMRC<CR>
+
+" cursor stable when exiting insert mode
+inoremap <Esc> <Esc>`^
+
+" Enable most readline Ctrl mappings in command line
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+"default <C-m> <CR>
+"default <C-h> <BS>
+cnoremap <C-d> <Del>
+cnoremap <C-a> <C-b>
+cnoremap <C-k> <C-f>Y<C-c><C-c>:
+cnoremap <C-y> <C-r>"<BS>
+cnoremap <C-o> <C-f>
+
+" go to prev/next tab with Alt-j/k
+nnoremap <silent><A-k> :tabnext<CR>
+nnoremap <silent><A-j> :tabprev<CR>
+
+" yank to X11 clipboard
+nmap <silent>y :yank <bar> exec(system('xsel -i -b', getreg('0')))<CR>
+nmap <silent>Y :yank <bar> exec(system('xsel -i -b', getreg('0')))<CR>
+vmap <silent>y :yank <bar> exec(system('xsel -i -b', getreg('0')))<CR>
+
+" Space + [char] inserts chosen character
+nnoremap <silent><Space> :exec "normal i".nr2char(getchar())<CR>
+nnoremap <silent><NUL> :exec "normal a".nr2char(getchar())<CR>
+
+" Enable Alt key
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+" vim:set ft=vim et sw=2:
