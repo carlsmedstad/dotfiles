@@ -1,9 +1,8 @@
-"" Vim Init Script
-
-"unlet! skip_defaults_vim
-"source $VIMRUNTIME/defaults.vim
+" Vim Init Script
+" by Carl Smedstad
 
 " Plugins
+
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
@@ -11,24 +10,23 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 call plug#end()
 
-let g:airline_symbols_ascii = 1
+" airline
+if exists('g:airline_detect_modified')
+  "let g:airline_powerline_fonts=1
+  let g:airline_symbols_ascii = 1
+  let g:airline_inactive_collapse=1
+endif
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Vim-files locations
-set backup
-set undofile
-set backupdir=$HOME/.vim/backup
-set directory=$HOME/.vim/backup
-set undodir=$HOME/.vim/backup
-set viminfo+=h,n~/.vim/viminfo
+" syntastic
+if exists('g:syntastic_check_on_wq')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+endif
 
 " Colorscheme & Highlighting
 if &t_Co > 2 || has("gui_running")
@@ -38,16 +36,28 @@ if &t_Co > 2 || has("gui_running")
   let g:airline_theme='solarized'
 endif
 
+" Vim-files locations
+set backup
+set undofile
+set backupdir=$HOME/.vim/backup
+set directory=$HOME/.vim/backup
+set undodir=$HOME/.vim/backup
+set viminfo+=h,n~/.vim/viminfo
+
+" Window title
+set title
+set titlestring=%t
+
 " Search
 set ignorecase
 set smartcase
 
 " Editor look and features
 set nowrap
-set numberwidth=2
+set numberwidth=5
 set number
 set cursorline
-set colorcolumn=+1,+3,+5
+set colorcolumn=+1,+3
 set list
 
 " Wildcards
@@ -61,7 +71,7 @@ set expandtab
 set shiftwidth=4
 
 " Mappings
-let mapleader=","
+let g:mapleader=","
 
 " leader + s/v to source/edit $MYVIMRC
 nnoremap <silent><Leader>s :source $MYVIMRC<CR>
@@ -82,8 +92,8 @@ cnoremap <C-y> <C-r>"<BS>
 cnoremap <C-o> <C-f>
 
 " go to prev/next tab with Alt-j/k
-nnoremap <silent><A-k> :tabnext<CR>
-nnoremap <silent><A-j> :tabprev<CR>
+nnoremap <silent><C-k> :tabnext<CR>
+nnoremap <silent><C-j> :tabprev<CR>
 
 " yank to X11 clipboard
 nmap <silent>y :yank <bar> exec(system('xsel -i -b', getreg('0')))<CR>
@@ -101,5 +111,3 @@ while c <= 'z'
   exec "imap \e".c." <A-".c.">"
   let c = nr2char(1+char2nr(c))
 endw
-
-" vim:set ft=vim et sw=2:
