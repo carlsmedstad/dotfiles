@@ -2,6 +2,7 @@
 " by Carl Smedstad
 
 " Plugins
+set runtimepath+=$HOME/workspace/vimscript/vim-sourcer
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
@@ -12,8 +13,7 @@ call plug#end()
 
 " airline
 if exists('g:airline_detect_modified')
-  "let g:airline_powerline_fonts=1
-  let g:airline_symbols_ascii = 1
+  let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=1
 endif
 
@@ -91,9 +91,11 @@ cnoremap <C-k> <C-f>Y<C-c><C-c>:
 cnoremap <C-y> <C-r>"<BS>
 cnoremap <C-o> <C-f>
 
-" go to prev/next tab with Alt-j/k
-nnoremap <silent><C-k> :tabnext<CR>
-nnoremap <silent><C-j> :tabprev<CR>
+" bufswitch for consistency with vimium
+nnoremap <C-j> <S-j>
+nnoremap <C-k> <S-k>
+nnoremap <silent><S-j> :bprev<CR>
+nnoremap <silent><S-k> :bnext<CR>
 
 " yank to X11 clipboard
 nmap <silent>y :yank <bar> exec(system('xsel -i -b', getreg('0')))<CR>
