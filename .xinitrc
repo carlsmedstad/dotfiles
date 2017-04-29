@@ -1,8 +1,8 @@
 #!/bin/bash
 # xinitrc
 
-userresources=$HOME/.config/.Xresources
-usermodmap=$HOME/.config/.Xmodmap
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
@@ -28,7 +28,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xset r rate 200 50 &
-setxkbmap -option caps:escape &
+xset r rate 170 50 &
+xinput set-prop 12 273 1
+unclutter --timeout 3 &
+setxkbmap -layout se -variant nodeadkeys
+setxkbmap -option caps:escape
 
 exec i3 -V >> ~/.local/share/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
+

@@ -14,15 +14,13 @@ export PATH=$PATH:$HOME/workspace/bash
 export EDITOR=nvim
 export VISUAL=nvim
 
-# bash history
-export HISTFILE=$HOME/.local/share/bash_history
-export PROMPT_COMMAND='history -a'
-
 # aliases
 alias mv="mv -i"
 alias ls="ls --color=auto"
 alias grep="grep --colour=auto"
 alias vim="nvim"
+alias connect="sudo dhcpcd enp0s20f0u2"
+alias neofetch="neofetch --ascii_colors 31 31 --colors 31 31 31 31"
 
 # tabsize
 tabs -4

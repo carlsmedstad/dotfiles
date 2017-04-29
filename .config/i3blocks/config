@@ -1,0 +1,29 @@
+# i3blocks config
+
+[volume]
+label=VOL:
+command=/lib/i3blocks/volume
+interval=once
+signal=1
+
+[battery]
+command=echo -n 'BAT: '; /lib/i3blocks/battery
+interval=30
+
+[free]
+label=MEM:
+command=/lib/i3blocks/memory
+interval=3
+
+[wifi]
+
+[ethernet]
+
+[cpu]
+label=CPU:
+command=/lib/i3blocks/cpu_usage
+interval=3
+
+[datetime]
+command=date +%A\ %F\ %H:%M
+interval=60

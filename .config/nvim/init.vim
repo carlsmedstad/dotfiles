@@ -14,6 +14,7 @@ let g:mapleader=","
 
 " Plugins: -------------------------------------------------------------{{{
 if filereadable($MYVIMDIR."/autoload/plug.vim")
+
   call plug#begin($MYVIMDIR."/plugged")
 
   Plug 'tpope/vim-sensible'        " barebones init-file
@@ -30,14 +31,9 @@ if filereadable($MYVIMDIR."/autoload/plug.vim")
   Plug 'ynkdir/vim-vimlparser'     " parser for vimscript
   Plug 'syngan/vim-vimlint'        " lint for vimscript
   Plug 'vim-syntastic/syntastic'   " syntax checker
-  Plug 'Valloric/YouCompleteMe'    " autocomplete in insert-mode
-
-  Plug 'scrooloose/nerdtree'       " file explorer
 
   Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
   Plug 'carlsmedstad/vim-sessions' " lightweight session manager
-
-  Plug 'mtth/scratch.vim'
 
   call plug#end()
 
@@ -48,6 +44,7 @@ if filereadable($MYVIMDIR."/autoload/plug.vim")
     set background=dark
     colorscheme solarized
     hi SignColumn ctermbg=8
+    hi Normal ctermbg=none
     let g:airline_theme='solarized'
   endif " --------------------------------------------------------------}}}
 

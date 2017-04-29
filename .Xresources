@@ -1,11 +1,11 @@
 ! .Xresources, by Carl Smedstad
 
-URxvt.font:             xft:DejaVu Sans Mono for Powerline:size=11
+URxvt.font:             xft:DejaVu Sans Mono for Powerline:size=13
 URxvt.lineSpace:        1
 URxvt.scrollBar:        false
 
 URxvt.depth:            32
-URxvt.background:       [93]#002b36
+URxvt.background:       [94]#002b36
 
 URxvt.perl-ext-common:  font-size,keyboard-select,selection-to-clipboard
 
@@ -13,8 +13,7 @@ URxvt.keysym.C-plus:    font-size:increase
 URxvt.keysym.C-minus:   font-size:decrease
 URxvt.keysym.M-Escape:  keyboard-select:activate
 
-! FROM HERE ON NOT MY CODE: Copied from https://github.com/solarized/xresources
-!                           Copyright Ethan Schoonover, MIT Licensed
+! Rest of file copied from https://github.com/solarized/xresources
 
 #define S_base03        #002b36
 #define S_base02        #073642
@@ -44,31 +43,24 @@ URxvt.keysym.M-Escape:  keyboard-select:activate
 !! black dark/light
 *color0:                S_base02
 *color8:                S_base03
-
 !! red dark/light
 *color1:                S_red
 *color9:                S_orange
-
 !! green dark/light
 *color2:                S_green
 *color10:               S_base01
-
 !! yellow dark/light
 *color3:                S_yellow
 *color11:               S_base00
-
 !! blue dark/light
 *color4:                S_blue
 *color12:               S_base0
-
 !! magenta dark/light
 *color5:                S_magenta
 *color13:               S_violet
-
 !! cyan dark/light
 *color6:                S_cyan
 *color14:               S_base1
-
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
