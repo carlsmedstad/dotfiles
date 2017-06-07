@@ -7,11 +7,6 @@ CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
 export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\W$RESET "
 
-# add my scripts to path
-export PATH=$PATH:$HOME/workspace/bash:$HOME/downloads/mve165/
-# add ampl to path
-export PATH=$PATH:$HOME/downloads/mve165/ampl_linux-intel64
-
 # editor
 export EDITOR=nvim
 export VISUAL=nvim
