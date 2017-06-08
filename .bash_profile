@@ -1,6 +1,11 @@
 #!/bin/bash
 # bash_profile
 
+# Environment variables
+export PATH=$PATH:$HOME/workspace/bash
+export PATH=$PATH:$HOME/workspace/chalmers/mve165/ampl/ampl_linux-intel64
+export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
+
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
 fi

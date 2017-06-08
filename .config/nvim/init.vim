@@ -122,9 +122,8 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 augroup fileTypes
   autocmd!
   autocmd FileType vim set et sw=2
-  autocmd FileType sh,xdefaults,i3,html set et tw=80 sw=2
+  autocmd FileType sh,xdefaults,i3,html,markdown set et tw=80 sw=2
   autocmd FileType java set tw=80 sw=4
-  autocmd FileType markdown set tw=80
 augroup END
 
 " use current file's dir as working dir, except in some special cases

@@ -11,6 +11,8 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 # start j4-dmenu-desktop
 bindsym $mod+d exec j4-dmenu-desktop
+# dock to peripherals & screen at work
+bindsym $mod+Shift+p exec dock
 
 # change focus
 bindsym $mod+h focus left

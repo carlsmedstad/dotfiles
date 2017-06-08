@@ -18,6 +18,12 @@ alias grep="grep --colour=auto"
 alias vim="nvim"
 alias connect="sudo dhcpcd enp0s20f0u2"
 alias neofetch="neofetch --ascii_colors 31 31 --colors 31 31 31 31"
+alias cpwd="pwd | xsel -ib"
+
+# TeleRadio
+alias trupdate="$HOME/dev/git/tools/gitTools/handleRepoListDef.py $HOME/dev/git/CFG.repoListDef"
+alias trdir="cd ~/dev/git/src/SW/SW0026-PC_Software"
+alias trhome="cd ~/dev/git/home/carl"
 
 # tabsize
 tabs -4
