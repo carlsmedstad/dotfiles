@@ -1,4 +1,4 @@
-" init.vim - My take on Vim-configuration
+" FILE: $HOME/.config/nvim/init.vim
 " Author:       Carl Smedstad
 " License:      MIT. Copyright (c) 2017 Carl Smedstad
 " Last Change:  March 29, 2017

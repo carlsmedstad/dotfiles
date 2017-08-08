@@ -1,4 +1,4 @@
-# i3 config
+# $HOME/.config/i3/config
 
 # set mod key
 set $mod Mod4
@@ -135,6 +135,8 @@ bar {
 }
 
 # autostart applications
+exec unclutter &
+exec udiskie -T -N --no-appindicator &
 exec compton -bCG
 exec --no-startup-id redshift
-exec_always feh --bg-max --randomize ~/.wallpaper/* &
+exec_always feh --bg-max --randomize ~/.wallpapers/* &

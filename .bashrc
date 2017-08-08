@@ -1,5 +1,5 @@
 #!/bin/bash
-# bashrc
+# FILE: $HOME/.bashrc
 
 # prompt
 CLR1="\[$(tput setaf 108)\]"

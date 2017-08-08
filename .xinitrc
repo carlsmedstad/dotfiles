@@ -1,5 +1,5 @@
 #!/bin/bash
-# xinitrc
+# FILE: $HOME/.xinitrc
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -30,7 +30,6 @@ fi
 
 xset r rate 170 50 &
 xinput set-prop 12 273 1
-unclutter --timeout 3 &
 setxkbmap -layout se -variant nodeadkeys
 setxkbmap -option caps:escape
 

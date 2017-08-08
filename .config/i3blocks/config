@@ -1,4 +1,4 @@
-# i3blocks config
+# FILE: $HOME/.config/i3blocks/config
 
 [volume]
 label=VOL:

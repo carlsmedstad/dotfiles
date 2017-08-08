@@ -1,9 +1,9 @@
 #!/bin/bash
-# bash_profile
+# FILE: $HOME/.bash_profile
 
 # Environment variables
-export PATH=$PATH:$HOME/workspace/bash
-export PATH=$PATH:$HOME/workspace/chalmers/mve165/ampl/ampl_linux-intel64
+export PATH=$PATH:$HOME/workspace/bashscripts
+# export PATH=$PATH:$HOME/workspace/chalmers/mve165/ampl/ampl_linux-intel64
 export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre
 
 if [[ -f ~/.bashrc ]]; then
@@ -17,6 +17,13 @@ fi
 #   WLC_REPEAT_RATE=50
 #   exec sway
 # fi
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx

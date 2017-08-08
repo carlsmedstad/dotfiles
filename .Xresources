@@ -1,16 +1,14 @@
-! .Xresources, by Carl Smedstad
+! FILE: $HOME/.Xresources
 
 URxvt.font:             xft:DejaVu Sans Mono for Powerline:size=11
 URxvt.lineSpace:        1
 URxvt.scrollBar:        false
 
 URxvt.depth:            32
-URxvt.background:       [94]#002b36
+URxvt.background:       [80]#002b36
 
-URxvt.perl-ext-common:  font-size,keyboard-select,selection-to-clipboard
+URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
 
-URxvt.keysym.C-plus:    font-size:increase
-URxvt.keysym.C-minus:   font-size:decrease
 URxvt.keysym.M-Escape:  keyboard-select:activate
 
 ! Rest of file copied from https://github.com/solarized/xresources
