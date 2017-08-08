@@ -164,6 +164,7 @@ libfbclient
 libffi
 libfontenc
 libgcrypt
+libgit2
 libglvnd
 libgpg-error
 libgudev
@@ -335,6 +336,7 @@ python-docopt
 python-gobject
 python-keyutils
 python-packaging
+python-pip
 python-pyparsing
 python-setuptools
 python-six
