@@ -1,4 +1,4 @@
-! FILE: $HOME/.Xresources
+! .Xresources, by Carl Smedstad
 
 URxvt.font:             xft:DejaVu Sans Mono for Powerline:size=11
 URxvt.lineSpace:        1
@@ -7,7 +7,7 @@ URxvt.scrollBar:        false
 URxvt.depth:            32
 URxvt.background:       [80]#002b36
 
-URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
+URxvt.perl-ext-common:  default,url-select,keyboard-select,resize-font,selection-to-clipboard
 
 URxvt.keysym.M-Escape:  keyboard-select:activate
 

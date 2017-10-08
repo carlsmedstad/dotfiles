@@ -1,4 +1,4 @@
-" FILE: $HOME/.config/nvim/init.vim
+" init.vim - My take on Vim-configuration
 " Author:       Carl Smedstad
 " License:      MIT. Copyright (c) 2017 Carl Smedstad
 " Last Change:  March 29, 2017
@@ -124,6 +124,7 @@ augroup fileTypes
   autocmd FileType vim set et sw=2
   autocmd FileType sh,xdefaults,i3,html,markdown set et tw=80 sw=2
   autocmd FileType java set tw=80 sw=4
+  autocmd FileType c set et sw=4
 augroup END
 
 " use current file's dir as working dir, except in some special cases

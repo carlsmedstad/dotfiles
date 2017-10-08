@@ -1,0 +1,5 @@
+# FILE: $HOME/.gitignore
+.pyc
+***__pycache__
+***.cache
+***.log

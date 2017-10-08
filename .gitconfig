@@ -1,0 +1,5 @@
+[user]
+	email = carl.smedstad@gmail.com
+	name = Carl Smedstad
+[core]
+	excludesFile = /home/meadow/.gitignore
