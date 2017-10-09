@@ -13,6 +13,7 @@ export VISUAL=nvim
 
 # aliases
 alias mv="mv -i"
+alias cp="cp -i"
 alias ls="ls --color=auto"
 alias grep="grep --colour=auto"
 alias vim="nvim"
