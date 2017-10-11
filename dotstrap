@@ -12,7 +12,7 @@ while read -r path; do
 
   if [[ ! $repopath =~ (package-list|dotstrap) ]]; then
     if [ -L $localpath ]; then
-      echo "Skipping : $repopath"
+      echo "Skipped:  $repopath"
     elif [ -z "$(diff $repopath $localpath)" ]; then
       ln -srf $repopath $localpath
       echo "Replaced: $repopath"
