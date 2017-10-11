@@ -92,6 +92,7 @@ endif " filereadable($MYVIMDIR."/autoload/plug.vim") -------------------}}}
 set title titlestring=%t   " set X-window title to name of active file
 set clipboard=unnamedplus  " enables copy/paste from/to vim
 set undofile               " saves undo-history between sessions
+set mouse=a                " Enable scrolling with mouse-wheel
 
 set hidden                 " buffer stays open when window is closed
 set noequalalways          " splitting won't default to a 50/50 ratio

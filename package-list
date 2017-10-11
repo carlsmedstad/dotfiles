@@ -122,6 +122,7 @@ guile
 gzip
 harfbuzz
 harfbuzz-icu
+help2man
 hicolor-icon-theme
 hspell
 htop
@@ -431,6 +432,7 @@ pcre
 pcre2
 perl
 perl-error
+perl-locale-gettext
 pinentry
 pixman
 pkg-config
