@@ -1,16 +1,10 @@
 " init.vim - My take on Vim-configuration
 " Author:       Carl Smedstad
-" License:      MIT. Copyright (c) 2017 Carl Smedstad
-" Last Change:  March 29, 2017
+" Last Change:  October 13, 2017
 " URL:          https://github.com/carlsmedstad/dotfiles
 
 let $MYVIMDIR = expand("~/.config/nvim")
 let g:mapleader=","
-
-" paths of plugins i'm developing
-" set runtimepath+=$HOME/workspace/vimscript/vim-toggler
-" set runtimepath+=$HOME/workspace/vimscript/vim-sourcer
-" set runtimepath+=$HOME/workspace/vimscript/vim-sessions
 
 " Plugins: -------------------------------------------------------------{{{
 if filereadable($MYVIMDIR."/autoload/plug.vim")
@@ -27,13 +21,9 @@ if filereadable($MYVIMDIR."/autoload/plug.vim")
   Plug 'vim-airline/vim-airline-themes'   " themes for the above
   Plug 'altercation/vim-colors-solarized' " colorscheme
 
-  Plug 'sheerun/vim-polyglot'      " a bunch of language packs
-  Plug 'ynkdir/vim-vimlparser'     " parser for vimscript
-  Plug 'syngan/vim-vimlint'        " lint for vimscript
-  Plug 'vim-syntastic/syntastic'   " syntax checker
+  Plug 'neomake/neomake'           " Async syntax checker
 
   Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
-  Plug 'carlsmedstad/vim-sessions' " lightweight session manager
 
   call plug#end()
 
@@ -66,18 +56,11 @@ if filereadable($MYVIMDIR."/autoload/plug.vim")
     let g:airline_section_z = '%3p%% %4l:%3v'
   endif " --------------------------------------------------------------}}}
 
-  " Syntastic: ---------------------------------------------------------{{{
-  if index(keys(g:plugs), "syntastic") >= 0
-    " defaults recommended by the plugin author
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-
-    " use validator as html-checker, w3 was super-slow for some reason
-    let g:syntastic_html_checkers = ["validator"]
-
-    " Some vimlint errors that are either wrong or inconvenient
-    let g:syntastic_vim_vimlint_quiet_messages = { "regex" : "tnoremap" }
+  " NeoMake: -----------------------------------------------------------{{{
+  if index(keys(g:plugs), "neomake") >= 0
+    call neomake#configure#automake('w')
+    call neomake#configure#automake('nw', 750)
+    call neomake#configure#automake('rw', 1000)
   endif " --------------------------------------------------------------}}}
 
   " Sourcer: -----------------------------------------------------------{{{
@@ -122,8 +105,8 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 " set options for different filetypes
 augroup fileTypes
   autocmd!
-  autocmd FileType vim set et sw=2
-  autocmd FileType sh,xdefaults,i3,html,markdown set et tw=80 sw=2
+  autocmd FileType vim,sh,xdefaults,i3,html,markdown,txt set et tw=80 sw=2
+  autocmd FileType python set tw=80 sw=4
   autocmd FileType java set tw=80 sw=4
   autocmd FileType c set et sw=4
 augroup END
@@ -136,29 +119,6 @@ augroup workingDir
 augroup END
 " ----------------------------------------------------------------------}}}
 
-" WIP! UNFINISHED
-" Toggler function I wrote to enable some mappings
-let g:toggler_dict = {}
-function! Toggler(name, doif, doelse)
-  if get(g:toggler_dict, a:name, 0) == 0
-    let g:toggler_dict[a:name] = 1
-    exec a:doif
-  else
-    let g:toggler_dict[a:name] = 0
-    exec a:doelse
-  endif
-endfunction
-
-" WIP! UNFINISHED
-nnoremap <silent><Leader>t :bo 10split +terminal <Bar> setlocal nobuflisted<CR>
-let g:term_open = 0
-augroup terminalEmulator
-  au!
-  autocmd BufEnter term://* startinsert
-  autocmd TermOpen * let g:term_open += 1
-  autocmd TermClose * let g:term_open -= 1
-augroup END
-
 " Mappings: ------------------------------------------------------------{{{
 " Vim help on word under cursor
 nnoremap <C-\> :h <C-r><C-w><CR>
@@ -168,15 +128,6 @@ nnoremap <C-j> <S-j>
 nnoremap <C-k> <S-k>
 nnoremap <silent><S-j> :bprev<CR>
 nnoremap <silent><S-k> :bnext<CR>
-
-" traverse syntax-checker errors and toggle location list
-nnoremap <silent><A-S-j> :lnext<CR>
-nnoremap <silent><A-S-k> :lprev<CR>
-nnoremap <silent><Leader><S-e> :call Toggler('A-e', 'lopen <Bar> wincmd k', 'wincmd x <Bar> lclose')<CR>
-
-" insert one character without leaving normal-mode
-nnoremap <silent><Space> :exec "normal i".nr2char(getchar())<CR>
-nnoremap <silent><S-Space> :exec "normal a".nr2char(getchar())<CR>
 
 " delete trailing whitespaces
 nnoremap <silent><Leader><S-t> :%s/\s\+$//e<CR>

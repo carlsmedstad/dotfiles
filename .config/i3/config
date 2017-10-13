@@ -14,8 +14,7 @@ bindsym $mod+d exec j4-dmenu-desktop
 # dock to peripherals & screen at work
 bindsym $mod+Shift+p exec dock
 # lock
-# bindsym $mod+Shift+g exec i3lock -c 002b36
-bindsym $mod+Shift+g exec i3lock -i ~/.wallpapers/cube.png
+bindsym $mod+Shift+g exec i3lock -c 002b36
 
 # change focus
 bindsym $mod+h focus left
