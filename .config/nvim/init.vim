@@ -1,31 +1,28 @@
 " init.vim - My take on Vim-configuration
 " Author:       Carl Smedstad
-" Last Change:  October 13, 2017
+" Last Change:  November 22, 2017
 " URL:          https://github.com/carlsmedstad/dotfiles
 
-let $MYVIMDIR = expand("~/.config/nvim")
 let g:mapleader=","
 
 " Plugins: -------------------------------------------------------------{{{
-if filereadable($MYVIMDIR."/autoload/plug.vim")
+call plug#begin('~/.local/share/nvim/plugged')
 
-  call plug#begin($MYVIMDIR."/plugged")
+Plug 'tpope/vim-sensible'        " barebones init-file
+Plug 'tpope/vim-commentary'      " mappings for commenting code
+Plug 'tpope/vim-surround'        " mappings for paranthesis, brackets etc.
+Plug 'tpope/vim-repeat'          " make . work for plugins
+Plug 'farmergreg/vim-lastplace'  " save cursor pos between sessions
 
-  Plug 'tpope/vim-sensible'        " barebones init-file
-  Plug 'tpope/vim-commentary'      " mappings for commenting code
-  Plug 'tpope/vim-surround'        " mappings for paranthesis, brackets etc.
-  Plug 'tpope/vim-repeat'          " make . work for plugins
-  Plug 'farmergreg/vim-lastplace'  " save cursor pos between sessions
+Plug 'vim-airline/vim-airline'          " fancier statusline
+Plug 'vim-airline/vim-airline-themes'   " themes for the above
+Plug 'altercation/vim-colors-solarized' " colorscheme
 
-  Plug 'vim-airline/vim-airline'          " fancier statusline
-  Plug 'vim-airline/vim-airline-themes'   " themes for the above
-  Plug 'altercation/vim-colors-solarized' " colorscheme
+Plug 'neomake/neomake'           " Async syntax checker
 
-  Plug 'neomake/neomake'           " Async syntax checker
+Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
 
-  Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
-
-  call plug#end()
+call plug#end()
 
   " Solarized: ---------------------------------------------------------{{{
   if (index(keys(g:plugs), "vim-colors-solarized") >= 0)
@@ -69,7 +66,7 @@ if filereadable($MYVIMDIR."/autoload/plug.vim")
     nnoremap <silent><Leader><S-s> :SourceBufs<CR>
   endif " --------------------------------------------------------------}}}
 
-endif " filereadable($MYVIMDIR."/autoload/plug.vim") -------------------}}}
+" ----------------------------------------------------------------------}}}
 
 " Options: -------------------------------------------------------------{{{
 set title titlestring=%t   " set X-window title to name of active file
@@ -98,6 +95,7 @@ set wrap                   " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set tw=80 sw=2
 " set listchars+=eol:↲     " show at every newline, too messy imo
 " ----------------------------------------------------------------------}}}
 
@@ -105,10 +103,8 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 " set options for different filetypes
 augroup fileTypes
   autocmd!
-  autocmd FileType vim,sh,xdefaults,i3,html,markdown,txt set et tw=80 sw=2
-  autocmd FileType python set tw=80 sw=4
-  autocmd FileType java set tw=80 sw=4
-  autocmd FileType c set et sw=4
+  autocmd FileType python,java,sql set tw=80 sw=4
+  autocmd FileType c set et tw=0 sw=4
 augroup END
 
 " use current file's dir as working dir, except in some special cases
