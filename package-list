@@ -475,8 +475,8 @@ procps-ng
 protobuf
 psmisc
 pulseaudio
+pulseaudio-alsa
 pygobject-devel
-pyinstaller
 pyqt5-common
 python
 python-appdirs
@@ -577,11 +577,13 @@ sysstat
 systemd
 systemd-sysvcompat
 tar
+tcl
 tdb
 texinfo
 thin-provisioning-tools
 timidity++
 timidity-freepats
+tk
 tor
 tor-browser-en
 tree
