@@ -23,8 +23,8 @@ alias cpwd="pwd | xsel -ib"
 
 # TeleRadio
 alias trupdate="$HOME/dev/tools/gitTools/handleRepoListDef.py $HOME/dev/CFG.repoListDef"
-alias trdir="cd ~/dev/src/SW/SW0026-PC_Software"
 alias trhome="cd ~/dev/home/carl"
+alias trdir="cd ~/dev/src/SW/SW0026-PC_Software"
 
 # tabsize
 tabs -4

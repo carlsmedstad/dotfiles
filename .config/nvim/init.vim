@@ -95,7 +95,7 @@ set wrap                   " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-set tw=80 sw=2
+set et tw=80 sw=2
 " set listchars+=eol:↲     " show at every newline, too messy imo
 " ----------------------------------------------------------------------}}}
 

@@ -2,7 +2,7 @@
 # bash_profile
 
 export PATH=$PATH:$HOME/workspace/bashscripts
-export TRABDEVELROOT=$HOME/dev
+export TRAB_GIT_ROOT=$HOME/dev
 
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
