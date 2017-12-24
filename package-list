@@ -1,6 +1,7 @@
 acl
 acpi
 adwaita-icon-theme
+aic94xx-firmware
 alsa-lib
 alsa-plugins
 alsa-utils
@@ -50,6 +51,7 @@ dconf
 desktop-file-utils
 device-mapper
 dhcpcd
+dialog
 diffutils
 dmenu
 dmraid
@@ -160,10 +162,14 @@ jemalloc
 jfsutils
 jlink-software-and-documentation
 js
+json-c
 json-glib
 kbd
 kbproto
 keyutils
+kicad
+kicad-library
+kicad-library-3d
 kmod
 krb5
 ladspa
@@ -184,7 +190,6 @@ lib32-libffi
 lib32-libglvnd
 lib32-libpciaccess
 lib32-libstdc++5
-lib32-libtxc_dxtn
 lib32-libx11
 lib32-libxau
 lib32-libxcb
@@ -273,6 +278,7 @@ libksba
 liblangtag
 libldap
 liblqr
+libmagick
 libmm-glib
 libmms
 libmnl
@@ -329,7 +335,6 @@ libtiff
 libtirpc
 libtommath
 libtool
-libtxc_dxtn
 libudev0-shim
 libunistring
 libunwind
@@ -486,6 +491,7 @@ python-bcrypt
 python-cffi
 python-chardet
 python-colorama
+python-coverage
 python-cryptography
 python-django
 python-docopt
@@ -514,6 +520,7 @@ python-pypeg2
 python-pyqt5
 python-pyserial
 python-pytest
+python-pytest-cov
 python-pytz
 python-requests
 python-setuptools
@@ -523,6 +530,12 @@ python-termcolor
 python-urllib3
 python-yaml
 python2
+python2-appdirs
+python2-packaging
+python2-pip
+python2-pyparsing
+python2-setuptools
+python2-six
 qt5-base
 qt5-declarative
 qt5-location
@@ -536,6 +549,7 @@ qutebrowser
 randrproto
 raptor
 rasqal
+re2
 readline
 recordproto
 redland
@@ -559,6 +573,7 @@ sed
 shadow
 shared-mime-info
 sip
+skypeforlinux-bin
 snappy
 sound-theme-freedesktop
 soundtouch
@@ -610,6 +625,7 @@ vte3
 vulkan-icd-loader
 wayland
 wayland-protocols
+wd719x-firmware
 webkit2gtk
 webrtc-audio-processing
 which
@@ -620,6 +636,7 @@ wpa_actiond
 wpa_supplicant
 wxgtk-common
 wxgtk2
+wxpython
 x265
 xcb-proto
 xcb-util
@@ -722,4 +739,5 @@ zip
 zita-alsa-pcmi
 zita-resampler
 zlib
+zstd
 zvbi
