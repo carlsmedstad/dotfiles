@@ -1,0 +1,23 @@
+#!/bin/bash
+
+while read -r path; do
+  repopath=${path:2}
+  localpath=$HOME/$repopath
+
+  if [[ ! $repopath =~ (deploy|pkglist|update-pkglist) ]]; then
+    echo FILE: $localpath
+    if [ -L $localpath ]; then
+      echo -e "      \e[33mSkipped: Already a symlink\e[0m"
+    elif [ -f $localpath ]; then
+      if [ -z "$(diff $repopath $localpath)" ]; then
+        echo -e "      \e[32mCopied: Local file exists and is identical\e[0m"
+        ln -srf $repopath $localpath
+      else
+        echo -e "      \e[31mSkipped: Local file exists and differs\e[0m"
+      fi
+    else
+      echo -e "      \e[32mCopied: No local file\e[0m"
+      ln -srf $repopath $localpath
+    fi
+  fi
+done < <(find -type f ! -path *.git/*)

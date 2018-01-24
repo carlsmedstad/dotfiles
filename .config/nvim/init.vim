@@ -55,6 +55,7 @@ call plug#end()
 
   " NeoMake: -----------------------------------------------------------{{{
   if index(keys(g:plugs), "neomake") >= 0
+    let g:neomake_python_flake8_args=['--format=default', '--ignore=E221']
     call neomake#configure#automake('w')
     call neomake#configure#automake('nw', 750)
     call neomake#configure#automake('rw', 1000)

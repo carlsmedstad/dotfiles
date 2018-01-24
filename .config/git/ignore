@@ -1,4 +1,4 @@
-# FILE: $HOME/.gitignore
+# FILE: $HOME/.config/ignore
 .pyc
 ***__pycache__
 ***.cache
