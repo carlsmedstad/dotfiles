@@ -1,9 +1,9 @@
 " init.vim - My take on Vim-configuration
 " Author:       Carl Smedstad
-" Last Change:  November 22, 2017
+" Last Change:  January 25, 2018
 " URL:          https://github.com/carlsmedstad/dotfiles
 
-let g:mapleader=","
+let g:mapleader=','
 
 " Plugins: -------------------------------------------------------------{{{
 call plug#begin('~/.local/share/nvim/plugged')
@@ -25,8 +25,8 @@ Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
 call plug#end()
 
   " Solarized: ---------------------------------------------------------{{{
-  if (index(keys(g:plugs), "vim-colors-solarized") >= 0)
-        \ && (&t_Co > 2 || has("gui_running"))
+  if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
+        \ && (&t_Co > 2 || has('gui_running'))
     syntax on
     set background=dark
     colorscheme solarized
@@ -36,7 +36,7 @@ call plug#end()
   endif " --------------------------------------------------------------}}}
 
   " Airline: -----------------------------------------------------------{{{
-  if index(keys(g:plugs), "vim-airline") >= 0
+  if index(keys(g:plugs), 'vim-airline') >= 0
     if !empty($DISPLAY)
       let g:airline_powerline_fonts = 1
     else
@@ -54,15 +54,15 @@ call plug#end()
   endif " --------------------------------------------------------------}}}
 
   " NeoMake: -----------------------------------------------------------{{{
-  if index(keys(g:plugs), "neomake") >= 0
-    let g:neomake_python_flake8_args=['--format=default', '--ignore=E221']
+  if index(keys(g:plugs), 'neomake') >= 0
+    let g:neomake_python_enabled_makers = ['python', 'pylint']
     call neomake#configure#automake('w')
     call neomake#configure#automake('nw', 750)
     call neomake#configure#automake('rw', 1000)
   endif " --------------------------------------------------------------}}}
 
   " Sourcer: -----------------------------------------------------------{{{
-  if index(keys(g:plugs), "vim-sourcer") >= 0
+  if index(keys(g:plugs), 'vim-sourcer') >= 0
     nnoremap <silent><Leader>s :Source<CR>
     nnoremap <silent><Leader><S-s> :SourceBufs<CR>
   endif " --------------------------------------------------------------}}}

@@ -82,7 +82,6 @@ findutils
 firefox
 fixesproto
 flac
-flake8
 flex
 fontconfig
 fontsproto
@@ -515,9 +514,7 @@ python-ply
 python-psycopg2
 python-py
 python-pyasn1
-python-pycodestyle
 python-pycparser
-python-pyflakes
 python-pygit2
 python-pygments
 python-pylint
