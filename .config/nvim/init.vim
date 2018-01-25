@@ -8,19 +8,20 @@ let g:mapleader=','
 " Plugins: -------------------------------------------------------------{{{
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'tpope/vim-sensible'        " barebones init-file
-Plug 'tpope/vim-commentary'      " mappings for commenting code
-Plug 'tpope/vim-surround'        " mappings for paranthesis, brackets etc.
-Plug 'tpope/vim-repeat'          " make . work for plugins
-Plug 'farmergreg/vim-lastplace'  " save cursor pos between sessions
+Plug 'tpope/vim-sensible'       " barebones init-file
+Plug 'tpope/vim-commentary'     " mappings for commenting code
+Plug 'tpope/vim-surround'       " mappings for paranthesis, brackets etc.
+Plug 'tpope/vim-repeat'         " make . work for plugins
+Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
 
 Plug 'vim-airline/vim-airline'          " fancier statusline
 Plug 'vim-airline/vim-airline-themes'   " themes for the above
 Plug 'altercation/vim-colors-solarized' " colorscheme
 
-Plug 'neomake/neomake'           " Async syntax checker
+Plug 'neomake/neomake'                  " async syntax checker
+Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 
-Plug 'carlsmedstad/vim-sourcer'  " commands for sourcing vimfiles
+Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
 
 call plug#end()
 
