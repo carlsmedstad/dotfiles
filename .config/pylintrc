@@ -128,7 +128,8 @@ disable=print-statement,
         dict-keys-not-iterating,
         dict-values-not-iterating,
         missing-docstring,              # Added by me
-        bad-whitespace                  # Added by me
+        bad-whitespace,                 # Added by me
+        no-else-return                  # Added by me
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

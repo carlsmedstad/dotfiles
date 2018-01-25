@@ -56,7 +56,7 @@ call plug#end()
 
   " NeoMake: -----------------------------------------------------------{{{
   if index(keys(g:plugs), 'neomake') >= 0
-    let g:neomake_python_enabled_makers = ['python', 'pylint']
+    let g:neomake_python_enabled_makers = ['python', 'flake8', 'pylint']
     call neomake#configure#automake('w')
     call neomake#configure#automake('nw', 750)
     call neomake#configure#automake('rw', 1000)
