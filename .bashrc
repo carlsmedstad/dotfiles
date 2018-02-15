@@ -14,7 +14,7 @@ export VISUAL=nvim
 # aliases
 alias mv="mv -i"
 alias cp="cp -i"
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias grep="grep --colour=auto"
 alias vim="nvim"
 alias connect="sudo dhcpcd enp0s20f0u2"

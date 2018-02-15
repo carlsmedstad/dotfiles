@@ -5,7 +5,7 @@
 
 let g:mapleader=','
 
-" Plugins: -------------------------------------------------------------{{{
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-sensible'       " barebones init-file
@@ -25,7 +25,6 @@ Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
 
 call plug#end()
 
-  " Solarized: ---------------------------------------------------------{{{
   if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
         \ && (&t_Co > 2 || has('gui_running'))
     syntax on
@@ -34,9 +33,8 @@ call plug#end()
     hi SignColumn ctermbg=8
     hi Normal ctermbg=none
     let g:airline_theme='solarized'
-  endif " --------------------------------------------------------------}}}
+  endif
 
-  " Airline: -----------------------------------------------------------{{{
   if index(keys(g:plugs), 'vim-airline') >= 0
     if !empty($DISPLAY)
       let g:airline_powerline_fonts = 1
@@ -52,25 +50,16 @@ call plug#end()
 
     " Minimal line and column number section
     let g:airline_section_z = '%3p%% %4l:%3v'
-  endif " --------------------------------------------------------------}}}
+  endif
 
-  " NeoMake: -----------------------------------------------------------{{{
   if index(keys(g:plugs), 'neomake') >= 0
     let g:neomake_python_enabled_makers = ['python', 'flake8', 'pylint']
     call neomake#configure#automake('w')
     call neomake#configure#automake('nw', 750)
     call neomake#configure#automake('rw', 1000)
-  endif " --------------------------------------------------------------}}}
+  endif
 
-  " Sourcer: -----------------------------------------------------------{{{
-  if index(keys(g:plugs), 'vim-sourcer') >= 0
-    nnoremap <silent><Leader>s :Source<CR>
-    nnoremap <silent><Leader><S-s> :SourceBufs<CR>
-  endif " --------------------------------------------------------------}}}
 
-" ----------------------------------------------------------------------}}}
-
-" Options: -------------------------------------------------------------{{{
 set title titlestring=%t   " set X-window title to name of active file
 set clipboard=unnamedplus  " enables copy/paste from/to vim
 set undofile               " saves undo-history between sessions
@@ -98,10 +87,8 @@ set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set et tw=80 sw=2
-" set listchars+=eol:↲     " show at every newline, too messy imo
-" ----------------------------------------------------------------------}}}
 
-" Autocommands: --------------------------------------------------------{{{
+
 " set options for different filetypes
 augroup fileTypes
   autocmd!
@@ -115,11 +102,7 @@ augroup workingDir
   autocmd BufEnter * silent! lcd %:p:h
   autocmd BufEnter ~/workspace/vimscript/*/* silent! lcd %:p:h:h
 augroup END
-" ----------------------------------------------------------------------}}}
 
-" Mappings: ------------------------------------------------------------{{{
-" Vim help on word under cursor
-nnoremap <C-\> :h <C-r><C-w><CR>
 
 " bufswitch remaps for consistency with vimium
 nnoremap <C-j> <S-j>
@@ -127,16 +110,12 @@ nnoremap <C-k> <S-k>
 nnoremap <silent><S-j> :bprev<CR>
 nnoremap <silent><S-k> :bnext<CR>
 
+" walk through errors
+nnoremap <C-n> :lnext<CR>
+nnoremap <C-m> :lprev<CR>
+
 " delete trailing whitespaces
 nnoremap <silent><Leader><S-t> :%s/\s\+$//e<CR>
-
-" attempt to enable GNU readline mappings
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
-cnoremap <C-a> <C-b>
-cnoremap <C-d> <Del>
-cnoremap <C-y> <C-r>"<BS>
-cnoremap <C-o> <C-f>
 
 " Windows
 tnoremap <Esc> <C-\><C-n>
@@ -154,4 +133,3 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-" ----------------------------------------------------------------------}}}
