@@ -20,6 +20,7 @@ Plug 'altercation/vim-colors-solarized' " colorscheme
 
 Plug 'neomake/neomake'                  " async syntax checker
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
+Plug 'craigemery/vim-autotag'           " ctags auto-generation
 
 Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
 
@@ -57,6 +58,11 @@ call plug#end()
     call neomake#configure#automake('w')
     call neomake#configure#automake('nw', 750)
     call neomake#configure#automake('rw', 1000)
+  endif
+
+  if index(keys(g:plugs), 'vim-autotag') >= 0
+    let g:autotagTagsFile='.tags'
+    set tags+=.tags
   endif
 
 

@@ -16,6 +16,7 @@ autoconf
 automake
 avahi
 bash
+bash-completion
 bash-pipes
 binutils
 bison
@@ -44,6 +45,7 @@ coreutils
 cower
 cracklib
 cryptsetup
+ctags
 curl
 db
 dbus
