@@ -92,7 +92,7 @@ set wrap                   " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-set et tw=80 sw=2
+set et tw=80 sw=2 ts=4
 
 
 " set options for different filetypes
@@ -115,6 +115,10 @@ nnoremap <C-j> <S-j>
 nnoremap <C-k> <S-k>
 nnoremap <silent><S-j> :bprev<CR>
 nnoremap <silent><S-k> :bnext<CR>
+
+" move through display lines instead of actual lines
+nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
+nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 " walk through errors
 nnoremap <C-n> :lnext<CR>

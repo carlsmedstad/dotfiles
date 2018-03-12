@@ -23,6 +23,7 @@ bison
 bluez
 bluez-utils
 boost-libs
+bridge-utils
 btrfs-progs
 bzip2
 c-ares
@@ -60,6 +61,7 @@ dkms
 dmenu
 dmraid
 dnssec-anchors
+docker
 dosfstools
 double-conversion
 e2fsprogs
@@ -83,6 +85,8 @@ flex
 fontconfig
 freetype2
 fribidi
+fuse-common
+fuse2
 gawk
 gc
 gcc
@@ -92,6 +96,8 @@ gd
 gdbm
 gdk-pixbuf2
 geoclue2
+geoip
+geoip-database
 gettext
 giflib
 git
@@ -129,6 +135,7 @@ gzip
 harfbuzz
 harfbuzz-icu
 hicolor-icon-theme
+hping
 hspell
 htop
 http-parser
@@ -154,10 +161,15 @@ iso-codes
 j4-dmenu-desktop
 jack
 jasper
+java-environment-common
+java-runtime-common
 jbig2dec
+jdk8-openjdk
 jemalloc
 jfsutils
 jlink-software-and-documentation
+jre8-openjdk
+jre8-openjdk-headless
 js
 json-c
 json-glib
@@ -397,6 +409,7 @@ lm_sensors
 logrotate
 lpsolve
 lua
+lua52
 luajit
 lvm2
 lxmenu-data
@@ -407,6 +420,7 @@ mailcap
 make
 man-db
 man-pages
+maven
 mdadm
 menu-cache
 mesa
@@ -428,10 +442,13 @@ neovim
 nerd-fonts-complete
 netctl
 nettle
+nmap
 nodejs
 npth
 nspr
 nss
+ntfs-3g
+ntp
 openal
 opencore-amr
 openexr
@@ -489,6 +506,7 @@ python-babel
 python-bcrypt
 python-cffi
 python-chardet
+python-click
 python-colorama
 python-coverage
 python-cryptography
@@ -497,12 +515,14 @@ python-docopt
 python-docutils
 python-execnet
 python-flake8-polyfill
+python-flask
 python-gobject
 python-googlemaps
 python-greenlet
 python-idna
 python-imagesize
 python-isort
+python-itsdangerous
 python-jinja
 python-keyutils
 python-lazy-object-proxy
@@ -547,7 +567,11 @@ python-sphinx_rtd_theme
 python-sphinxcontrib-websupport
 python-sqlalchemy
 python-termcolor
+python-tox
 python-urllib3
+python-virtualenv
+python-vulture
+python-werkzeug
 python-whoosh
 python-wrapt
 python-yaml
@@ -591,6 +615,7 @@ sed
 shadow
 shared-mime-info
 sip
+skypeforlinux-preview-bin
 snappy
 sound-theme-freedesktop
 soundtouch
@@ -604,6 +629,7 @@ startup-notification
 staruml
 steam
 steamos-xpad-dkms
+strace
 sudo
 sysfsutils
 sysstat
@@ -611,6 +637,7 @@ systemd
 systemd-sysvcompat
 tar
 tcl
+tcpdump
 tdb
 texinfo
 thin-provisioning-tools
@@ -619,6 +646,7 @@ timidity-freepats
 tk
 tor
 tor-browser-en
+traceroute
 tree
 tslib
 ttf-dejavu
@@ -645,9 +673,11 @@ wayland-protocols
 wd719x-firmware
 webkit2gtk
 webrtc-audio-processing
+wget
 which
 wildmidi
 wireless_tools
+wireshark-cli
 wpa_actiond
 wpa_supplicant
 wxgtk-common

@@ -5,7 +5,7 @@
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
-export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\W$RESET "
+export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 
 # editor
 export EDITOR=nvim
@@ -20,6 +20,8 @@ alias vim="nvim"
 alias connect="sudo dhcpcd enp0s20f0u2"
 alias neofetch="neofetch --ascii_colors 31 31 --colors 31 31 31 31"
 alias cpwd="pwd | xsel -ib"
+alias tree="tree -C"
+alias less="less -R"
 
 # TeleRadio
 alias trupdate="$HOME/dev/tools/gitTools/handleRepoListDef.py $HOME/dev/CFG.repoListDef"

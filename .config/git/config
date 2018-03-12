@@ -1,3 +1,5 @@
 [user]
-	email = carl.smedstad@gmail.com
-	name = Carl Smedstad
+    email = carl.smedstad@gmail.com
+    name = Carl Smedstad
+[credential]
+    helper = cache
