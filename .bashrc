@@ -28,7 +28,7 @@ alias trupdate="$HOME/dev/tools/gitTools/handleRepoListDef.py $HOME/dev/CFG.repo
 alias trhome="cd ~/dev/home/carl"
 alias trdir="cd ~/dev/src/SW/SW0026-PC_Software"
 
-export CDPATH=$HOME:$HOME/dev/src/SW/SW0026-PC_Software
+export CDPATH=$HOME/dev/src/SW/SW0026-PC_Software
 
 # tabsize
 tabs -4

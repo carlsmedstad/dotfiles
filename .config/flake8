@@ -2,6 +2,7 @@
 radon-max-cc = 10
 statistics = True
 ignore =
+    E201,  # whitespace after '['
     E203,  # whitespace before ':'
     E221,  # multiple whitespace around operator
     E226,  # missing whitespace around operator

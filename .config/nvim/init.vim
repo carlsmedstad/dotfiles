@@ -1,6 +1,6 @@
 " init.vim - My take on Vim-configuration
 " Author:       Carl Smedstad
-" Last Change:  January 25, 2018
+" Last Change:  Mars 16, 2018
 " URL:          https://github.com/carlsmedstad/dotfiles
 
 let g:mapleader=','
@@ -22,6 +22,9 @@ Plug 'neomake/neomake'                  " async syntax checker
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 
+Plug 'alvan/vim-closetag'               " closing html tags
+Plug 'JulesWang/css.vim'                " css3 syntax
+
 Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
 
 call plug#end()
@@ -42,15 +45,9 @@ call plug#end()
     else
       let g:airline_symbols_ascii = 1
     endif
-
-    " enables airlines built-in tabline
     let g:airline#extensions#tabline#enabled = 1
-
-    " remove encoding section
-    let g:airline_section_y = ''
-
-    " Minimal line and column number section
-    let g:airline_section_z = '%3p%% %4l:%3v'
+    let g:airline_section_y = ''               " remove encoding section
+    let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
   endif
 
   if index(keys(g:plugs), 'neomake') >= 0
@@ -62,7 +59,6 @@ call plug#end()
 
   if index(keys(g:plugs), 'vim-autotag') >= 0
     let g:autotagTagsFile='.tags'
-    set tags+=.tags
   endif
 
 
@@ -94,19 +90,23 @@ set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set et tw=80 sw=2 ts=4
 
+set tags=./.tags;/         " look for tags file from pwd to root
 
-" set options for different filetypes
-augroup fileTypes
+
+augroup configFiles        " set filetype for config files
+  autocmd!
+  autocmd BufRead,BufNewFile *.conf set ft=gitconfig
+augroup END
+
+augroup languageSpecific   " set options for different languages
   autocmd!
   autocmd FileType python,java,sql set tw=80 sw=4
   autocmd FileType c set et tw=0 sw=4
 augroup END
 
-" use current file's dir as working dir, except in some special cases
-augroup workingDir
+augroup workingDir  " use current file's dir as working dir
   autocmd!
   autocmd BufEnter * silent! lcd %:p:h
-  autocmd BufEnter ~/workspace/vimscript/*/* silent! lcd %:p:h:h
 augroup END
 
 

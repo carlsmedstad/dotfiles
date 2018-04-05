@@ -1,4 +1,0 @@
-#!/bin/bash
-
-pacman -Qq > pkglist
-echo Package list copied

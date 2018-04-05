@@ -3,3 +3,5 @@
     name = Carl Smedstad
 [credential]
     helper = cache
+[remote "local"]
+    url = ~/.git_local

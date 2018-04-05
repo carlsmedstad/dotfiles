@@ -1,7 +1,7 @@
 #!/bin/bash
 # bash_profile
 
-export PATH=$PATH:$HOME/workspace/bashscripts
+export PATH=$PATH:$HOME/workspace/bashscripts:$HOME/.local/bin
 export TRAB_GIT_ROOT=$HOME/dev
 
 if [[ -f ~/.bashrc ]]; then
