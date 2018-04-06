@@ -18,7 +18,7 @@ Plug 'vim-airline/vim-airline'          " fancier statusline
 Plug 'vim-airline/vim-airline-themes'   " themes for the above
 Plug 'altercation/vim-colors-solarized' " colorscheme
 
-Plug 'neomake/neomake'                  " async syntax checker
+Plug 'w0rp/ale'                         " async syntax checker
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 
@@ -46,15 +46,13 @@ call plug#end()
       let g:airline_symbols_ascii = 1
     endif
     let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#ale#enabled = 1
     let g:airline_section_y = ''               " remove encoding section
     let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
   endif
 
-  if index(keys(g:plugs), 'neomake') >= 0
-    let g:neomake_python_enabled_makers = ['python', 'flake8', 'pylint']
-    call neomake#configure#automake('w')
-    call neomake#configure#automake('nw', 750)
-    call neomake#configure#automake('rw', 1000)
+  if index(keys(g:plugs), 'ale') >= 0
+    let g:ale_linters = {'python': ['python', 'pylint', 'flake8']}
   endif
 
   if index(keys(g:plugs), 'vim-autotag') >= 0
