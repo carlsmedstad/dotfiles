@@ -52,7 +52,8 @@ call plug#end()
   endif
 
   if index(keys(g:plugs), 'ale') >= 0
-    let g:ale_linters = {'python': ['python', 'pylint', 'flake8']}
+    let g:ale_linters = {'python': ['pylint', 'flake8']}
+    " let g:ale_lint_on_enter = 0
   endif
 
   if index(keys(g:plugs), 'vim-autotag') >= 0
@@ -90,11 +91,6 @@ set et tw=80 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
 
-
-augroup configFiles        " set filetype for config files
-  autocmd!
-  autocmd BufRead,BufNewFile *.conf set ft=gitconfig
-augroup END
 
 augroup languageSpecific   " set options for different languages
   autocmd!

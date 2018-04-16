@@ -12,7 +12,7 @@ at-spi2-atk
 at-spi2-core
 atk
 attr
-aurman-git
+aurman
 autoconf
 automake
 avahi
@@ -82,7 +82,6 @@ filesystem
 findutils
 firefox
 flac
-flake8
 flex
 flite
 fontconfig
@@ -492,22 +491,19 @@ pyqt5-common
 python
 python-appdirs
 python-asn1crypto
-python-astroid
 python-attrs
 python-certifi
 python-cffi
 python-chardet
+python-colorama
 python-cryptography
 python-docopt
 python-gobject
 python-greenlet
 python-idna
-python-isort
 python-jinja
 python-keyutils
-python-lazy-object-proxy
 python-markupsafe
-python-mccabe
 python-more-itertools
 python-msgpack
 python-neovim
@@ -518,11 +514,8 @@ python-pipenv
 python-pluggy
 python-ply
 python-py
-python-pycodestyle
 python-pycparser
-python-pyflakes
 python-pygments
-python-pylint
 python-pyparsing
 python-pypeg2
 python-pyqt5
@@ -535,7 +528,6 @@ python-six
 python-urllib3
 python-virtualenv
 python-virtualenv-clone
-python-wrapt
 python-yaml
 python2
 qt5-base
@@ -583,6 +575,7 @@ steam
 steamos-xpad-dkms
 strace
 sudo
+swig
 sysfsutils
 sysstat
 systemd
@@ -596,8 +589,6 @@ thin-provisioning-tools
 timidity++
 timidity-freepats
 tk
-tor
-tor-browser-en
 traceroute
 tree
 tslib
