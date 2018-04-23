@@ -83,7 +83,6 @@ findutils
 firefox
 flac
 flex
-flite
 fontconfig
 freetype2
 fribidi
@@ -168,7 +167,7 @@ jfsutils
 jlink-software-and-documentation
 jre8-openjdk
 jre8-openjdk-headless
-js
+js52
 json-c
 json-glib
 kbd
@@ -599,6 +598,7 @@ udiskie
 udisks2
 unclutter-xfixes-git
 unibilium
+unrar
 unzip
 urxvt-perls
 urxvt-resize-font-git

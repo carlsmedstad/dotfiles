@@ -1,7 +1,9 @@
 [user]
-    email = carl.smedstad@gmail.com
-    name = Carl Smedstad
+  email = carl.smedstad@gmail.com
+  name = Carl Smedstad
 [credential]
-    helper = cache
+  helper = cache
 [remote "local"]
-    url = ~/.git_local
+  url = ~/.git_local
+[alias]
+  st = status --short --branch
