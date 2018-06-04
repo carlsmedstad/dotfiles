@@ -98,11 +98,6 @@ augroup languageSpecific   " set options for different languages
   autocmd FileType c set et tw=0 sw=4
 augroup END
 
-augroup workingDir  " use current file's dir as working dir
-  autocmd!
-  autocmd BufEnter * silent! lcd %:p:h
-augroup END
-
 
 " bufswitch remaps for consistency with vimium
 nnoremap <C-j> <S-j>

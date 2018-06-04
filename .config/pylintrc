@@ -127,9 +127,6 @@ disable=print-statement,
         dict-items-not-iterating,
         dict-keys-not-iterating,
         dict-values-not-iterating,
-        missing-docstring,              # Added by me
-        bad-whitespace,                 #
-        no-else-return,                 #
         too-many-instance-attributes,   #
         too-many-public-methods,        #
         too-many-return-statements,     #
@@ -139,9 +136,7 @@ disable=print-statement,
         too-many-branches,              #
         too-many-locals,                #
         too-few-public-methods,         #
-        unused-argument,                #
-        broad-except,                   #
-        unnecessary-lambda              #
+        no-else-return,                 #
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
