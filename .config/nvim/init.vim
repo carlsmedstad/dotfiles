@@ -52,7 +52,8 @@ call plug#end()
   endif
 
   if index(keys(g:plugs), 'ale') >= 0
-    let g:ale_linters = {'python': ['pylint', 'flake8']}
+    let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
+                        \'lua': ['luac', 'luacheck']}
     " let g:ale_lint_on_enter = 0
   endif
 
