@@ -54,7 +54,8 @@ call plug#end()
   if index(keys(g:plugs), 'ale') >= 0
     let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
                         \'lua': ['luac', 'luacheck']}
-    " let g:ale_lint_on_enter = 0
+    let g:ale_lint_on_text_change = 'never'
+    let g:ale_echo_msg_format = '[%linter%] %code:% %s'
   endif
 
   if index(keys(g:plugs), 'vim-autotag') >= 0
@@ -111,13 +112,17 @@ nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 " walk through errors
-nnoremap <C-n> :lnext<CR>
-nnoremap <C-m> :lprev<CR>
+nmap <silent> <C-m> <Plug>(ale_previous_wrap)
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
+
+" run python code
+xnoremap <leader>p :w !python<CR>
+nnoremap <leader>p :w<CR> w: !python %<CR>
 
 " delete trailing whitespaces
-nnoremap <silent><Leader><S-t> :%s/\s\+$//e<CR>
+nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
 
-" Windows
+" moving through windows
 tnoremap <Esc> <C-\><C-n>
 tnoremap <A-w> <C-\><C-n><C-w>w
 tnoremap <A-q> <C-\><C-n><C-w>q

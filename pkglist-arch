@@ -38,7 +38,6 @@ btrfs-progs
 bzip2
 c-ares
 ca-certificates
-ca-certificates-cacert
 ca-certificates-mozilla
 ca-certificates-utils
 cairo
@@ -48,6 +47,7 @@ celt
 celt0.5.1
 chromaprint
 clang
+clazy
 clucene
 cmatrix
 colord
@@ -119,7 +119,6 @@ gettext
 giflib
 gimp
 git
-glew
 glib-networking
 glib2
 glibc
@@ -226,6 +225,7 @@ kwallet
 kwidgetsaddons
 kwindowsystem
 kxmlgui
+l-smash
 ladspa
 lame
 lapack
@@ -366,6 +366,7 @@ libnice
 libnl
 libnotify
 libnsl
+libnumbertext
 libodfgen
 libofa
 libogg
@@ -435,7 +436,6 @@ libwpd
 libwpg
 libwps
 libx11
-libx264
 libxau
 libxaw
 libxcb
@@ -786,6 +786,7 @@ wireshark-cli
 woff2
 wpa_actiond
 wpa_supplicant
+x264
 x265
 xcb-proto
 xcb-util
