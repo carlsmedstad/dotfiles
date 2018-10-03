@@ -3,5 +3,12 @@
   name = Carl Smedstad
 [credential]
   helper = cache
+[pull]
+  ff = only
+[color]
+  ui = always
 [alias]
   st = status --short --branch
+  co = checkout
+  glog = log --graph --oneline --decorate
+  pushf = push --force-with-lease

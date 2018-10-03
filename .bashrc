@@ -15,7 +15,7 @@ export VISUAL=nvim
 alias mv="mv -i"
 alias cp="cp -i"
 alias ls="ls --hide=__pycache__ --color=auto --group-directories-first"
-alias grep="grep --colour=auto -nI --exclude=\\.tags --exclude-dir={\\.mypy_cache,\\.git}"
+alias grep="grep --colour=auto -nI --exclude=\\.tags --exclude-dir={\\.mypy_cache,\\.cache,\\.pytest_cache,\\.git}"
 alias vim="nvim"
 alias connect="sudo dhcpcd enp0s20f0u2"
 alias neofetch="neofetch --ascii_colors 31 31 --colors 31 31 31 31"

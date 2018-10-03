@@ -117,7 +117,8 @@ nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 " run python code
 xnoremap <leader>p :w !python<CR>
-nnoremap <leader>p :w<CR> w: !python %<CR>
+" nnoremap <leader>p :w<CR> w: !python %<CR>
+nnoremap <leader>p :w<CR>:w !python %<CR>
 
 " delete trailing whitespaces
 nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
