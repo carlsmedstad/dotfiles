@@ -1,23 +1,53 @@
 #!/bin/bash
 
+OPTIND=1
+
+# Arguments
+force=false
+
+while getopts "fh?" opt; do
+  case $opt in
+    h|\?)
+      echo "deploy - links to repo files"
+      echo "-f force"
+      echo "-h help"
+      exit 0
+      ;;
+    f)
+      force=true
+      ;;
+  esac
+done
+
+
 while read -r path; do
   repopath=${path:2}
   localpath=$HOME/$repopath
 
-  if [[ ! $repopath =~ (deploy|pkglist|update-pkglist) ]]; then
+  copy=false
+  if [[ ! $repopath =~ (deploy|pkglist|update-pkglist|LICENSE) ]]; then
     echo FILE: $localpath
     if [ -L $localpath ]; then
-      echo -e "      \e[33mSkipped: Already a symlink\e[0m"
+      if $force; then
+        echo -e "      \e[32mCopied: Replacing symlink\e[0m"
+        copy=true
+      else
+        echo -e "      \e[31mSkipped: Symlink already exists\e[0m"
+      fi
     elif [ -f $localpath ]; then
       if [ -z "$(diff $repopath $localpath)" ]; then
         echo -e "      \e[32mCopied: Local file exists and is identical\e[0m"
-        ln -srf $repopath $localpath
+        copy=true
       else
         echo -e "      \e[31mSkipped: Local file exists and differs\e[0m"
       fi
     else
       echo -e "      \e[32mCopied: No local file\e[0m"
-      ln -srf $repopath $localpath
+      copy=true
     fi
+  fi
+
+  if $copy; then
+    ln -srf $repopath $localpath
   fi
 done < <(find -type f ! -path *.git/*)
