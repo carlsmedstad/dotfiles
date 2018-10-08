@@ -9,12 +9,14 @@ alsa-utils
 aom
 archlinux-keyring
 argon2
+aribb24
 aspell
 at-spi2-atk
 at-spi2-core
 atk
 attica
 attr
+audit
 aurman
 autoconf
 automake
@@ -189,7 +191,6 @@ jdk8-openjdk
 jemalloc
 jenkins
 jfsutils
-jlink-software-and-documentation
 jre8-openjdk
 jre8-openjdk-headless
 js52
@@ -229,7 +230,6 @@ l-smash
 ladspa
 lame
 lapack
-lcms
 lcms2
 ldns
 lensfun
@@ -413,7 +413,6 @@ libtiff
 libtirpc
 libtommath
 libtool
-libudev0-shim
 libunistring
 libunwind
 libupnp
@@ -478,6 +477,7 @@ lm_sensors
 logrotate
 lpsolve
 lua
+lua-argparse
 lua-filesystem
 lua52
 luacheck
@@ -571,8 +571,6 @@ poppler
 poppler-data
 popt
 postman-bin
-ppp
-pptpclient
 procps-ng
 protobuf
 psmisc
@@ -628,6 +626,7 @@ python-markupsafe
 python-mccabe
 python-more-itertools
 python-msgpack
+python-mypy_extensions
 python-neovim
 python-packaging
 python-paramiko
@@ -706,14 +705,12 @@ rust
 rxvt-unicode
 rxvt-unicode-terminfo
 s-nail
-saleae-logic
 sbc
 sdl
 sdl2
 sed
 shadow
 shared-mime-info
-skypeforlinux-preview-bin
 snappy
 solid
 sonnet
