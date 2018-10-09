@@ -1,8 +1,7 @@
 #!/bin/bash
 # bash_profile
 
-export TRAB_GIT_ROOT=$HOME/dev
-export PATH=$PATH:$HOME/workspace/scripts:$HOME/.local/bin:$HOME/dev/home/carl
+export PATH=$HOME/.local/bin:$PATH
 
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
