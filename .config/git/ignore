@@ -5,3 +5,4 @@
 ***.log
 .tags
 .mypy_cache
+luacov.stats.out

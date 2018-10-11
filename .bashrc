@@ -14,9 +14,11 @@ has_nvim=$([[ ! -z $(command -v nvim) ]])
 if $has_nvim; then
   export EDITOR=nvim
   export VISUAL=nvim
+  alias vim=nvim
 else
   export EDITOR=vim
   export VISUAL=vim
+  alias nvim=vim
 fi
 
 
