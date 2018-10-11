@@ -38,6 +38,9 @@ while read -r path; do
       if [ -z "$(diff $repopath $localpath)" ]; then
         echo -e "      \e[32mCopied: Local file exists and is identical\e[0m"
         copy=true
+      elif $force; then
+        echo -e "      \e[32mCopied: Local file exists, forced\e[0m"
+        copy=true
       else
         echo -e "      \e[31mSkipped: Local file exists and differs\e[0m"
       fi
