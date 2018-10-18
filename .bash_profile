@@ -1,7 +1,12 @@
 #!/bin/bash
 # bash_profile
 
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.luarocks/bin:$HOME/.local/bin:$PATH
+
+if command -v luarocks; then
+  export LUA_PATH=$(luarocks path --lr-path)
+  export LUA_CPATH=$(luarocks path --lr-cpath)
+fi
 
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc

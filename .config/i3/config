@@ -142,6 +142,6 @@ bar {
 # autostart applications
 exec unclutter &
 exec udiskie -T -N --no-appindicator &
-exec compton -bCG
-exec --no-startup-id redshift
-exec_always feh --bg-max --randomize ~/.wallpapers/* &
+# exec compton -bCG
+# exec --no-startup-id redshift
+exec_always feh --bg-center --randomize ~/.wallpapers/* &

@@ -6,7 +6,12 @@
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
-export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  export PS1="\[\e]2;terminal\a\]$CLR1\h@\u $CLR2\A $CLR1\W$RESET "
+else
+  export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
+  export TERM=rxvt
+fi
 
 
 # editor
@@ -35,8 +40,11 @@ alias tree="tree -C"
 alias less="less -R"
 
 
-# work
-export TEXTTEST_HOME=$HOME/repos/sulu2_tt
+# workrc
+workrc_path=$HOME/.workrc
+if [ -f $workrc_path ]; then
+  source $workrc_path
+fi
 
 
 # tabsize

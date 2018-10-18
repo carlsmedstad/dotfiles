@@ -110,6 +110,8 @@ nnoremap <silent><S-k> :bnext<CR>
 " move through display lines instead of actual lines
 nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
+vnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
+vnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 " walk through errors
 nmap <silent> <C-m> <Plug>(ale_previous_wrap)
@@ -117,8 +119,12 @@ nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 " run python code
 xnoremap <leader>p :w !python<CR>
-" nnoremap <leader>p :w<CR> w: !python %<CR>
 nnoremap <leader>p :w<CR>:w !python %<CR>
+
+" run lua code
+xnoremap <leader>l :w !lua<CR>
+nnoremap <leader>l :w<CR>:w !lua %<CR>
+
 
 " delete trailing whitespaces
 nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
