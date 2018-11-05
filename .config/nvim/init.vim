@@ -21,6 +21,7 @@ Plug 'altercation/vim-colors-solarized' " colorscheme
 Plug 'w0rp/ale'                         " async syntax checker
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
+Plug 'tbastos/vim-lua'                  " better lua
 
 Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'JulesWang/css.vim'                " css3 syntax
@@ -29,41 +30,41 @@ Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
 
 call plug#end()
 
-  if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
-        \ && (&t_Co > 2 || has('gui_running'))
-    syntax on
-    set background=dark
-    colorscheme solarized
-    hi SignColumn ctermbg=8
-    hi Normal ctermbg=none
-    let g:airline_theme='solarized'
+
+if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
+      \ && (&t_Co > 2 || has('gui_running'))
+  syntax on
+  set background=dark
+  colorscheme solarized
+  hi SignColumn ctermbg=8
+  hi Normal ctermbg=none
+  let g:airline_theme='solarized'
+endif
+
+if index(keys(g:plugs), 'vim-airline') >= 0
+  if !empty($DISPLAY)
+    let g:airline_powerline_fonts = 1
+  else
+    let g:airline_symbols_ascii = 1
   endif
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline_section_y = ''               " remove encoding section
+  let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
+endif
 
-  if index(keys(g:plugs), 'vim-airline') >= 0
-    if !empty($DISPLAY)
-      let g:airline_powerline_fonts = 1
-    else
-      let g:airline_symbols_ascii = 1
-    endif
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#ale#enabled = 1
-    let g:airline_section_y = ''               " remove encoding section
-    let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
-  endif
+if index(keys(g:plugs), 'ale') >= 0
+  let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
+                      \'lua': ['luac', 'luacheck']}
+  let g:ale_lint_on_text_changed = 0
+  let g:ale_echo_msg_format = '[%linter%] %code:% %s'
+endif
 
-  if index(keys(g:plugs), 'ale') >= 0
-    let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
-                        \'lua': ['luac', 'luacheck']}
-    let g:ale_lint_on_text_changed = 0
-    let g:ale_echo_msg_format = '[%linter%] %code:% %s'
-  endif
-
-  if index(keys(g:plugs), 'vim-autotag') >= 0
-    let g:autotagTagsFile='.tags'
-  endif
+if index(keys(g:plugs), 'vim-autotag') >= 0
+  let g:autotagTagsFile='.tags'
+endif
 
 
-set title titlestring=%t   " set X-window title to name of active file
 set clipboard=unnamedplus  " enables copy/paste from/to vim
 set undofile               " saves undo-history between sessions
 set mouse=a                " Enable scrolling with mouse-wheel

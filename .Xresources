@@ -8,9 +8,11 @@ URxvt.saveLines:        10000
 URxvt.depth:            32
 URxvt.background:       [80]#002b36
 
-URxvt.perl-ext-common:  default,url-select,keyboard-select,resize-font,selection-to-clipboard
+URxvt.perl-ext-common:  default,keyboard-select,resize-font,selection-to-clipboard,matcher
 
+urxvt.url-launcher:     google-chrome-stable
 URxvt.keysym.M-Escape:  keyboard-select:activate
+
 
 ! Rest of file copied from https://github.com/solarized/xresources
 
