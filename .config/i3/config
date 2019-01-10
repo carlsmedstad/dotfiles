@@ -102,17 +102,20 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # pulse audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% \
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 5%+ unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% \
+bindsym $mod+period exec --no-startup-id amixer -q sset Master 5%+ unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle \
+
+bindsym $mod+comma exec --no-startup-id amixer -q sset Master 5%- unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym $mod+period exec --no-startup-id pactl set-sink-volume 0 +5% \
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 5%- unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym $mod+comma exec --no-startup-id pactl set-sink-volume 0 -5% \
+
+bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle \
 && pkill -RTMIN+1 i3blocks
-bindsym $mod+m exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $mod+m exec --no-startup-id amixer -q sset Master toggle \
+&& pkill -RTMIN+1 i3blocks
 
 # media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -124,7 +127,7 @@ bindsym $mod+minus exec playerctl next
 
 # gaps
 gaps inner 10
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # i3bar
 bar {
@@ -139,9 +142,11 @@ bar {
     status_command i3blocks
 }
 
+mouse_warping none
+
 # autostart applications
 exec unclutter &
 exec udiskie -T -N --no-appindicator &
 # exec compton -bCG
-# exec --no-startup-id redshift
+exec --no-startup-id redshift
 exec_always feh --bg-center --randomize ~/.wallpapers/* &
