@@ -3,7 +3,8 @@
 
 
 # paths
-export PATH=$HOME/.luarocks/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/scrips:$HOME/.luarocks/bin:$HOME/.local/bin:$PATH
+export PATH=$PATH:$HOME/scripts
 export TERM=rxvt-256color
 
 
@@ -49,8 +50,8 @@ alias ssh="TERM=rxvt-256color ssh"
 
 
 # workrc
-if [[ -f $HOME/.workrc ]]; then
-  source $HOME/.workrc
+if [[ -f $HOME/work/.bashrc ]]; then
+  source $HOME/work/.bashrc
 fi
 
 
