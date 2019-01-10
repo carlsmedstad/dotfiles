@@ -22,6 +22,7 @@ Plug 'w0rp/ale'                         " async syntax checker
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 Plug 'tbastos/vim-lua'                  " better lua
+Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'JulesWang/css.vim'                " css3 syntax
@@ -53,8 +54,9 @@ if index(keys(g:plugs), 'vim-airline') >= 0
   let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
 endif
 
-if index(keys(g:plugs), 'ale') >= 0
-  let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
+if index(keys(g:plugs), 'ale') >= 0 " 'mypy'],
+  let g:ale_linters = {'python': ['pylint', 'flake8',
+                      \'mypy --ignore-missing-imports'],
                       \'lua': ['luac', 'luacheck']}
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
@@ -62,6 +64,11 @@ endif
 
 if index(keys(g:plugs), 'vim-autotag') >= 0
   let g:autotagTagsFile='.tags'
+endif
+
+if index(keys(g:plugs), 'yapf') >= 0
+  noremap <C-Y> :call yapf#YAPF()<cr>
+  inoremap <C-Y> <c-o>:call yapf#YAPF()<cr>
 endif
 
 
