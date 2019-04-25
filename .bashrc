@@ -3,8 +3,11 @@
 
 
 # paths
-export PATH=$HOME/scrips:$HOME/.luarocks/bin:$HOME/.local/bin:$PATH
-export PATH=$PATH:$HOME/scripts
+export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.luarocks/bin:$PATH
+
 export TERM=rxvt-256color
 
 
@@ -20,7 +23,7 @@ fi
 
 
 # editor
-if [[ ! -z $(command -v nvim) ]]; then
+if [[ -n $(command -v nvim) ]]; then
   export EDITOR=nvim
   export VISUAL=nvim
   alias vim=nvim
@@ -51,12 +54,22 @@ alias ssh="TERM=rxvt-256color ssh"
 
 # workrc
 if [[ -f $HOME/work/.bashrc ]]; then
-  source $HOME/work/.bashrc
+  # shellcheck source=/dev/null
+  source "$HOME/work/.bashrc"
 fi
 
 
 # lua
 if command -v luarocks >> /dev/null; then
-  export LUA_PATH=$(luarocks path --lr-path)";;"
-  export LUA_CPATH=$(luarocks path --lr-cpath)";;"
+  LUA_PATH=$(luarocks path --lr-path)";;"
+  LUA_CPATH=$(luarocks path --lr-cpath)";;"
+  export LUA_PATH
+  export LUA_CPATH
+fi
+
+
+# rust
+if [[ -f $HOME/.cargo/env ]]; then
+  # shellcheck source=/dev/null
+  source "$HOME/.cargo/env"
 fi
