@@ -23,6 +23,8 @@ Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 Plug 'tbastos/vim-lua'                  " better lua
 Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
+Plug 'rust-lang/rust.vim'
+Plug 'PProvost/vim-ps1'
 
 Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'JulesWang/css.vim'                " css3 syntax
@@ -54,21 +56,24 @@ if index(keys(g:plugs), 'vim-airline') >= 0
   let g:airline_section_z = '%3p%% %4l:%3v'  " line/column number section
 endif
 
-if index(keys(g:plugs), 'ale') >= 0 " 'mypy'],
-  let g:ale_linters = {'python': ['pylint', 'flake8',
-                      \'mypy --ignore-missing-imports'],
-                      \'lua': ['luac', 'luacheck']}
+if index(keys(g:plugs), 'ale') >= 0
+  let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
+                      \'lua': ['luac', 'luacheck'],
+                      \'rust': ['rls'],
+                      \'sh': ['shellcheck'],
+                      \'json': ['jsonlint'],
+                      \'gitcommit': ['gitlint'],
+                      \'ansible': ['ansible_lint']}
+  let g:ale_fixers = {'python': ['yapf'],
+                     \'rust': ['rustfmt'],
+                     \'go': ['gofmt']}
+  let g:ale_rust_rls_toolchain = 'stable'
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
 endif
 
 if index(keys(g:plugs), 'vim-autotag') >= 0
   let g:autotagTagsFile='.tags'
-endif
-
-if index(keys(g:plugs), 'yapf') >= 0
-  noremap <C-Y> :call yapf#YAPF()<cr>
-  inoremap <C-Y> <c-o>:call yapf#YAPF()<cr>
 endif
 
 
@@ -93,10 +98,11 @@ set number numberwidth=5   " line-number-bar, with width = 3 digits + padding
 set cursorline             " highlight the line under the cursor
 set colorcolumn=+1,+3      " highlighted columns to show too long lines
 
-set wrap                   " don't wrap lines too long for window
+set nowrap                 " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
-set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars+=tab:→\ ,
 set et tw=80 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
@@ -104,7 +110,8 @@ set tags=./.tags;/         " look for tags file from pwd to root
 
 augroup languageSpecific   " set options for different languages
   autocmd!
-  autocmd FileType python,java,sql set tw=80 sw=4
+  autocmd FileType python,java,sql,rust set tw=80 sw=4 ts=4
+  autocmd FileType go set tw=80 sw=4 ts=4 noet listchars+=tab:\ \ ,
   autocmd FileType c set et tw=0 sw=4
 augroup END
 
@@ -121,21 +128,22 @@ nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 vnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 vnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
+
 " walk through errors
 nmap <silent> <C-m> <Plug>(ale_previous_wrap)
 nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
-" run python code
-xnoremap <leader>p :w !python<CR>
-nnoremap <leader>p :w<CR>:w !python %<CR>
+" run linter
+xnoremap <leader>l :ALELint<CR>
+nnoremap <leader>l :ALELint<CR>
 
-" run lua code
-xnoremap <leader>l :w !lua<CR>
-nnoremap <leader>l :w<CR>:w !lua %<CR>
-
+" run fixer
+xnoremap <leader>f :ALEFix<CR>
+nnoremap <leader>f :ALEFix<CR>
 
 " delete trailing whitespaces
 nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
+
 
 " moving through windows
 tnoremap <Esc> <C-\><C-n>
