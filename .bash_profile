@@ -14,5 +14,6 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec startx
+  # exec startx
+  exec sway -V >> ~/.local/share/sway/sway-$(date +'%F-%H-%M-%S').log 2>&1
 fi

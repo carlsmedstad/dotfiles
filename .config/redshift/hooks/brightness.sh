@@ -14,13 +14,13 @@ case $1 in
   period-changed)
     case $3 in
       night)
-        xbacklight -set $brightness_night -time $fade_time
+        light -S $brightness_night
         ;;
       transition)
-        xbacklight -set $brightness_transition -time $fade_time
+        light -S $brightness_transition
         ;;
       daytime)
-        xbacklight -set $brightness_day -time $fade_time
+        light -S $brightness_day
         ;;
     esac
     ;;
