@@ -5,8 +5,8 @@ URxvt.lineSpace:        1
 URxvt.scrollBar:        false
 URxvt.saveLines:        10000
 
-URxvt.depth:            32
-URxvt.background:       [80]#002b36
+!URxvt.depth:            32
+!URxvt.background:       [80]#002b36
 
 URxvt.perl-ext-common:  default,keyboard-select,resize-font,selection-to-clipboard,matcher
 
@@ -25,7 +25,7 @@ URxvt.keysym.M-Escape:  keyboard-select:activate
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-!*background:            S_base03
+*background:            S_base03
 *foreground:            S_base0
 *fadeColor:             S_base03
 *cursorColor:           S_base1
