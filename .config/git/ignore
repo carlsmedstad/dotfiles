@@ -1,8 +1,0 @@
-# FILE: $HOME/.config/ignore
-.pyc
-***__pycache__
-***.cache
-***.log
-.tags
-.mypy_cache
-luacov.stats.out
