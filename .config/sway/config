@@ -1,4 +1,4 @@
-# i3 config
+# sway config
 
 # set mod key
 set $mod Mod4
@@ -6,7 +6,7 @@ set $mod Mod4
 font pango:DejaVu Sans 11
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 # start j4-dmenu-desktop
@@ -140,8 +140,6 @@ bar {
 }
 
 # autostart
-exec udiskie -T -N --no-appindicator &
-exec --no-startup-id redshift
 exec xrdb -load ~/.Xresources
 
 input * {
