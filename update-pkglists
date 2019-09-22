@@ -2,6 +2,3 @@
 
 pacman -Qq > pkglist-arch
 echo Arch package list copied
-
-pip freeze --user > pkglist-python
-echo Python package list copied
