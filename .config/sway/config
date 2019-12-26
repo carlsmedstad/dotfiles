@@ -1,20 +1,13 @@
-# sway config
-
 # set mod key
 set $mod Mod4
-# font
-font pango:DejaVu Sans 11
 
-# start a terminal
-bindsym $mod+Return exec urxvt
-# kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Return exec urxvt                # start a terminal
+bindsym $mod+Shift+q kill                     # kill focused window
+bindsym $mod+Shift+g exec swaylock -c 002b36  # lock
+
 # start j4-dmenu-desktop
-bindsym $mod+d exec j4-dmenu-desktop
-# dock to peripherals & screen at work
-bindsym $mod+Shift+p exec dock
-# lock
-bindsym $mod+Shift+g exec swaylock -c 002b36
+bindsym $mod+d exec j4-dmenu-desktop --dmenu \
+  "bemenu -i -H 25 --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36' --fn 'DejaVuSansMono Nerd Font Mono 12'"
 
 # change focus
 bindsym $mod+h focus left
@@ -36,7 +29,7 @@ bindsym $mod+Shift+u move workspace to output left
 bindsym $mod+b split horizontal
 bindsym $mod+v split vertical
 
-# enter fullscreen mode for the focused container
+# fullscreen mode
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -122,12 +115,16 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec playerctl play-pause
 bindsym $mod+minus exec playerctl next
 
+# toggle touchpad
+bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
+
 # gaps
 gaps inner 10
 for_window [class=".*"] border pixel 4
 for_window [app_id="termite"] border pixel 4
 
-# bar
+font pango:DejaVu Sans 11
+
 bar {
     position top
     tray_output none
@@ -139,21 +136,23 @@ bar {
     status_command i3blocks
 }
 
-# autostart
-exec xrdb -load ~/.config/Xresources
+input type:keyboard {
+    repeat_delay 170
+    repeat_rate 50
+    xkb_layout se
+    xkb_variant nodeadkeys
+    xkb_options caps:escape
+}
 
-input * {
-  repeat_delay 170
-  repeat_rate 50
-  xkb_layout se
-  xkb_variant nodeadkeys
-  xkb_options caps:escape
+input type:touchpad {
+    tap enable
 }
 
 output * {
   bg ~/.wallpapers/current.png fill
 }
 
-# cursor
 seat * hide_cursor 5000
 mouse_warping none
+
+exec xrdb -load ~/.config/Xresources
