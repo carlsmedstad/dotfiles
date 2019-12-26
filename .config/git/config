@@ -17,7 +17,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-
-# work user
 [includeIf "gitdir:~/work/**"]
   path = ~/work/.gitconfig
+[core]
+  eol = lf
