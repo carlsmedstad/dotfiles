@@ -63,7 +63,8 @@ if index(keys(g:plugs), 'ale') >= 0
                       \'sh': ['shellcheck'],
                       \'json': ['jsonlint'],
                       \'gitcommit': ['gitlint'],
-                      \'ansible': ['ansible_lint']}
+                      \'ansible': ['ansible_lint'],
+                      \'perl': ['perl', 'perlcritic']}
   let g:ale_fixers = {'python': ['yapf'],
                      \'rust': ['rustfmt'],
                      \'go': ['gofmt']}
@@ -96,23 +97,23 @@ set foldmethod=marker      " define folds in code with {{{}}}
 
 set number numberwidth=5   " line-number-bar, with width = 3 digits + padding
 set cursorline             " highlight the line under the cursor
-set colorcolumn=+1,+3      " highlighted columns to show too long lines
+set colorcolumn=+2,+4      " highlighted columns to show too long lines
 
 set nowrap                 " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set listchars+=tab:→\ ,
-set et tw=80 sw=2 ts=4
+set et tw=79 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
 
 
 augroup languageSpecific   " set options for different languages
   autocmd!
-  autocmd FileType python,java,sql,rust set tw=80 sw=4 ts=4
-  autocmd FileType go set tw=80 sw=4 ts=4 noet listchars+=tab:\ \ ,
-  autocmd FileType c set et tw=0 sw=4
+  autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
+  autocmd FileType go set tw=79 sw=4 ts=4 noet listchars+=tab:\ \ ,
+  autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
 augroup END
 
 
@@ -161,3 +162,6 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+nnoremap <C-K> :py3file /usr/share/clang/clang-format.py<cr>
+vnoremap <C-K> :py3file /usr/share/clang/clang-format.py<cr>
