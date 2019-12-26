@@ -1,17 +1,17 @@
 #!/bin/bash
-# bashrc
-
-
-# paths
-export PATH=$HOME/scripts:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.luarocks/bin:$PATH
 
 export TERM=rxvt-256color
 
+export EDITOR=nvim
+export VISUAL=nvim
 
-# prompt
+alias mv="mv -i"
+alias cp="cp -i"
+alias ls="ls --color=auto --group-directories-first"
+alias ssh="TERM=rxvt-256color ssh"
+
+tabs -4
+
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
@@ -21,55 +21,7 @@ else
   export PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-
-# editor
-if [[ -n $(command -v nvim) ]]; then
-  export EDITOR=nvim
-  export VISUAL=nvim
-  alias vim=nvim
-else
-  export EDITOR=vim
-  export VISUAL=vim
-  alias nvim=vim
-fi
-
-
-# tabsize
-tabs -4
-
-
-# aliases
-alias mv="mv -i"
-alias cp="cp -i"
-alias ls="ls --hide=__pycache__ --color=auto --group-directories-first"
-alias grep="grep --colour=auto -nI --exclude={\\.tags,luacov*} --exclude-dir={\\.mypy_cache,\\.cache,\\.pytest_cache,\\.git}"
-alias diff="diff --color"
-alias connect="sudo dhcpcd enp0s20f0u2"
-alias neofetch="neofetch --ascii_colors 31 31 --colors 31 31 31 31"
-alias cpwd="pwd | xsel -ib"
-alias tree="tree -C"
-alias less="less -R"
-alias ssh="TERM=rxvt-256color ssh"
-
-
-# workrc
 if [[ -f $HOME/work/.bashrc ]]; then
   # shellcheck source=/dev/null
   source "$HOME/work/.bashrc"
-fi
-
-
-# lua
-if command -v luarocks >> /dev/null; then
-  LUA_PATH=$(luarocks path --lr-path)";;"
-  LUA_CPATH=$(luarocks path --lr-cpath)";;"
-  export LUA_PATH
-  export LUA_CPATH
-fi
-
-
-# rust
-if [[ -f $HOME/.cargo/env ]]; then
-  # shellcheck source=/dev/null
-  source "$HOME/.cargo/env"
 fi
