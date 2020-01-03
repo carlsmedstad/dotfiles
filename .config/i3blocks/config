@@ -1,28 +1,38 @@
 # i3blocks config
 
-[volume]
-label=VOL 
-command=~/personal/i3blocks-contrib/volume/volume
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume-pulseaudio
 interval=once
 signal=1
+USE_ALSA_NAME=1
+AUDIO_HIGH_SYMBOL=VOL 
+AUDIO_MED_THRESH=50
+AUDIO_MED_SYMBOL=VOL 
+AUDIO_LOW_THRESH=0
+AUDIO_LOW_SYMBOL=VOL 
+AUDIO_MUTED_SYMBOL=VOL 
+DEFAULT_COLOR="#a0a0a0"
+MUTED_COLOR="#b58900"
 
 [battery]
-command=echo -n 'BAT '; ~/personal/i3blocks-contrib/battery/battery
+label=BAT 
+command=~/.config/i3blocks/battery
 interval=30
 
 [free]
 label=MEM 
-command=~/personal/i3blocks-contrib/memory/memory
+command=~/.config/i3blocks/memory
 interval=1
-
-[wifi]
-
-[ethernet]
 
 [cpu]
 label=CPU 
-command=~/personal/i3blocks-contrib/cpu_usage/cpu_usage
+command=~/.config/i3blocks/cpu_usage
 interval=1
+
+[interface]
+label=NET 
+command=~/.config/i3blocks/iface
+interval=5
 
 [datetime]
 command=date +%A\ %F\ %H:%M
