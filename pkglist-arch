@@ -25,7 +25,6 @@ coreutils
 cryptsetup
 ctags
 device-mapper
-dhcpcd
 dialog
 diffutils
 dos2unix
@@ -34,6 +33,7 @@ fakeroot
 file
 filesystem
 findutils
+firefox
 flake8
 flatpak
 flex
@@ -65,6 +65,7 @@ j4-dmenu-desktop
 jfrog-cli-go
 jfsutils
 jq
+kitty
 kubectl-bin
 ldoc
 less
@@ -110,6 +111,7 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+pyenv
 python-openapi-spec-validator
 python-pipenv
 python-pynvim
@@ -117,9 +119,10 @@ python-pytest
 python-pytest-cov
 python-pywal
 python-wheel
-python36
 reiserfsprogs
 ripgrep
+rpm-tools
+rsync
 rxvt-unicode
 s-nail
 sed

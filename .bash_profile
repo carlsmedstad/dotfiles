@@ -2,12 +2,18 @@
 
 export PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/work/go
+
+export LESSHISTFILE=$HOME/.cache/.less_history
+export HISTFILE=$HOME/.cache/.bash_history
+
 if command -v luarocks >> /dev/null; then
   LUA_PATH=$(luarocks path --lr-path)";;"
   LUA_CPATH=$(luarocks path --lr-cpath)";;"
   export LUA_PATH
   export LUA_CPATH
 fi
+
+eval "$(pyenv init -)"
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing

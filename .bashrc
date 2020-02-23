@@ -9,6 +9,7 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias ls="ls --color=auto --group-directories-first"
 alias ssh="TERM=rxvt-256color ssh"
+alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 
 tabs -4
 
