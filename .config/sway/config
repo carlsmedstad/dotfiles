@@ -1,7 +1,7 @@
 # set mod key
 set $mod Mod4
 
-bindsym $mod+Return exec urxvt                # start a terminal
+bindsym $mod+Return exec alacritty            # start a terminal
 bindsym $mod+Shift+q kill                     # kill focused window
 bindsym $mod+Shift+g exec swaylock -c 002b36  # lock
 
@@ -24,6 +24,9 @@ bindsym $mod+Shift+l move right
 # move workspace to ouputs
 bindsym $mod+Shift+i move workspace to output right
 bindsym $mod+Shift+u move workspace to output left
+
+# split
+bindsym $mod+v split toggle
 
 # fullscreen mode
 bindsym $mod+f fullscreen toggle

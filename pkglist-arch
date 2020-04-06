@@ -1,6 +1,7 @@
 acpi
 acpid
 aic94xx-firmware
+alacritty
 alsa-utils
 ansible
 ansible-lint
@@ -76,7 +77,6 @@ mupdf
 mypy
 neofetch
 neovim
-nerd-fonts-complete
 net-tools
 ninja
 nmap
@@ -111,12 +111,12 @@ sway
 swaylock
 symlinks
 sysstat
-termite
 tidy
 tk
 tlp
 traceroute
 tree
+ttf-dejavu-sans-mono-powerline-git
 twine
 urxvt-perls
 urxvt-resize-font-git

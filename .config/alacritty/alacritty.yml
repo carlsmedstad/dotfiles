@@ -38,3 +38,8 @@ window:
   padding:
     x: 3
     y: 3
+
+# Font
+font:
+  normal:
+    family: DejaVu Sans Mono for Powerline
