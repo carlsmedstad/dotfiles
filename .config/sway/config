@@ -25,10 +25,6 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Shift+i move workspace to output right
 bindsym $mod+Shift+u move workspace to output left
 
-# split
-bindsym $mod+b split horizontal
-bindsym $mod+v split vertical
-
 # fullscreen mode
 bindsym $mod+f fullscreen toggle
 
@@ -118,10 +114,9 @@ bindsym $mod+minus exec playerctl next
 # toggle touchpad
 bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
 
-# gaps
+# borders & gaps
+default_border pixel 4
 gaps inner 10
-for_window [class=".*"] border pixel 4
-for_window [app_id="termite"] border pixel 4
 
 font pango:DejaVu Sans 11
 
