@@ -1,7 +1,4 @@
-" init.vim - My take on Vim-configuration
-" Author:       Carl Smedstad
-" Last Change:  Mars 16, 2018
-" URL:          https://github.com/carlsmedstad/dotfiles
+scriptencoding utf-8
 
 let g:mapleader=','
 
@@ -19,6 +16,7 @@ Plug 'vim-airline/vim-airline-themes'   " themes for the above
 Plug 'altercation/vim-colors-solarized' " colorscheme
 
 Plug 'w0rp/ale'                         " async syntax checker
+Plug 'm-pilia/vim-ccls'
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 Plug 'tbastos/vim-lua'                  " better lua
@@ -57,18 +55,33 @@ if index(keys(g:plugs), 'vim-airline') >= 0
 endif
 
 if index(keys(g:plugs), 'ale') >= 0
-  let g:ale_linters = {'python': ['pylint', 'flake8', 'mypy'],
-                      \'lua': ['luac', 'luacheck'],
-                      \'rust': ['rls'],
-                      \'sh': ['shellcheck'],
-                      \'json': ['jsonlint'],
-                      \'gitcommit': ['gitlint'],
-                      \'ansible': ['ansible_lint'],
-                      \'perl': ['perl', 'perlcritic']}
-  let g:ale_fixers = {'python': ['yapf'],
-                     \'rust': ['rustfmt'],
-                     \'go': ['gofmt']}
+  let g:ale_linters = {
+    \'python': ['pylint', 'flake8', 'mypy'],
+    \'lua': ['luac', 'luacheck'],
+    \'rust': ['rls'],
+    \'sh': ['shellcheck'],
+    \'json': ['jsonlint'],
+    \'gitcommit': ['gitlint'],
+    \'ansible': ['ansible_lint'],
+    \'perl': ['perl', 'perlcritic'],
+    \'cmake': ['cmakelint'],
+    \'cpp': ['cppcheck', 'ccls'],
+  \}
+  let g:ale_fixers = {
+    \'python': ['yapf'],
+    \'rust': ['rustfmt'],
+    \'go': ['gofmt'],
+    \'cpp': ['clang-format'],
+  \}
   let g:ale_rust_rls_toolchain = 'stable'
+  let g:ale_cpp_cppcheck_options = '--enable=all --project=Debug/compile_commands.json'
+  let g:ale_cpp_ccls_init_options = {
+    \'compilationDatabaseDirectory' : 'Debug',
+    \'cache': {
+       \'format': 'binary',
+       \'directory': '/tmp/ccls-cache'
+    \}
+  \}
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
 endif
@@ -104,7 +117,7 @@ set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set listchars+=tab:→\ ,
-set et tw=79 sw=2 ts=4
+set expandtab tw=79 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
 
@@ -162,6 +175,3 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-
-nnoremap <C-K> :py3file /usr/share/clang/clang-format.py<cr>
-vnoremap <C-K> :py3file /usr/share/clang/clang-format.py<cr>
