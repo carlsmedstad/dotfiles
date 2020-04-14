@@ -43,3 +43,9 @@ window:
 font:
   normal:
     family: DejaVu Sans Mono for Powerline
+
+# Key Bindings
+key_bindings:
+  - { key: K, mods: Control|Shift, action: ScrollLineUp   }
+  - { key: J, mods: Control|Shift, action: ScrollLineDown }
+  - { key: T, mods: Control|Shift, action: SpawnNewInstance }
