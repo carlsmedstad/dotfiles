@@ -28,5 +28,6 @@ if [[ -f ~/.bashrc && "$-" == *i* ]]; then
 fi
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  [ ! -d ~/.cache/sway ] && mkdir ~/.cache/sway
   exec sway -V >> ~/.cache/sway/sway-"$(date +'%F-%H-%M-%S')".log 2>&1
 fi
