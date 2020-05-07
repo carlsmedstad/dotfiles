@@ -117,6 +117,10 @@ bindsym $mod+minus exec playerctl next
 # toggle touchpad
 bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
 
+# toggle laptop screen
+bindsym $mod+y output eDP-1 enable
+bindsym $mod+Shift+y output eDP-1 disable
+
 # borders & gaps
 default_border pixel 4
 gaps inner 10
