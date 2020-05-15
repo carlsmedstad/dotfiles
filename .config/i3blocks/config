@@ -2,17 +2,16 @@
 
 [volume-pulseaudio]
 command=~/.config/i3blocks/volume-pulseaudio
-interval=once
-signal=1
-USE_ALSA_NAME=1
+interval=persist
+markup=pango
 AUDIO_HIGH_SYMBOL=VOL 
 AUDIO_MED_THRESH=50
 AUDIO_MED_SYMBOL=VOL 
 AUDIO_LOW_THRESH=0
 AUDIO_LOW_SYMBOL=VOL 
 AUDIO_MUTED_SYMBOL=VOL 
-DEFAULT_COLOR="#a0a0a0"
-MUTED_COLOR="#b58900"
+DEFAULT_COLOR=#a0a0a0
+MUTED_COLOR=#b58900
 
 [battery]
 label=BAT 
