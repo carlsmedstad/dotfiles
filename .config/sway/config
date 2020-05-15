@@ -91,19 +91,19 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # pulse audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 5%+ unmute \
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 --unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym $mod+period exec --no-startup-id amixer -q sset Master 5%+ unmute \
-&& pkill -RTMIN+1 i3blocks
-
-bindsym $mod+comma exec --no-startup-id amixer -q sset Master 5%- unmute \
-&& pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 5%- unmute \
+bindsym $mod+period exec --no-startup-id pamixer -i 5 --unmute \
 && pkill -RTMIN+1 i3blocks
 
-bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle \
+bindsym $mod+comma exec --no-startup-id pamixer -d 5 --unmute \
 && pkill -RTMIN+1 i3blocks
-bindsym $mod+m exec --no-startup-id amixer -q sset Master toggle \
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 --unmute \
+&& pkill -RTMIN+1 i3blocks
+
+bindsym XF86AudioMute exec --no-startup-id pamixer --toggle-mute \
+&& pkill -RTMIN+1 i3blocks
+bindsym $mod+m exec --no-startup-id pamixer --toggle-mute \
 && pkill -RTMIN+1 i3blocks
 
 # media player controls
@@ -120,6 +120,10 @@ bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
 # toggle laptop screen
 bindsym $mod+y output eDP-1 enable
 bindsym $mod+Shift+y output eDP-1 disable
+
+# suspend & hibernate
+bindsym $mod+p exec systemctl suspend
+bindsym $mod+Shift+p exec systemctl hibernate
 
 # borders & gaps
 default_border pixel 4
