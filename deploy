@@ -25,17 +25,17 @@ while read -r path; do
   localpath=$HOME/$repopath
 
   copy=false
-  if [[ ! $repopath =~ (deploy|pkglist|update-pkglist|LICENSE) ]]; then
-    echo FILE: $localpath
-    if [ -L $localpath ]; then
+  if [[ ! $repopath =~ (deploy|pkglist|update-pkglist|LICENSE|README.md) ]]; then
+    echo "FILE: $localpath"
+    if [ -L "$localpath" ]; then
       if $force; then
         echo -e "      \e[32mCopied: Replacing symlink\e[0m"
         copy=true
       else
         echo -e "      \e[31mSkipped: Symlink already exists\e[0m"
       fi
-    elif [ -f $localpath ]; then
-      if [ -z "$(diff $repopath $localpath)" ]; then
+    elif [ -f "$localpath" ]; then
+      if [ -z "$(diff "$repopath" "$localpath")" ]; then
         echo -e "      \e[32mCopied: Local file exists and is identical\e[0m"
         copy=true
       elif $force; then
@@ -51,6 +51,6 @@ while read -r path; do
   fi
 
   if $copy; then
-    ln -srf $repopath $localpath
+    ln -srf "$repopath" "$localpath"
   fi
-done < <(find -type f ! -path *.git/*)
+done < <(find . -type f ! -path "*.git/*")
