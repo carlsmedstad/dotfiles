@@ -24,6 +24,11 @@ while read -r path; do
   repopath=${path:2}
   localpath=$HOME/$repopath
 
+  folderpath=$(dirname "$localpath")
+  if [ ! -d "$folderpath" ]; then
+    mkdir -p "$folderpath"
+  fi
+
   copy=false
   if [[ ! $repopath =~ (deploy|pkglist|update-pkglist|LICENSE|README.md) ]]; then
     echo "FILE: $localpath"
