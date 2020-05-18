@@ -2,7 +2,6 @@ scriptencoding utf-8
 
 let g:mapleader=','
 
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-sensible'       " barebones init-file
@@ -13,33 +12,30 @@ Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
 
 Plug 'vim-airline/vim-airline'          " fancier statusline
 Plug 'vim-airline/vim-airline-themes'   " themes for the above
-Plug 'altercation/vim-colors-solarized' " colorscheme
+Plug 'lifepillar/vim-solarized8'        " colorscheme
 
 Plug 'w0rp/ale'                         " async syntax checker
+Plug 'craigemery/vim-autotag'           " ctags auto-generation
+
 Plug 'm-pilia/vim-ccls'
 Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
-Plug 'craigemery/vim-autotag'           " ctags auto-generation
 Plug 'tbastos/vim-lua'                  " better lua
 Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 Plug 'rust-lang/rust.vim'
 Plug 'PProvost/vim-ps1'
-
-Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'JulesWang/css.vim'                " css3 syntax
-
-Plug 'carlsmedstad/vim-sourcer' " commands for sourcing vimfiles
+Plug 'alvan/vim-closetag'               " closing html tags
 
 call plug#end()
 
+if ($COLORTERM ==# 'truecolor')
+  set termguicolors
+endif
 
-if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
+if (index(keys(g:plugs), 'vim-solarized8') >= 0)
       \ && (&t_Co > 2 || has('gui_running'))
-  syntax on
   set background=dark
-  colorscheme solarized
-  hi SignColumn ctermbg=8
-  hi Normal ctermbg=none
-  let g:airline_theme='solarized'
+  colorscheme solarized8
 endif
 
 if index(keys(g:plugs), 'vim-airline') >= 0
@@ -90,7 +86,6 @@ if index(keys(g:plugs), 'vim-autotag') >= 0
   let g:autotagTagsFile='.tags'
 endif
 
-
 set clipboard=unnamedplus  " enables copy/paste from/to vim
 set undofile               " saves undo-history between sessions
 set mouse=a                " Enable scrolling with mouse-wheel
@@ -121,14 +116,12 @@ set expandtab tw=79 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
 
-
 augroup languageSpecific   " set options for different languages
   autocmd!
   autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
   autocmd FileType go set tw=79 sw=4 ts=4 noet listchars+=tab:\ \ ,
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
 augroup END
-
 
 " bufswitch remaps for consistency with vimium
 nnoremap <C-j> <S-j>
@@ -141,7 +134,6 @@ nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 vnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 vnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
-
 
 " walk through errors
 nmap <silent> <C-m> <Plug>(ale_previous_wrap)
@@ -157,7 +149,6 @@ nnoremap <leader>f :ALEFix<CR>
 
 " delete trailing whitespaces
 nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
-
 
 " moving through windows
 tnoremap <Esc> <C-\><C-n>
