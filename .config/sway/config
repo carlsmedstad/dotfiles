@@ -1,52 +1,41 @@
-# set mod key
+# Sway config file
+
 set $mod Mod4
 
-bindsym $mod+Return exec alacritty            # start a terminal
-bindsym $mod+Shift+q kill                     # kill focused window
-bindsym $mod+Shift+g exec swaylock -c 002b36  # lock
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+g exec swaylock -c 002b36
 
-# start j4-dmenu-desktop
 bindsym $mod+d exec j4-dmenu-desktop --dmenu \
   "bemenu -i -H 25 --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36' --fn 'DejaVuSansMono Nerd Font Mono 12'"
 
-# change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# move workspace to ouputs
 bindsym $mod+Shift+i move workspace to output right
 bindsym $mod+Shift+u move workspace to output left
 
-# split
 bindsym $mod+v split toggle
 
-# fullscreen mode
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus parent/child
 bindsym $mod+q focus parent
 bindsym $mod+a focus child
 
-# switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -58,7 +47,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -70,12 +58,9 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# reload the configuration file
 bindsym $mod+Shift+r reload
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exit
 
-# resize window (you can also use the mouse for that)
 mode "resize" {
     bindsym h resize shrink width 10 px or 1 ppt
     bindsym j resize grow height 10 px or 1 ppt
@@ -86,11 +71,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
-# pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 --unmute \
 && pkill -RTMIN+1 i3blocks
 bindsym $mod+period exec --no-startup-id pamixer -i 5 --unmute \
@@ -106,7 +89,6 @@ bindsym XF86AudioMute exec --no-startup-id pamixer --toggle-mute \
 bindsym $mod+m exec --no-startup-id pamixer --toggle-mute \
 && pkill -RTMIN+1 i3blocks
 
-# media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
@@ -114,18 +96,14 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec playerctl play-pause
 bindsym $mod+minus exec playerctl next
 
-# toggle touchpad
 bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
 
-# toggle laptop screen
 bindsym $mod+y output eDP-1 enable
 bindsym $mod+Shift+y output eDP-1 disable
 
-# suspend & hibernate
 bindsym $mod+p exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl hibernate
 
-# borders & gaps
 default_border pixel 4
 smart_borders on
 smart_gaps on
