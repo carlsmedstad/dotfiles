@@ -127,6 +127,8 @@ bindsym $mod+Shift+p exec systemctl hibernate
 
 # borders & gaps
 default_border pixel 4
+smart_borders on
+smart_gaps on
 gaps inner 10
 
 font pango:DejaVu Sans 11
