@@ -6,6 +6,8 @@ export GOPATH=$HOME/work/go
 export LESSHISTFILE=$HOME/.cache/.less_history
 export HISTFILE=$HOME/.cache/.bash_history
 
+export I3BLOCKS_CONTRIB_REPO=$HOME/personal/i3blocks-contrib
+
 if command -v luarocks >> /dev/null; then
   LUA_PATH=$(luarocks path --lr-path)";;"
   LUA_CPATH=$(luarocks path --lr-cpath)";;"

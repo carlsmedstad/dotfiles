@@ -1,7 +1,7 @@
 # i3blocks config
 
 [volume-pulseaudio]
-command=~/.config/i3blocks/volume-pulseaudio
+command=$I3BLOCKS_CONTRIB_REPO/volume-pulseaudio/volume-pulseaudio
 interval=persist
 markup=pango
 AUDIO_HIGH_SYMBOL=VOL 
@@ -15,22 +15,27 @@ MUTED_COLOR=#b58900
 
 [battery]
 label=BAT 
-command=~/.config/i3blocks/battery
+command=$I3BLOCKS_CONTRIB_REPO/battery/battery
 interval=30
 
 [free]
 label=MEM 
-command=~/.config/i3blocks/memory
+command=$I3BLOCKS_CONTRIB_REPO/memory/memory
 interval=1
 
 [cpu]
 label=CPU 
-command=~/.config/i3blocks/cpu_usage
+command=$I3BLOCKS_CONTRIB_REPO/cpu_usage/cpu_usage
 interval=1
+
+[wifi]
+label=WIFI 
+command=$I3BLOCKS_CONTRIB_REPO/wifi/wifi
+interval=60
 
 [interface]
 label=NET 
-command=~/.config/i3blocks/iface
+command=$I3BLOCKS_CONTRIB_REPO/iface/iface
 interval=5
 
 [datetime]
