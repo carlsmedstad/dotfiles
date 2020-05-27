@@ -15,7 +15,9 @@ if command -v luarocks >> /dev/null; then
   export LUA_CPATH
 fi
 
-eval "$(pyenv init -)"
+if command -v pyenv >> /dev/null; then
+  eval "$(pyenv init -)"
+fi
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
