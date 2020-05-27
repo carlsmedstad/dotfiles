@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export TERM=rxvt-256color
-
 export EDITOR=nvim
 export VISUAL=nvim
 
