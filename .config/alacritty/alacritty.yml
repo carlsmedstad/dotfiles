@@ -44,6 +44,9 @@ font:
   normal:
     family: DejaVu Sans Mono for Powerline
 
+# Needed for Alt to work on MacOS
+alt_send_esc: false
+
 # Key Bindings
 key_bindings:
   - { key: K, mods: Control|Shift, action: ScrollLineUp   }
