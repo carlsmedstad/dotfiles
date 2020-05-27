@@ -32,8 +32,8 @@ if ($COLORTERM ==# 'truecolor')
   set termguicolors
 endif
 
-if (index(keys(g:plugs), 'vim-solarized8') >= 0)
-      \ && (&t_Co > 2 || has('gui_running'))
+if (index(keys(g:plugs), 'vim-solarized8') >= 0
+    \ && (&t_Co > 2 || has('gui_running')))
   set background=dark
   colorscheme solarized8
 endif
