@@ -3,6 +3,20 @@
 export PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/work/go
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+  export PATH=/usr/local/opt/grep/libexec/gnubin:$PATH
+  export PATH=/usr/local/opt/gnu-indent/libexec/gnubin:$PATH
+  export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+  export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
+  export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
+
+  if [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
+    # shellcheck source=/dev/null
+    . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+  fi
+fi
+
 export LESSHISTFILE=$HOME/.cache/.less_history
 export HISTFILE=$HOME/.cache/.bash_history
 
