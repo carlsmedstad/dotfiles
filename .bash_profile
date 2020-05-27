@@ -11,6 +11,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
   export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
 
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+
   if [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
     # shellcheck source=/dev/null
     . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
