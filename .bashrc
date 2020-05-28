@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export EDITOR=nvim
-export VISUAL=nvim
-
 alias mv="mv -i"
 alias cp="cp -i"
 alias ls="ls --color=auto --group-directories-first"
@@ -22,5 +19,5 @@ fi
 
 if [[ -f $HOME/work/.bashrc ]]; then
   # shellcheck source=/dev/null
-  source "$HOME/work/.bashrc"
+  . "$HOME/work/.bashrc"
 fi
