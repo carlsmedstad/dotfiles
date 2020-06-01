@@ -25,6 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'PProvost/vim-ps1'
 Plug 'JulesWang/css.vim'                " css3 syntax
 Plug 'alvan/vim-closetag'               " closing html tags
+Plug 'keith/swift.vim'
 
 call plug#end()
 
@@ -68,6 +69,7 @@ if index(keys(g:plugs), 'ale') >= 0
     \'rust': ['rustfmt'],
     \'go': ['gofmt'],
     \'cpp': ['clang-format'],
+    \'swift': ['swiftformat'],
   \}
   let g:ale_rust_rls_toolchain = 'stable'
   let g:ale_cpp_cppcheck_options = '--enable=all --project=Debug/compile_commands.json'
@@ -118,6 +120,7 @@ set tags=./.tags;/         " look for tags file from pwd to root
 
 augroup languageSpecific   " set options for different languages
   autocmd!
+  autocmd FileType swift set tw=119 sw=4 ts=4
   autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
   autocmd FileType go set tw=79 sw=4 ts=4 noet listchars+=tab:\ \ ,
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
