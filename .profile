@@ -3,6 +3,8 @@
 export EDITOR=nvim
 export VISUAL=nvim
 
+export MANPAGER="nvim +Man!"
+
 export PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/work/go
 
