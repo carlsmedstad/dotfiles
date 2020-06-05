@@ -109,7 +109,6 @@ set number numberwidth=5   " line-number-bar, with width = 3 digits + padding
 set cursorline             " highlight the line under the cursor
 set colorcolumn=+2,+4      " highlighted columns to show too long lines
 
-set nowrap                 " don't wrap lines too long for window
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
 set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
