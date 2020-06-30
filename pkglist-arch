@@ -90,6 +90,7 @@ neovim
 net-tools
 ninja
 nmap
+noto-fonts
 noto-fonts-emoji
 openapi-generator
 openconnect
@@ -106,7 +107,6 @@ pipewire-pulse
 pkgconf
 playerctl
 podman
-powerline-fonts
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -137,7 +137,6 @@ tk
 tlp
 traceroute
 tree
-ttf-dejavu-sans-mono-powerline-git
 twine
 urxvt-perls
 urxvt-resize-font-git
