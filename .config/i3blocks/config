@@ -13,6 +13,12 @@ AUDIO_MUTED_SYMBOL=VOL
 DEFAULT_COLOR=#a0a0a0
 MUTED_COLOR=#b58900
 
+[mediaplayer]
+command=$I3BLOCKS_CONTRIB_REPO/mediaplayer/mediaplayer
+instance=spotify
+interval=5
+signal=10
+
 [battery]
 label=BAT 
 command=$I3BLOCKS_CONTRIB_REPO/battery/battery
