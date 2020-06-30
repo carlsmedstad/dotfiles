@@ -29,8 +29,8 @@ discord
 docker
 dos2unix
 entr
-fedora-firefox-wayland-bin
 feh
+firefox
 flake8
 flatpak
 flex
@@ -128,7 +128,6 @@ spotify
 sudo
 sway
 swaylock
-swift-bin
 symlinks
 sysstat
 terraform
