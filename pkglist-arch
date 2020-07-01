@@ -26,8 +26,10 @@ cmatrix
 cppcheck
 ctags
 discord
-docker
+dmidecode
+dnsmasq
 dos2unix
+ebtables
 entr
 feh
 firefox
@@ -68,6 +70,7 @@ ldoc
 less
 libreoffice-fresh
 libtool
+libvirt
 light
 linux
 lua-busted
@@ -117,6 +120,7 @@ python-pipenv
 python-pynvim
 python-pywal
 python-wheel
+qemu
 ripgrep
 rpm-tools
 rsync
