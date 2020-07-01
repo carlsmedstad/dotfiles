@@ -5,15 +5,15 @@ export VISUAL=nvim
 
 export MANPAGER="nvim +Man!"
 
-export PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
-  export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-  export PATH=/usr/local/opt/grep/libexec/gnubin:$PATH
-  export PATH=/usr/local/opt/gnu-indent/libexec/gnubin:$PATH
-  export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-  export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
-  export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/grep/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/gnu-indent/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
+  PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
 
   export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
