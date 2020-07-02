@@ -8,6 +8,7 @@ Plug 'tpope/vim-sensible'       " barebones init-file
 Plug 'tpope/vim-commentary'     " mappings for commenting code
 Plug 'tpope/vim-surround'       " mappings for paranthesis, brackets etc.
 Plug 'tpope/vim-repeat'         " make . work for plugins
+Plug 'tpope/vim-markdown'
 Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
 
 Plug 'vim-airline/vim-airline'          " fancier statusline
@@ -31,6 +32,10 @@ call plug#end()
 
 if ($COLORTERM ==# 'truecolor')
   set termguicolors
+endif
+
+if index(keys(g:plugs), 'vim-markdown') >= 0
+  let g:markdown_fenced_languages = ['json', 'yaml', 'sh', 'bash=sh', 'python']
 endif
 
 if (index(keys(g:plugs), 'vim-solarized8') >= 0
