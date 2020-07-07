@@ -6,6 +6,7 @@ export VISUAL=nvim
 export MANPAGER="nvim +Man!"
 
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
 
 PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
@@ -20,8 +21,8 @@ if [ "$(uname)" = "Darwin" ]; then
   export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
 
-export LESSHISTFILE=$HOME/.cache/lesshistfile
-export HISTFILE=$HOME/.cache/histfile
+export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
+export HISTFILE=$XDG_CACHE_HOME/histfile
 
 export I3BLOCKS_CONTRIB_REPO=$HOME/personal/repos/i3blocks-contrib
 
