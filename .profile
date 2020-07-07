@@ -23,7 +23,7 @@ fi
 export LESSHISTFILE=$HOME/.cache/lesshistfile
 export HISTFILE=$HOME/.cache/histfile
 
-export I3BLOCKS_CONTRIB_REPO=$HOME/personal/i3blocks-contrib
+export I3BLOCKS_CONTRIB_REPO=$HOME/personal/repos/i3blocks-contrib
 
 if command -v luarocks >> /dev/null; then
   LUA_PATH=$(luarocks path --lr-path)";;"
