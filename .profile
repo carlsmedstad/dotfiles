@@ -5,6 +5,8 @@ export VISUAL=nvim
 
 export MANPAGER="nvim +Man!"
 
+export XDG_CONFIG_HOME=$HOME/.config
+
 PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then

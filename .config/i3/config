@@ -117,5 +117,5 @@ bar {
 
 # mouse_warping none
 
-exec xrdb -load ~/.config/Xresources
+exec xrdb -load $XDG_CONFIG_HOME/Xresources
 exec_always feh --bg-center ~/.wallpapers/current.png &

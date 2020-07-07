@@ -135,5 +135,5 @@ output * {
 seat * hide_cursor 5000
 mouse_warping none
 
-exec xrdb -load ~/.config/Xresources
+exec xrdb -load $XDG_CONFIG_HOME/Xresources
 exec mako
