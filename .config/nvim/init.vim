@@ -8,7 +8,6 @@ Plug 'tpope/vim-sensible'       " barebones init-file
 Plug 'tpope/vim-commentary'     " mappings for commenting code
 Plug 'tpope/vim-surround'       " mappings for paranthesis, brackets etc.
 Plug 'tpope/vim-repeat'         " make . work for plugins
-Plug 'tpope/vim-markdown'
 Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
 
 Plug 'vim-airline/vim-airline'          " fancier statusline
@@ -27,6 +26,8 @@ Plug 'PProvost/vim-ps1'
 Plug 'JulesWang/css.vim'                " css3 syntax
 Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'keith/swift.vim'
+Plug 'tpope/vim-markdown'
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
@@ -128,6 +129,10 @@ augroup languageSpecific   " set options for different languages
   autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
   autocmd FileType go set tw=79 sw=4 ts=4 noet listchars+=tab:\ \ ,
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
+augroup END
+
+augroup fileExtensions
+  autocmd BufNewFile,BufRead *.tpl set filetype=mustache
 augroup END
 
 " bufswitch remaps for consistency with vimium
