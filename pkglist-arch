@@ -46,6 +46,7 @@ git
 git-lfs
 gitlint
 go
+gocomplete
 google-chrome
 google-earth-pro
 grep
@@ -59,6 +60,7 @@ i3blocks
 i3lock
 inetutils
 intel-ucode
+ipcalc
 iproute2
 iwd
 j4-dmenu-desktop
