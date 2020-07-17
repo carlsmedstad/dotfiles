@@ -132,8 +132,13 @@ output * {
   bg ~/.wallpapers/current.png fill
 }
 
+for_window [class=".*"] inhibit_idle fullscreen
+
 seat * hide_cursor 5000
 mouse_warping none
 
 exec xrdb -load $XDG_CONFIG_HOME/Xresources
 exec mako
+exec swayidle -w \
+  timeout 300 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"'
