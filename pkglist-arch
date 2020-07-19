@@ -1,7 +1,7 @@
 acpi
 acpid
 aic94xx-firmware
-alacritty
+alacritty-git
 ansible
 ansible-lint
 asciidoctor
@@ -12,7 +12,7 @@ base
 bash-completion
 bemenu
 bemenu-x11
-bind-tools
+bind
 bison
 blender
 bluez
@@ -47,7 +47,6 @@ git-lfs
 gitlint
 go
 gocomplete
-google-chrome
 google-earth-pro
 grep
 gzip
@@ -125,6 +124,7 @@ qemu
 ripgrep
 rpm-tools
 rsync
+rustup
 rxvt-unicode
 shellcheck-bin
 slack-desktop
@@ -132,6 +132,7 @@ soulseekqt
 spotify
 sudo
 sway
+swayidle
 swaylock
 symlinks
 sysstat
@@ -148,6 +149,7 @@ urxvt-resize-font-git
 usbutils
 vi
 vint
+waybar
 wd719x-firmware
 wget
 which
