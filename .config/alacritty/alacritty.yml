@@ -47,3 +47,5 @@ key_bindings:
   - { key: K, mods: Control|Shift, action: ScrollLineUp   }
   - { key: J, mods: Control|Shift, action: ScrollLineDown }
   - { key: T, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Space, mods: Control|Shift, action: ToggleViMode }
+  - { key: 58, action: ToggleViMode, mode: Vi }
