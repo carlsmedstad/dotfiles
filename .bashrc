@@ -18,7 +18,7 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-if [[ -f $HOME/work/.bashrc ]]; then
+if [[ -f $HOME/workspace/jepp-gitlab/dotfiles/bashrc ]]; then
   # shellcheck source=/dev/null
-  . "$HOME/work/.bashrc"
+  . "$HOME/workspace/jepp-gitlab/dotfiles/bashrc"
 fi

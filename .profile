@@ -8,7 +8,7 @@ export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
-PATH=$HOME/personal/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+PATH=$HOME/workspace/github/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -24,7 +24,7 @@ fi
 export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
 export HISTFILE=$XDG_CACHE_HOME/histfile
 
-export I3BLOCKS_CONTRIB_REPO=$HOME/personal/repos/i3blocks-contrib
+export I3BLOCKS_CONTRIB_REPO=$HOME/workspace/github/i3blocks-contrib
 
 if command -v luarocks >> /dev/null; then
   LUA_PATH=$(luarocks path --lr-path)";;"
