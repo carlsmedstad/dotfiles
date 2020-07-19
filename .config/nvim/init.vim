@@ -135,6 +135,9 @@ augroup fileExtensions
   autocmd BufNewFile,BufRead *.tpl set filetype=mustache
 augroup END
 
+" toggle spell checking
+nnoremap <silent> <F11> :set spell!<cr>
+
 " bufswitch remaps for consistency with vimium
 nnoremap <C-j> <S-j>
 nnoremap <C-k> <S-k>
