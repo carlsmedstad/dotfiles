@@ -1,2 +1,4 @@
-border-size=8
+border-size=0
+margin=8
+font=sans-serif 10
 default-timeout=5000

@@ -26,8 +26,8 @@ bindsym $mod+v split toggle
 
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+s layout toggle stacking split
+bindsym $mod+w layout toggle tabbed split
 bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
@@ -98,10 +98,11 @@ bindsym $mod+Shift+y output eDP-1 disable
 bindsym $mod+p exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl hibernate
 
-default_border pixel 4
+default_border pixel 2
+titlebar_border_thickness 0
 smart_borders on
 smart_gaps on
-gaps inner 10
+gaps inner 8
 
 font pango:sans-serif 11
 
