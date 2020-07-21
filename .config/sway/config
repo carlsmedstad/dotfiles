@@ -6,8 +6,10 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+g exec swaylock -c 002b36
 
-bindsym $mod+d exec j4-dmenu-desktop --dmenu \
-  "bemenu -i -H 25 --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36' --fn 'sans-serif 11'"
+bindsym $mod+d exec j4-dmenu-desktop --term alacritty --dmenu \
+  "bemenu --ignorecase --monitor all --line-height 27 \
+  --fn 'sans-serif 11' --prompt Launch \
+  --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36'"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
