@@ -68,7 +68,7 @@ if index(keys(g:plugs), 'ale') >= 0
     \'ansible': ['ansible_lint'],
     \'perl': ['perl', 'perlcritic'],
     \'cmake': ['cmakelint'],
-    \'cpp': ['cppcheck', 'ccls'],
+    \'cpp': ['ccls'],
   \}
   let g:ale_fixers = {
     \'python': ['yapf'],
