@@ -7,7 +7,6 @@
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
     ~/.config/Xresources: .config/Xresources
-    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
     ~/.config/flake8: .config/flake8
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/git/config: .config/git/config
@@ -21,7 +20,6 @@
     ~/.config/sway/config: .config/sway/config
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.ctags: .ctags
-    ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
     ~/.gnupg/sshcontrol: .gnupg/sshcontrol
     ~/.mrconfig: .mrconfig
@@ -30,3 +28,19 @@
     ~/.sqliterc: .sqliterc
     ~/.xinitrc: .xinitrc
     ~/.xserverrc: .xserverrc
+
+- link:
+    ~/.config/alacritty/alacritty.yml:
+      path: .config/alacritty/alacritty.yml.Linux
+      if: '[ "$(uname)" = Linux ]'
+    ~/.gnupg/gpg-agent.conf:
+      path: .gnupg/gpg-agent.conf.Linux
+      if: '[ "$(uname)" = Linux ]'
+
+- link:
+    ~/.gnupg/gpg-agent.conf:
+      path: .gnupg/gpg-agent.conf.Darwin
+      if: '[ "$(uname)" = Darwin ]'
+    ~/.config/alacritty/alacritty.yml:
+      path: .config/alacritty/alacritty.yml.Darwin
+      if: '[ "$(uname)" = Darwin ]'
