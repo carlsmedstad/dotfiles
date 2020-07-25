@@ -80,7 +80,7 @@ if index(keys(g:plugs), 'ale') >= 0
   let g:ale_rust_rls_toolchain = 'stable'
   let g:ale_cpp_cppcheck_options = '--enable=all --project=Debug/compile_commands.json'
   let g:ale_cpp_ccls_init_options = {
-    \'compilationDatabaseDirectory' : 'Debug',
+    \'compilationDatabaseDirectory' : 'build',
     \'cache': {
        \'format': 'binary',
        \'directory': '/tmp/ccls-cache'
