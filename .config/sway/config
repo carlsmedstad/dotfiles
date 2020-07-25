@@ -3,6 +3,7 @@
 set $mod Mod4
 
 bindsym $mod+Return exec alacritty
+
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+g exec swaylock -c 002b36
 
@@ -92,16 +93,16 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec playerctl play-pause
 bindsym $mod+minus exec playerctl next
 
-bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
-
 bindsym $mod+y output eDP-1 enable
 bindsym $mod+Shift+y output eDP-1 disable
+
+bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
 
 bindsym $mod+p exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl hibernate
 
-default_border pixel 2
 titlebar_border_thickness 0
+default_border pixel 2
 smart_borders on
 smart_gaps on
 gaps inner 8
@@ -132,7 +133,7 @@ input type:touchpad {
 }
 
 output * {
-  bg ~/.wallpapers/current.png fill
+    bg ~/.wallpapers/current.png fill
 }
 
 for_window [class=".*"] inhibit_idle fullscreen

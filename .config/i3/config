@@ -7,8 +7,10 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+g exec i3lock -c 002b36
 
-bindsym $mod+d exec j4-dmenu-desktop --dmenu \
-  "bemenu -i -H 25 --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36' --fn 'sans-serif 11'"
+bindsym $mod+d exec j4-dmenu-desktop --term alacritty --dmenu \
+  "bemenu --ignorecase --monitor all --line-height 27 \
+  --fn 'sans-serif 11' --prompt Launch \
+  --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36'"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -27,12 +29,11 @@ bindsym $mod+v split toggle
 
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+s layout toggle stacking split
+bindsym $mod+w layout toggle tabbed split
 bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
-
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+q focus parent
@@ -64,12 +65,12 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exit
 
 mode "resize" {
-  bindsym h resize shrink width 10 px or 1 ppt
-  bindsym j resize grow height 10 px or 1 ppt
-  bindsym k resize shrink height 10 px or 1 ppt
-  bindsym l resize grow width 10 px or 1 ppt
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym h resize shrink width 10 px or 1 ppt
+    bindsym j resize grow height 10 px or 1 ppt
+    bindsym k resize shrink height 10 px or 1 ppt
+    bindsym l resize grow width 10 px or 1 ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -92,30 +93,27 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec playerctl play-pause
 bindsym $mod+minus exec playerctl next
 
-# bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
-
 bindsym $mod+y exec xrandr --output eDP-1 --auto && feh --bg-center ~/.wallpapers/current.png
 bindsym $mod+Shift+y exec xrandr --output eDP-1 --off && feh --bg-center ~/.wallpapers/current.png
 
-default_border pixel 4
+default_border pixel 2
 smart_borders on
 smart_gaps on
-gaps inner 10
+gaps inner 8
 
 font pango:sans-serif 11
 
 bar {
-  position top
-  tray_output none
-  colors {
-    background  #002b36
-    statusline  #93a1a1
-    separator   #dc322f
-  }
-  status_command i3blocks
+    position top
+    tray_output none
+    colors {
+        background  #002b36
+        statusline  #93a1a1
+        separator   #dc322f
+    }
+    status_command i3blocks
 }
 
-# mouse_warping none
 
 exec xrdb -load $XDG_CONFIG_HOME/Xresources
 exec_always feh --bg-center ~/.wallpapers/current.png &
