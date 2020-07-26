@@ -7,8 +7,25 @@ export MANPAGER="nvim +Man!"
 
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
 
-PATH=$HOME/workspace/github/scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+export GNUPG=$XDG_DATA_HOME/gnupg
+export HELM_HOME=$XDG_DATA_HOME/helm
+export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
+export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
+export PYENV_ROOT=$XDG_DATA_HOME/pyenv
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+
+export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
+
+export CCACHE_DIR=$XDG_CACHE_HOME/ccache
+export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
+export HISTFILE=$XDG_CACHE_HOME/histfile
+export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
+
+PATH=$HOME/workspace/github/scripts:$HOME/.local/bin:$CARGO_HOME/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
@@ -20,9 +37,6 @@ if [ "$(uname)" = "Darwin" ]; then
 
   export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
-
-export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
-export HISTFILE=$XDG_CACHE_HOME/histfile
 
 export I3BLOCKS_CONTRIB_REPO=$HOME/workspace/github/i3blocks-contrib
 
