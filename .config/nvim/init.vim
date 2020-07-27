@@ -61,7 +61,7 @@ if index(keys(g:plugs), 'ale') >= 0
   let g:ale_linters = {
     \'python': ['pylint', 'flake8', 'mypy'],
     \'lua': ['luac', 'luacheck'],
-    \'rust': ['rls'],
+    \'rust': ['analyzer'],
     \'sh': ['shellcheck'],
     \'json': ['jsonlint'],
     \'gitcommit': ['gitlint'],
@@ -77,7 +77,6 @@ if index(keys(g:plugs), 'ale') >= 0
     \'cpp': ['clang-format'],
     \'swift': ['swiftformat'],
   \}
-  let g:ale_rust_rls_toolchain = 'stable'
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
 endif
