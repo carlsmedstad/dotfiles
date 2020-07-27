@@ -145,6 +145,10 @@ vnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 nmap <silent> <C-m> <Plug>(ale_previous_wrap)
 nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
+" Go to definition
+xnoremap <leader>g :ALEGoToDefinition<CR>
+nnoremap <leader>g :ALEGoToDefinition<CR>
+
 " run linter
 xnoremap <leader>l :ALELint<CR>
 nnoremap <leader>l :ALELint<CR>
