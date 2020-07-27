@@ -68,7 +68,7 @@ if index(keys(g:plugs), 'ale') >= 0
     \'ansible': ['ansible_lint'],
     \'perl': ['perl', 'perlcritic'],
     \'cmake': ['cmakelint'],
-    \'cpp': ['ccls'],
+    \'cpp': ['clangd'],
   \}
   let g:ale_fixers = {
     \'python': ['yapf'],
@@ -78,14 +78,6 @@ if index(keys(g:plugs), 'ale') >= 0
     \'swift': ['swiftformat'],
   \}
   let g:ale_rust_rls_toolchain = 'stable'
-  let g:ale_cpp_cppcheck_options = '--enable=all --project=Debug/compile_commands.json'
-  let g:ale_cpp_ccls_init_options = {
-    \'compilationDatabaseDirectory' : 'build',
-    \'cache': {
-       \'format': 'binary',
-       \'directory': '/tmp/ccls-cache'
-    \}
-  \}
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
 endif
