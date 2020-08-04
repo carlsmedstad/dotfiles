@@ -4,7 +4,6 @@ let g:mapleader=','
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'tpope/vim-sensible'       " barebones init-file
 Plug 'tpope/vim-commentary'     " mappings for commenting code
 Plug 'tpope/vim-surround'       " mappings for paranthesis, brackets etc.
 Plug 'tpope/vim-repeat'         " make . work for plugins
@@ -17,17 +16,13 @@ Plug 'lifepillar/vim-solarized8'        " colorscheme
 Plug 'w0rp/ale'                         " async syntax checker
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 
-Plug 'm-pilia/vim-ccls'
-Plug 'Vimjas/vim-python-pep8-indent'    " PEP8 auto-indentation
 Plug 'tbastos/vim-lua'                  " better lua
 Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 Plug 'rust-lang/rust.vim'
 Plug 'PProvost/vim-ps1'
-Plug 'JulesWang/css.vim'                " css3 syntax
-Plug 'alvan/vim-closetag'               " closing html tags
 Plug 'keith/swift.vim'
-Plug 'tpope/vim-markdown'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'tpope/vim-markdown'               " Syntax highlighting for code blocks
+Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
 
 call plug#end()
 
@@ -125,6 +120,9 @@ augroup END
 augroup fileExtensions
   autocmd BufNewFile,BufRead *.tpl set filetype=mustache
 augroup END
+
+" Remove higlights
+nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 
 " toggle spell checking
 nnoremap <silent> <F11> :set spell!<cr>
