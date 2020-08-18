@@ -96,7 +96,10 @@ bindsym $mod+minus exec playerctl next
 bindsym $mod+y output eDP-1 enable
 bindsym $mod+Shift+y output eDP-1 disable
 
-bindsym $mod+t input 1739:0:Synaptics_TM3276-022 events toggle enabled disabled
+bindsym $mod+t input type:touchpad events toggle enabled disabled
+
+bindsym $mod+b input type:keyboard xkb_variant us
+bindsym $mod+Shift+b input type:keyboard xkb_variant nodeadkeys
 
 bindsym $mod+p exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl hibernate
@@ -124,7 +127,7 @@ input type:keyboard {
     repeat_delay 170
     repeat_rate 50
     xkb_layout se
-    xkb_variant nodeadkeys
+    xkb_variant us
     xkb_options caps:escape
 }
 
