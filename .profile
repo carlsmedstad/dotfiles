@@ -17,6 +17,8 @@ export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
 export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
 export PYENV_ROOT=$XDG_DATA_HOME/pyenv
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+export GOPATH=$XDG_DATA_HOME/go
+export GOBIN=$GOPATH/bin
 
 export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
 
@@ -25,7 +27,8 @@ export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
 export HISTFILE=$XDG_CACHE_HOME/histfile
 export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
 
-PATH=$HOME/workspace/github/scripts:$HOME/.local/bin:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
+PATH=$GOBIN:$HOME/workspace/github/scripts:$HOME/.local/bin:$PATH
+PATH=$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
