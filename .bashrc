@@ -9,6 +9,11 @@ alias xalacritty="env WINIT_UNIX_BACKEND=x11 alacritty"
 
 tabs -4
 
+unset HISTFILESIZE
+export HISTSIZE=10000
+export PROMPT_COMMAND="history -a"
+shopt -s histappend
+
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
