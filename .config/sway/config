@@ -91,6 +91,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec playerctl play-pause
+bindsym $mod+slash exec playerctl next
 bindsym $mod+minus exec playerctl next
 
 bindsym $mod+y output eDP-1 enable
