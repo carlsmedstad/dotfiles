@@ -1,7 +1,7 @@
 acpi
 acpid
 aic94xx-firmware
-alacritty-git
+alacritty
 ansible
 ansible-lint
 asciidoctor
@@ -18,7 +18,7 @@ blender
 bluez
 bluez-utils
 buildah
-ccls
+ccache
 clang
 cmake
 cmake-lint-git
@@ -45,9 +45,9 @@ gettext
 git
 git-lfs
 gitlint
+gnome-keyring
 go
 gocomplete
-google-earth-pro
 grep
 gzip
 helm
@@ -83,7 +83,7 @@ make
 mako
 man-db
 man-pages
-meld
+meson
 minikube
 moreutils
 mupdf
@@ -121,9 +121,11 @@ python-pynvim
 python-pywal
 python-wheel
 qemu
+repo
 ripgrep
 rpm-tools
 rsync
+rust-analyzer
 rustup
 rxvt-unicode
 shellcheck-bin
@@ -134,6 +136,7 @@ sudo
 sway
 swayidle
 swaylock
+swift-bin
 symlinks
 sysstat
 terraform
@@ -151,6 +154,7 @@ vi
 vint
 waybar
 wd719x-firmware
+wev
 wget
 which
 whois
