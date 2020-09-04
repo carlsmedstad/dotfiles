@@ -1,0 +1,49 @@
+[workspace/github/alacritty]
+checkout = git clone 'git@github.com:alacritty/alacritty.git' 'alacritty'
+
+[workspace/github/dotfiles]
+checkout = git clone 'git@github.com:carlsmedstad/dotfiles.git' 'dotfiles'
+
+[workspace/github/i3blocks]
+checkout = git clone 'git@github.com:vivien/i3blocks.git' 'i3blocks'
+
+[workspace/github/i3blocks-contrib]
+checkout = git clone 'git@github.com:carlsmedstad/i3blocks-contrib.git' 'i3blocks-contrib'
+
+[workspace/github/jfrog-cli]
+checkout = git clone 'git@github.com:jfrog/jfrog-cli.git' 'jfrog-cli'
+
+[workspace/github/kubectl]
+checkout = git clone 'git@github.com:kubernetes/kubectl.git' 'kubectl'
+
+[workspace/github/neovim]
+checkout = git clone 'git@github.com:neovim/neovim.git' 'neovim'
+
+[workspace/github/playerctl]
+checkout = git clone 'git@github.com:altdesktop/playerctl.git' 'playerctl'
+
+[workspace/github/scripts]
+checkout = git clone 'git@github.com:carlsmedstad/scripts.git' 'scripts'
+
+[workspace/github/spotifyd]
+checkout = git clone 'git@github.com:Spotifyd/spotifyd.git' 'spotifyd'
+
+[workspace/github/sway]
+checkout = git clone 'git@github.com:swaywm/sway.git' 'sway'
+
+[workspace/github/tiny]
+checkout = git clone 'git@github.com:osa1/tiny.git' 'tiny'
+
+[workspace/github/Waybar]
+checkout = git clone 'git@github.com:Alexays/Waybar.git' 'Waybar'
+
+[workspace/github/wlroots]
+checkout = git clone 'git@github.com:swaywm/wlroots.git' 'wlroots'
+
+[workspace/github/yay]
+checkout = git clone 'git@github.com:Jguer/yay.git' 'yay'
+
+[workspace/freedesktop/pulseaudio]
+checkout = git clone 'https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git' 'pulseaudio'
+
+include = cat ~/workspace/jeppesen-gitlab/dotfiles/mrconfig
