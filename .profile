@@ -39,6 +39,10 @@ if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
 
   export BASH_SILENCE_DEPRECATION_WARNING=1
+
+  if command -v ruby >> /dev/null && command -v gem >> /dev/null; then
+      PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+  fi
 fi
 
 export I3BLOCKS_CONTRIB_REPO=$HOME/workspace/github/i3blocks-contrib
@@ -52,10 +56,6 @@ fi
 
 if command -v pyenv >> /dev/null; then
   eval "$(pyenv init -)"
-fi
-
-if command -v ruby >> /dev/null && command -v gem >> /dev/null; then
-    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 export MINIKUBE_CONTAINER_RUNTIME=crio
