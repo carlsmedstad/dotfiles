@@ -24,6 +24,9 @@ Plug 'keith/swift.vim'
 Plug 'tpope/vim-markdown'               " Syntax highlighting for code blocks
 Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
 
+Plug 'mhinz/vim-signify'              " VCS info
+Plug 'editorconfig/editorconfig-vim'  " Editorconfig support
+
 call plug#end()
 
 if ($COLORTERM ==# 'truecolor')
