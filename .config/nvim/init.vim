@@ -106,8 +106,7 @@ set colorcolumn=+2,+4      " highlighted columns to show too long lines
 
 set list                   " show symbols in listchars instead of some chars
 set showbreak=↪\           " symbol before continuation of wrapped line
-set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨
-set listchars+=tab:→\ ,
+set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨,tab:\ \ ,
 set expandtab tw=79 sw=2 ts=4
 
 set tags=./.tags;/         " look for tags file from pwd to root
@@ -116,7 +115,7 @@ augroup languageSpecific   " set options for different languages
   autocmd!
   autocmd FileType swift set tw=119 sw=4 ts=4
   autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
-  autocmd FileType go set tw=79 sw=4 ts=4 noet listchars+=tab:\ \ ,
+  autocmd FileType go set tw=79 sw=4 ts=4 noet
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
 augroup END
 
