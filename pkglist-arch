@@ -57,6 +57,7 @@ hwinfo
 i3-gaps
 i3blocks
 i3lock
+i3status-rust
 inetutils
 intel-ucode
 ipcalc
@@ -88,6 +89,7 @@ minikube
 moreutils
 mupdf
 mypy
+myrepos
 neofetch
 neovim
 net-tools
@@ -110,6 +112,7 @@ pipewire-pulse
 pkgconf
 playerctl
 podman
+podman-docker
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -121,7 +124,6 @@ python-pynvim
 python-pywal
 python-wheel
 qemu
-repo
 ripgrep
 rpm-tools
 rsync
@@ -131,7 +133,7 @@ rxvt-unicode
 shellcheck-bin
 slack-desktop
 soulseekqt
-spotify
+spotify-dev
 sudo
 sway
 swayidle
@@ -139,6 +141,7 @@ swaylock
 swift-bin
 symlinks
 sysstat
+systemd-boot-pacman-hook
 terraform
 tidy
 tiny-irc-client
@@ -147,6 +150,8 @@ tlp
 traceroute
 tree
 twine
+udisks2
+upd72020x-fw
 urxvt-perls
 urxvt-resize-font-git
 usbutils
