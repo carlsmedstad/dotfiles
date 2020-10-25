@@ -69,6 +69,7 @@ if index(keys(g:plugs), 'ale') >= 0
     \'cpp': ['clangd'],
   \}
   let g:ale_fixers = {
+    \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'python': ['yapf'],
     \'rust': ['rustfmt'],
     \'go': ['gofmt'],
