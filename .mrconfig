@@ -20,7 +20,7 @@ checkout = git clone 'git@github.com:carlsmedstad/i3blocks-contrib.git' 'i3block
 checkout = git clone 'git@github.com:greshake/i3status-rust.git' 'i3status-rust'
 
 [workspace/github/jfrog-cli]
-checkout = git clone 'git@github.com:jfrog/jfrog-cli.git' 'jfrog-cli'
+checkout = git clone carlsmedstad/'git@github.com:jfrog/jfrog-cli.git' 'jfrog-cli'
 
 [workspace/github/kubectl]
 checkout = git clone 'git@github.com:kubernetes/kubectl.git' 'kubectl'
@@ -61,4 +61,4 @@ checkout = git clone 'git@github.com:Jguer/yay.git' 'yay'
 [workspace/freedesktop/pulseaudio]
 checkout = git clone 'https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git' 'pulseaudio'
 
-include = cat ~/workspace/jeppesen-gitlab/dotfiles/mrconfig
+include = cat ~/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/mrconfig
