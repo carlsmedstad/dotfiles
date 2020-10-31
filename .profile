@@ -27,8 +27,10 @@ export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
 export HISTFILE=$XDG_CACHE_HOME/histfile
 export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
 
+export HOME_WORK=$HOME/workspace/jeppesen-gitlab/carlsmedstad
+
 PATH=$GOBIN:$HOME/workspace/github/bin:$HOME/.local/bin:$PATH
-PATH=$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
+PATH=$CARGO_HOME/bin:/usr/lib/ccache/bin:$HOME_WORK/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
