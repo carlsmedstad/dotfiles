@@ -1,7 +1,8 @@
 #!/bin/bash
 
-alias mv="mv -i"
-alias cp="cp -i"
+alias mv="mv -iv"
+alias cp="cp -riv"
+alias mkdir="mkdir -pv"
 alias ls="ls --color=auto --group-directories-first"
 alias ssh="TERM=rxvt-256color ssh"
 alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
