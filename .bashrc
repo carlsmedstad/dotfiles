@@ -16,6 +16,9 @@ export HISTSIZE=10000
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
 
+GPG_TTY=$(tty)
+export GPG_TTY
+
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"

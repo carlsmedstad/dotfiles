@@ -11,7 +11,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 
 export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure
 export CARGO_HOME=$XDG_DATA_HOME/cargo
-export GNUPG=$XDG_DATA_HOME/gnupg
 export HELM_HOME=$XDG_DATA_HOME/helm
 export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
 export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
