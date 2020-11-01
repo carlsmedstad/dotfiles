@@ -56,18 +56,6 @@ if index(keys(g:plugs), 'vim-airline') >= 0
 endif
 
 if index(keys(g:plugs), 'ale') >= 0
-  let g:ale_linters = {
-    \'python': ['pylint', 'flake8', 'mypy'],
-    \'lua': ['luac', 'luacheck'],
-    \'rust': ['analyzer'],
-    \'sh': ['shellcheck'],
-    \'json': ['jsonlint'],
-    \'gitcommit': ['gitlint'],
-    \'ansible': ['ansible_lint'],
-    \'perl': ['perl', 'perlcritic'],
-    \'cmake': ['cmakelint'],
-    \'cpp': ['clangd'],
-  \}
   let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'python': ['yapf'],
