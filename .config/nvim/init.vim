@@ -12,7 +12,7 @@ Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
 
 Plug 'vim-airline/vim-airline'          " fancier statusline
 Plug 'vim-airline/vim-airline-themes'   " themes for the above
-Plug 'lifepillar/vim-solarized8'        " colorscheme
+Plug 'altercation/vim-colors-solarized' " colorscheme
 
 Plug 'w0rp/ale'                         " async syntax checker
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
@@ -40,10 +40,12 @@ if index(keys(g:plugs), 'vim-markdown') >= 0
   let g:markdown_fenced_languages = ['json', 'yaml', 'sh', 'bash=sh', 'python']
 endif
 
-if (index(keys(g:plugs), 'vim-solarized8') >= 0
-    \ && (&t_Co > 2 || has('gui_running')))
+if (index(keys(g:plugs), 'vim-colors-solarized') >= 0)
+    \ && (&t_Co > 2 || has('gui_running'))
   set background=dark
-  colorscheme solarized8
+  colorscheme solarized
+  hi SignColumn ctermbg=none
+  hi Normal ctermbg=none
 endif
 
 if index(keys(g:plugs), 'vim-airline') >= 0
