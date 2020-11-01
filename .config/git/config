@@ -3,8 +3,11 @@
 [user]
   email = carl.smedstad@gmail.com
   name = Carl Smedstad
+  signingkey = BDBF3C2ABA76D09672540F7BE59E3D154B466E4A
 [credential]
   helper = cache
+[commit]
+  gpgsign = true
 [pull]
   ff = only
 [submodule]
