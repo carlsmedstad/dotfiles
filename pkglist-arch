@@ -20,6 +20,7 @@ bluez-utils
 buildah
 ccache
 clang
+cloc
 cmake
 cmake-lint-git
 cmatrix
@@ -45,9 +46,10 @@ gettext
 git
 git-lfs
 gitlint
-gnome-keyring
 go
 gocomplete
+google-chrome
+google-earth-pro
 grep
 gzip
 helm
@@ -73,6 +75,7 @@ ldoc
 less
 libtool
 libvirt
+libxslt
 light
 linux
 lua-busted
@@ -84,6 +87,7 @@ make
 mako
 man-db
 man-pages
+maven
 meson
 minikube
 moreutils
@@ -133,7 +137,7 @@ rxvt-unicode
 shellcheck-bin
 slack-desktop
 soulseekqt
-spotify-dev
+spotify
 sudo
 sway
 swayidle
@@ -175,7 +179,6 @@ xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-fonts-encodings
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server
 xorg-server-common
