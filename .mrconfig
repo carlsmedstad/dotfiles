@@ -4,6 +4,9 @@ checkout = git clone 'git@github.com:alacritty/alacritty.git' 'alacritty'
 [workspace/github/bin]
 checkout = git clone 'git@github.com:carlsmedstad/bin.git' 'bin'
 
+[workspace/github/coveragepy]
+checkout = git clone 'git@github.com:nedbat/coveragepy.git' 'coveragepy'
+
 [workspace/github/dotfiles]
 checkout = git clone 'git@github.com:carlsmedstad/dotfiles.git' 'dotfiles'
 
@@ -39,6 +42,9 @@ checkout = git clone 'git@github.com:hgrecco/pint-pandas.git' 'pint-pandas'
 
 [workspace/github/playerctl]
 checkout = git clone 'git@github.com:altdesktop/playerctl.git' 'playerctl'
+
+[workspace/github/pytest-cov]
+checkout = git clone 'git@github.com:pytest-dev/pytest-cov.git' 'pytest-cov'
 
 [workspace/github/spotifyd]
 checkout = git clone 'git@github.com:Spotifyd/spotifyd.git' 'spotifyd'
