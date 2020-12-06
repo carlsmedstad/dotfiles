@@ -31,6 +31,7 @@ discord
 dmidecode
 dnsmasq
 dos2unix
+drawio-desktop-bin
 ebtables
 entr
 etckeeper
@@ -48,10 +49,11 @@ git-lfs
 gitlint
 go
 gocomplete
-google-chrome
 google-earth-pro
 grep
+gron-bin
 gzip
+handlr-bin
 helm
 helm2-bin
 htop
@@ -60,6 +62,7 @@ i3-gaps
 i3blocks
 i3lock
 i3status-rust
+imv
 inetutils
 intel-ucode
 ipcalc
@@ -91,7 +94,6 @@ maven
 meson
 minikube
 moreutils
-mupdf
 mypy
 myrepos
 neofetch
@@ -99,6 +101,7 @@ neovim
 net-tools
 ninja
 nmap
+nnn
 noto-fonts
 noto-fonts-emoji
 openapi-generator
@@ -112,7 +115,6 @@ perl
 perl-perl-critic
 pigz
 pipes.sh
-pipewire-pulse
 pkgconf
 playerctl
 podman
@@ -142,10 +144,10 @@ sudo
 sway
 swayidle
 swaylock
-swift-bin
 symlinks
 sysstat
 systemd-boot-pacman-hook
+teams
 terraform
 tidy
 tiny-irc-client
@@ -170,7 +172,7 @@ whois
 wl-clipboard
 xdg-desktop-portal-wlr-git
 xdg-user-dirs
-xdg-utils
+xdg-utils-handlr
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs
@@ -223,3 +225,4 @@ yapf
 yay-bin
 yq
 ytop-bin
+zathura-pdf-mupdf
