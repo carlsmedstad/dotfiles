@@ -19,6 +19,7 @@ export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 export GOPATH=$XDG_DATA_HOME/go
 export GOBIN=$GOPATH/bin
 
+export LUAROCKS_CONFIG=$XDG_CONFIG_HOME/luarocks/config.lua
 export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
 
 export CCACHE_DIR=$XDG_CACHE_HOME/ccache
