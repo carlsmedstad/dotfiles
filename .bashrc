@@ -4,9 +4,15 @@ alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -pv"
 alias ls="ls --color=auto --group-directories-first"
+
+alias open="xdg-open"
+alias nnn="nnn -e"
+
 alias ssh="TERM=rxvt-256color ssh"
+
 alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
+
 alias xalacritty="env WINIT_UNIX_BACKEND=x11 alacritty"
 
 tabs -4
