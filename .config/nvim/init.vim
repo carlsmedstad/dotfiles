@@ -17,7 +17,7 @@ Plug 'w0rp/ale'                         " async syntax checker
 Plug 'craigemery/vim-autotag'           " ctags auto-generation
 
 Plug 'tbastos/vim-lua'                  " better lua
-Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
+Plug 'Vimjas/vim-python-pep8-indent'    " better python indentation
 Plug 'rust-lang/rust.vim'
 Plug 'PProvost/vim-ps1'
 Plug 'keith/swift.vim'
