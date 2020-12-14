@@ -36,5 +36,5 @@ fi
 
 if [[ -f $HOME/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/bashrc ]]; then
   # shellcheck source=/dev/null
-  . "$HOME_WORK/dotfiles/bashrc"
+  . "$HOME/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/bashrc"
 fi
