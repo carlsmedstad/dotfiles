@@ -1,5 +1,4 @@
 acpi
-acpid
 aic94xx-firmware
 alacritty
 ansible
@@ -12,6 +11,7 @@ base
 bash-completion
 bemenu
 bemenu-x11
+bfg
 bind
 bison
 blender
@@ -115,13 +115,12 @@ perl
 perl-perl-critic
 pigz
 pipes.sh
+pipewire-alsa
+pipewire-pulse
 pkgconf
 playerctl
 podman
 podman-docker
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
 pyenv
 python-black
 python-openapi-spec-validator
@@ -170,7 +169,7 @@ wget
 which
 whois
 wl-clipboard
-xdg-desktop-portal-wlr-git
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils-handlr
 xf86-video-vesa
@@ -188,7 +187,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -218,6 +216,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
