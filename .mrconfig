@@ -6,6 +6,9 @@ checkout = git clone 'https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git' 
 [workspace/github/alacritty]
 checkout = git clone 'git@github.com:alacritty/alacritty.git' 'alacritty'
 
+[workspace/github/archive]
+checkout = git clone 'git@github.com:carlsmedstad/archive.git' 'archive'
+
 [workspace/github/bin]
 checkout = git clone 'git@github.com:carlsmedstad/bin.git' 'bin'
 
@@ -14,18 +17,6 @@ checkout = git clone 'git@github.com:nedbat/coveragepy.git' 'coveragepy'
 
 [workspace/github/dotfiles]
 checkout = git clone 'git@github.com:carlsmedstad/dotfiles.git' 'dotfiles'
-
-[workspace/github/glab]
-checkout = git clone 'git@github.com:profclems/glab.git' 'glab'
-
-[workspace/github/go-gitlab]
-checkout = git clone 'git@github.com:xanzy/go-gitlab.git' 'go-gitlab'
-
-[workspace/github/i3blocks]
-checkout = git clone 'git@github.com:vivien/i3blocks.git' 'i3blocks'
-
-[workspace/github/i3blocks-contrib]
-checkout = git clone 'git@github.com:carlsmedstad/i3blocks-contrib.git' 'i3blocks-contrib'
 
 [workspace/github/i3status-rust]
 checkout = git clone 'git@github.com:greshake/i3status-rust.git' 'i3status-rust'
@@ -60,9 +51,6 @@ checkout = git clone 'git@github.com:swaywm/sway.git' 'sway'
 [workspace/github/tiny]
 checkout = git clone 'git@github.com:osa1/tiny.git' 'tiny'
 
-[workspace/github/Waybar]
-checkout = git clone 'git@github.com:Alexays/Waybar.git' 'Waybar'
-
 [workspace/github/wlroots]
 checkout = git clone 'git@github.com:swaywm/wlroots.git' 'wlroots'
 
@@ -71,9 +59,3 @@ checkout = git clone 'git@github.com:Jguer/yay.git' 'yay'
 
 [workspace/kernel/bluez]
 checkout = git clone 'https://git.kernel.org/pub/scm/bluetooth/bluez.git' 'bluez'
-
-[workspace/github/python-pulse-control]
-checkout = git clone 'git@github.com:mk-fg/python-pulse-control.git' 'python-pulse-control'
-
-[workspace/github/py3status]
-checkout = git clone 'git@github.com:ultrabug/py3status.git' 'py3status'
