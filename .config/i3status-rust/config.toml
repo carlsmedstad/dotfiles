@@ -1,0 +1,37 @@
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+separator = ""
+
+[icons]
+name = "awesome5"
+
+[[block]]
+block = "sound"
+show_volume_when_muted = true
+max_vol = 100
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage}%"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %F %R"
