@@ -23,6 +23,7 @@ Plug 'PProvost/vim-ps1'
 Plug 'keith/swift.vim'
 Plug 'tpope/vim-markdown'               " Syntax highlighting for code blocks
 Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
+Plug 'cespare/vim-toml'
 
 Plug 'mhinz/vim-signify'              " VCS info
 Plug 'editorconfig/editorconfig-vim'  " Editorconfig support
