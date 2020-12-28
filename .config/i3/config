@@ -104,14 +104,14 @@ gaps inner 8
 font pango:sans-serif 11
 
 bar {
+    font pango:monospace 11, Font Awesome 5 Free
     position top
-    tray_output none
     colors {
         background  #002b36
         statusline  #93a1a1
         separator   #dc322f
     }
-    status_command i3blocks
+    status_command i3status-rs
 }
 
 exec xrdb -load $XDG_CONFIG_HOME/Xresources
