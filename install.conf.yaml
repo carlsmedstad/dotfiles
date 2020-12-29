@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      create: true
+
+- link:
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.config/Xresources: .config/Xresources
+    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
+    ~/.config/flake8: .config/flake8
+    ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
+    ~/.config/git/config: .config/git/config
+    ~/.config/git/ignore: .config/git/ignore
+    ~/.config/i3/config: .config/i3/config
+    ~/.config/i3blocks/config: .config/i3blocks/config
+    ~/.config/luarocks/config.lua: .config/luarocks/config.lua
+    ~/.config/mako/config: .config/mako/config
+    ~/.config/mypy/config: .config/mypy/config
+    ~/.config/nvim/init.vim: .config/nvim/init.vim
+    ~/.config/sway/config: .config/sway/config
+    ~/.config/user-dirs.dirs: .config/user-dirs.dirs
+    ~/.ctags: .ctags
+    ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf
+    ~/.gnupg/gpg.conf: .gnupg/gpg.conf
+    ~/.gnupg/sshcontrol: .gnupg/sshcontrol
+    ~/.mrconfig: .mrconfig
+    ~/.pam_environment: .pam_environment
+    ~/.profile: .profile
+    ~/.sqliterc: .sqliterc
+    ~/.xinitrc: .xinitrc
+    ~/.xserverrc: .xserverrc
