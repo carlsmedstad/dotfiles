@@ -147,22 +147,5 @@ nnoremap <leader>l :ALELint<CR>
 xnoremap <leader>f :ALEFix<CR>
 nnoremap <leader>f :ALEFix<CR>
 
-" delete trailing whitespaces
-nnoremap <leader>t :%s/\s\+$//e<CR>:echo 'Deleted trailing whitespaces'<CR>
-
-" moving through windows
+" exit insert mode in terminal with Esc
 tnoremap <Esc> <C-\><C-n>
-tnoremap <A-w> <C-\><C-n><C-w>w
-tnoremap <A-q> <C-\><C-n><C-w>q
-tnoremap <A-o> <C-\><C-n><C-w>o
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-w> <C-w>w
-nnoremap <A-q> <C-w>q
-nnoremap <A-o> <C-w>o
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
