@@ -99,6 +99,7 @@ myrepos
 neofetch
 neovim
 net-tools
+nicotine+
 ninja
 nmap
 nnn
@@ -134,10 +135,8 @@ rpm-tools
 rsync
 rust-analyzer
 rustup
-rxvt-unicode
 shellcheck-bin
 slack-desktop
-soulseekqt
 spotify
 sudo
 sway
@@ -157,8 +156,6 @@ tree
 twine
 udisks2
 upd72020x-fw
-urxvt-perls
-urxvt-resize-font-git
 usbutils
 vi
 vint
