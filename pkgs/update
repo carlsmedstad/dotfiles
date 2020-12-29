@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -eu
+
+yay -Qqen > pkgs/arch.official.txt
+yay -Qqem > pkgs/arch.aur.txt
