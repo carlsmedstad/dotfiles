@@ -1,4 +1,0 @@
-#!/bin/bash
-
-yay -Qqe > pkglist-arch
-echo Arch package list copied
