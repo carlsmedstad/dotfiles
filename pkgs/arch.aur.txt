@@ -6,6 +6,7 @@ drawio-desktop-bin
 gitlint
 gocomplete
 google-earth-pro
+greetd
 gron-bin
 handlr-bin
 helm2-bin

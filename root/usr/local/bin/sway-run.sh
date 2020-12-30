@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Session
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=sway
+export XDG_CURRENT_DESKTOP=sway
+
+. /usr/local/lib/wayland-enablement.sh
+
+systemd-cat --identifier=sway sway "$@"
