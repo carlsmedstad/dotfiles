@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+
+- link:
+    /etc/greetd/config.toml: etc/greetd/config.toml
+    /usr/local/bin/sway-run.sh: usr/local/bin/sway-run.sh
+    /usr/local/lib/wayland-enablement.sh: usr/local/lib/wayland-enablement.sh

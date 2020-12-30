@@ -20,11 +20,3 @@ if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
   export SSH_AUTH_SOCK
   gpgconf --launch gpg-agent
 fi
-
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  export XDG_CURRENT_DESKTOP=sway
-  [ ! -d "$XDG_CACHE_HOME/sway" ] && mkdir "$XDG_CACHE_HOME/sway"
-  exec sway -V >> "$XDG_CACHE_HOME/sway/sway-$(date +'%F-%H-%M-%S').log" 2>&1
-
-  # exec startx
-fi
