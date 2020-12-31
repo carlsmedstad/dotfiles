@@ -2,5 +2,9 @@
 
 set -eu
 
-yay -Qqen > pkgs/arch.official.txt
-yay -Qqem > pkgs/arch.aur.txt
+if [ -f /etc/arch-release ]; then
+  pacman -Qqen > pkgs/arch.official.txt
+  pacman -Qqem > pkgs/arch.aur.txt
+elif [ "$(uname)" = Darwin ]; then
+  brew bundle dump --force --file pkgs/Brewfile
+fi
