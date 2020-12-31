@@ -18,6 +18,7 @@ lua-busted
 luacheck
 myrepos
 pipes.sh
+poweralertd
 shellcheck-bin
 slack-desktop
 spotify
