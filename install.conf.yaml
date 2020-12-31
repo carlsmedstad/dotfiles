@@ -1,6 +1,7 @@
 - defaults:
     link:
       create: true
+      relink: true
 
 - link:
     ~/.bash_profile: .bash_profile
@@ -12,7 +13,7 @@
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
     ~/.config/i3/config: .config/i3/config
-    ~/.config/i3blocks/config: .config/i3blocks/config
+    ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
     ~/.config/luarocks/config.lua: .config/luarocks/config.lua
     ~/.config/mako/config: .config/mako/config
     ~/.config/mypy/config: .config/mypy/config
