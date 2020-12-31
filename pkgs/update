@@ -3,8 +3,8 @@
 set -eu
 
 if [ -f /etc/arch-release ]; then
-  pacman -Qqen > pkgs/arch.official.txt
-  pacman -Qqem > pkgs/arch.aur.txt
+  pacman -Qqen | sort > pkgs/arch.official.txt
+  pacman -Qqem | sort > pkgs/arch.aur.txt
 elif [ "$(uname)" = Darwin ]; then
   brew bundle dump --force --file pkgs/Brewfile
 fi
