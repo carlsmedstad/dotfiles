@@ -29,6 +29,7 @@ tiny-irc-client
 upd72020x-fw
 wd719x-firmware
 wev
+wlsunset
 xdg-utils-handlr
 yay-bin
 ytop-bin

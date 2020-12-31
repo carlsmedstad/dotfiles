@@ -146,6 +146,7 @@ seat * hide_cursor 5000
 mouse_warping none
 
 exec xrdb -load $XDG_CONFIG_HOME/Xresources
+exec wlsunset -l 57.7 -L 11.9
 exec mako
 exec swayidle -w \
   timeout 300 'swaymsg "output * dpms off"' \
