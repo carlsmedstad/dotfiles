@@ -34,7 +34,7 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-if [[ -f $HOME/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/bashrc ]]; then
+if [[ -f $HOME/.bashrc_extra ]]; then
   # shellcheck source=/dev/null
-  . "$HOME/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/bashrc"
+  . "$HOME/.bashrc_extra"
 fi

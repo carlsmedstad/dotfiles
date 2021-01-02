@@ -45,8 +45,6 @@ if [ "$(uname)" = "Darwin" ]; then
   fi
 fi
 
-export I3BLOCKS_CONTRIB_REPO=$HOME/workspace/github/i3blocks-contrib
-
 if command -v luarocks >> /dev/null; then
   LUA_PATH=$(luarocks path --lr-path)";;"
   LUA_CPATH=$(luarocks path --lr-cpath)";;"

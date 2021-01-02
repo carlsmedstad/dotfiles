@@ -29,4 +29,4 @@
   process = git-lfs filter-process
   required = true
 [include]
-  path = ~/workspace/jeppesen-gitlab/carlsmedstad/dotfiles/gitconfig
+  path = ~/.config/git/config_extra
