@@ -1,6 +1,7 @@
 - defaults:
     link:
       create: true
+      relink: true
 
 - link:
     /etc/greetd/config.toml: etc/greetd/config.toml
