@@ -13,8 +13,6 @@ alias ssh="TERM=rxvt-256color ssh"
 alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
 
-alias xalacritty="env WINIT_UNIX_BACKEND=x11 alacritty"
-
 tabs -4
 
 unset HISTFILESIZE
