@@ -107,6 +107,7 @@ augroup languageSpecific   " set options for different languages
   autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4
   autocmd FileType go set tw=79 sw=4 ts=4 noet
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
+  autocmd FileType asciidoc setlocal commentstring=//\ %s
 augroup END
 
 augroup fileExtensions
