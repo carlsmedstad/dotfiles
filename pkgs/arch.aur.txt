@@ -1,4 +1,5 @@
 aic94xx-firmware
+asciidoctor-pdf
 azure-cli
 bfg
 cmake-lint-git
@@ -8,8 +9,10 @@ gocomplete
 google-earth-pro
 greetd
 gron-bin
+hadolint-bin
 handlr-bin
 helm2-bin
+heroku-cli-bin
 j4-dmenu-desktop
 jfrog-cli-go
 kubectl-bin

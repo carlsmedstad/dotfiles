@@ -25,6 +25,7 @@ ctags
 discord
 dmidecode
 dnsmasq
+docker-compose
 dos2unix
 ebtables
 entr
@@ -54,6 +55,7 @@ jfsutils
 jq
 ldoc
 less
+libreoffice-fresh
 libtool
 libvirt
 libxslt
@@ -95,15 +97,16 @@ pipewire-pulse
 pkgconf
 playerctl
 podman
-podman-docker
 pyenv
 python-black
 python-openapi-spec-validator
 python-pipenv
+python-poetry
 python-pynvim
 python-pywal
 python-wheel
 qemu
+realtime-privileges
 ripgrep
 rpm-tools
 rsync
