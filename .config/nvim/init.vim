@@ -24,6 +24,7 @@ Plug 'keith/swift.vim'
 Plug 'tpope/vim-markdown'               " Syntax highlighting for code blocks
 Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
 Plug 'cespare/vim-toml'
+Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'mhinz/vim-signify'              " VCS info
 Plug 'editorconfig/editorconfig-vim'  " Editorconfig support
@@ -108,6 +109,7 @@ augroup languageSpecific   " set options for different languages
   autocmd FileType go set tw=79 sw=4 ts=4 noet
   autocmd FileType c,cc,h set et tw=79 sw=2 ts=2
   autocmd FileType asciidoc setlocal commentstring=//\ %s
+  autocmd FileType html set tw=120
 augroup END
 
 augroup fileExtensions
