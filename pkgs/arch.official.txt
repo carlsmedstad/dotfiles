@@ -121,6 +121,7 @@ terraform
 tidy
 tlp
 traceroute
+transmission-gtk
 tree
 ttf-font-awesome
 twine

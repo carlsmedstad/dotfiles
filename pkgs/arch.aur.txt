@@ -19,6 +19,7 @@ kubectl-bin
 kubetail
 lua-busted
 luacheck
+mullvad-vpn-bin
 myrepos
 pipes.sh
 poweralertd
