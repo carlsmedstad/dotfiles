@@ -12,3 +12,4 @@ rocks_trees = {
 }
 home_tree = home.."/.local"
 homeconfdir = home.."/.config/luarocks"
+lua_version = "5.3"
