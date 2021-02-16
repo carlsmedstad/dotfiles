@@ -19,10 +19,12 @@
 [color]
   ui = always
 [alias]
-  st = status --short --branch
+  br = branch
+  ci = commit
   co = checkout
   glog = log --graph --oneline --decorate
   pushf = push --force-with-lease
+  st = status --short --branch
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
