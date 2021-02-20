@@ -10,7 +10,6 @@ bemenu
 bemenu-x11
 bind
 bison
-blender
 bluez
 bluez-utils
 buildah
@@ -40,8 +39,11 @@ freerdp
 gcc
 gdb
 git
+git-filter-repo
+gitlab-runner
 git-lfs
 go
+grim
 helm
 htop
 hwinfo
@@ -53,7 +55,6 @@ ipcalc
 iwd
 jfsutils
 jq
-ldoc
 less
 libreoffice-fresh
 libtool
@@ -82,6 +83,7 @@ nmap
 nnn
 noto-fonts
 noto-fonts-emoji
+ntfs-3g
 openapi-generator
 openconnect
 openssh
