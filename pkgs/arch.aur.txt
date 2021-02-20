@@ -2,7 +2,7 @@ aic94xx-firmware
 asciidoctor-pdf
 azure-cli
 bfg
-cmake-lint-git
+cmake-lint
 drawio-desktop-bin
 gitlint
 gocomplete
@@ -17,12 +17,11 @@ j4-dmenu-desktop
 jfrog-cli-go
 kubectl-bin
 kubetail
-lua-busted
-luacheck
 mullvad-vpn-bin
 myrepos
 pipes.sh
 poweralertd
+rpmlint
 shellcheck-bin
 slack-desktop
 spotify
