@@ -5,6 +5,7 @@ let g:mapleader=','
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-commentary'     " mappings for commenting code
+Plug 'tpope/vim-fugitive'       " git plugin
 Plug 'tpope/vim-surround'       " mappings for paranthesis, brackets etc.
 Plug 'tpope/vim-repeat'         " make . work for plugins
 Plug 'farmergreg/vim-lastplace' " save cursor pos between sessions
