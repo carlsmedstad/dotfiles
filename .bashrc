@@ -3,6 +3,9 @@
 [ "$TERM" = alacritty ] && ! infocmp alacritty &> /dev/null \
   && export TERM="xterm-256color"
 
+# Return here for non-interactive shells
+test ! -t 0 && return
+
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -pv"
