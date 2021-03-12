@@ -1,5 +1,8 @@
 #!/bin/bash
 
+[ "$TERM" = alacritty ] && ! infocmp alacritty &> /dev/null \
+  && export TERM="xterm-256color"
+
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -pv"
@@ -7,8 +10,6 @@ alias ls="ls --color=auto --group-directories-first"
 
 alias open="xdg-open"
 alias nnn="nnn -e"
-
-alias ssh="TERM=rxvt-256color ssh"
 
 alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
@@ -34,7 +35,7 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-if [[ -f $HOME/.bashrc_extra ]]; then
+if [ -f "$HOME/.bashrc_extra" ]; then
   # shellcheck source=/dev/null
   . "$HOME/.bashrc_extra"
 fi
