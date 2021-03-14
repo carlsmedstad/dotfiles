@@ -38,7 +38,5 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-if [ -f "$HOME/.bashrc_extra" ]; then
-  # shellcheck source=/dev/null
-  . "$HOME/.bashrc_extra"
-fi
+# shellcheck source=/dev/null
+[ -f "$HOME/.bashrc_extra" ] && . "$HOME/.bashrc_extra"

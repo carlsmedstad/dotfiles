@@ -40,9 +40,8 @@ if [ "$(uname)" = "Darwin" ]; then
 
   export BASH_SILENCE_DEPRECATION_WARNING=1
 
-  if command -v ruby >> /dev/null && command -v gem >> /dev/null; then
-      PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-  fi
+  command -v ruby >> /dev/null && command -v gem >> /dev/null \
+    && PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 if command -v luarocks >> /dev/null; then
@@ -52,9 +51,7 @@ if command -v luarocks >> /dev/null; then
   export LUA_CPATH
 fi
 
-if command -v pyenv >> /dev/null; then
-  eval "$(pyenv init -)"
-fi
+command -v pyenv >> /dev/null && eval "$(pyenv init -)"
 
 export MINIKUBE_CONTAINER_RUNTIME=crio
 export MINIKUBE_DRIVER=kvm2
