@@ -19,6 +19,8 @@ alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
 
 alias rga="rg --glob='*' --glob='!.git'"
 
+alias podrun='podman run --rm --interactive --tty --volume "$(pwd)":/pwd --workdir /pwd'
+
 tabs -4
 
 unset HISTFILESIZE
