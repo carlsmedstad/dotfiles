@@ -18,6 +18,7 @@
     ~/.config/nvim/init.vim: .config/nvim/init.vim
     ~/.config/sway/config: .config/sway/config
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
+    ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.ctags: .ctags
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
