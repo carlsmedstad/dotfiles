@@ -27,6 +27,7 @@
     ~/.pam_environment: .pam_environment
     ~/.profile: .profile
     ~/.sqliterc: .sqliterc
+    ~/.ssh/config: .ssh/config
 
 - link:
     ~/.config/alacritty/alacritty.yml:
