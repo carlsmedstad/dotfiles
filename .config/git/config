@@ -1,5 +1,6 @@
 [core]
   eol = lf
+  pager = less -x1,3
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
