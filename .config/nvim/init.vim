@@ -60,6 +60,9 @@ endif
 
 if index(keys(g:plugs), 'ale') >= 0
   let g:ale_rust_rls_executable = 'rust-analyzer'
+  let g:ale_linters = {
+    \'cpp': ['cc', 'clangd'],
+  \}
   let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'python': ['yapf'],
@@ -136,9 +139,12 @@ nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 vnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 vnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
+nmap <leader>j <plug>(signify-next-hunk)
+nmap <leader>k <plug>(signify-prev-hunk)
+
 " walk through errors
-nmap <silent> <C-m> <Plug>(ale_previous_wrap)
-nmap <silent> <C-n> <Plug>(ale_next_wrap)
+nmap <C-m> <Plug>(ale_previous_wrap)
+nmap <C-n> <Plug>(ale_next_wrap)
 
 " Go to definition
 xnoremap <leader>g :ALEGoToDefinition<CR>
