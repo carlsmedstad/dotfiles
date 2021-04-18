@@ -16,6 +16,7 @@
     ~/.config/mako/config: .config/mako/config
     ~/.config/mypy/config: .config/mypy/config
     ~/.config/nvim/init.vim: .config/nvim/init.vim
+    ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
     ~/.config/sway/config: .config/sway/config
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/yamllint/config: .config/yamllint/config
