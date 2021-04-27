@@ -1,0 +1,8 @@
+#!/bin/sh -eu
+
+CONTAINER_ENGINE=podman
+
+$CONTAINER_ENGINE ps --all --quiet \
+  | xargs --no-run-if-empty $CONTAINER_ENGINE rm
+$CONTAINER_ENGINE images --all --quiet \
+  | xargs --no-run-if-empty  $CONTAINER_ENGINE rmi --force

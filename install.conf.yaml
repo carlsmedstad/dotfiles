@@ -24,6 +24,9 @@
     ~/.ctags: .ctags
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
     ~/.gnupg/sshcontrol: .gnupg/sshcontrol
+    ~/.local/bin/:
+      glob: true
+      path: .local/bin/*
     ~/.mrconfig: .mrconfig
     ~/.pam_environment: .pam_environment
     ~/.profile: .profile

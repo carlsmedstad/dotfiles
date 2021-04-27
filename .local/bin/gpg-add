@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -eu
+
+email="$1"
+
+pubkey=$(mktemp)
+trap '{ rm "$pubkey"; }' EXIT
+gpg-connect-agent updatestartuptty /bye >/dev/null
+gpg --export-ssh-key --output "$pubkey" "$email"
+ssh-add -T "$pubkey"

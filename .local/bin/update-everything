@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eu
+
+sudo cat /dev/null
+
+rustup update
+flatpak update --assumeyes
+yay -Syu --noconfirm
+nvim '+PlugClean!' '+PlugUpdate' '+qall'
