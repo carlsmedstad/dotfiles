@@ -26,6 +26,7 @@ Plug 'tpope/vim-markdown'               " Syntax highlighting for code blocks
 Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
 Plug 'cespare/vim-toml'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'fatih/vim-go'
 
 Plug 'mhinz/vim-signify'              " VCS info
 Plug 'editorconfig/editorconfig-vim'  " Editorconfig support
@@ -61,7 +62,7 @@ endif
 if index(keys(g:plugs), 'ale') >= 0
   let g:ale_rust_rls_executable = 'rust-analyzer'
   let g:ale_linters = {
-    \'cpp': ['cc', 'clangd'],
+    \'cpp': ['cc', 'clangd', 'cppcheck'],
   \}
   let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
