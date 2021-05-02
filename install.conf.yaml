@@ -12,7 +12,7 @@
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
-    ~/.config/luarocks/config.lua: .config/luarocks/config.lua
+    ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/mako/config: .config/mako/config
     ~/.config/mypy/config: .config/mypy/config
     ~/.config/nvim/init.vim: .config/nvim/init.vim
