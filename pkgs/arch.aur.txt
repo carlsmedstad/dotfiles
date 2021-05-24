@@ -20,10 +20,12 @@ j4-dmenu-desktop
 jfrog-cli-bin
 kubectl-bin
 kubetail
+lua-format
 mullvad-vpn-bin
 myrepos
 pipes.sh
 poweralertd
+proselint
 python-shtab
 rpmlint
 shellcheck-bin
@@ -33,11 +35,13 @@ spotify
 symlinks
 systemd-boot-pacman-hook
 teams
+texttest
 tiny-irc-client
 upd72020x-fw
 wd719x-firmware
 wev
 wlsunset
 xdg-utils-handlr
+yajsv-bin
 yay-bin
 ytop-bin
