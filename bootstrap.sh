@@ -36,6 +36,11 @@ if [ -f /etc/arch-release ]; then
 
 fi
 
+plug_path="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim"
+if [ ! -f "$plug_path" ]; then
+  curl -fLo "$plug_path" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 if command -v nvim >/dev/null 2>&1; then
-  nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+  nvim '+PlugUpgrade' '+PlugInstall' '+PlugUpdate' '+PlugClean!' '+qall'
 fi
