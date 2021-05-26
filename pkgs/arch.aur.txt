@@ -24,7 +24,6 @@ lua-format
 mullvad-vpn-bin
 myrepos
 pipes.sh
-poweralertd
 proselint
 python-shtab
 rpmlint
@@ -36,7 +35,7 @@ symlinks
 systemd-boot-pacman-hook
 teams
 texttest
-tiny-irc-client
+tiny-irc-client-bin
 upd72020x-fw
 wd719x-firmware
 wev
