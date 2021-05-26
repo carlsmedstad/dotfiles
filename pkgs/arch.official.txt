@@ -118,6 +118,7 @@ rpm-tools
 rsync
 rust-analyzer
 rustup
+slurp
 sudo
 sway
 swayidle

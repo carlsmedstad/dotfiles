@@ -18,6 +18,7 @@
     ~/.config/nvim/init.vim: .config/nvim/init.vim
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
     ~/.config/sway/config: .config/sway/config
+    ~/.config/sway/setup-xdg-desktop-portal-wlr: .config/sway/setup-xdg-desktop-portal-wlr
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
