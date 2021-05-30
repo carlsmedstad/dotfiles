@@ -15,7 +15,6 @@ export CARGO_HOME=$XDG_DATA_HOME/cargo
 export HELM_HOME=$XDG_DATA_HOME/helm
 export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
 export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
-export PYENV_ROOT=$XDG_DATA_HOME/pyenv
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 export GOPATH=$XDG_DATA_HOME/go
 export GOBIN=$GOPATH/bin
@@ -51,7 +50,10 @@ if command -v luarocks >> /dev/null; then
   export LUA_CPATH
 fi
 
-command -v pyenv >> /dev/null && eval "$(pyenv init -)"
-
 export MINIKUBE_CONTAINER_RUNTIME=crio
 export MINIKUBE_DRIVER=kvm2
+
+if command -v pyenv>> /dev/null; then
+  export PYENV_ROOT=$XDG_DATA_HOME/pyenv
+  eval "$(pyenv init --path)"
+fi
