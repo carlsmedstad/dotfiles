@@ -26,6 +26,7 @@
   glog = log --graph --oneline --decorate
   pushf = push --force-with-lease
   st = status --short --branch
+  root = rev-parse --show-toplevel
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
