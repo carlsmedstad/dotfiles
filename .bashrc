@@ -17,9 +17,10 @@ alias nnn="nnn -e"
 alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
 
-alias rga="rg --glob='*' --glob='!.git'"
+alias rga="rg --glob='*' --glob='!.git' --glob='!build'"
 
 alias podrun='podman run --rm --interactive --tty --volume "$(pwd)":/pwd --workdir /pwd'
+alias lspods='kubectl get pods -o wide --sort-by="{.spec.nodeName}" --all-namespaces'
 
 tabs -4
 
