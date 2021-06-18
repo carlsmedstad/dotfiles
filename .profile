@@ -8,6 +8,7 @@ export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
 
 export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure
 export CARGO_HOME=$XDG_DATA_HOME/cargo
@@ -20,11 +21,11 @@ export GOPATH=$XDG_DATA_HOME/go
 export GOBIN=$GOPATH/bin
 
 export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
-
 export CCACHE_DIR=$XDG_CACHE_HOME/ccache
-export LESSHISTFILE=$XDG_CACHE_HOME/lesshistfile
-export HISTFILE=$XDG_CACHE_HOME/histfile
-export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
+
+export HISTFILE=$XDG_STATE_HOME/bash_history
+export LESSHISTFILE=$XDG_STATE_HOME/less_history
+export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
 
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 
