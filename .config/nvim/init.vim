@@ -63,6 +63,7 @@ if index(keys(g:plugs), 'ale') >= 0
   let g:ale_rust_rls_executable = 'rust-analyzer'
   let g:ale_linters = {
     \'cpp': ['cc', 'clangd'],
+    \'spec': ['rpmlint'],
   \}
   let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
