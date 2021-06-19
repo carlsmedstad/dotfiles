@@ -23,6 +23,7 @@ export GOBIN=$GOPATH/bin
 export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
 export CCACHE_DIR=$XDG_CACHE_HOME/ccache
 
+[ -f "$XDG_STATE_HOME" ] || mkdir -p "$XDG_STATE_HOME"
 export HISTFILE=$XDG_STATE_HOME/bash_history
 export LESSHISTFILE=$XDG_STATE_HOME/less_history
 export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
