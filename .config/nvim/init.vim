@@ -74,6 +74,7 @@ if index(keys(g:plugs), 'ale') >= 0
     \'swift': ['swiftformat'],
     \'sh': ['shfmt'],
     \'PKGBUILD': ['shfmt'],
+    \'cmake': ['cmakeformat'],
   \}
   let g:ale_lint_on_text_changed = 0
   let g:ale_echo_msg_format = '[%linter%] %code:% %s'
