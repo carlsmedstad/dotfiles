@@ -28,6 +28,7 @@ export LESSHISTFILE=$XDG_STATE_HOME/less_history
 export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
 
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
+PATH=$HOME/.krew/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
