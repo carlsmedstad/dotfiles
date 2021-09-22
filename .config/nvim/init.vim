@@ -125,6 +125,7 @@ augroup END
 
 augroup fileExtensions
   autocmd BufNewFile,BufRead *.tpl set filetype=mustache
+  autocmd BufNewFile,BufRead **/templates/*.yaml set filetype=yamltpl syntax=yaml
 augroup END
 
 " Remove higlights
