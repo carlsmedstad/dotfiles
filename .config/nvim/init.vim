@@ -27,6 +27,7 @@ Plug 'mustache/vim-mustache-handlebars' " Syntax highlighting for Go templates
 Plug 'cespare/vim-toml'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
 
 Plug 'mhinz/vim-signify'              " VCS info
 Plug 'editorconfig/editorconfig-vim'  " Editorconfig support
