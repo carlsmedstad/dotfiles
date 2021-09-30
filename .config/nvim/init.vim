@@ -125,6 +125,7 @@ augroup languageSpecific   " set options for different languages
 augroup END
 
 augroup fileExtensions
+  autocmd BufNewFile,BufRead .mrconfig set filetype=cfg
   autocmd BufNewFile,BufRead *.tpl set filetype=mustache
   autocmd BufNewFile,BufRead **/templates/*.yaml set filetype=yamltpl syntax=yaml
 augroup END
