@@ -15,7 +15,7 @@
     ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/mako/config: .config/mako/config
     ~/.config/mypy/config: .config/mypy/config
-    ~/.config/nvim/init.vim: .config/nvim/init.vim
+    ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
     ~/.config/sway/config: .config/sway/config
     ~/.config/sway/setup-xdg-desktop-portal-wlr: .config/sway/setup-xdg-desktop-portal-wlr

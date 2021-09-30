@@ -1,11 +1,9 @@
-#!/bin/sh
-
-set -eu
+#!/bin/sh -eu
 
 sudo cat /dev/null
 
 rustup update
 flatpak update --assumeyes
 yay -Syu --noconfirm
-nvim '+PlugClean!' '+PlugUpdate' '+qall'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ibmcloud update
