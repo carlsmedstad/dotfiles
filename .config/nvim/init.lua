@@ -65,7 +65,6 @@ require('packer').startup(function()
           'cc',
           'clangd'
         },
-        spec = {'rpmlint'},
       }
       vim.g.ale_fixers = {
         python = {'yapf'},
