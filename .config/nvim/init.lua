@@ -106,26 +106,21 @@ require('packer').startup(function()
     end
   }
 
-  use 'tbastos/vim-lua'                  -- better lua
-  use 'Vimjas/vim-python-pep8-indent'    -- better python indentation
-  use 'rust-lang/rust.vim'
-  use 'PProvost/vim-ps1'
-  use 'keith/swift.vim'
+  -- syntax highlighting
+  use {
+    'sheerun/vim-polyglot',
+    setup = function()
+      vim.g.polyglot_disabled = {'markdown'}
+    end,
+  }
 
-  -- syntax highlighting for code blocks
+  -- nicer markdown syntax than vim-polyglot
   use {
     'tpope/vim-markdown',
     config = function()
       vim.g.markdown_fenced_languages = {'json', 'yaml', 'sh', 'bash=sh', 'python'}
     end,
   }
-
-  use 'mustache/vim-mustache-handlebars' -- Syntax highlighting for Go templates
-  use 'cespare/vim-toml'
-  use 'ekalinin/Dockerfile.vim'
-  use 'fatih/vim-go'
-  use 'hashivim/vim-terraform'
-  use 'aklt/plantuml-syntax'
 end)
 
 vim.g.mapleader = ','
