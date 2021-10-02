@@ -10,6 +10,7 @@ alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -pv"
 alias ls="ls --color=auto --group-directories-first"
+alias nvim="nvim --startuptime /tmp/nvim-startuptime"
 
 alias open="xdg-open"
 alias nnn="nnn -e"

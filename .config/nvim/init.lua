@@ -36,6 +36,14 @@ require('packer').startup(function()
     end,
   }
 
+  -- measure start-up time
+  use {
+    'henriquehbr/nvim-startup.lua',
+    config = function()
+      require('nvim-startup').setup()
+    end,
+  }
+
   -- fancier statusline
   use {
     'vim-airline/vim-airline',
