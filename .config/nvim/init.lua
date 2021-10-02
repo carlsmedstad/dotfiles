@@ -28,6 +28,14 @@ require('packer').startup(function()
     end,
   }
 
+  -- colorizer
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end,
+  }
+
   -- fancier statusline
   use {
     'vim-airline/vim-airline',
