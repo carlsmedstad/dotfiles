@@ -174,10 +174,8 @@ vim.api.nvim_command('autocmd FileType asciidoc setlocal commentstring=//\\ %s')
 vim.api.nvim_command('autocmd FileType html set tw=120')
 vim.api.nvim_command('augroup END')
 
-vim.api.nvim_command('augroup fileExtensions')
+vim.api.nvim_command('augroup fileDetection')
 vim.api.nvim_command('autocmd BufNewFile,BufRead .mrconfig set filetype=cfg')
-vim.api.nvim_command('autocmd BufNewFile,BufRead *.tpl set filetype=mustache')
-vim.api.nvim_command('autocmd BufNewFile,BufRead **/templates/*.yaml set filetype=yamltpl syntax=yaml')
 vim.api.nvim_command('augroup END')
 
 -- Remove higlights
