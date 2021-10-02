@@ -50,8 +50,7 @@ require('packer').startup(function()
   use {
     'lifepillar/vim-solarized8',
     config = function()
-      vim.o.background = 'dark'
-      vim.cmd [[colorscheme solarized8]]
+      vim.cmd('colorscheme solarized8')
     end,
   }
 
