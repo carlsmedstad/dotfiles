@@ -1,3 +1,5 @@
+-- luacheck: globals vim, max_line_length 200
+
 -- Bootstrap packer.nvim
 local fn = vim.fn
 
@@ -10,6 +12,8 @@ end
 
 -- Plugins
 require('packer').startup(function()
+  -- luacheck: push globals use
+
   use 'tpope/vim-commentary'     -- mappings for commenting code
   use 'tpope/vim-fugitive'       -- git plugin
   use 'tpope/vim-surround'       -- mappings for paranthesis, brackets etc.
@@ -136,6 +140,8 @@ require('packer').startup(function()
       vim.g.markdown_fenced_languages = {'json', 'yaml', 'sh', 'bash=sh', 'python'}
     end,
   }
+
+  -- luacheck: pop
 end)
 
 vim.g.mapleader = ','
