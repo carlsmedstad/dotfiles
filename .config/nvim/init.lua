@@ -196,7 +196,8 @@ vim.api.nvim_command('autocmd FileType html set tw=120')
 vim.api.nvim_command('augroup END')
 
 vim.api.nvim_command('augroup fileDetection')
-vim.api.nvim_command('autocmd BufNewFile,BufRead .mrconfig set filetype=cfg')
+vim.api.nvim_command('autocmd BufNewFile,BufRead .mrconfig set filetype=cfg tw=0')
+vim.api.nvim_command('autocmd BufNewFile,BufRead PKGBUILD set filetype=PKGBUILD tw=0 syntax=sh')
 vim.api.nvim_command('augroup END')
 
 -- Remove higlights
