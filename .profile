@@ -12,12 +12,13 @@ export XDG_STATE_HOME=$HOME/.local/state
 
 export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure
 export CARGO_HOME=$XDG_DATA_HOME/cargo
-export HELM_HOME=$XDG_DATA_HOME/helm
+export GOBIN=$GOPATH/bin
+export GOPATH=$XDG_DATA_HOME/go
+export IBMCLOUD_HOME=$XDG_DATA_HOME/ibmcloud
 export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
+export KREW_ROOT=$XDG_DATA_HOME/krew
 export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
-export GOPATH=$XDG_DATA_HOME/go
-export GOBIN=$GOPATH/bin
 
 export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
 export CCACHE_DIR=$XDG_CACHE_HOME/ccache
@@ -28,7 +29,7 @@ export LESSHISTFILE=$XDG_STATE_HOME/less_history
 export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
 
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
-PATH=$HOME/.krew/bin:$PATH
+PATH=$KREW_ROOT/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
