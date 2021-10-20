@@ -2,6 +2,7 @@ extends: default
 
 rules:
   document-start: disable
+  comments-indentation: disable
   line-length: disable
   truthy:
     check-keys: false
