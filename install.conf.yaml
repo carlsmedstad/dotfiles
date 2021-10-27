@@ -28,6 +28,7 @@
     ~/.local/bin/:
       glob: true
       path: .local/bin/*
+    ~/.local/share/azure/config: .local/share/azure/config
     ~/.mrconfig: .mrconfig
     ~/.pam_environment: .pam_environment
     ~/.profile: .profile
