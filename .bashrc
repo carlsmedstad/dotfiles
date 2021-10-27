@@ -46,5 +46,8 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
+. /usr/share/fzf/key-bindings.bash
+. /usr/share/fzf/completion.bash
+
 # shellcheck source=/dev/null
 [ -f "$HOME/.bashrc_extra" ] && . "$HOME/.bashrc_extra"
