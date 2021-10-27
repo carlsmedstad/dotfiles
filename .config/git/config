@@ -1,6 +1,6 @@
 [core]
   eol = lf
-  pager = less -x1,3
+  pager = less -x1,5
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
@@ -8,6 +8,8 @@
 [credential]
   helper = cache
 [commit]
+  gpgsign = true
+[tag]
   gpgsign = true
 [pull]
   ff = only
