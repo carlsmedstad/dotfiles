@@ -13,6 +13,17 @@ end
 -- Plugins
 require('packer').startup(function()
   -- luacheck: push globals use
+  use {
+    'wbthomason/packer.nvim',
+    config = function()
+      vim.cmd([[
+        augroup packerUserConfig
+          autocmd!
+          autocmd BufWritePost init.lua source <afile> | PackerCompile
+        augroup end
+      ]])
+    end,
+  }
 
   use 'tpope/vim-commentary'     -- mappings for commenting code
   use 'tpope/vim-fugitive'       -- git plugin
