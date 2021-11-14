@@ -55,6 +55,8 @@ fi
 export MINIKUBE_CONTAINER_RUNTIME=crio
 export MINIKUBE_DRIVER=kvm2
 
+export ANSIBLE_STDOUT_CALLBACK=yaml
+
 if command -v pyenv>> /dev/null; then
   export PYENV_ROOT=$XDG_DATA_HOME/pyenv
   eval "$(pyenv init --path)"
