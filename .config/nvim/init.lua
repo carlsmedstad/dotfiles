@@ -129,7 +129,7 @@ require('packer').startup(function()
   use {
     'sheerun/vim-polyglot',
     setup = function()
-      vim.g.polyglot_disabled = {'markdown'}
+      vim.g.polyglot_disabled = {'markdown', 'sh'}
     end,
   }
 
