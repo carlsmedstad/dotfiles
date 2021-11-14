@@ -25,7 +25,7 @@
   br = branch
   ci = commit
   co = checkout
-  glog = log --graph --oneline --decorate
+  glog = log --all --graph --oneline --decorate
   pushf = push --force-with-lease
   st = status --short --branch
   root = rev-parse --show-toplevel
