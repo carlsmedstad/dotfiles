@@ -14,6 +14,7 @@
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
     ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/mako/config: .config/mako/config
+    ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/mypy/config: .config/mypy/config
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
