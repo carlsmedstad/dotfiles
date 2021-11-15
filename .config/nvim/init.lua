@@ -147,18 +147,11 @@ require('packer').startup(function()
     end,
   }
 
-  -- nicer markdown syntax than vim-polyglot
-  use {
-    'tpope/vim-markdown',
-    config = function()
-      vim.g.markdown_fenced_languages = {'json', 'yaml', 'sh', 'bash=sh', 'python'}
-    end,
-  }
-
   -- luacheck: pop
 end)
 
 vim.g.mapleader = ','
+vim.g.markdown_fenced_languages = {'json', 'yaml', 'sh', 'bash=sh', 'python'}
 
 if vim.env.COLORTERM == 'truecolor' then
   vim.opt.termguicolors = true
