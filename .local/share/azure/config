@@ -1,5 +1,7 @@
 [core]
 output = table
+first_run = yes
 
 [cloud]
 name = AzureCloud
+
