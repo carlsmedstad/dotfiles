@@ -25,7 +25,6 @@
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.ctags: .ctags
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
-    ~/.gnupg/sshcontrol: .gnupg/sshcontrol
     ~/.local/bin/:
       glob: true
       path: .local/bin/*
