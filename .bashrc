@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=1091
 
 [ "$TERM" = alacritty ] && ! infocmp alacritty &> /dev/null \
   && export TERM="xterm-256color"
@@ -46,8 +47,10 @@ else
   PS1="\[\e]2;terminal\a\]$CLR1\u $CLR2\A $CLR1\W$RESET "
 fi
 
-. /usr/share/fzf/key-bindings.bash
-. /usr/share/fzf/completion.bash
+[ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+[ -f /usr/local/opt/fzf/shell/key-bindings.bash ] && . /usr/local/opt/fzf/shell/key-bindings.bash
+[ -f /usr/local/opt/fzf/shell/completion.bash ] && . /usr/local/opt/fzf/shell/completion.bash
 
 # shellcheck source=/dev/null
 [ -f "$HOME/.bashrc_extra" ] && . "$HOME/.bashrc_extra"
