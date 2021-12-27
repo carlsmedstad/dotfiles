@@ -43,6 +43,10 @@ if [ "$(uname)" = "Darwin" ]; then
 
   command -v ruby >> /dev/null && command -v gem >> /dev/null \
     && PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+
+  export PATH="/usr/local/opt/llvm/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
+  export CPPFLAGS="-I/usr/local/opt/llvm/include"
 fi
 
 if command -v luarocks >> /dev/null; then
