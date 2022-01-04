@@ -1,0 +1,28 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.config/flake8: .config/flake8
+    ~/.config/git/config: .config/git/config
+    ~/.config/git/ignore: .config/git/ignore
+    ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
+    ~/.config/markdownlint/config: .config/markdownlint/config
+    ~/.config/mypy/config: .config/mypy/config
+    ~/.config/nvim/init.lua: .config/nvim/init.lua
+    ~/.config/yamllint/config: .config/yamllint/config
+    ~/.config/zathura/zathurarc: .config/zathura/zathurarc
+    ~/.ctags: .ctags
+    ~/.gnupg/gpg.conf: .gnupg/gpg.conf
+    ~/.local/bin/:
+      glob: true
+      path: .local/bin/*
+    ~/.local/share/azure/config: .local/share/azure/config
+    ~/.mrconfig: .mrconfig
+    ~/.pam_environment: .pam_environment
+    ~/.profile: .profile
+    ~/.sqliterc: .sqliterc
+    ~/.ssh/config: .ssh/config

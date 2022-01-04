@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.config/Xresources: .config/Xresources
+    ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
+    ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
+    ~/.config/mako/config: .config/mako/config
+    ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
+    ~/.config/sway/config: .config/sway/config
+    ~/.config/sway/setup-xdg-desktop-portal-wlr: .config/sway/setup-xdg-desktop-portal-wlr
+    ~/.config/user-dirs.dirs: .config/user-dirs.dirs
+    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml.Linux
+    ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.Linux

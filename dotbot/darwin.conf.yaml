@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.Darwin
+    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml.Darwin
