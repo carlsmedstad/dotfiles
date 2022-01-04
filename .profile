@@ -5,28 +5,28 @@ export VISUAL=nvim
 
 export MANPAGER="nvim +Man!"
 
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
-export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure
-export CARGO_HOME=$XDG_DATA_HOME/cargo
-export GOBIN=$GOPATH/bin
-export GOPATH=$XDG_DATA_HOME/go
-export IBMCLOUD_HOME=$XDG_DATA_HOME/ibmcloud
-export JFROG_CLI_HOME_DIR=$XDG_DATA_HOME/jfrog
-export KREW_ROOT=$XDG_DATA_HOME/krew
-export MINIKUBE_HOME=$XDG_DATA_HOME/minikube
-export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+export AZURE_CONFIG_DIR="$XDG_DATA_HOME/azure"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOBIN="$GOPATH/bin"
+export GOPATH="$XDG_DATA_HOME/go"
+export IBMCLOUD_HOME="$XDG_DATA_HOME/ibmcloud"
+export JFROG_CLI_HOME_DIR="$XDG_DATA_HOME/jfrog"
+export KREW_ROOT="$XDG_DATA_HOME/krew"
+export MINIKUBE_HOME="$XDG_DATA_HOME/minikube"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
-export CCACHE_CONFIGPATH=$XDG_CONFIG_HOME/ccache.config
-export CCACHE_DIR=$XDG_CACHE_HOME/ccache
+export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache.config"
+export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
 
 [ -d "$XDG_STATE_HOME" ] || mkdir -p "$XDG_STATE_HOME"
-export HISTFILE=$XDG_STATE_HOME/bash_history
-export LESSHISTFILE=$XDG_STATE_HOME/less_history
-export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
+export HISTFILE="$XDG_STATE_HOME/bash_history"
+export LESSHISTFILE="$XDG_STATE_HOME/less_history"
+export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
 
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 PATH=$KREW_ROOT/bin:$PATH
@@ -61,7 +61,7 @@ export MINIKUBE_DRIVER=kvm2
 
 export ANSIBLE_STDOUT_CALLBACK=yaml
 
-if command -v pyenv>> /dev/null; then
-  export PYENV_ROOT=$XDG_DATA_HOME/pyenv
+if command -v pyenv >> /dev/null; then
+  export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
   eval "$(pyenv init --path)"
 fi
