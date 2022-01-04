@@ -67,6 +67,8 @@ require('packer').startup(function()
   use {
     'vim-airline/vim-airline',
     config = function()
+      vim.g.airline_theme = 'solarized'
+
       if vim.env.DISPLAY ~= nil then
         vim.g.airline_powerline_fonts = 1
       else
@@ -75,7 +77,6 @@ require('packer').startup(function()
 
       vim.api.nvim_set_var('airline#extensions#tabline#enabled', 1)
       vim.api.nvim_set_var('airline#extensions#ale#enabled', 1)
-      vim.g.airline_section_y = ''               -- remove encoding section
       vim.g.airline_section_z = '%3p%% %4l:%3v'  -- line/column number section
     end,
   }
