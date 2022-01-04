@@ -11,7 +11,7 @@ all: shellcheck install install-system
 SHELL_FILES = $(shell bin/findsh)
 
 shellcheck:
-	shellcheck $(SHELL_FILES)
+	shellcheck -x $(SHELL_FILES)
 
 install:
 	dotbot -d . -c dotbot/common.conf.yaml
