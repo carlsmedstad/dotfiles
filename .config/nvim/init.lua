@@ -228,3 +228,6 @@ vim.api.nvim_set_keymap('n', 'k', [[v:count ? (v:count > 5 ? "m'" . v:count : ''
 
 -- exit intsert mode in terminal with Esc
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {})
+
+-- get syntax higlight group under pointer
+vim.api.nvim_set_keymap('n', '<leader>h', ':echo synIDattr(synID(line("."),col("."),1),"name")<CR>', { noremap = true, silent = true })
