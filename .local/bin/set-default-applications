@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 
 handlr set text/plain nvim.desktop
 handlr set image/png imv.desktop

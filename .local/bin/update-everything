@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-command -v sudo >> /dev/null && sudo cat /dev/null
+command -v sudo > /dev/null && sudo cat /dev/null
 
 rustup update
 flatpak update --assumeyes

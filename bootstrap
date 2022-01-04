@@ -1,6 +1,4 @@
-#!/bin/sh
-
-set -eu
+#!/bin/sh -eu
 
 if [ "$(uname)" = Darwin ]; then
 
@@ -20,15 +18,15 @@ if [ -f /etc/arch-release ]; then
   cat pkgs/arch.official.txt | sudo pacman -S --needed -
 
   # install yay if it's missing
-  if ! command -v yay >/dev/null 2>&1; then
+  if ! command -v yay > /dev/null 2>&1; then
     repo_dir=$(mktemp -d)
     old_dir="$(pwd)"
     trap 'rm -rf $repo_dir' EXIT
 
-    git clone https://aur.archlinux.org/yay.git "$repo_dir"
+    git clone https://aur.archlinux.org/yay-bin.git "$repo_dir"
 
     cd "$repo_dir"
-    makepkg -si
+    makepkg --noconfirm --syncdeps --rmdeps --install --clean
     cd "$old_dir"
   fi
 
@@ -41,6 +39,6 @@ if [ ! -f "$plug_path" ]; then
   curl -fLo "$plug_path" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-if command -v nvim >/dev/null 2>&1; then
+if command -v nvim > /dev/null 2>&1; then
   nvim '+PlugUpgrade' '+PlugInstall' '+PlugUpdate' '+PlugClean!' '+qall'
 fi

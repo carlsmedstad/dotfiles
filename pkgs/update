@@ -1,6 +1,4 @@
-#!/bin/sh
-
-set -eu
+#!/bin/sh -eu
 
 if [ -f /etc/arch-release ]; then
   pacman -Qqen | sort > pkgs/arch.official.txt

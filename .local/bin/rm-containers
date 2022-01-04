@@ -1,8 +1,9 @@
 #!/bin/sh -eu
 
-CONTAINER_ENGINE=podman
+command -v docker > /dev/null && container_engine=docker
+command -v podman > /dev/null && container_engine=podman
 
-$CONTAINER_ENGINE ps --all --quiet \
-  | xargs --no-run-if-empty $CONTAINER_ENGINE rm
-$CONTAINER_ENGINE images --all --quiet \
-  | xargs --no-run-if-empty  $CONTAINER_ENGINE rmi --force
+$container_engine ps --all --quiet \
+  | xargs --no-run-if-empty $container_engine rm
+$container_engine images --all --quiet \
+  | xargs --no-run-if-empty  $container_engine rmi --force
