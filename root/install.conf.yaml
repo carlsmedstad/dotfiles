@@ -7,5 +7,5 @@
     /etc/greetd/config.toml: etc/greetd/config.toml
     /etc/modules-load.d/btusb.conf: etc/modules-load.d/btusb.conf
     /etc/tlp.d/10-disable-usb-autosuspend.conf: etc/tlp.d/10-disable-usb-autosuspend.conf
-    /usr/local/bin/sway-run.sh: usr/local/bin/sway-run.sh
+    /usr/local/bin/sway-run: usr/local/bin/sway-run
     /usr/local/lib/wayland-enablement.sh: usr/local/lib/wayland-enablement.sh
