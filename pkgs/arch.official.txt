@@ -5,8 +5,10 @@ asciidoctor
 astyle
 autoconf
 automake
+aws-cli
 base
 bash-completion
+bat
 bemenu
 bind
 binutils
@@ -43,6 +45,7 @@ flatpak
 flex
 freerdp
 fwupd
+fzf
 gcc
 gdb
 git
@@ -97,9 +100,11 @@ nmap
 nnn
 noto-fonts
 noto-fonts-emoji
+npm
 ntfs-3g
 openapi-generator
 openconnect
+opendoas
 openssh
 pacman-contrib
 pamixer
@@ -123,6 +128,7 @@ python-poetry
 python-pynvim
 python-pytest
 python-pywal
+python-shtab
 python-wheel
 qemu
 qrencode
@@ -132,7 +138,6 @@ rpm-tools
 rsync
 rust-analyzer
 rustup
-shfmt
 slurp
 sshpass
 sudo
@@ -218,5 +223,6 @@ xorg-xwud
 yamllint
 yapf
 yq
+yubikey-manager
 zathura-pdf-mupdf
 zig
