@@ -1,4 +1,5 @@
--- luacheck: globals vim, max_line_length 200
+-- luacheck: globals vim
+-- luacheck: max_line_length 200
 
 -- Bootstrap packer.nvim
 local fn = vim.fn
@@ -95,12 +96,11 @@ require('packer').startup(function()
       vim.g.ale_rust_rls_executable = 'rust-analyzer'
       vim.g.ale_linters = {
         cpp = {
-          'cc',
           'clangd'
         },
       }
       vim.g.ale_fixers = {
-        python = {'yapf'},
+        python = {'black'},
         rust = {'rustfmt'},
         go = {'gofmt'},
         cpp = {'clang-format'},
