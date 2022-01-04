@@ -205,9 +205,6 @@ vim.api.nvim_command("autocmd BufNewFile,BufRead .mrconfig set filetype=cfg tw=0
 vim.api.nvim_command("autocmd BufNewFile,BufRead PKGBUILD set filetype=PKGBUILD tw=0 syntax=sh")
 vim.api.nvim_command("augroup END")
 
--- Remove higlights
-vim.api.nvim_set_keymap("n", "<C-L>", [[:nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>]], { noremap = true, silent = true })
-
 -- toggle spell checking
 vim.api.nvim_set_keymap("n", "<leader>s", ":set spell!<CR>", { noremap = true, silent = true })
 
