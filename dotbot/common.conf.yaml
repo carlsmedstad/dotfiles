@@ -6,6 +6,7 @@
 - link:
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
+    ~/.config/black: .config/black
     ~/.config/flake8: .config/flake8
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
