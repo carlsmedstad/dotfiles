@@ -12,11 +12,13 @@ SHFMT_OPTS = -p -i 2 -bn -sr
 all: check install install-system
 
 
-.PHONY: shfmt stylua
-shfmt:
+.PHONY: fix fix-shfmt fix-stylua
+fix: fix-shfmt fix-stylua
+
+fix-shfmt:
 	shfmt -w $(SHFMT_OPTS) $(SHELL_FILES)
 
-stylua:
+fix-stylua:
 	stylua $(LUA_FILES)
 
 
