@@ -4,14 +4,19 @@ else
     DETECTED_OS := $(shell uname)
 endif
 
-.PHONY: all shellcheck install install-system
+.PHONY: all check-shellcheck check-shfmt check install install-system
 
-all: shellcheck install install-system
+all: check install install-system
 
 SHELL_FILES = $(shell bin/findsh)
 
-shellcheck:
+check-shellcheck:
 	shellcheck -x $(SHELL_FILES)
+
+check-shfmt:
+	shfmt -d $(SHELL_FILES)
+
+check: check-shellcheck check-shfmt
 
 install:
 	dotbot -d . -c dotbot/common.conf.yaml

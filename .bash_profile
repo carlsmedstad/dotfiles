@@ -23,6 +23,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   fi
   if [[ ! "$SSH_AUTH_SOCK" ]]; then
     # shellcheck source=/dev/null
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" > /dev/null
   fi
 fi
