@@ -5,36 +5,34 @@ else
 endif
 
 SHELL_FILES = $(shell bin/findsh)
+SHFMT_OPTS = -p -i 2 -bn -sr
 
 .PHONY: all
 all: check install install-system
 
-.PHONY: check-shellcheck
-check-shellcheck:
-	shellcheck -x $(SHELL_FILES)
 
-SHFMT_OPTS=-p -i 2 -bn -sr
-
-.PHONY: shfmt
+.PHONY: shfmt stylua
 shfmt:
 	shfmt -w $(SHFMT_OPTS) $(SHELL_FILES)
 
-.PHONY: check-shfmt
-check-shfmt:
-	shfmt -d $(SHFMT_OPTS) $(SHELL_FILES)
-
-.PHONY: stylua
 stylua:
 	stylua .
 
-.PHONY: check-stylua
+
+.PHONY: check check-shellcheck check-shfmt check-stylua
+check: check-shellcheck check-shfmt check-stylua
+
+check-shellcheck:
+	shellcheck -x $(SHELL_FILES)
+
+check-shfmt:
+	shfmt -d $(SHFMT_OPTS) $(SHELL_FILES)
+
 check-stylua:
 	stylua --check .
 
-.PHONY: check
-check: check-shellcheck check-shfmt check-stylua
 
-.PHONY: install
+.PHONY: install install-system
 install:
 	dotbot -d . -c dotbot/common.conf.yaml
 ifeq ($(DETECTED_OS), Linux)
@@ -44,6 +42,5 @@ ifeq ($(DETECTED_OS), Darwin)
 	dotbot -d . -c dotbot/darwin.conf.yaml
 endif
 
-.PHONY: install-system
 install-system:
 	dotbot -d system -c dotbot/system.conf.yaml
