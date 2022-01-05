@@ -13,9 +13,19 @@ all: check install install-system
 check-shellcheck:
 	shellcheck -x $(SHELL_FILES)
 
+SHFMT_OPTS=-p -i 2 -bn -sr
+
+.PHONY: shfmt
+shfmt:
+	shfmt -w $(SHFMT_OPTS) $(SHELL_FILES)
+
 .PHONY: check-shfmt
 check-shfmt:
-	shfmt -d $(SHELL_FILES)
+	shfmt -d $(SHFMT_OPTS) $(SHELL_FILES)
+
+.PHONY: stylua
+stylua:
+	stylua .
 
 .PHONY: check-stylua
 check-stylua:
