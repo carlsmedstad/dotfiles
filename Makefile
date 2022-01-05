@@ -5,6 +5,7 @@ else
 endif
 
 SHELL_FILES = $(shell bin/findsh)
+LUA_FILES = $(shell find -name '*.lua')
 SHFMT_OPTS = -p -i 2 -bn -sr
 
 .PHONY: all
@@ -16,7 +17,7 @@ shfmt:
 	shfmt -w $(SHFMT_OPTS) $(SHELL_FILES)
 
 stylua:
-	stylua .
+	stylua $(LUA_FILES)
 
 
 .PHONY: check check-shellcheck check-shfmt check-stylua
@@ -29,7 +30,7 @@ check-shfmt:
 	shfmt -d $(SHFMT_OPTS) $(SHELL_FILES)
 
 check-stylua:
-	stylua --check .
+	stylua --check $(LUA_FILES)
 
 
 .PHONY: install install-system

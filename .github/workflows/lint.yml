@@ -7,16 +7,18 @@ jobs:
     container: alpine:3
     steps:
       - uses: actions/checkout@v2
-      - run: apk add make
-      - run: apk add shfmt
-      - run: apk add shellcheck
+      - run: |
+          apk add make
+          apk add shfmt
+          apk add shellcheck
       - run: make check-shellcheck
       - run: make check-shfmt
   lua:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: JohnnyMorganz/stylua-action@1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check .
+      - run: |
+          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v0.11.3/stylua-0.11.3-linux.zip
+          unzip stylua-0.11.3-linux.zip -d /usr/local/bin/
+          chmod u+x /usr/local/bin/stylua
+      - run: make check-stylua
