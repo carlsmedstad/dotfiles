@@ -4,20 +4,27 @@ else
     DETECTED_OS := $(shell uname)
 endif
 
-.PHONY: all check-shellcheck check-shfmt check install install-system
-
-all: check install install-system
-
 SHELL_FILES = $(shell bin/findsh)
 
+.PHONY: all
+all: check install install-system
+
+.PHONY: check-shellcheck
 check-shellcheck:
 	shellcheck -x $(SHELL_FILES)
 
+.PHONY: check-shfmt
 check-shfmt:
 	shfmt -d $(SHELL_FILES)
 
-check: check-shellcheck check-shfmt
+.PHONY: check-stylua
+check-stylua:
+	stylua --check .
 
+.PHONY: check
+check: check-shellcheck check-shfmt check-stylua
+
+.PHONY: install
 install:
 	dotbot -d . -c dotbot/common.conf.yaml
 ifeq ($(DETECTED_OS), Linux)
@@ -27,5 +34,6 @@ ifeq ($(DETECTED_OS), Darwin)
 	dotbot -d . -c dotbot/darwin.conf.yaml
 endif
 
+.PHONY: install-system
 install-system:
 	dotbot -d system -c dotbot/system.conf.yaml
