@@ -6,7 +6,7 @@ endif
 
 SHELL_FILES = $(shell bin/findsh)
 LUA_FILES = $(shell find -name '*.lua')
-SHFMT_OPTS = -p -i 2 -bn -sr
+SHFMT_OPTS = -i 2 -bn -sr
 
 .PHONY: all
 all: check install install-system
