@@ -17,7 +17,7 @@ alias nvim="nvim --startuptime /tmp/nvim-startuptime"
 alias open="xdg-open"
 alias nnn="nnn -e"
 
-alias gitprune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
+alias gitprune="git --no-pager  branch --format='%(refname:short)' | xargs -n1 -I{} git branch -d {} 2> /dev/null"
 alias gitfix="git diff --name-only | uniq | xargs \$EDITOR"
 
 alias rga="rg --glob='*' --glob='!.git' --glob='!build'"
