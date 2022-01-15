@@ -7,6 +7,3 @@ flatpak update --assumeyes
 yay -Syu --noconfirm
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ibmcloud plugin update --all
-az extension list --output json \
-  | jq -r '.[].name' \
-  | xargs -n1 az extension update --name
