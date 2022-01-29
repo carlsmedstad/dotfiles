@@ -18,7 +18,6 @@ buttons = ["play", "next"]
 
 [[block]]
 block = "battery"
-driver = "upower"
 format = "{percentage}"
 
 [[block]]
