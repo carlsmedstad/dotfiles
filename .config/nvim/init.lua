@@ -89,7 +89,7 @@ require("packer").startup(function()
 
   -- async syntax checker
   use({
-    "w0rp/ale",
+    "dense-analysis/ale",
     config = function()
       vim.g.ale_rust_rls_executable = "rust-analyzer"
       vim.g.ale_linters = {
