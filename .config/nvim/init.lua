@@ -146,6 +146,14 @@ require("packer").startup(function()
     end,
   })
 
+  use({
+    "ibhagwan/fzf-lua",
+    requires = { "kyazdani42/nvim-web-devicons" },
+    setup = function()
+      vim.api.nvim_set_keymap("n", "<M-c>", "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+    end,
+  })
+
   -- luacheck: pop
 end)
 
