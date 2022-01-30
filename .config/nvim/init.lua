@@ -106,6 +106,7 @@ require("packer").startup(function()
         sh = { "shfmt" },
         PKGBUILD = { "shfmt" },
         cmake = { "cmakeformat" },
+        lua = { "stylua" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
       vim.g.ale_lint_on_text_changed = 0
