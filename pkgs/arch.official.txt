@@ -1,3 +1,4 @@
+acpilight
 alacritty
 ansible
 ansible-lint
@@ -19,6 +20,7 @@ bluez-utils
 bottom
 buildah
 ccache
+checkbashisms
 chromium
 clang
 cloc
@@ -40,6 +42,7 @@ expect
 fakeroot
 fd
 firefox
+fish
 flake8
 flatpak
 flex
@@ -47,11 +50,14 @@ freerdp
 fwupd
 fzf
 gcc
+gcovr
 gdb
 git
+git-delta
 git-filter-repo
 gitlab-runner
 git-lfs
+glab
 go
 grim
 groff
@@ -119,6 +125,7 @@ pkgstats
 plantuml
 playerctl
 podman
+podman-docker
 postgresql-libs
 pyenv
 python-black
@@ -133,9 +140,11 @@ python-wheel
 qemu
 qrencode
 realtime-privileges
+reflector
 ripgrep
 rpm-tools
 rsync
+ruby-vimrunner
 rust-analyzer
 rustup
 slurp
@@ -226,3 +235,4 @@ yq
 yubikey-manager
 zathura-pdf-mupdf
 zig
+zsh

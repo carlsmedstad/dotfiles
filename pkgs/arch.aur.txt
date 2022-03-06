@@ -6,13 +6,12 @@ azure-kubelogin
 bfg
 bicep-bin
 cmake-format
-cmake-lint
 dotbot
 drawio-desktop-bin
 emojify
-gitlab-glab-bin
 gitlint
 google-earth-pro
+go-task-bin
 greetd
 gron-bin
 hadolint-bin
@@ -20,6 +19,7 @@ handlr-bin
 hererocks
 heroku-cli-bin
 ibmcloud-cli
+infer-bin
 ipcalc-redhat
 istio-bin
 j4-dmenu-desktop
@@ -43,7 +43,6 @@ sparse
 spotify
 stylua-bin
 symlinks
-systemd-boot-pacman-hook
 teams
 texttest
 tiny-irc-client-bin
@@ -55,4 +54,3 @@ wlsunset
 xdg-utils-handlr
 yajsv-bin
 yay-bin
-ytop-bin
