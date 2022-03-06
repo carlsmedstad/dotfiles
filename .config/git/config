@@ -1,6 +1,10 @@
 [core]
   eol = lf
   pager = less -x1,5
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
