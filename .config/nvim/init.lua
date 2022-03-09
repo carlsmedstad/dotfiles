@@ -102,6 +102,7 @@ require("packer").startup(function()
         cmake = { "cmakeformat" },
         cpp = { "clang-format" },
         go = { "gofmt" },
+        json = { "jq" },
         lua = { "stylua" },
         python = { "black" },
         rust = { "rustfmt" },
