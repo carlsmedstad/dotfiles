@@ -110,6 +110,7 @@ require("packer").startup(function()
         swift = { "swiftformat" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
+      vim.g.ale_sh_shfmt_options = "-bn -ln=posix -sr -i 2"
       vim.g.ale_lint_on_text_changed = 0
       vim.g.ale_echo_msg_format = "[%linter%] %code:% %s"
 
