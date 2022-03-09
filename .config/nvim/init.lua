@@ -98,15 +98,15 @@ require("packer").startup(function()
         },
       }
       vim.g.ale_fixers = {
-        python = { "black" },
-        rust = { "rustfmt" },
-        go = { "gofmt" },
-        cpp = { "clang-format" },
-        swift = { "swiftformat" },
-        sh = { "shfmt" },
         PKGBUILD = { "shfmt" },
         cmake = { "cmakeformat" },
+        cpp = { "clang-format" },
+        go = { "gofmt" },
         lua = { "stylua" },
+        python = { "black" },
+        rust = { "rustfmt" },
+        sh = { "shfmt" },
+        swift = { "swiftformat" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
       vim.g.ale_lint_on_text_changed = 0
