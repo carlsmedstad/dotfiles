@@ -140,19 +140,37 @@ require("packer").startup(function()
     end,
   })
 
-  -- syntax highlighting
-  use({
-    "sheerun/vim-polyglot",
-    setup = function()
-      vim.g.polyglot_disabled = { "markdown", "sh" }
-    end,
-  })
-
+  -- fuzzy finding
   use({
     "ibhagwan/fzf-lua",
     requires = { "kyazdani42/nvim-web-devicons" },
     setup = function()
       vim.api.nvim_set_keymap("n", "<M-c>", "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+    end,
+  })
+
+  -- Syntax highlighting for Bicep
+  use("carlsmedstad/vim-bicep")
+
+  -- Better filetype detection
+  use({
+    "nathom/filetype.nvim",
+    config = function()
+      require("filetype").setup({
+        overrides = {
+          function_literal = {
+            ["PKGBUILD"] = function()
+              vim.bo.filetype = "PKGBUILD"
+              vim.bo.syntax = "sh"
+              vim.bo.tw = 0
+            end,
+            [".mrconfig"] = function()
+              vim.bo.filetype = "cfg"
+              vim.bo.tw = 0
+            end,
+          },
+        },
+      })
     end,
   })
 
@@ -209,11 +227,6 @@ vim.api.nvim_command("autocmd FileType go set tw=79 sw=4 ts=4 noet")
 vim.api.nvim_command("autocmd FileType c,cc,h set et tw=79 sw=2 ts=2")
 vim.api.nvim_command("autocmd FileType asciidoc setlocal commentstring=//\\ %s")
 vim.api.nvim_command("autocmd FileType html set tw=120")
-vim.api.nvim_command("augroup END")
-
-vim.api.nvim_command("augroup fileDetection")
-vim.api.nvim_command("autocmd BufNewFile,BufRead .mrconfig set filetype=cfg tw=0")
-vim.api.nvim_command("autocmd BufNewFile,BufRead PKGBUILD set filetype=PKGBUILD tw=0 syntax=sh")
 vim.api.nvim_command("augroup END")
 
 -- toggle spell checking
