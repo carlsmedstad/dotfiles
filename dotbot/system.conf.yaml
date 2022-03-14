@@ -4,6 +4,7 @@
       relink: true
 
 - link:
+    /etc/bluetooth/main.conf: etc/bluetooth/main.conf
     /etc/greetd/config.toml: etc/greetd/config.toml
     /etc/modules-load.d/btusb.conf: etc/modules-load.d/btusb.conf
     /etc/systemd/journald.conf: etc/systemd/journald.conf
