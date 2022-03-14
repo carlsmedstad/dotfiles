@@ -178,7 +178,17 @@ require("packer").startup(function()
 end)
 
 vim.g.mapleader = ","
-vim.g.markdown_fenced_languages = { "json", "yaml", "sh", "bash=sh", "python", "ini=dosini", "vim", "lua" }
+vim.g.markdown_fenced_languages = {
+  "make",
+  "bash=sh",
+  "ini=dosini",
+  "json",
+  "lua",
+  "python",
+  "sh",
+  "vim",
+  "yaml",
+}
 
 if vim.env.COLORTERM == "truecolor" then
   vim.opt.termguicolors = true
