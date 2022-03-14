@@ -46,4 +46,4 @@ ifeq ($(DETECTED_OS), Darwin)
 endif
 
 install-system:
-	dotbot -d system -c dotbot/system.conf.yaml
+	cd system && ./install

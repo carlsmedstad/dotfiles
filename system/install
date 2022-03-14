@@ -1,0 +1,20 @@
+#!/bin/sh -eu
+
+_install() {
+  install -D --mode 644 --compare "$1" "/$1"
+}
+
+_install_exec() {
+  install -D --mode 755 --compare "$1" "/$1"
+}
+
+_install etc/bluetooth/main.conf
+_install etc/greetd/config.toml
+_install etc/modules-load.d/btusb.conf
+_install etc/systemd/journald.conf
+_install etc/tlp.d/10-disable-usb-autosuspend.conf
+_install etc/udev/rules.d/backlight.rules
+_install etc/xdg/reflector/reflector.conf
+_install usr/local/lib/wayland-enablement.sh
+
+_install_exec usr/local/bin/sway-run
