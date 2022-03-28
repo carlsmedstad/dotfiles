@@ -15,10 +15,12 @@ jobs:
       - run: make check-shfmt
   lua:
     runs-on: ubuntu-latest
+    env:
+      STYLUA_VERSION: "0.12.5"
     steps:
       - uses: actions/checkout@v2
       - run: |
-          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v0.11.3/stylua-0.11.3-linux.zip
-          unzip stylua-0.11.3-linux.zip -d /usr/local/bin/
+          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v$STYLUA_VERSION/stylua-$STYLUA_VERSION-linux.zip
+          unzip stylua-$STYLUA_VERSION-linux.zip -d /usr/local/bin/
           chmod u+x /usr/local/bin/stylua
       - run: make check-stylua
