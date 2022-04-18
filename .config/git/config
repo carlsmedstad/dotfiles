@@ -40,5 +40,8 @@
   required = true
 [rebase]
   autosquash = true
+[ghq]
+  vcs = git
+  root = ~/repos
 [include]
   path = ~/.config/git/config_extra
