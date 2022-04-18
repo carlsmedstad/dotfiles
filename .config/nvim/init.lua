@@ -152,30 +152,18 @@ require("packer").startup(function()
   -- Syntax highlighting for Bicep
   use("carlsmedstad/vim-bicep")
 
-  -- Better filetype detection
-  use({
-    "nathom/filetype.nvim",
-    config = function()
-      require("filetype").setup({
-        overrides = {
-          function_literal = {
-            ["PKGBUILD"] = function()
-              vim.bo.filetype = "PKGBUILD"
-              vim.bo.syntax = "sh"
-              vim.bo.tw = 0
-            end,
-            [".mrconfig"] = function()
-              vim.bo.filetype = "cfg"
-              vim.bo.tw = 0
-            end,
-          },
-        },
-      })
-    end,
-  })
-
   -- luacheck: pop
 end)
+
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+
+vim.filetype.add({
+  filename = {
+    [".clang-tidy"] = "yaml",
+    [".mrconfig"] = "cfg",
+  },
+})
 
 vim.g.mapleader = ","
 vim.g.markdown_fenced_languages = {
@@ -237,6 +225,8 @@ vim.api.nvim_command("autocmd FileType go set tw=79 sw=4 ts=4 noet")
 vim.api.nvim_command("autocmd FileType c,cc,h set et tw=79 sw=2 ts=2")
 vim.api.nvim_command("autocmd FileType asciidoc setlocal commentstring=//\\ %s")
 vim.api.nvim_command("autocmd FileType html set tw=120")
+vim.api.nvim_command("autocmd FileType PKGBUILD set tw=0")
+vim.api.nvim_command("autocmd FileType cfg set tw=0")
 vim.api.nvim_command("augroup END")
 
 -- toggle spell checking
