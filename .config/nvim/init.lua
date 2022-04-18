@@ -212,24 +212,35 @@ vim.o.list = true
 vim.o.showbreak = "↪"
 vim.o.listchars = "nbsp:␣,trail:•,extends:⟩,precedes:⟨,tab:  ,"
 vim.o.expandtab = true
-vim.o.tw = 79
-vim.o.sw = 2
-vim.o.ts = 4
+vim.o.textwidth = 79
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
 
 vim.o.tags = "./.tags;/" -- look for tags file from pwd to root
 
--- set options for different languages
-vim.api.nvim_command("augroup languageSpecific")
-vim.api.nvim_command("autocmd!")
-vim.api.nvim_command("autocmd FileType swift set tw=119 sw=4 ts=4")
-vim.api.nvim_command("autocmd FileType python,java,sql,rust set tw=79 sw=4 ts=4")
-vim.api.nvim_command("autocmd FileType go set tw=79 sw=4 ts=4 noet")
-vim.api.nvim_command("autocmd FileType c,cc,h set et tw=79 sw=2 ts=2")
-vim.api.nvim_command("autocmd FileType asciidoc setlocal commentstring=//\\ %s")
-vim.api.nvim_command("autocmd FileType html set tw=120")
-vim.api.nvim_command("autocmd FileType PKGBUILD set tw=0")
-vim.api.nvim_command("autocmd FileType cfg set tw=0")
-vim.api.nvim_command("augroup END")
+vim.api.nvim_create_augroup("init", {})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "python,java,sql,rust,go",
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "go",
+  callback = function()
+    vim.bo.expandtab = false
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "asciidoc",
+  callback = function()
+    vim.bo.commentstring = "//\\ %s"
+  end,
+})
 
 -- toggle spell checking
 vim.keymap.set("n", "<leader>s", function()
