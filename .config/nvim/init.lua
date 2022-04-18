@@ -39,8 +39,8 @@ require("packer").startup(function()
     "mhinz/vim-signify",
     config = function()
       -- move through git hunks
-      vim.api.nvim_set_keymap("n", "<M-j>", "<plug>(signify-next-hunk)", {})
-      vim.api.nvim_set_keymap("n", "<M-k>", "<plug>(signify-prev-hunk)", {})
+      vim.keymap.set("n", "<M-j>", "<plug>(signify-next-hunk)", {})
+      vim.keymap.set("n", "<M-k>", "<plug>(signify-prev-hunk)", {})
     end,
   })
 
@@ -115,20 +115,20 @@ require("packer").startup(function()
       vim.g.ale_echo_msg_format = "[%linter%] %code:% %s"
 
       -- walk through errors
-      vim.api.nvim_set_keymap("n", "<C-k>", "<Plug>(ale_previous_wrap)", {})
-      vim.api.nvim_set_keymap("n", "<C-j>", "<Plug>(ale_next_wrap)", {})
+      vim.keymap.set("n", "<C-k>", "<Plug>(ale_previous_wrap)")
+      vim.keymap.set("n", "<C-j>", "<Plug>(ale_next_wrap)")
 
       -- go to definition
-      vim.api.nvim_set_keymap("x", "<leader>g", ":ALEGoToDefinition<CR>", {})
-      vim.api.nvim_set_keymap("n", "<leader>g", ":ALEGoToDefinition<CR>", {})
+      vim.keymap.set("x", "<leader>g", ":ALEGoToDefinition<CR>")
+      vim.keymap.set("n", "<leader>g", ":ALEGoToDefinition<CR>")
 
       -- run linter
-      vim.api.nvim_set_keymap("n", "<leader>l", ":ALELint<CR>", {})
-      vim.api.nvim_set_keymap("n", "<leader>l", ":ALELint<CR>", {})
+      vim.keymap.set("n", "<leader>l", ":ALELint<CR>")
+      vim.keymap.set("n", "<leader>l", ":ALELint<CR>")
 
       -- run linter
-      vim.api.nvim_set_keymap("n", "<leader>f", ":ALEFix<CR>", {})
-      vim.api.nvim_set_keymap("n", "<leader>f", ":ALEFix<CR>", {})
+      vim.keymap.set("n", "<leader>f", ":ALEFix<CR>")
+      vim.keymap.set("n", "<leader>f", ":ALEFix<CR>")
     end,
   })
 
@@ -145,7 +145,9 @@ require("packer").startup(function()
     "ibhagwan/fzf-lua",
     requires = { "kyazdani42/nvim-web-devicons" },
     setup = function()
-      vim.api.nvim_set_keymap("n", "<M-c>", "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<M-c>", function()
+        require("fzf-lua").files()
+      end, { silent = true })
     end,
   })
 
@@ -230,22 +232,24 @@ vim.api.nvim_command("autocmd FileType cfg set tw=0")
 vim.api.nvim_command("augroup END")
 
 -- toggle spell checking
-vim.api.nvim_set_keymap("n", "<leader>s", ":set spell!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>s", function()
+  vim.o.spell = not vim.o.spell
+end, { silent = true })
 
 -- bufswitch remaps for consistency with vimium
-vim.api.nvim_set_keymap("n", "<C-n>", "<S-j>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-m>", "<S-k>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<S-j>", ":bprev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-k>", ":bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-n>", "<S-j>")
+vim.keymap.set("n", "<C-m>", "<S-k>")
+vim.keymap.set("n", "<S-j>", ":bprev<CR>", { silent = true })
+vim.keymap.set("n", "<S-k>", ":bnext<CR>", { silent = true })
 
 -- move through display lines instead of actual lines
-vim.api.nvim_set_keymap("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
-vim.api.nvim_set_keymap("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
-vim.api.nvim_set_keymap("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { noremap = true, expr = true })
-vim.api.nvim_set_keymap("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk']], { noremap = true, expr = true })
+vim.keymap.set("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { expr = true })
+vim.keymap.set("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk']], { expr = true })
+vim.keymap.set("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { expr = true })
+vim.keymap.set("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk']], { expr = true })
 
 -- exit intsert mode in terminal with Esc
-vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {})
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- get syntax higlight group under pointer
-vim.api.nvim_set_keymap("n", "<leader>h", ':echo synIDattr(synID(line("."),col("."),1),"name")<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>h", ':echo synIDattr(synID(line("."),col("."),1),"name")<CR>', { silent = true })
