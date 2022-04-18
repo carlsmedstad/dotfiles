@@ -16,11 +16,11 @@ jobs:
   lua:
     runs-on: ubuntu-latest
     env:
-      STYLUA_VERSION: "0.12.5"
+      STYLUA_VERSION: "0.13.1"
     steps:
       - uses: actions/checkout@v2
       - run: |
-          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v$STYLUA_VERSION/stylua-$STYLUA_VERSION-linux.zip
-          unzip stylua-$STYLUA_VERSION-linux.zip -d /usr/local/bin/
+          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v$STYLUA_VERSION/stylua-linux.zip
+          unzip stylua-linux.zip -d /usr/local/bin/
           chmod u+x /usr/local/bin/stylua
       - run: make check-stylua
