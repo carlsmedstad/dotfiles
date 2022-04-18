@@ -1,1 +1,4 @@
+[DEFAULT]
 jobs = 1
+post_update = sleep 1
+post_fetch = sleep 1
