@@ -56,7 +56,6 @@ fzf
 gcc
 gcovr
 gdb
-gimp
 git
 git-delta
 git-filter-repo
@@ -101,7 +100,6 @@ minikube
 moreutils
 mpv
 mypy
-myrepos
 namcap
 neofetch
 neovim

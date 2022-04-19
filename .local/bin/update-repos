@@ -1,0 +1,10 @@
+#!/bin/sh -eu
+
+SLEEP_INBETWEEN=${SLEEP_INBETWEEN:-3}
+
+pattern=${1:-'.'}
+
+for repo in $(ghq list | grep "$pattern"); do
+  ghq get --update "$repo"
+  sleep "$SLEEP_INBETWEEN"
+done

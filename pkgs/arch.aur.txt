@@ -11,6 +11,7 @@ dotbot
 drawio-desktop-bin
 duc
 emojify
+ghq-bin
 gitlint
 google-earth-pro
 go-task
