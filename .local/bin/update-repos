@@ -5,6 +5,6 @@ SLEEP_INBETWEEN=${SLEEP_INBETWEEN:-3}
 pattern=${1:-'.'}
 
 for repo in $(ghq list | grep "$pattern"); do
-  ghq get --update "$repo"
+  ghq get --update "$repo" || echo "Failed: $repo" >&2
   sleep "$SLEEP_INBETWEEN"
 done
