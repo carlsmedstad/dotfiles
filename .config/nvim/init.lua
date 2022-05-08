@@ -104,7 +104,7 @@ require("packer").startup(function()
         go = { "gofmt" },
         json = { "jq" },
         lua = { "stylua" },
-        python = { "black" },
+        python = { "black", "isort" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
         swift = { "swiftformat" },
