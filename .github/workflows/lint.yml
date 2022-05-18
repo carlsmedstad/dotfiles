@@ -4,23 +4,15 @@ on: [push]
 jobs:
   shell:
     runs-on: ubuntu-latest
-    container: alpine:3
+    container: ghcr.io/carlsmedstad/mkincl-shell:v1
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          apk add make
-          apk add shfmt
-          apk add shellcheck
-      - run: make check-shellcheck
-      - run: make check-shfmt
+      - run: make init
+      - run: make lint-shell
   lua:
     runs-on: ubuntu-latest
-    env:
-      STYLUA_VERSION: "0.13.1"
+    container: ghcr.io/carlsmedstad/mkincl-lua:v1
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v$STYLUA_VERSION/stylua-linux.zip
-          unzip stylua-linux.zip -d /usr/local/bin/
-          chmod u+x /usr/local/bin/stylua
-      - run: make check-stylua
+      - run: make init
+      - run: make lint-lua

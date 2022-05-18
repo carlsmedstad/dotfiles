@@ -11,30 +11,6 @@ SHFMT_OPTS = -i 2 -bn -sr
 .PHONY: all
 all: check install install-system
 
-
-.PHONY: fix fix-shfmt fix-stylua
-fix: fix-shfmt fix-stylua
-
-fix-shfmt:
-	shfmt -w $(SHFMT_OPTS) $(SHELL_FILES)
-
-fix-stylua:
-	stylua $(LUA_FILES)
-
-
-.PHONY: check check-shellcheck check-shfmt check-stylua
-check: check-shellcheck check-shfmt check-stylua
-
-check-shellcheck:
-	shellcheck -x $(SHELL_FILES)
-
-check-shfmt:
-	shfmt -d $(SHFMT_OPTS) $(SHELL_FILES)
-
-check-stylua:
-	stylua --check $(LUA_FILES)
-
-
 .PHONY: install install-system
 install:
 	dotbot -d . -c dotbot/common.conf.yaml
@@ -47,3 +23,5 @@ endif
 
 install-system:
 	cd system && ./install
+
+include .mkincl/init.mk
