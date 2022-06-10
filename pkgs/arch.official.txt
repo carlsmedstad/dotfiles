@@ -22,7 +22,6 @@ buildah
 ccache
 checkbashisms
 chezmoi
-chromium
 clang
 cloc
 cmake
@@ -31,7 +30,6 @@ cppcheck
 crun
 ctags
 difftastic
-discord
 dmidecode
 dnsmasq
 docker-compose
@@ -133,15 +131,15 @@ podman-docker
 postgresql-libs
 pyenv
 python-black
+python-isort
 python-openapi-spec-validator
-python-pipenv
 python-poetry
 python-pynvim
 python-pytest
-python-pywal
 python-shtab
+python-tox
 python-wheel
-qemu
+qemu-desktop
 qrencode
 realtime-privileges
 reflector
@@ -150,8 +148,10 @@ rpm-tools
 rsync
 rust-analyzer
 rustup
+shfmt
 slurp
 sparse
+speedtest-cli
 sshpass
 stylua
 sudo
@@ -188,6 +188,7 @@ wl-clipboard
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xf86-video-vesa
+xmlto
 xorg-bdftopcf
 xorg-docs
 xorg-fonts-100dpi
@@ -240,5 +241,4 @@ yamllint
 yapf
 yubikey-manager
 zathura-pdf-mupdf
-zig
 zsh
