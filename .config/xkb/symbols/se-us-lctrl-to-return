@@ -1,0 +1,6 @@
+partial alphanumeric_keys
+xkb_symbols "se-us-lctrl-to-return" {
+    include "se(us)"
+
+	  key <RCTL> { [ Return ] };
+};

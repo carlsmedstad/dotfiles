@@ -127,8 +127,7 @@ bar {
 input type:keyboard {
     repeat_delay 170
     repeat_rate 50
-    xkb_layout se
-    xkb_variant us
+    xkb_layout se-us-lctrl-to-return
     xkb_options caps:escape
 }
 
