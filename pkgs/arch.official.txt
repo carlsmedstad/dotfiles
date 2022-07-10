@@ -6,7 +6,6 @@ asciidoctor
 astyle
 autoconf
 automake
-aws-cli
 base
 bash-completion
 bat
@@ -112,7 +111,6 @@ noto-fonts-emoji
 npm
 ntfs-3g
 openapi-generator
-openconnect
 opendoas
 openssh
 pacman-contrib
@@ -133,7 +131,6 @@ pyenv
 python-black
 python-isort
 python-openapi-spec-validator
-python-poetry
 python-pynvim
 python-pytest
 python-shtab
@@ -159,7 +156,6 @@ sway
 swayidle
 swaylock
 sysstat
-task
 terraform
 terragrunt
 texinfo
@@ -238,7 +234,5 @@ xorg-xwininfo
 xorg-xwud
 yadm
 yamllint
-yapf
 yubikey-manager
 zathura-pdf-mupdf
-zsh

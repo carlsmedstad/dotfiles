@@ -6,4 +6,3 @@ rustup update
 flatpak update --assumeyes
 yay -Syu --noconfirm
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-ibmcloud plugin update --all
