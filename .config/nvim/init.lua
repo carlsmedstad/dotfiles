@@ -170,6 +170,7 @@ vim.g.markdown_fenced_languages = {
   "sh",
   "vim",
   "yaml",
+  "powershell=ps1",
 }
 
 if vim.env.COLORTERM == "truecolor" then
