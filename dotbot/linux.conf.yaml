@@ -15,3 +15,4 @@
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/xkb/symbols/se-us-lctrl-to-return: .config/xkb/symbols/se-us-lctrl-to-return
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.Linux
+    ~/.local/share/applications/slack.deskop: .local/share/applications/slack.desktop
