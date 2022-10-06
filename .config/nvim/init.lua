@@ -124,14 +124,6 @@ require("packer").startup(function()
     end,
   })
 
-  -- ctags auto-generation
-  use({
-    "craigemery/vim-autotag",
-    config = function()
-      vim.g.autotagTagsFile = ".tags"
-    end,
-  })
-
   -- fuzzy finding
   use({
     "ibhagwan/fzf-lua",
