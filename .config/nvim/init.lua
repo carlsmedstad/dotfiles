@@ -144,7 +144,6 @@ end)
 vim.filetype.add({
   filename = {
     [".clang-tidy"] = "yaml",
-    [".mrconfig"] = "cfg",
   },
 })
 
@@ -169,22 +168,16 @@ end
 
 vim.o.clipboard = "unnamedplus" -- enables copy/paste from/to vim
 vim.o.undofile = true -- saves undo-history between sessions
-vim.o.mouse = "a" -- Enable scrolling with mouse-wheel
 
-vim.o.hidden = true -- buffer stays open when window is closed
 vim.o.equalalways = false -- splitting won't default to a 50/50 ratio
 
 vim.opt.sessionoptions:remove("tabpages") -- only save current tab in session
 vim.opt.sessionoptions:remove("help") -- don't save help windows in session
 
-vim.o.autoindent = true
-vim.o.smartindent = true -- autoindenting when starting a new line
+vim.o.smartindent = true -- auto-indenting when starting a new line
 vim.o.wildmode = "longest,full" -- tab-completion
 vim.o.ignorecase = true
 vim.o.smartcase = true -- ignore case except if uppercase in search phrase
-
-vim.o.foldenable = true -- folds enabled by default
-vim.o.foldmethod = "marker" -- define folds in code with {{{}}}
 
 vim.o.number = true
 vim.o.numberwidth = 5 -- line-number-bar, with width = 3 digits + padding
@@ -242,7 +235,7 @@ vim.keymap.set("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' :
 vim.keymap.set("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { expr = true })
 vim.keymap.set("n", "k", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk']], { expr = true })
 
--- exit intsert mode in terminal with Esc
+-- exit insert mode in terminal with Esc
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- get syntax higlight group under pointer
