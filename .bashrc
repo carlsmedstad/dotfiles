@@ -53,7 +53,9 @@ fi
 [ -f /usr/local/opt/fzf/shell/key-bindings.bash ] && . /usr/local/opt/fzf/shell/key-bindings.bash
 [ -f /usr/local/opt/fzf/shell/completion.bash ] && . /usr/local/opt/fzf/shell/completion.bash
 
-for f in "$XDG_CONFIG_HOME/bashrc.d/"*; do
-  # shellcheck source=/dev/null
-  . "$f"
-done
+if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
+  for f in "$XDG_CONFIG_HOME/bashrc.d/"*; do
+    # shellcheck source=/dev/null
+    . "$f"
+  done
+fi
