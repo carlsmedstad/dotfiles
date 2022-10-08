@@ -73,9 +73,9 @@ require("packer").startup(function()
 
   -- colorscheme
   use({
-    "lifepillar/vim-solarized8",
+    "ishan9299/nvim-solarized-lua",
     config = function()
-      vim.cmd("colorscheme solarized8")
+      vim.cmd("colorscheme solarized")
     end,
   })
 
