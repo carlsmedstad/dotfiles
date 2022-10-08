@@ -87,6 +87,7 @@ require("packer").startup(function()
       vim.g.ale_linters = {
         cpp = {
           "clangd",
+          "cppcheck",
         },
       }
       vim.g.ale_fixers = {
