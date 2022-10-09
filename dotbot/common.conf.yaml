@@ -17,7 +17,6 @@
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
-    ~/.ctags: .ctags
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
     ~/.local/bin/:
       glob: true
@@ -25,5 +24,4 @@
     ~/.local/share/azure/config: .local/share/azure/config
     ~/.pam_environment: .pam_environment
     ~/.profile: .profile
-    ~/.sqliterc: .sqliterc
     ~/.ssh/config: .ssh/config
