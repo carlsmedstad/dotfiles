@@ -1,10 +1,6 @@
 #!/bin/bash
 # shellcheck disable=1091
 
-# shellcheck disable=2015
-[ "$TERM" = alacritty ] && infocmp alacritty &> /dev/null \
-  || export TERM="xterm-256color"
-
 # Return here for non-interactive shells
 test ! -t 0 && return
 
