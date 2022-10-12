@@ -3,3 +3,5 @@
 az extension list --output json \
   | jq -r '.[].name' \
   | xargs -n1 az extension update --name
+
+az bicep upgrade
