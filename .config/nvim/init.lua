@@ -89,6 +89,9 @@ require("packer").startup(function()
           "clangd",
           "cppcheck",
         },
+        go = {
+          "golangci-lint",
+        },
       }
       vim.g.ale_fixers = {
         PKGBUILD = { "shfmt" },
@@ -161,6 +164,7 @@ vim.g.markdown_fenced_languages = {
   "yaml",
   "powershell=ps1",
   "bicep",
+  "diff",
 }
 
 if vim.env.COLORTERM == "truecolor" then
