@@ -15,8 +15,6 @@ if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
   gpgconf --launch gpg-agent
 fi
 
-command -v terraform >> /dev/null && complete -C /usr/bin/terraform terraform
-
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"

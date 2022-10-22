@@ -21,9 +21,6 @@ alias rga="rg --glob='*' --glob='!.git' --glob='!build'"
 alias screenshot='grim -g "$(slurp)"'
 
 alias podrun='podman run --rm --interactive --tty --volume "$(pwd)":/pwd --workdir /pwd'
-alias lspods='kubectl get pods -o wide --sort-by="{.spec.nodeName}" --all-namespaces'
-
-alias ibmlogin='ibmcloud login -r eu-gb --sso'
 
 tabs -4
 
