@@ -23,6 +23,5 @@
       glob: true
       path: .local/bin/*
     ~/.local/share/azure/config: .local/share/azure/config
-    ~/.pam_environment: .pam_environment
     ~/.profile: .profile
     ~/.ssh/config: .ssh/config
