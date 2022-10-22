@@ -1,5 +1,6 @@
 #!/bin/sh -eu
 
+handlr set text/markdown nvim.desktop
 handlr set text/plain nvim.desktop
 handlr set image/png imv.desktop
 handlr set image/jpeg imv.desktop
