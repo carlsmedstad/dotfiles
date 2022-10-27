@@ -57,3 +57,5 @@ if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
     . "$f"
   done
 fi
+
+eval "$(direnv hook bash)"
