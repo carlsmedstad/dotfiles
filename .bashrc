@@ -50,6 +50,7 @@ fi
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 [ -f /usr/local/opt/fzf/shell/key-bindings.bash ] && . /usr/local/opt/fzf/shell/key-bindings.bash
 [ -f /usr/local/opt/fzf/shell/completion.bash ] && . /usr/local/opt/fzf/shell/completion.bash
+[ -f /usr/share/clang/bash-autocomplete.sh ] && . /usr/share/clang/bash-autocomplete.sh
 
 if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
   for f in "$XDG_CONFIG_HOME/bashrc.d/"*; do
