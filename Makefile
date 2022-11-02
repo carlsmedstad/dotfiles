@@ -34,8 +34,8 @@ ifeq ($(DETECTED_OS), Darwin)
 
 .PHONY: install-configs-user
 install-configs-user:
-	dotbot -d . -c dotbot/common.conf.yaml
-	dotbot -d . -c dotbot/darwin.conf.yaml
+	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/common.conf.yaml
+	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/darwin.conf.yaml
 
 .PHONY: dump-packages
 dump-packages:

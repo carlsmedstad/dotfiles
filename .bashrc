@@ -59,4 +59,6 @@ if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
   done
 fi
 
-eval "$(direnv hook bash)"
+command -v direnv >> /dev/null && eval "$(direnv hook bash)"
+
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
