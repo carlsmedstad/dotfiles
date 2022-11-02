@@ -22,6 +22,8 @@ ifeq ($(DETECTED_OS), Darwin)
 endif
 
 install-system:
-	cd system && ./install
+ifeq ($(DETECTED_OS), Linux)
+	cd system/linux && ./install
+endif
 
 include .mkincl/init.mk
