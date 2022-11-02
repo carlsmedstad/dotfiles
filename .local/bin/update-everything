@@ -4,5 +4,5 @@ command -v sudo > /dev/null && sudo cat /dev/null
 
 rustup update
 flatpak update --assumeyes
-yay -Syu --noconfirm
+paru -Syu --noconfirm
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'

@@ -34,6 +34,7 @@ lua-format
 markdown-link-check
 nodejs-markdownlint-cli
 openssl-3.0
+paru-bin
 pipes.sh
 powershell-bin
 rpmlint
@@ -51,4 +52,3 @@ wlsunset
 wob
 xdg-utils-handlr
 yajsv-bin
-yay-bin
