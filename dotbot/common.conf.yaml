@@ -19,9 +19,10 @@
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
-    ~/.local/bin/:
-      glob: true
-      path: .local/bin/*
+    ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
+    ~/.local/bin/gpg-add: .local/bin/gpg-add
+    ~/.local/bin/rm-containers: .local/bin/rm-containers
+    ~/.local/bin/update-repos: .local/bin/update-repos
     ~/.local/share/azure/config: .local/share/azure/config
     ~/.profile: .profile
     ~/.ssh/config: .ssh/config
