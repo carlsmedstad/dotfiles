@@ -1,8 +1,0 @@
-#!/bin/sh -eu
-
-if [ -f /etc/arch-release ]; then
-  pacman -Qqen | sort > pkgs/arch.official.txt
-  pacman -Qqem | sort | grep -v 'globalprotect' > pkgs/arch.aur.txt
-elif [ "$(uname)" = Darwin ]; then
-  brew bundle dump --force --file pkgs/Brewfile
-fi
