@@ -1,3 +1,4 @@
 #!/bin/sh -eu
 
-brew bundle --file pkgs/macos/Brewfile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew bundle --verbose --file pkgs/macos/Brewfile
