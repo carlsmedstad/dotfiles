@@ -43,6 +43,7 @@ dump-packages:
 
 .PHONY: bootstrap
 bootstrap:
+	./bootstrap/macos/shell
 	./bootstrap/macos/homebrew
 	./bootstrap/macos/pkgs
 	make install-configs-user
