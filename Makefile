@@ -6,36 +6,47 @@ endif
 
 ifeq ($(DETECTED_OS), Linux)
 
-.PHONY: install
-install:
+.PHONY: install-configs-user
+install-configs-user:
 	dotbot -d . -c dotbot/common.conf.yaml
 	dotbot -d . -c dotbot/linux.conf.yaml
 
-.PHONY: install-system
-install-system:
+.PHONY: install-configs-system
+install-configs-system:
 	cd system/linux && ./install
 
-.PHONY: update-pkgs
-explicit_native_pkgs:=$(shell mktemp)
-base_devel_pkgs:=$(shell mktemp)
-update-pkgs:
-	pacman -Qqen | sort > ${explicit_native_pkgs}
-	pacman -Qqeng base-devel | sort > ${base_devel_pkgs}
-	comm -23 ${explicit_native_pkgs} ${base_devel_pkgs} > pkgs/linux/arch.official.txt
-	pacman -Qqem | sort | grep -v 'globalprotect' > pkgs/linux/arch.aur.txt
+.PHONY: dump-packages
+dump-packages:
+	./pkgs/linux/dump
+
+.PHONY: bootstrap
+bootstrap:
+	sudo pacman -S --needed base base-devel
+	./bootstrap/linux/paru
+	./bootstrap/linux/pkgs
+	sudo make install-configs-system
+	make install-configs-user
+	./bootstrap/common/nvim
 
 endif
 
 ifeq ($(DETECTED_OS), Darwin)
 
-.PHONY: install
-install:
+.PHONY: install-configs-user
+install-configs-user:
 	dotbot -d . -c dotbot/common.conf.yaml
 	dotbot -d . -c dotbot/darwin.conf.yaml
 
-.PHONY: update-pkgs
-update-pkgs:
+.PHONY: dump-packages
+dump-packages:
 	brew bundle dump --force --file pkgs/macos/Brewfile
+
+.PHONY: bootstrap
+bootstrap:
+	./bootstrap/macos/homebrew
+	./bootstrap/macos/pkgs
+	make install-configs-user
+	./bootstrap/common/nvim
 
 endif
 

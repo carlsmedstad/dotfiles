@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+brew bundle --file pkgs/macos/Brewfile

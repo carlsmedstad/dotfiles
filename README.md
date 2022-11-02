@@ -11,7 +11,7 @@ Deployment can be done using my dotfile manager of choice, [dotbot][], and
 [GNUMake][]:
 
 ```sh
-make install
+make install-configs-user
 ```
 
 In `system/` I've put system-wide configuration files deemed valuable to have
@@ -19,7 +19,7 @@ in this repository. These can be deployed in the same manner with the
 `install-system` target:
 
 ```sh
-sudo make install-system
+sudo make install-configs-system
 ```
 
 Package lists for both Arch and Brew are located in `pkgs/`.
