@@ -32,11 +32,12 @@ PATH=$KREW_ROOT/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
   PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
+  PATH=/opt/homebrew/opt/findutils/libexec/gnubin:$PATH
   PATH=/opt/homebrew/opt/gnu-indent/libexec/gnubin:$PATH
   PATH=/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH
   PATH=/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/findutils/libexec/gnubin:$PATH
+  PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
+  PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 
   export BASH_SILENCE_DEPRECATION_WARNING=1
 
