@@ -16,8 +16,12 @@ install-system:
 	cd system/linux && ./install
 
 .PHONY: update-pkgs
+explicit_native_pkgs:=$(shell mktemp)
+base_devel_pkgs:=$(shell mktemp)
 update-pkgs:
-	pacman -Qqen | sort > pkgs/linux/arch.official.txt
+	pacman -Qqen | sort > ${explicit_native_pkgs}
+	pacman -Qqeng base-devel | sort > ${base_devel_pkgs}
+	comm -23 ${explicit_native_pkgs} ${base_devel_pkgs} > pkgs/linux/arch.official.txt
 	pacman -Qqem | sort | grep -v 'globalprotect' > pkgs/linux/arch.aur.txt
 
 endif
