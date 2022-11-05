@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-pkg_mgr=yay
+pkg_mgr=paru
 
 pkgs=$($pkg_mgr -Qtdq)
 if [ "$pkgs" != "" ]; then
