@@ -7,5 +7,5 @@ old_dir="$(pwd)"
 trap 'cd "$old_dir"' EXIT
 cd "$repo_dir"
 
-git clone https://aur.archlinux.org/paru-bin.git "$repo_dir"
+git clone https://aur.archlinux.org/paru-git.git "$repo_dir"
 makepkg --noconfirm --syncdeps --rmdeps --install --clean
