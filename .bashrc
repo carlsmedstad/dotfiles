@@ -32,9 +32,10 @@ shopt -s histappend
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ "$(uname)" = "Linux" ]; then
-  export SSH_AGENT_PID=""
-  export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+  export SSH_AUTH_SOCK
 fi
 
 CLR1="\[$(tput setaf 108)\]"
