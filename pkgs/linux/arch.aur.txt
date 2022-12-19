@@ -47,7 +47,6 @@ shellcheck-bin
 slack-desktop
 spotify
 symlinks
-teams
 texttest
 tiny-irc-client-bin
 upd72020x-fw

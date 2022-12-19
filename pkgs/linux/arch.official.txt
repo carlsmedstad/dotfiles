@@ -53,7 +53,6 @@ gdb
 git
 git-delta
 git-filter-repo
-gitlab-runner
 git-lfs
 glab
 go
@@ -81,7 +80,6 @@ kanshi
 kitty
 kubectl
 kubectx
-libreoffice-fresh
 libva-utils
 libvirt
 libxslt
@@ -116,9 +114,11 @@ ntfs-3g
 openapi-generator
 openconnect
 opendoas
+opensc
 openssh
 pacman-contrib
 pamixer
+pcsc-tools
 perl-perl-critic
 pgformatter
 pipewire-alsa
@@ -171,14 +171,12 @@ traceroute
 transmission-cli
 transmission-gtk
 tree
-trivy
 ttf-nerd-fonts-symbols-2048-em
 twine
 udisks2
 upower
 usbutils
 valgrind
-vault
 vi
 vint
 virt-manager
