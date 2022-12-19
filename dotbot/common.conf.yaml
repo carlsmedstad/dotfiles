@@ -12,6 +12,7 @@
     ~/.config/flake8: .config/flake8
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
+    ~/.config/k9s/skin.yml: .config/k9s/skin.yml
     ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/mypy/config: .config/mypy/config
