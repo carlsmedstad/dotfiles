@@ -24,6 +24,8 @@ cmake
 cmatrix
 cppcheck
 ctags
+dbeaver
+ddcutil
 diffoscope
 difftastic
 direnv
@@ -68,11 +70,14 @@ imv
 inetutils
 intel-media-driver
 intel-ucode
+irssi
 istio
 iwd
 j4-dmenu-desktop
 jfsutils
 jq
+k9s
+kanshi
 kitty
 kubectl
 kubectx
@@ -109,11 +114,13 @@ noto-fonts-emoji
 npm
 ntfs-3g
 openapi-generator
+openconnect
 opendoas
 openssh
 pacman-contrib
 pamixer
 perl-perl-critic
+pgformatter
 pipewire-alsa
 pipewire-pulse
 pkgstats
@@ -121,7 +128,9 @@ plantuml
 playerctl
 podman
 podman-docker
+postgresql
 postgresql-libs
+prettier
 pyenv
 python-black
 python-openapi-spec-validator
@@ -145,6 +154,7 @@ slurp
 solaar
 sparse
 speedtest-cli
+sqlfluff
 sshpass
 stylua
 sway
@@ -154,7 +164,6 @@ sysstat
 tcpdump
 terraform
 terragrunt
-tidy
 tigervnc
 tldr
 tlp
