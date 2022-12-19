@@ -10,7 +10,7 @@
   name = Carl Smedstad
   signingkey = 02973186FA345F2CB9C060BB5EED78D7F779E010
 [credential]
-  helper = cache
+  helper = cache --timeout 3600
 [commit]
   gpgsign = true
 [tag]
