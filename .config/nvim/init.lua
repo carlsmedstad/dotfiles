@@ -83,7 +83,6 @@ require("packer").startup(function()
   use({
     "dense-analysis/ale",
     config = function()
-      vim.g.ale_rust_rls_executable = "rust-analyzer"
       vim.g.ale_linters = {
         cpp = {
           "clangd",
@@ -106,7 +105,11 @@ require("packer").startup(function()
         swift = { "swiftformat" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
+
+      vim.g.ale_rust_rls_executable = "rust-analyzer"
+
       vim.g.ale_sh_shfmt_options = "--binary-next-line --space-redirects --indent 2"
+
       vim.g.ale_lint_on_text_changed = 0
       vim.g.ale_echo_msg_format = "[%linter%] %code:% %s"
 
