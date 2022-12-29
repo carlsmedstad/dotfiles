@@ -17,6 +17,8 @@
   gpgsign = true
 [pull]
   ff = only
+[push]
+  autoSetupRemote = true
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
