@@ -148,6 +148,8 @@ end)
 vim.filetype.add({
   filename = {
     [".clang-tidy"] = "yaml",
+    [".sqlfluff"] = "toml",
+    [".envrc"] = "sh",
   },
 })
 
