@@ -84,6 +84,9 @@ require("packer").startup(function()
     "dense-analysis/ale",
     config = function()
       vim.g.ale_linters = {
+        c = {
+          "clangd",
+        },
         cpp = {
           "clangd",
           "cppcheck",
@@ -107,6 +110,9 @@ require("packer").startup(function()
       }
 
       vim.g.ale_rust_rls_executable = "rust-analyzer"
+
+      vim.g.ale_c_build_dir = "build"
+      vim.g.ale_c_clangd_options = "--clang-tidy"
 
       vim.g.ale_sh_shfmt_options = "--binary-next-line --space-redirects --indent 2"
 
