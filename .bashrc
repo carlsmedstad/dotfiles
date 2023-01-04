@@ -29,15 +29,6 @@ export HISTSIZE=10000
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
 
-GPG_TTY=$(tty)
-export GPG_TTY
-
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-  SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-  export SSH_AUTH_SOCK
-fi
-
 CLR1="\[$(tput setaf 108)\]"
 CLR2="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
@@ -63,3 +54,19 @@ fi
 command -v direnv >> /dev/null && eval "$(direnv hook bash)"
 
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
+  [ -r /usr/local/etc/profile.d/bash_completion.sh ] \
+    && . /usr/local/etc/profile.d/bash_completion.sh
+  [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] \
+    && . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+fi
+
+GPG_TTY=$(tty)
+export GPG_TTY
+
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+  export SSH_AUTH_SOCK
+fi
