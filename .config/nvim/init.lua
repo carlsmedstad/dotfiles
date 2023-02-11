@@ -170,6 +170,7 @@ vim.g.markdown_fenced_languages = {
   "powershell=ps1",
   "bicep",
   "diff",
+  "sql",
 }
 
 if vim.env.COLORTERM == "truecolor" then
