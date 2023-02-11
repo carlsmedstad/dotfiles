@@ -64,6 +64,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exit
 
+bindsym $mod+Shift+s exec grim -g "$(slurp)"
+
 mode "resize" {
     bindsym h resize shrink width 10 px or 1 ppt
     bindsym j resize grow height 10 px or 1 ppt
