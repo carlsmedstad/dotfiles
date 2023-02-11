@@ -31,22 +31,10 @@ PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 PATH=$KREW_ROOT/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
-  PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/findutils/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/gnu-indent/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
-  PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
-
   export BASH_SILENCE_DEPRECATION_WARNING=1
 
   command -v ruby >> /dev/null && command -v gem >> /dev/null \
     && PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-
-  export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-  export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 fi
 
 if command -v luarocks >> /dev/null; then
