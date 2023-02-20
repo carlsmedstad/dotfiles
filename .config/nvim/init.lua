@@ -172,6 +172,7 @@ vim.filetype.add({
   },
   extension = {
     h = "c",
+    props = "xml",
   },
 })
 
