@@ -1,10 +1,9 @@
 [theme]
-name = "solarized-dark"
+theme = "solarized-dark"
 [theme.overrides]
-separator = ""
-
+separator = "  "
 [icons]
-name = "awesome5"
+icons = "awesome6"
 
 [[block]]
 block = "sound"
@@ -14,19 +13,26 @@ max_vol = 100
 [[block]]
 block = "music"
 player = "spotify"
-buttons = ["play", "next"]
+[[block.click]]
+button = "left"
+action = "play_pause"
+[[block.click]]
+button = "right"
+action = "next"
 
 [[block]]
-block = "battery"
-format = "{percentage}"
+block = "bluetooth"
+mac = "00:18:09:92:1B:BA"
+disconnected_format = ""
+format = " $icon "
+
+[[block]]
+block = "net"
+format = "    $icon {$signal_strength $ssid|Wired connection} "
 
 [[block]]
 block = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
-display_type = "memory"
-icons = true
-clickable = true
+format = " $icon $mem_used_percents.eng(w:3) "
 interval = 5
 warning_mem = 80
 warning_swap = 80
@@ -35,9 +41,14 @@ critical_swap = 95
 
 [[block]]
 block = "cpu"
+format = " $icon $utilization.eng(w:3) "
 interval = 1
+
+[[block]]
+block = "battery"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a %F %R"
+[block.format]
+full = " $icon $timestamp.datetime(f:'%Y-%m-%d %R') "
