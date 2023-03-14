@@ -26,6 +26,8 @@ alias podrun='podman run --rm --interactive --tty --volume "$(pwd)":/pwd --workd
 
 alias gitaux='git --git-dir=.gitaux --work-tree=$(pwd)'
 
+alias spellupdate='mkspell ~/.config/nvim/spell/en.utf-8.add.spl ~/.config/nvim/spell/words.en.txt'
+
 tabs -4
 
 unset HISTFILESIZE
