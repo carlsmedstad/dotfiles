@@ -240,6 +240,20 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "//\\ %s"
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "markdown",
+  callback = function()
+    vim.wo.spell = true
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "gitcommit",
+  callback = function()
+    vim.wo.spell = true
+  end,
+})
 
 -- toggle spell checking
 vim.keymap.set("n", "<leader>s", function()
