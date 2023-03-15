@@ -99,12 +99,16 @@ require("packer").startup(function()
         PKGBUILD = { "shfmt" },
         cmake = { "cmakeformat" },
         cpp = { "clang-format" },
+        css = { "prettier" },
         go = { "gofmt" },
+        html = { "prettier" },
+        javascript = { "prettier" },
         json = { "jq" },
         lua = { "stylua" },
         python = { "black", "isort" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
+        sql = { "sqlfluff" },
         swift = { "swiftformat" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
@@ -150,6 +154,12 @@ require("packer").startup(function()
 
   -- Syntax highlighting for Bicep
   use("carlsmedstad/vim-bicep")
+
+  -- Better syntax highlighting for SQL
+  use("shmup/vim-sql-syntax")
+
+  -- Better syntax highlighting for SQL
+  use("lifepillar/pgsql.vim")
 
   -- luacheck: pop
 end)
