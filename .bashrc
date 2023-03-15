@@ -24,6 +24,8 @@ alias screenshot='grim -g "$(slurp)"'
 
 alias podrun='podman run --rm --interactive --tty --volume "$(pwd)":/pwd --workdir /pwd'
 
+alias gitaux='git --git-dir=.gitaux --work-tree=$(pwd)'
+
 tabs -4
 
 unset HISTFILESIZE
