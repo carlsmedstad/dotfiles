@@ -1,0 +1,21 @@
+profile {
+	output DP-2 enable
+	output "Dell Inc. DELL P2422HE BZ7P5L3" mode 1920x1080 position 0,0
+	output DP-1 enable
+	output "Samsung Electric Company S24C650 H4MFB02141" mode 1920x1200 position 1920,0
+	output eDP-1 disable
+}
+
+profile {
+	output DP-2 enable
+	output "Dell Inc. DELL P2422HE 28KJCN3" mode 1920x1080 position 0,0
+	output DP-1 enable
+	output "Eizo Nanao Corporation EV2456 0x0000F7BB" mode 1920x1200 position 1920,0
+	output eDP-1 disable
+}
+
+profile {
+  output "Sharp Corporation 0x14E2 Unknown" disable
+	output "Dell Inc. DELL P2419H 6YY3097V0TWB" mode 1920x1080 position 0,0
+	output "Dell Inc. DELL P2422HE FJF1ZB3" mode 1920x1080 position 1920,0
+}

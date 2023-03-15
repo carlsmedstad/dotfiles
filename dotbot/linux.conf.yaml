@@ -8,6 +8,7 @@
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/gtk-3.0/settings.ini: .config/gtk-3.0/settings.ini
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
+    ~/.config/kanshi/config: .config/kanshi/config
     ~/.config/mako/config: .config/mako/config
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
     ~/.config/sway/config: .config/sway/config
