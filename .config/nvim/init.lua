@@ -160,6 +160,9 @@ vim.filetype.add({
     [".sqlfluff"] = "toml",
     [".envrc"] = "sh",
   },
+  extension = {
+    h = "c",
+  },
 })
 
 vim.g.mapleader = ","
