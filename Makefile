@@ -4,13 +4,10 @@ else
     DETECTED_OS := $(shell uname)
 endif
 
-.config/nvim/spell/en.utf-8.add.spl: .config/nvim/spell/words.en.txt
-	mkspell $@ $<
-
 ifeq ($(DETECTED_OS), Linux)
 
 .PHONY: install-configs-user
-install-configs-user: .config/nvim/spell/en.utf-8.add.spl
+install-configs-user:
 	dotbot -d . -c dotbot/common.conf.yaml
 	dotbot -d . -c dotbot/linux.conf.yaml
 
