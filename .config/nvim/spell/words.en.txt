@@ -1,10 +1,15 @@
+Alacritty
 Artifactory
 CMake
+Coverity
 FastAPI
 GitLab
 Gothenburg
 IaC
+Istio
 JSON
+K8s
+Kubernetes
 Lua
 Neovim
 OpenAPI
@@ -13,4 +18,7 @@ PowerShell
 RHEL
 SaaS
 ServiceNow
+UAT
+ZNC
+mTLS
 onboarding
