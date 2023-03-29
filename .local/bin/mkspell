@@ -1,3 +1,4 @@
 #!/bin/sh -eu
 
 nvim --headless --cmd "mkspell! $1 $2 | quit"
+echo
