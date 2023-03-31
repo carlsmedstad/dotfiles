@@ -277,3 +277,9 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- get syntax higlight group under pointer
 vim.keymap.set("n", "<leader>h", ':echo synIDattr(synID(line("."),col("."),1),"name")<CR>', { silent = true })
+
+-- remove duplicate newlines
+vim.keymap.set("v", "<leader>s", ":s/\\n\\n/\\r<CR> :noh<CR>", { silent = true })
+
+-- one word per line
+vim.keymap.set("v", "<leader>w", ":s/\\s\\+/\\r/g<CR> :noh<CR>", { silent = true })
