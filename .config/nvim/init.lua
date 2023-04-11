@@ -32,8 +32,6 @@ require("packer").startup(function()
   use("tpope/vim-repeat") -- make . work for plugins
   use("farmergreg/vim-lastplace") -- save cursor pos between sessions
 
-  use("editorconfig/editorconfig-vim") -- Editorconfig support
-
   -- VCS info
   use({
     "mhinz/vim-signify",
