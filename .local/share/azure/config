@@ -5,3 +5,6 @@ first_run = yes
 [cloud]
 name = AzureCloud
 
+[bicep]
+use_binary_from_path = false
+
