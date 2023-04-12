@@ -17,8 +17,7 @@
     ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/mypy/config: .config/mypy/config
     ~/.config/nvim/init.lua: .config/nvim/init.lua
-    ~/.config/nvim/spell/en.utf-8.add.spl: .config/nvim/spell/en.utf-8.add.spl
-    ~/.config/nvim/spell/words.en.txt: .config/nvim/spell/words.en.txt
+    ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf

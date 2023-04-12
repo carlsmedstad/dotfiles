@@ -1,4 +1,10 @@
 #!/bin/sh -eu
 
-nvim --headless --cmd "mkspell! $1 $2 | quit"
+xdg_config_home=${XDG_CONFIG_HOME:-$HOME/.config}
+
+tmpfile=$(mktemp)
+cat ~/.config/nvim/spell/wordlists/*.en.txt > "$tmpfile"
+
+mkdir -p "$xdg_config_home/nvim/spell"
+nvim --headless --cmd "mkspell! $xdg_config_home/nvim/spell/en.utf-8.add.spl $tmpfile | quit"
 echo

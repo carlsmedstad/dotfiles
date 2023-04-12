@@ -12,6 +12,7 @@ K8s
 Kubernetes
 Lua
 Neovim
+OAuth
 OpenAPI
 PostgreSQL
 PowerShell
