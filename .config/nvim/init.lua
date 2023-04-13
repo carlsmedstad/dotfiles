@@ -81,6 +81,9 @@ require("packer").startup(function()
           "clangd",
           "cppcheck",
         },
+        bicep = {
+          "az_bicep",
+        },
         go = {
           "golangci-lint",
         },
