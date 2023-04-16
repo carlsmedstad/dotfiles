@@ -22,6 +22,7 @@
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
     ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
+    ~/.local/bin/git-recursive: .local/bin/git-recursive
     ~/.local/bin/gpg-add: .local/bin/gpg-add
     ~/.local/bin/mkspell: .local/bin/mkspell
     ~/.local/bin/rm-containers: .local/bin/rm-containers
