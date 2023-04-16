@@ -16,11 +16,12 @@ export GOBIN="$GOPATH/bin"
 export GOPATH="$XDG_DATA_HOME/go"
 export JFROG_CLI_HOME_DIR="$XDG_DATA_HOME/jfrog"
 export KREW_ROOT="$XDG_DATA_HOME/krew"
-export MINIKUBE_HOME="$XDG_DATA_HOME/minikube"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache.config"
 export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
+
+export ANSIBLE_STDOUT_CALLBACK=yaml
 
 [ -d "$XDG_STATE_HOME" ] || mkdir -p "$XDG_STATE_HOME"
 export HISTFILE="$XDG_STATE_HOME/bash_history"
@@ -43,11 +44,6 @@ if command -v luarocks >> /dev/null; then
   export LUA_PATH
   export LUA_CPATH
 fi
-
-export MINIKUBE_CONTAINER_RUNTIME=crio
-export MINIKUBE_DRIVER=kvm2
-
-export ANSIBLE_STDOUT_CALLBACK=yaml
 
 if command -v pyenv >> /dev/null; then
   export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
