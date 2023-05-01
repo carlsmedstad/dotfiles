@@ -1,6 +1,8 @@
+AWS
 Alacritty
 Artifactory
 CMake
+CORS
 Coverity
 FastAPI
 GitLab
@@ -17,11 +19,15 @@ OAuth
 OpenAPI
 PostgreSQL
 PowerShell
+PyPI
 RHEL
 SaaS
 ServiceNow
+ShellCheck
 UAT
 ZNC
+composability
 crontab
+focals
 mTLS
 onboarding
