@@ -221,7 +221,7 @@ vim.o.tags = "./.tags;/" -- look for tags file from pwd to root
 vim.api.nvim_create_augroup("init", {})
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
-  pattern = "python,java,sql,rust,go",
+  pattern = "python,java,rust,go",
   callback = function()
     vim.bo.shiftwidth = 4
     vim.bo.tabstop = 4
@@ -246,6 +246,8 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   callback = function()
     vim.wo.spell = true
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
   end,
 })
 vim.api.nvim_create_autocmd("FileType", {
