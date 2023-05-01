@@ -258,11 +258,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- toggle spell checking
-vim.keymap.set("n", "<leader>s", function()
-  vim.o.spell = not vim.o.spell
-end, { silent = true })
-
 -- bufswitch remaps for consistency with vimium
 vim.keymap.set("n", "<C-n>", "<S-j>")
 vim.keymap.set("n", "<C-m>", "<S-k>")
@@ -286,3 +281,12 @@ vim.keymap.set("v", "<leader>s", ":s/\\n\\n/\\r<CR> :noh<CR>", { silent = true }
 
 -- one word per line
 vim.keymap.set("v", "<leader>w", ":s/\\s\\+/\\r/g<CR> :noh<CR>", { silent = true })
+
+-- toggle spell checking
+vim.keymap.set("n", "<leader>s", function()
+  vim.o.spell = not vim.o.spell
+end, { silent = true })
+
+-- sort buffer or marked
+vim.keymap.set("n", "<leader>o", "ggVG:'<,'>sort<CR>", { silent = true })
+vim.keymap.set("v", "<leader>o", ":'<,'>sort<CR>", { silent = true })
