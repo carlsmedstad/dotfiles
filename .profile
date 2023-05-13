@@ -44,8 +44,3 @@ if command -v luarocks >> /dev/null; then
   export LUA_PATH
   export LUA_CPATH
 fi
-
-if command -v pyenv >> /dev/null; then
-  export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-  eval "$(pyenv init --path)"
-fi
