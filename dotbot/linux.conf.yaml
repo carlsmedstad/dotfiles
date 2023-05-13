@@ -5,6 +5,7 @@
 
 - link:
     ~/.config/Xresources: .config/Xresources
+    ~/.config/electron-flags.conf: .config/electron-flags.conf
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/gtk-3.0/settings.ini: .config/gtk-3.0/settings.ini
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
@@ -20,4 +21,5 @@
     ~/.local/bin/rm-orphans: .local/bin/rm-orphans
     ~/.local/bin/set-default-applications: .local/bin/set-default-applications
     ~/.local/bin/update-everything: .local/bin/update-everything
+    ~/.local/share/applications/google-earth-pro.desktop: .local/share/applications/google-earth-pro.desktop
     ~/.local/share/applications/slack.deskop: .local/share/applications/slack.desktop
