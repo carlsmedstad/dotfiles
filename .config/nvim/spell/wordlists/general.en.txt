@@ -1,6 +1,7 @@
 AWS
 Alacritty
 Artifactory
+Base64
 CMake
 CORS
 Coverity
