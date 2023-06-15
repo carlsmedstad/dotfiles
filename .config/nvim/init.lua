@@ -87,6 +87,9 @@ require("packer").startup(function()
         go = {
           "golangci-lint",
         },
+        typescript = {
+          "eslint",
+        },
       }
       vim.g.ale_fixers = {
         PKGBUILD = { "shfmt" },
@@ -103,9 +106,12 @@ require("packer").startup(function()
         sh = { "shfmt" },
         sql = { "sqlfluff" },
         swift = { "swiftformat" },
+        typescript = { "prettier" },
+        vue = { "prettier" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
 
+      vim.g.ale_use_neovim_diagnostics_api = 1
       vim.g.ale_rust_rls_executable = "rust-analyzer"
 
       vim.g.ale_c_build_dir = "build"
@@ -171,19 +177,20 @@ vim.filetype.add({
 
 vim.g.mapleader = ","
 vim.g.markdown_fenced_languages = {
-  "make",
   "bash=sh",
-  "ini=dosini",
-  "json",
-  "lua",
-  "python",
-  "sh",
-  "vim",
-  "yaml",
-  "powershell=ps1",
   "bicep",
   "diff",
+  "ini=dosini",
+  "javascript",
+  "json",
+  "lua",
+  "make",
+  "powershell=ps1",
+  "python",
+  "sh",
   "sql",
+  "vim",
+  "yaml",
 }
 
 if vim.env.COLORTERM == "truecolor" then
