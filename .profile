@@ -4,6 +4,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 export MANPAGER="nvim +Man!"
+export DIFFPROG="nvim -d"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
