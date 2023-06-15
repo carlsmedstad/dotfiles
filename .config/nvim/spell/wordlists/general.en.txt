@@ -5,6 +5,7 @@ Base64
 CMake
 CORS
 Coverity
+ESLint
 FastAPI
 GitLab
 Gothenburg
@@ -12,9 +13,13 @@ Homebrew
 IaC
 Istio
 JSON
+JWK
+JWT
+JWTs
 K8s
 Kubernetes
 Lua
+NGINX
 Neovim
 OAuth
 OpenAPI
@@ -26,9 +31,12 @@ SaaS
 ServiceNow
 ShellCheck
 UAT
+Vue
 ZNC
 composability
 crontab
 focals
+hostname
 mTLS
 onboarding
+whitelist
