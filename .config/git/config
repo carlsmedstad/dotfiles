@@ -47,3 +47,5 @@
   root = ~/repos
 [include]
   path = ~/.config/git/config_extra
+[init]
+  defaultBranch = master
