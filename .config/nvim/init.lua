@@ -154,6 +154,19 @@ require("packer").startup(function()
   -- copilot
   use("github/copilot.vim")
 
+  -- chatgpt
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+  })
+
   -- Syntax highlighting for Bicep
   use("carlsmedstad/vim-bicep")
 
