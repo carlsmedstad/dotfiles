@@ -151,6 +151,9 @@ require("packer").startup(function()
     end,
   })
 
+  -- copilot
+  use("github/copilot.vim")
+
   -- Syntax highlighting for Bicep
   use("carlsmedstad/vim-bicep")
 
