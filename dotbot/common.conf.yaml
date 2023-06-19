@@ -21,10 +21,15 @@
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
+    ~/.local/bin/aicommits: .local/bin/crypt-run
     ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
+    ~/.local/bin/chatblade: .local/bin/crypt-run
+    ~/.local/bin/crypt-create: .local/bin/crypt-create
     ~/.local/bin/git-recursive: .local/bin/git-recursive
     ~/.local/bin/gpg-add: .local/bin/gpg-add
     ~/.local/bin/mkspell: .local/bin/mkspell
+    ~/.local/bin/nvim: .local/bin/crypt-run
+    ~/.local/bin/phoneinfoga: .local/bin/crypt-run
     ~/.local/bin/rm-containers: .local/bin/rm-containers
     ~/.local/bin/update-repos: .local/bin/update-repos
     ~/.local/share/azure/config: .local/share/azure/config

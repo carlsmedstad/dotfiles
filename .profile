@@ -29,6 +29,10 @@ export HISTFILE="$XDG_STATE_HOME/bash_history"
 export LESSHISTFILE="$XDG_STATE_HOME/less_history"
 export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
 
+# For phoneinfoga
+export GOOGLECSE_CX=f0f0d74a82b79456e
+export GOOGLECSE_MAX_RESULTS=10
+
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 PATH=$KREW_ROOT/bin:$PATH
 

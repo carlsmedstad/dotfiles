@@ -1,0 +1,9 @@
+#!/bin/sh -eu
+
+xdg_state_home=${XDG_STATE_HOME:-$HOME/.local/state}
+crypt_file=${CRYPT_FILE:-$xdg_state_home/crypt}
+
+eval "$(gpg --decrypt "$crypt_file" 2> /dev/null)"
+
+# shellcheck disable=SC2046
+/bin/$(basename "$0") "$@"
