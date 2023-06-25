@@ -6,7 +6,6 @@
 - link:
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
-    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
     ~/.config/bat/config: .config/bat/config
     ~/.config/black: .config/black
     ~/.config/flake8: .config/flake8
