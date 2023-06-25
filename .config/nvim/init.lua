@@ -252,6 +252,13 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
+  pattern = "sql",
+  callback = function()
+    vim.bo.commentstring = "-- %s"
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
   pattern = "go",
   callback = function()
     vim.bo.expandtab = false
