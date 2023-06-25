@@ -64,6 +64,8 @@ if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
     && . /usr/local/etc/profile.d/bash_completion.sh
   [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] \
     && . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+  # shellcheck source=/dev/null
+  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
 
 GPG_TTY=$(tty)
