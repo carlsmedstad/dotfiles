@@ -1,10 +1,4 @@
 #!/bin/sh -eu
 
-explicit_native_pkgs=$(mktemp)
-base_devel_pkgs=$(mktemp)
-
-pacman -Qqen | sort > "$explicit_native_pkgs"
-pacman -Qqeng base-devel | sort > "$base_devel_pkgs"
-comm -23 "$explicit_native_pkgs" "$base_devel_pkgs" > pkgs/linux/arch.official.txt
-
+pacman -Qqen | sort > pkgs/linux/arch.official.txt
 pacman -Qqem | sort | grep -v 'globalprotect' > pkgs/linux/arch.aur.txt
