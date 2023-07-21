@@ -160,5 +160,5 @@ exec mako
 exec swayidle -w \
   timeout 300 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"'
-exec ~/.config/sway/setup-xdg-desktop-portal-wlr
-exec_always ~/.config/sway/keep-laptop-display-disabled-when-lid-closed
+exec ~/.config/sway/scripts/setup-xdg-desktop-portal-wlr
+exec_always ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed

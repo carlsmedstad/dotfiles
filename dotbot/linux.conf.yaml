@@ -14,8 +14,8 @@
     ~/.config/mako/config: .config/mako/config
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
     ~/.config/sway/config: .config/sway/config
-    ~/.config/sway/keep-laptop-display-disabled-when-lid-closed: .config/sway/keep-laptop-display-disabled-when-lid-closed
-    ~/.config/sway/setup-xdg-desktop-portal-wlr: .config/sway/setup-xdg-desktop-portal-wlr
+    ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed: .config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
+    ~/.config/sway/scripts/setup-xdg-desktop-portal-wlr: .config/sway/scripts/setup-xdg-desktop-portal-wlr
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/xkb/symbols/se-us-lctrl-to-return: .config/xkb/symbols/se-us-lctrl-to-return
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.Linux
