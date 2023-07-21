@@ -1,5 +1,5 @@
 -- luacheck: globals vim
--- luacheck: max_line_length 200
+-- luacheck: max_line_length 120
 
 -- Bootstrap packer.nvim
 local fn = vim.fn

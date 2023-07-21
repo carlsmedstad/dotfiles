@@ -17,6 +17,7 @@
     ~/.config/mypy/config: .config/mypy/config
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
+    ~/.config/stylua.toml: .stylua.toml
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
