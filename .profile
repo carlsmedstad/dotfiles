@@ -22,6 +22,8 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache.config"
 export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
 
+export CHROOT="$XDG_DATA_HOME/chroot"
+
 export ANSIBLE_STDOUT_CALLBACK=yaml
 
 [ -d "$XDG_STATE_HOME" ] || mkdir -p "$XDG_STATE_HOME"
