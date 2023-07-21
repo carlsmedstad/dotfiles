@@ -89,6 +89,7 @@ require("packer").startup(function()
         },
         typescript = {
           "eslint",
+          "tsserver",
         },
       }
       vim.g.ale_fixers = {
