@@ -9,7 +9,7 @@ mkdir -p "$HOME/.screenshots"
 if [ "$mode" = "full" ]; then
   focused_output=$(
     swaymsg -t get_tree \
-    | jq -r '
+      | jq -r '
         .nodes[]
         | select([recurse(.nodes[]?, .floating_nodes[]?) | .focused ] | any)
         | .name

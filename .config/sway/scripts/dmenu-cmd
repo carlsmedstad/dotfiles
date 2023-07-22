@@ -32,23 +32,23 @@ bemenu \
   --prompt Launch \
   --line-height 29 \
   --accept-single \
-  --fn  "$font" \
-  --hp  "$horizontal_padding" \
-  --tb  "$title_background" \
-  --tf  "$title_foreground" \
-  --fb  "$filter_background" \
-  --ff  "$filter_foreground" \
-  --cb  "$cursor_background" \
-  --cf  "$cursor_foreground" \
-  --nb  "$normal_background" \
-  --nf  "$normal_foreground" \
-  --hb  "$highlighted_background" \
-  --hf  "$highlighted_foreground" \
+  --fn "$font" \
+  --hp "$horizontal_padding" \
+  --tb "$title_background" \
+  --tf "$title_foreground" \
+  --fb "$filter_background" \
+  --ff "$filter_foreground" \
+  --cb "$cursor_background" \
+  --cf "$cursor_foreground" \
+  --nb "$normal_background" \
+  --nf "$normal_foreground" \
+  --hb "$highlighted_background" \
+  --hf "$highlighted_foreground" \
   --fbb "$feedback_background" \
   --fbf "$feedback_foreground" \
-  --sb  "$selected_background" \
-  --sf  "$selected_foreground" \
-  --ab  "$alternating_background" \
-  --af  "$alternating_foreground" \
+  --sb "$selected_background" \
+  --sf "$selected_foreground" \
+  --ab "$alternating_background" \
+  --af "$alternating_foreground" \
   --scb "$scrollbar_background" \
   --scf "$scrollbar_foreground"
