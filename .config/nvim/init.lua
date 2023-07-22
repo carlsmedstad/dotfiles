@@ -15,6 +15,13 @@ end
 require("packer").startup(function()
   -- luacheck: push globals use
   use({
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      vim.keymap.set("n", "<leader>c", ":ColorizerToggle<CR>", { silent = true })
+    end,
+  })
+
+  use({
     "nvim-treesitter/nvim-treesitter",
     run = function()
       local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
