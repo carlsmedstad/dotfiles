@@ -68,7 +68,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exit
 
-bindsym $mod+Shift+s exec grim -g "$(slurp)"
+bindsym $mod+p exec ~/.config/sway/scripts/printscreen full
+bindsym $mod+Shift+p exec ~/.config/sway/scripts/printscreen region
 
 mode "resize" {
     bindsym h resize shrink width 10 px or 1 ppt
@@ -105,11 +106,8 @@ bindsym $mod+Shift+y output eDP-1 disable
 
 bindsym $mod+t input type:touchpad events toggle enabled disabled
 
-bindsym $mod+b input type:keyboard xkb_variant us
-bindsym $mod+Shift+b input type:keyboard xkb_variant nodeadkeys
-
-bindsym $mod+p exec systemctl suspend
-bindsym $mod+Shift+p exec systemctl hibernate
+bindsym $mod+z exec systemctl suspend
+bindsym $mod+Shift+z exec systemctl hibernate
 
 titlebar_border_thickness 2
 default_border pixel 2
@@ -120,7 +118,7 @@ gaps inner 8
 font pango:monospace 12
 
 # target                 title     bg        text     indicator  border
-client.focused           $mauve    $mauve    $crust   $flamingo  $mauve
+client.focused           $mauve    $mauve    $crust   $pink      $mauve
 client.focused_inactive  $mantle   $mantle   $mauve   $surface0  $mantle
 client.unfocused         $surface0 $surface0 $text    $surface1  $mantle
 client.urgent            $maroon   $maroon   $text    $red       $maroon

@@ -1,0 +1,23 @@
+#!/bin/sh -eu
+
+mode=${1:-full}
+
+file_name=$(date +"%Y-%m-%dT%H:%M:%S%:z").png
+
+mkdir -p "$HOME/.screenshots"
+
+if [ "$mode" = "full" ]; then
+  focused_output=$(
+    swaymsg -t get_tree \
+    | jq -r '
+        .nodes[]
+        | select([recurse(.nodes[]?, .floating_nodes[]?) | .focused ] | any)
+        | .name
+      '
+  )
+  grim -c -o "$focused_output" "$HOME/.screenshots/$file_name"
+fi
+
+if [ "$mode" = "region" ]; then
+  slurp | grim -g - "$HOME/.screenshots/$file_name"
+fi
