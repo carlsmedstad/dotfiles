@@ -1,29 +1,3 @@
-# "#f5e0dc" # rosewater
-# "#f2cdcd" # flamingo
-# "#f5c2e7" # pink
-# "#cba6f7" # mauve
-# "#f38ba8" # red
-# "#eba0ac" # maroon
-# "#fab387" # peach
-# "#a6e3a1" # green
-# "#94e2d5" # teal
-# "#89dceb" # sky
-# "#74c7ec" # sapphire
-# "#89b4fa" # blue
-# "#b4befe" # lavender
-# "#cdd6f4" # text
-# "#bac2de" # subtext1
-# "#a6adc8" # subtext0
-# "#9399b2" # overlay2
-# "#7f849c" # overlay1
-# "#6c7086" # overlay0
-# "#585b70" # surface2
-# "#45475a" # surface1
-# "#313244" # surface0
-# "#1e1e2e" # base
-# "#181825" # mantle
-# "#11111b" # crust
-
 idle_bg = "#181825" # mantle
 idle_fg = "#cdd6f4" # text
 
