@@ -172,9 +172,9 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
-exec xrdb -load $XDG_CONFIG_HOME/Xresources
+exec_always xrdb -load $XDG_CONFIG_HOME/Xresources
 exec wlsunset -l 57.7 -L 11.9
 exec mako
 exec swayidle -w \
