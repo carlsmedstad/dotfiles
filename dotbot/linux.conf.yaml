@@ -30,4 +30,5 @@
     ~/.local/bin/set-default-applications: .local/bin/set-default-applications
     ~/.local/bin/update-everything: .local/bin/update-everything
     ~/.local/share/applications/google-earth-pro.desktop: .local/share/applications/google-earth-pro.desktop
-    ~/.local/share/applications/slack.deskop: .local/share/applications/slack.desktop
+    ~/.local/share/applications/slack.desktop: .local/share/applications/slack.desktop
+    ~/.local/share/applications/xeyes.desktop: .local/share/applications/xeyes.desktop
