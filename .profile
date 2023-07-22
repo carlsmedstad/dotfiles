@@ -51,3 +51,5 @@ if command -v luarocks >> /dev/null; then
   export LUA_PATH
   export LUA_CPATH
 fi
+
+export GTK_THEME=Catppuccin-Mocha-Standard-Mauve-dark

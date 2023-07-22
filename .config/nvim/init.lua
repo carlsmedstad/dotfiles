@@ -123,7 +123,7 @@ require("packer").startup(function()
   use({
     "vim-airline/vim-airline",
     config = function()
-      vim.g.airline_theme = "solarized"
+      vim.g.airline_theme = "catppuccin"
 
       if vim.env.DISPLAY ~= nil then
         vim.g.airline_powerline_fonts = 1
@@ -140,9 +140,13 @@ require("packer").startup(function()
 
   -- colorscheme
   use({
-    "ishan9299/nvim-solarized-lua",
+    "catppuccin/nvim",
+    as = "catppuccin",
     config = function()
-      vim.cmd("colorscheme solarized")
+      require("catppuccin").setup({
+        flavour = "mocha",
+      })
+      vim.cmd.colorscheme("catppuccin")
     end,
   })
 

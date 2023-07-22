@@ -6,3 +6,5 @@ rustup update
 flatpak update --assumeyes
 paru -Syu --noconfirm
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+git -C "$HOME/repos/github.com/carlsmedstad/dotfiles" \
+  submodule update --recursive --remote

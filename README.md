@@ -3,7 +3,11 @@
 These are my dotfiles at the moment.
 
 I use these regularly on both MacOS and Arch Linux and aim for them to be
-compatable with both operating systems.
+compatible with both operating systems.
+
+As much as possible is themed with [Catppuccin][].
+
+[Catppuccin]: https://github.com/catppuccin/catppuccin
 
 ## Usage
 

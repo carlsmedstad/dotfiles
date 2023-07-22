@@ -6,6 +6,7 @@
 - link:
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
+    ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml: .config/alacritty/themes/catppuccin/catppuccin-mocha.yml
     ~/.config/bat/config: .config/bat/config
     ~/.config/black: .config/black
     ~/.config/flake8: .config/flake8
@@ -19,6 +20,7 @@
     ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
     ~/.config/stylua.toml: .stylua.toml
     ~/.config/yamllint/config: .config/yamllint/config
+    ~/.config/zathura/themes/catppuccin/src/catppuccin-mocha: .config/zathura/themes/catppuccin/src/catppuccin-mocha
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
     ~/.local/bin/aicommits: .local/bin/crypt-run

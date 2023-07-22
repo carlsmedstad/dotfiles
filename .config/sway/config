@@ -1,16 +1,20 @@
 # Sway config file
 
+include themes/catppuccin/themes/catppuccin-mocha
+
 set $mod Mod4
+
+floating_modifier $mod normal
 
 bindsym $mod+Return exec alacritty
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+g exec swaylock -c 002b36
 
-bindsym $mod+d exec j4-dmenu-desktop --term alacritty --dmenu \
-  "bemenu --ignorecase --monitor all --line-height 27 \
-  --fn 'sans-serif 11' --prompt Launch \
-  --tb '#002b36' --fb '#002b36' --hb '#002b36' --nb '#002b36'"
+bindsym $mod+d exec j4-dmenu-desktop \
+  --use-xdg-de \
+  --term alacritty \
+  --dmenu ~/.config/sway/scripts/dmenu-cmd
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -107,38 +111,56 @@ bindsym $mod+Shift+b input type:keyboard xkb_variant nodeadkeys
 bindsym $mod+p exec systemctl suspend
 bindsym $mod+Shift+p exec systemctl hibernate
 
-titlebar_border_thickness 0
+titlebar_border_thickness 2
 default_border pixel 2
 smart_borders on
 smart_gaps on
 gaps inner 8
 
-font pango:sans-serif 11
+font pango:monospace 12
+
+# target                 title     bg        text     indicator  border
+client.focused           $mauve    $mauve    $crust   $flamingo  $mauve
+client.focused_inactive  $mantle   $mantle   $mauve   $surface0  $mantle
+client.unfocused         $surface0 $surface0 $text    $surface1  $mantle
+client.urgent            $maroon   $maroon   $text    $red       $maroon
+client.placeholder       $crust    $crust    $text    $crust     $crust
+client.background        $mantle
 
 bar {
-    font pango:monospace 11, Font Awesome 5 Free
-    position top
-    colors {
-        background  #002b36
-        statusline  #93a1a1
-        separator   #dc322f
-    }
-    status_command i3status-rs
+  font pango:monospace 12
+  position top
+  colors {
+    background $base
+    separator  $mauve
+
+    # target           border    bg         text
+    focused_workspace  $mauve    $mauve     $crust
+    active_workspace   $mantle   $mantle    $crust
+    urgent_workspace   $maroon   $maroon    $crust
+    inactive_workspace $mantle   $mantle    $text
+  }
+  status_command i3status-rs
 }
 
+seat seat0 xcursor_theme Catppuccin-Mocha-Mauve-Cursors 32
+
+exec gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Mauve-Cursors
+exec gsettings set org.gnome.desktop.interface cursor-size 32
+
 input type:keyboard {
-    repeat_delay 170
-    repeat_rate 50
-    xkb_layout se-us-lctrl-to-return
-    xkb_options caps:escape
+  repeat_delay 170
+  repeat_rate 50
+  xkb_layout se-us-lctrl-to-return
+  xkb_options caps:escape
 }
 
 input type:touchpad {
-    tap enable
+  tap enable
 }
 
 output * {
-    bg ~/.wallpapers/current.png fill
+  bg ~/.config/sway/wallpapers/evening-sky.png fill
 }
 
 for_window [class=".*"] inhibit_idle fullscreen

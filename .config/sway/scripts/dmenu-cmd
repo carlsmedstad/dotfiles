@@ -1,0 +1,54 @@
+#!/bin/sh -eu
+
+font="sans-serif 12"
+horizontal_padding=6
+
+title_background="#cba6f7"
+title_foreground="#11111b"
+filter_background="#181825"
+filter_foreground="#cdd6f4"
+cursor_background="#181825"
+cursor_foreground="#181825"
+
+normal_background="#181825"
+normal_foreground="#89b4fa"
+alternating_background="#1e1e2e"
+alternating_foreground="#cdd6f4"
+
+highlighted_background="#89b4fa"
+highlighted_foreground="#11111b"
+
+feedback_background="#181825"
+feedback_foreground="#89b4fa"
+selected_background="#181825"
+selected_foreground="#89b4fa"
+
+scrollbar_background="#181825"
+scrollbar_foreground="#cba6f7"
+
+bemenu \
+  --ignorecase \
+  --monitor all \
+  --prompt Launch \
+  --line-height 29 \
+  --accept-single \
+  --fn  "$font" \
+  --hp  "$horizontal_padding" \
+  --tb  "$title_background" \
+  --tf  "$title_foreground" \
+  --fb  "$filter_background" \
+  --ff  "$filter_foreground" \
+  --cb  "$cursor_background" \
+  --cf  "$cursor_foreground" \
+  --nb  "$normal_background" \
+  --nf  "$normal_foreground" \
+  --hb  "$highlighted_background" \
+  --hf  "$highlighted_foreground" \
+  --fbb "$feedback_background" \
+  --fbf "$feedback_foreground" \
+  --sb  "$selected_background" \
+  --sf  "$selected_foreground" \
+  --ab  "$alternating_background" \
+  --af  "$alternating_foreground" \
+  --scb "$scrollbar_background" \
+  --scf "$scrollbar_foreground"

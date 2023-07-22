@@ -33,8 +33,8 @@ export HISTSIZE=10000
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
 
-CLR1="\[$(tput setaf 108)\]"
-CLR2="\[$(tput setaf 6)\]"
+CLR1="\[$(tput setaf 16)\]"
+CLR2="\[$(tput setaf 17)\]"
 RESET="\[$(tput sgr0)\]"
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   PS1="$CLR1\u@\h $CLR2\A \$? $CLR1\W $CLR2\$$RESET "

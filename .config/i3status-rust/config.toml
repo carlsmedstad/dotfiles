@@ -1,7 +1,9 @@
 [theme]
-theme = "solarized-dark"
+theme = "catppuccin-mocha.toml"
+
 [theme.overrides]
-separator = "  "
+separator = ""
+
 [icons]
 icons = "awesome6"
 
@@ -9,10 +11,12 @@ icons = "awesome6"
 block = "sound"
 show_volume_when_muted = true
 max_vol = 100
+format = "  $icon $volume "
 
 [[block]]
 block = "music"
 player = "spotify"
+format = "{ $play $combo.str(min_w:20, max_w:20, rot_interval:0.5) |}"
 [[block.click]]
 button = "left"
 action = "play_pause"
@@ -28,11 +32,11 @@ format = " $icon "
 
 [[block]]
 block = "net"
-format = "    $icon {$signal_strength $ssid|Wired connection} "
+format = "  $icon  {$signal_strength $ssid|Wired connection} "
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used_percents.eng(w:3) "
+format = " $icon $mem_used_percents.eng(w:2) "
 interval = 5
 warning_mem = 80
 warning_swap = 80
@@ -46,6 +50,9 @@ interval = 1
 
 [[block]]
 block = "battery"
+full_format	= " $icon $percentage "
+charging_format = " $icon $percentage "
+empty_format= " $icon $percentage "
 
 [[block]]
 block = "time"

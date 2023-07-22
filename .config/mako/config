@@ -1,4 +1,7 @@
-border-size=0
-margin=8
-font=sans-serif 10
+font=sans-serif 12
 default-timeout=5000
+
+margin=20
+border-size=0
+background-color=#89b4fa
+text-color=#11111b
