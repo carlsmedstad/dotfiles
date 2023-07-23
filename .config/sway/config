@@ -139,12 +139,20 @@ bar {
     inactive_workspace $mantle   $mantle    $text
   }
   status_command i3status-rs
+
+  # Left click on bar starts launcher
+  bindcode 272 exec j4-dmenu-desktop \
+    --use-xdg-de \
+    --term alacritty \
+    --dmenu ~/.config/sway/scripts/dmenu-cmd
+  # TODO: Find a good use for this action :)
+  bindcode 273 exec :
 }
 
 seat seat0 xcursor_theme Catppuccin-Mocha-Mauve-Cursors 32
 
-exec gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Mauve-Cursors
-exec gsettings set org.gnome.desktop.interface cursor-size 32
+exec_always gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Mocha-Mauve-Cursors
+exec_always gsettings set org.gnome.desktop.interface cursor-size 32
 
 input type:keyboard {
   repeat_delay 170
