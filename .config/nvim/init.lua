@@ -155,6 +155,9 @@ require("packer").startup(function()
     "dense-analysis/ale",
     config = function()
       vim.g.ale_linters = {
+        PKGBUILD = {
+          "shellcheck",
+        },
         c = {
           "clangd",
         },
@@ -367,6 +370,14 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "gitcommit",
   callback = function()
     vim.wo.spell = true
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = "PKGBUILD",
+  callback = function()
+    vim.g.ale_sh_shellcheck_dialect = "bash"
+    vim.g.ale_sh_shellcheck_exclusions = "2164,2154,2034"
   end,
 })
 

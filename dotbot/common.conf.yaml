@@ -16,6 +16,7 @@
     ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/mypy/config: .config/mypy/config
+    ~/.config/nvim/ale_linters/PKGBUILD/shellcheck.vim: .config/nvim/ale_linters/PKGBUILD/shellcheck.vim
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
     ~/.config/stylua.toml: .stylua.toml
