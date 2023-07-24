@@ -26,6 +26,7 @@
     ~/.local/bin/aicommits: .local/bin/crypt-run
     ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
     ~/.local/bin/chatblade: .local/bin/crypt-run
+    ~/.local/bin/create-local-repo: .local/bin/create-local-repo
     ~/.local/bin/crypt-create: .local/bin/crypt-create
     ~/.local/bin/git-recursive: .local/bin/git-recursive
     ~/.local/bin/gpg-add: .local/bin/gpg-add

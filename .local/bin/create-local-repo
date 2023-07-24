@@ -1,0 +1,9 @@
+#!/bin/sh -eu
+
+repo_name=aur
+repo_dir="/var/lib/repo/$repo_name"
+
+sudo mkdir -p "$repo_dir"
+sudo chown -R "$USER:$USER" "$repo_dir"
+
+repo-add "$repo_dir/$repo_name.db.tar.gz"
