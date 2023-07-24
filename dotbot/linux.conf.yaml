@@ -6,7 +6,8 @@
 - link:
     ~/.config/Xresources: .config/Xresources
     ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml.linux
-    ~/.config/electron-flags.conf: .config/electron-flags.conf
+    ~/.config/electron24-flags.conf: .config/electron-flags.conf
+    ~/.config/electron25-flags.conf: .config/electron-flags.conf
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/gtk-3.0/settings.ini: .config/gtk-3.0/settings.ini
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
@@ -30,5 +31,4 @@
     ~/.local/bin/set-default-applications: .local/bin/set-default-applications
     ~/.local/bin/update-everything: .local/bin/update-everything
     ~/.local/share/applications/google-earth-pro.desktop: .local/share/applications/google-earth-pro.desktop
-    ~/.local/share/applications/slack.desktop: .local/share/applications/slack.desktop
     ~/.local/share/applications/xeyes.desktop: .local/share/applications/xeyes.desktop
