@@ -3,7 +3,9 @@
 xdg_state_home=${XDG_STATE_HOME:-$HOME/.local/state}
 crypt_file=${CRYPT_FILE:-$xdg_state_home/crypt}
 
-eval "$(gpg --decrypt "$crypt_file" 2> /dev/null)"
+if [ "$(id -u)" = "$(stat -c '%u' "$crypt_file")" ]; then
+  eval "$(gpg --decrypt "$crypt_file" 2> /dev/null)"
+fi
 
 # shellcheck disable=SC2046
 /bin/$(basename "$0") "$@"
