@@ -7,3 +7,6 @@
 [submodule ".config/zathura/themes/catppuccin"]
 	path = .config/zathura/themes/catppuccin
 	url = ../../catppuccin/zathura.git
+[submodule ".config/k9s/themes/catppuccin"]
+	path = .config/k9s/themes/catppuccin
+	url = ../../catppuccin/k9s.git
