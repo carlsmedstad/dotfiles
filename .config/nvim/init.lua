@@ -202,6 +202,7 @@ require("packer").startup(function()
       vim.g.ale_c_build_dir = "build"
       vim.g.ale_c_clangd_options = "--clang-tidy"
 
+      vim.g.ale_sh_shellcheck_change_directory = 0
       vim.g.ale_sh_shfmt_options = "--binary-next-line --space-redirects --indent 2"
 
       vim.g.ale_lint_on_text_changed = 0
