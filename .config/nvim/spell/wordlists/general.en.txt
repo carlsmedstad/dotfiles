@@ -1,3 +1,4 @@
+AUR
 AWS
 Alacritty
 Artifactory
@@ -39,5 +40,6 @@ focals
 hostname
 mTLS
 onboarding
+pacman
 rebase
 whitelist
