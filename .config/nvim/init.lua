@@ -15,6 +15,18 @@ end
 require("packer").startup(function()
   -- luacheck: push globals use
   use({
+    "wbthomason/packer.nvim",
+    config = function()
+      vim.cmd([[
+        augroup packerUserConfig
+          autocmd!
+          autocmd BufWritePost init.lua source <afile> | PackerCompile
+        augroup end
+      ]])
+    end,
+  })
+
+  use({
     "norcalli/nvim-colorizer.lua",
     config = function()
       vim.keymap.set("n", "<leader>c", ":ColorizerToggle<CR>", { silent = true })
@@ -88,18 +100,6 @@ require("packer").startup(function()
         ":lua print(require('nvim-treesitter.ts_utils').get_node_at_cursor())<CR>",
         { silent = true }
       )
-    end,
-  })
-
-  use({
-    "wbthomason/packer.nvim",
-    config = function()
-      vim.cmd([[
-        augroup packerUserConfig
-          autocmd!
-          autocmd BufWritePost init.lua source <afile> | PackerCompile
-        augroup end
-      ]])
     end,
   })
 
@@ -253,15 +253,6 @@ require("packer").startup(function()
     },
   })
 
-  -- Syntax highlighting for Bicep
-  use("carlsmedstad/vim-bicep")
-
-  -- Better syntax highlighting for SQL
-  use("shmup/vim-sql-syntax")
-
-  -- Better syntax highlighting for SQL
-  use("lifepillar/pgsql.vim")
-
   -- luacheck: pop
 end)
 
@@ -279,22 +270,6 @@ vim.filetype.add({
 })
 
 vim.g.mapleader = ","
-vim.g.markdown_fenced_languages = {
-  "bash=sh",
-  "bicep",
-  "diff",
-  "ini=dosini",
-  "javascript",
-  "json",
-  "lua",
-  "make",
-  "powershell=ps1",
-  "python",
-  "sh",
-  "sql",
-  "vim",
-  "yaml",
-}
 
 if vim.env.COLORTERM == "truecolor" then
   vim.opt.termguicolors = true
