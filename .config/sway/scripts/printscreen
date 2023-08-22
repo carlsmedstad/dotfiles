@@ -4,7 +4,7 @@ screenshot_dir=${SCREENSHOT_DIR:-"$HOME/tmp/screeshots"}
 
 mode=${1:-full}
 
-file_name=$(date +"%Y-%m-%dT%H:%M:%S%:z").png
+filename=$(date +"%Y-%m-%dT%H%M%S%z").png
 
 mkdir -p "$screenshot_dir"
 
@@ -17,9 +17,9 @@ if [ "$mode" = "full" ]; then
         | .name
       '
   )
-  grim -c -o "$focused_output" "$screenshot_dir/$file_name"
+  grim -c -o "$focused_output" "$screenshot_dir/$filename"
 fi
 
 if [ "$mode" = "region" ]; then
-  slurp | grim -g - "$screenshot_dir/$file_name"
+  slurp | grim -g - "$screenshot_dir/$filename"
 fi
