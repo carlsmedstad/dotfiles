@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-screenshot_dir=${SCREENSHOT_DIR:-"$HOME/tmp/screeshots"}
+screenshot_dir=${SCREENSHOT_DIR:-"$HOME/tmp/screenshots"}
 
 mode=${1:-full}
 
