@@ -134,7 +134,7 @@ bar {
 
     # target           border    bg         text
     focused_workspace  $mauve    $mauve     $crust
-    active_workspace   $mantle   $mantle    $crust
+    active_workspace   $mantle   $mantle    $text
     urgent_workspace   $maroon   $maroon    $crust
     inactive_workspace $mantle   $mantle    $text
   }
