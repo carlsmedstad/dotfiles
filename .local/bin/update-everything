@@ -3,8 +3,13 @@
 command -v sudo > /dev/null && sudo cat /dev/null
 
 rustup update
+
 flatpak update --assumeyes
-paru -Syu --noconfirm
+
+aur sync --upgrades --sign
+sudo pacman -Syu --noconfirm
+
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
 git -C "$HOME/repos/github.com/carlsmedstad/dotfiles" \
   submodule update --recursive --remote
