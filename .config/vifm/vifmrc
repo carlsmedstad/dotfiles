@@ -1,4 +1,3 @@
-" vim: filetype=vifm :
 " Sample configuration file for vifm (last updated: 3 April, 2023)
 " You can edit this file by hand.
 " The " character at the beginning of a line comments out the line.
@@ -9,21 +8,7 @@
 " Main settings
 " ------------------------------------------------------------------------------
 
-" Command used to edit files in various contexts.  The default is vim.
-" If you would like to use another vi clone such as Elvis or Vile
-" you will need to change this setting.
-if executable('vim')
-    set vicmd=vim
-elseif executable('nvim')
-    set vicmd=nvim
-elseif executable('elvis')
-    set vicmd=elvis\ -G\ termcap
-elseif executable('vile')
-    set vicmd=vile
-elseif $EDITOR != ''
-    echo 'Note: using `'.$EDITOR.'` as an editor'
-    let &vicmd = $EDITOR
-endif
+let &vicmd = $EDITOR
 
 " This makes vifm perform file operations on its own instead of relying on
 " standard utilities like `cp`.  While using `cp` and alike is a more universal
@@ -67,7 +52,7 @@ set norunexec
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
 " See man date or man strftime for details.
-set timefmt='%Y/%m/%d %H:%M'
+set timefmt='%Y-%m-%d %H:%M'
 
 " Show list of matches on tab completion in command-line mode
 set wildmenu
@@ -99,10 +84,10 @@ if !has('win')
 endif
 
 " Set custom status line look
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+" set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " List of color schemes to try (picks the first one supported by the terminal)
-colorscheme Default-256 Default
+colorscheme cattpuccin-mocha
 
 " ------------------------------------------------------------------------------
 " Bookmarks
@@ -564,3 +549,4 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+source /home/carsme/repos/github.com/thimc/vifm_devicons/favicons.vifm

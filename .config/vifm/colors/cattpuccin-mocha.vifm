@@ -1,0 +1,58 @@
+" VIFM Theme - Cattpuccin Mocha
+" Based on: https://github.com/vifm/vifm-colors/blob/master/solarized-dark.vifm
+
+" default = -1 = None, can be used for transparency or default color
+" black = 0
+" red = 1
+" green = 2
+" yellow = 3
+" blue = 4
+" magenta = 5
+" cyan = 6
+" white = 7
+
+" Cattpuccin colors:
+" rosewater = 16
+" flamingo = 17
+" pink = 18
+" mauve = 19
+" maroon = 20
+" peach = 21
+" sky = 22
+" sapphire = 23
+" lavender = 24
+
+" Styles:
+" bold
+" underline
+" reverse, inverse
+" standout
+" none
+
+highlight clear
+
+highlight Win             cterm=none ctermfg=default    ctermbg=none
+
+highlight TabLine         cterm=none ctermfg=magenta   ctermbg=none
+highlight TabLineSel      cterm=bold,reverse ctermfg=magenta ctermbg=none
+
+highlight TopLine         cterm=none ctermfg=blue       ctermbg=none
+highlight TopLineSel      cterm=bold,reverse ctermfg=blue    ctermbg=none
+
+highlight StatusLine      cterm=none ctermfg=blue       ctermbg=none
+highlight Border          cterm=none ctermfg=blue       ctermbg=none
+
+highlight Selected        cterm=bold ctermfg=19               ctermbg=none
+highlight CurrLine        cterm=bold,reverse ctermfg=default  ctermbg=default
+
+highlight WildMenu        cterm=underline,reverse ctermfg=none ctermbg=none
+highlight CmdLine         cterm=none ctermfg=white ctermbg=none
+highlight ErrorMsg        cterm=none ctermfg=red ctermbg=none
+
+highlight Directory       cterm=bold ctermfg=blue ctermbg=default
+highlight Link            cterm=none ctermfg=cyan ctermbg=default
+highlight BrokenLink      cterm=none ctermfg=red ctermbg=default
+highlight Socket          cterm=none ctermfg=magenta ctermbg=default
+highlight Device          cterm=none ctermfg=red ctermbg=default
+highlight Fifo            cterm=none ctermfg=cyan ctermbg=default
+highlight Executable      cterm=none ctermfg=green ctermbg=default
