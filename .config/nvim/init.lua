@@ -261,13 +261,15 @@ end)
 vim.filetype.add({
   filename = {
     [".clang-tidy"] = "yaml",
-    [".sqlfluff"] = "ini",
     [".envrc"] = "sh",
+    [".sqlfluff"] = "ini",
+    ["vifmrc"] = "vim",
   },
   extension = {
     h = "c",
     props = "xml",
     service = "systemd",
+    vifm = "vim",
   },
 })
 
