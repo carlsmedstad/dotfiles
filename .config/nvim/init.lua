@@ -126,7 +126,9 @@ require("packer").startup(function()
       vim.g.airline_theme = "catppuccin"
 
       if vim.env.DISPLAY ~= nil then
-        vim.g.airline_powerline_fonts = 1
+        -- Looks horrible with ttf-nerd-fonts-symbols-mono installed
+        -- vim.g.airline_powerline_fonts = 1
+        vim.g.airline_symbols_ascii = 1
       else
         vim.g.airline_symbols_ascii = 1
       end
