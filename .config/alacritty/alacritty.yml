@@ -1,6 +1,7 @@
 # yamllint disable
 import:
   - ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml
+  - ~/.config/alacritty/platforms/macos.yml
 
 # Selection colors
 colors:

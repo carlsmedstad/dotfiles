@@ -4,5 +4,5 @@
       relink: true
 
 - link:
-    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml.darwin
+    ~/.config/alacritty/platforms/darwin.yml: .config/alacritty/platforms/darwin.yml
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.darwin

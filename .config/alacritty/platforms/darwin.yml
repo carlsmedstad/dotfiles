@@ -1,43 +1,7 @@
 # yamllint disable
-import:
-  - ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml
-
-# Selection colors
-colors:
-  selection:
-    text: "#11111b" # base
-    background: "#b4befe" # lavender
-
-  # Cattpuccin colors not set by the theme plugin
-  indexed_colors:
-    - { index: 16, color: "#f5e0dc" } # rosewater
-    - { index: 17, color: "#f2cdcd" } # flamingo
-    - { index: 18, color: "#f5c2e7" } # pink
-    - { index: 19, color: "#cba6f7" } # mauve
-    - { index: 20, color: "#eba0ac" } # maroon
-    - { index: 21, color: "#fab387" } # peach
-    - { index: 22, color: "#89dceb" } # sky
-    - { index: 23, color: "#74c7ec" } # sapphire
-    - { index: 24, color: "#b4befe" } # lavender
-    - { index: 25, color: "#1e1e2e" } # base
-    - { index: 26, color: "#181825" } # mantle
-    - { index: 27, color: "#11111b" } # crust
-
-# Window
-window:
-  # Window padding
-  padding:
-    x: 3
-    y: 3
 
 # Key Bindings
 key_bindings:
-  - { key: K, mods: Control|Shift, action: ScrollLineUp   }
-  - { key: J, mods: Control|Shift, action: ScrollLineDown }
-  - { key: T, mods: Control|Shift, action: SpawnNewInstance }
-  - { key: Space, mods: Control|Shift, action: ToggleViMode }
-  - { key: 58, action: ToggleViMode, mode: Vi }
-
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
   - { key: B,         mods: Alt,       chars: "\x1bb"                       }
   - { key: C,         mods: Alt,       chars: "\x1bc"                       }

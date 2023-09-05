@@ -5,7 +5,6 @@
 
 - link:
     ~/.config/Xresources: .config/Xresources
-    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml.linux
     ~/.config/electron24-flags.conf: .config/electron-flags.conf
     ~/.config/electron25-flags.conf: .config/electron-flags.conf
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
