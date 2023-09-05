@@ -8,3 +8,4 @@ handlr set application/pdf org.pwmt.zathura.desktop
 handlr set application/x-yaml nvim.desktop
 handlr set application/json nvim.desktop
 handlr set x-scheme-handler/terminal Alacritty.desktop
+handlr set application/x-zerosize nvim.desktop
