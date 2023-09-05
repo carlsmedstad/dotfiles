@@ -33,5 +33,6 @@
     ~/.local/bin/set-default-applications: .local/bin/set-default-applications
     ~/.local/bin/update-everything: .local/bin/update-everything
     ~/.local/bin/xdg-open: .local/bin/xdg-open
+    ~/.local/bin/xterm: .local/bin/xterm
     ~/.local/share/applications/google-earth-pro.desktop: .local/share/applications/google-earth-pro.desktop
     ~/.local/share/applications/xeyes.desktop: .local/share/applications/xeyes.desktop
