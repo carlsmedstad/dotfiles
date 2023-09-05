@@ -549,4 +549,4 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
-source /home/carsme/repos/github.com/thimc/vifm_devicons/favicons.vifm
+source ~/.config/vifm/include/vifm_devicons/favicons.vifm

@@ -24,6 +24,7 @@
     ~/.config/swayimg/config: .config/swayimg/config
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/vifm/colors/cattpuccin-mocha.vifm: .config/vifm/colors/cattpuccin-mocha.vifm
+    ~/.config/vifm/include/vifm_devicons/favicons.vifm: .config/vifm/include/vifm_devicons/favicons.vifm
     ~/.config/vifm/vifmrc: .config/vifm/vifmrc
     ~/.config/wob/wob.ini: .config/wob/wob.ini
     ~/.config/xkb/symbols/se-us-lctrl-to-return: .config/xkb/symbols/se-us-lctrl-to-return
