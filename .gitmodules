@@ -12,4 +12,4 @@
 	url = ../../catppuccin/k9s.git
 [submodule ".config/vifm/include/vifm_devicons"]
 	path = .config/vifm/include/vifm_devicons
-	url = git@github.com:thimc/vifm_devicons.git
+	url = ../../thimc/vifm_devicons.git
