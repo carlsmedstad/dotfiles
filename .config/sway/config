@@ -6,14 +6,14 @@ set $mod Mod4
 
 floating_modifier $mod normal
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $TERMINAL
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+g exec swaylock -c 002b36
 
 bindsym $mod+d exec j4-dmenu-desktop \
   --use-xdg-de \
-  --term alacritty \
+  --term $TERMINAL \
   --dmenu ~/.config/sway/scripts/dmenu-cmd
 
 bindsym $mod+h focus left
@@ -143,7 +143,7 @@ bar {
   # Left click on bar starts launcher
   bindcode 272 exec j4-dmenu-desktop \
     --use-xdg-de \
-    --term alacritty \
+    --term $TERMINAL \
     --dmenu ~/.config/sway/scripts/dmenu-cmd
   # TODO: Find a good use for this action :)
   bindcode 273 exec :
