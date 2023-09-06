@@ -1,0 +1,16 @@
+azure-kubelogin
+cmake-lint
+dotbot
+gitlint
+hadolint-bin
+json-schema-for-humans
+krew
+kube-score
+licensee
+markdown-link-check
+markdownlint-cli
+pev2-electron
+pg_activity
+rpmlint
+slack-electron
+tbls

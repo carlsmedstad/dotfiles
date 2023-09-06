@@ -5,6 +5,7 @@
 
 - link:
     ~/.config/Xresources: .config/Xresources
+    ~/.config/aurutils/keep: .config/aurutils/keep
     ~/.config/electron24-flags.conf: .config/electron-flags.conf
     ~/.config/electron25-flags.conf: .config/electron-flags.conf
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
