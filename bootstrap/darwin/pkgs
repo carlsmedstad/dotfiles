@@ -2,3 +2,10 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --verbose --file pkgs/darwin/Brewfile
+
+/opt/homebrew/opt/fzf/install \
+  --key-bindings \
+  --completion \
+  --no-update-rc \
+  --no-zsh \
+  --no-fish
