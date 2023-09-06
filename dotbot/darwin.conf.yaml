@@ -5,4 +5,5 @@
 
 - link:
     ~/.config/alacritty/platforms/darwin.yml: .config/alacritty/platforms/darwin.yml
+    ~/.config/kitty/platforms/darwin.conf: .config/kitty/platforms/darwin.conf
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.darwin
