@@ -13,3 +13,6 @@
 [submodule ".config/vifm/include/vifm_devicons"]
 	path = .config/vifm/include/vifm_devicons
 	url = ../../thimc/vifm_devicons.git
+[submodule ".config/kitty/themes/catppuccin"]
+	path = .config/kitty/themes/catppuccin
+	url = ../../catppuccin/kitty.git
