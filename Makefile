@@ -24,6 +24,7 @@ bootstrap:
 	sudo pacman -S --needed base base-devel
 	./bootstrap/linux/paru
 	./bootstrap/linux/pkgs
+	git submodule update --recursive --init
 	sudo make install-configs-system
 	make install-configs-user
 	./bootstrap/common/nvim
@@ -46,6 +47,7 @@ bootstrap:
 	./bootstrap/darwin/shell
 	./bootstrap/darwin/homebrew
 	./bootstrap/darwin/pkgs
+	git submodule update --recursive --init
 	make install-configs-user
 	./bootstrap/common/nvim
 
