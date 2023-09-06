@@ -60,10 +60,8 @@ command -v direnv >> /dev/null && eval "$(direnv hook bash)"
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
-  [ -r /usr/local/etc/profile.d/bash_completion.sh ] \
-    && . /usr/local/etc/profile.d/bash_completion.sh
-  [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] \
-    && . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] \
+    && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
   # shellcheck source=/dev/null
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
