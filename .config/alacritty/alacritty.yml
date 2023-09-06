@@ -11,12 +11,12 @@ colors:
 
   # Cattpuccin colors not set by the theme plugin
   indexed_colors:
-    - { index: 16, color: "#f5e0dc" } # rosewater
-    - { index: 17, color: "#f2cdcd" } # flamingo
-    - { index: 18, color: "#f5c2e7" } # pink
-    - { index: 19, color: "#cba6f7" } # mauve
-    - { index: 20, color: "#eba0ac" } # maroon
-    - { index: 21, color: "#fab387" } # peach
+    - { index: 16, color: "#fab387" } # peach
+    - { index: 17, color: "#f5e0dc" } # rosewater
+    - { index: 18, color: "#f2cdcd" } # flamingo
+    - { index: 19, color: "#f5c2e7" } # pink
+    - { index: 20, color: "#cba6f7" } # mauve
+    - { index: 21, color: "#eba0ac" } # maroon
     - { index: 22, color: "#89dceb" } # sky
     - { index: 23, color: "#74c7ec" } # sapphire
     - { index: 24, color: "#b4befe" } # lavender
