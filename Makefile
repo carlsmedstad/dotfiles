@@ -39,13 +39,13 @@ install-configs-user:
 
 .PHONY: dump-packages
 dump-packages:
-	brew bundle dump --force --file pkgs/macos/Brewfile
+	brew bundle dump --force --file pkgs/darwin/Brewfile
 
 .PHONY: bootstrap
 bootstrap:
-	./bootstrap/macos/shell
-	./bootstrap/macos/homebrew
-	./bootstrap/macos/pkgs
+	./bootstrap/darwin/shell
+	./bootstrap/darwin/homebrew
+	./bootstrap/darwin/pkgs
 	make install-configs-user
 	./bootstrap/common/nvim
 
