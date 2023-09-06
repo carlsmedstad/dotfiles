@@ -1,4 +1,28 @@
 #!/bin/sh -eu
 
-pacman -Qqen | sort > pkgs/linux/arch.official.txt
-pacman -Qqem | sort | grep -v 'globalprotect' > pkgs/linux/arch.aur.txt
+if [ ! -f ~/.config/pacman/makepkg.conf ]; then
+  printf >&2  "%s: ~/.config/pacman/makepkg.conf: does not exist\n" "$0"
+  exit 1
+fi
+
+local_packager=$(grep "^PACKAGER=" ~/.config/pacman/makepkg.conf | cut -d'"' -f2)
+
+if [ -z "$local_packager" ]; then
+  printf >&2  "%s: packager not set in makepkg.conf\n" "$0"
+  exit 22
+fi
+printf >&2  "%s: local packager: %s\n" "$0" "$local_packager"
+
+rm -f pkgs/linux/arch.official.txt
+rm -f pkgs/linux/arch.aur.txt
+
+expac -Q "%w,%n,%p" | grep '^explicit' | while read -r line; do
+  name=$(echo "$line" | cut -d , -f 2)
+  packager=$(echo "$line" | cut -d , -f 3)
+
+  if [ "$packager" = "$local_packager" ]; then
+    echo "$name" >> pkgs/linux/arch.aur.txt
+  else
+    echo "$name" >> pkgs/linux/arch.official.txt
+  fi
+done
