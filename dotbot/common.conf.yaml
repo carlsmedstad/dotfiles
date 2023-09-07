@@ -27,6 +27,9 @@
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/nvim/lua/keymaps.lua: .config/nvim/lua/keymaps.lua
     ~/.config/nvim/lua/options.lua: .config/nvim/lua/options.lua
+    ~/.config/nvim/lua/plugins/ale.lua: .config/nvim/lua/plugins/ale.lua
+    ~/.config/nvim/lua/plugins/other.lua: .config/nvim/lua/plugins/other.lua
+    ~/.config/nvim/lua/plugins/treesitter.lua: .config/nvim/lua/plugins/treesitter.lua
     ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
     ~/.config/stylua.toml: .stylua.toml
     ~/.config/yamllint/config: .config/yamllint/config

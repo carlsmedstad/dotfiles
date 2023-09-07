@@ -1,0 +1,68 @@
+return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "awk",
+          "bash",
+          "bicep",
+          "c",
+          "cmake",
+          "comment",
+          "cpp",
+          "diff",
+          "dockerfile",
+          "dot",
+          "git_config",
+          "git_rebase",
+          "gitattributes",
+          "gitcommit",
+          "gitignore",
+          "go",
+          "html",
+          "http",
+          "hurl",
+          "ini",
+          "javascript",
+          "jq",
+          "json",
+          "lua",
+          "luadoc",
+          "make",
+          "markdown",
+          "markdown_inline",
+          "meson",
+          "python",
+          "regex",
+          "rst",
+          "sql",
+          "toml",
+          "typescript",
+          "vim",
+          "vimdoc",
+          "vue",
+          "yaml",
+        },
+        highlight = { enable = true, additional_vim_regex_highlighting = false },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "gnn",
+            node_incremental = "grn",
+            scope_incremental = "grc",
+            node_decremental = "grm",
+          },
+        },
+        indent = { enable = true },
+      })
+      vim.keymap.set(
+        "n",
+        "<leader>t",
+        ":lua print(require('nvim-treesitter.ts_utils').get_node_at_cursor())<CR>",
+        { silent = true }
+      )
+    end,
+  },
+}
