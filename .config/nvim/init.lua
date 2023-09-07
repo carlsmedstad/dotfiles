@@ -149,9 +149,6 @@ require("lazy").setup({
     "dense-analysis/ale",
     config = function()
       vim.g.ale_linters = {
-        PKGBUILD = {
-          "shellcheck",
-        },
         c = {
           "clangd",
         },
@@ -171,7 +168,6 @@ require("lazy").setup({
         },
       }
       vim.g.ale_fixers = {
-        PKGBUILD = { "shfmt" },
         cmake = { "cmakeformat" },
         cpp = { "clang-format" },
         css = { "prettier" },
@@ -341,9 +337,9 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.spell = true
   end,
 })
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
   group = "init",
-  pattern = "PKGBUILD",
+  pattern = "*PKGBUILD",
   callback = function()
     vim.g.ale_sh_shellcheck_dialect = "bash"
     vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2164"
