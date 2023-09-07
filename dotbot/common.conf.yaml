@@ -10,7 +10,6 @@
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml: .config/alacritty/themes/catppuccin/catppuccin-mocha.yml
     ~/.config/bat/config: .config/bat/config
     ~/.config/black: .config/black
-    ~/.config/flake8: .config/flake8
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
     ~/.config/k9s/skin.yml: .config/k9s/themes/catppuccin/dist/mocha.yml
