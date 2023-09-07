@@ -264,35 +264,6 @@ vim.filetype.add({
 vim.api.nvim_create_augroup("init", {})
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
-  pattern = "python,java,rust,go",
-  callback = function()
-    vim.bo.shiftwidth = 4
-    vim.bo.tabstop = 4
-  end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
-  pattern = "sql",
-  callback = function()
-    vim.bo.commentstring = "-- %s"
-  end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
-  pattern = "go",
-  callback = function()
-    vim.bo.expandtab = false
-  end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
-  pattern = "asciidoc",
-  callback = function()
-    vim.bo.commentstring = "//\\ %s"
-  end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
   pattern = { "markdown", "gitcommit" },
   callback = function()
     vim.wo.spell = true

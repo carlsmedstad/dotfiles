@@ -22,6 +22,8 @@
     ~/.config/luarocks/config-5.4.lua: .config/luarocks/config-5.4.lua
     ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/mypy/config: .config/mypy/config
+    ~/.config/nvim/ftplugin/asciidoc.lua: .config/nvim/ftplugin/asciidoc.lua
+    ~/.config/nvim/ftplugin/sql.lua: .config/nvim/ftplugin/sql.lua
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/nvim/lua/keymaps.lua: .config/nvim/lua/keymaps.lua
     ~/.config/nvim/lua/options.lua: .config/nvim/lua/options.lua
