@@ -36,4 +36,3 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "kitty"
-mas "Bitwarden", id: 1352778147
