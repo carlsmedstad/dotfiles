@@ -1,5 +1,13 @@
 return {
   {
+    "dstein64/vim-startuptime",
+    cmd = "StartupTime",
+    init = function()
+      vim.g.startuptime_tries = 10
+    end,
+  },
+
+  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       vim.keymap.set("n", "<leader>c", ":ColorizerToggle<CR>", { silent = true })
@@ -7,10 +15,16 @@ return {
   },
 
   { "tpope/vim-commentary" }, -- mappings for commenting code
-  { "tpope/vim-fugitive" }, -- git plugin
   { "tpope/vim-surround" }, -- mappings for paranthesis, brackets etc.
   { "tpope/vim-repeat" }, -- make . work for plugins
   { "farmergreg/vim-lastplace" }, -- save cursor pos between sessions
+
+  -- Git plugin
+  {
+    "tpope/vim-fugitive",
+    lazy = true,
+    cmd = { "Git" },
+  },
 
   -- VCS info
   {
@@ -48,6 +62,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    priority = 1000,
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
@@ -69,17 +84,4 @@ return {
 
   -- copilot
   { "github/copilot.vim" },
-
-  -- chatgpt
-  {
-    "jackMort/ChatGPT.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      require("chatgpt").setup()
-    end,
-  },
 }
