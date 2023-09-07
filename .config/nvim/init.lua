@@ -1,44 +1,35 @@
 -- luacheck: globals vim
 -- luacheck: max_line_length 120
 
--- Bootstrap packer.nvim
-local fn = vim.fn
-
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", install_path })
-  vim.api.nvim_command("packadd packer.nvim")
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Plugins
-require("packer").startup(function()
-  -- luacheck: push globals use
-  use({
-    "wbthomason/packer.nvim",
-    config = function()
-      vim.cmd([[
-        augroup packerUserConfig
-          autocmd!
-          autocmd BufWritePost init.lua source <afile> | PackerCompile
-        augroup end
-      ]])
-    end,
-  })
-
-  use({
+require("lazy").setup({
+  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       vim.keymap.set("n", "<leader>c", ":ColorizerToggle<CR>", { silent = true })
     end,
-  })
+  },
 
-  use({
+  {
     "nvim-treesitter/nvim-treesitter",
-    run = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
+    build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
@@ -101,26 +92,26 @@ require("packer").startup(function()
         { silent = true }
       )
     end,
-  })
+  },
 
-  use("tpope/vim-commentary") -- mappings for commenting code
-  use("tpope/vim-fugitive") -- git plugin
-  use("tpope/vim-surround") -- mappings for paranthesis, brackets etc.
-  use("tpope/vim-repeat") -- make . work for plugins
-  use("farmergreg/vim-lastplace") -- save cursor pos between sessions
+  { "tpope/vim-commentary" }, -- mappings for commenting code
+  { "tpope/vim-fugitive" }, -- git plugin
+  { "tpope/vim-surround" }, -- mappings for paranthesis, brackets etc.
+  { "tpope/vim-repeat" }, -- make . work for plugins
+  { "farmergreg/vim-lastplace" }, -- save cursor pos between sessions
 
   -- VCS info
-  use({
+  {
     "mhinz/vim-signify",
     config = function()
       -- move through git hunks
       vim.keymap.set("n", "<M-j>", "<plug>(signify-next-hunk)", {})
       vim.keymap.set("n", "<M-k>", "<plug>(signify-prev-hunk)", {})
     end,
-  })
+  },
 
   -- fancier statusline
-  use({
+  {
     "vim-airline/vim-airline",
     config = function()
       vim.g.airline_theme = "catppuccin"
@@ -137,23 +128,24 @@ require("packer").startup(function()
       vim.api.nvim_set_var("airline#extensions#ale#enabled", 1)
       vim.g.airline_section_z = "%3p%% %4l:%3v" -- line/column number section
     end,
-  })
-  use("vim-airline/vim-airline-themes")
+  },
+
+  { "vim-airline/vim-airline-themes" },
 
   -- colorscheme
-  use({
+  {
     "catppuccin/nvim",
-    as = "catppuccin",
+    name = "catppuccin",
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
       })
       vim.cmd.colorscheme("catppuccin")
     end,
-  })
+  },
 
   -- async syntax checker
-  use({
+  {
     "dense-analysis/ale",
     config = function()
       vim.g.ale_linters = {
@@ -226,37 +218,35 @@ require("packer").startup(function()
       vim.keymap.set("n", "<leader>f", ":ALEFix<CR>")
       vim.keymap.set("n", "<leader>f", ":ALEFix<CR>")
     end,
-  })
+  },
 
   -- fuzzy finding
-  use({
+  {
     "ibhagwan/fzf-lua",
-    requires = { "kyazdani42/nvim-web-devicons" },
-    setup = function()
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
       vim.keymap.set("n", "<M-c>", function()
         require("fzf-lua").files()
       end, { silent = true })
     end,
-  })
+  },
 
   -- copilot
-  use("github/copilot.vim")
+  { "github/copilot.vim" },
 
   -- chatgpt
-  use({
+  {
     "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup()
-    end,
-    requires = {
+    dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
     },
-  })
-
-  -- luacheck: pop
-end)
+    config = function()
+      require("chatgpt").setup()
+    end,
+  },
+})
 
 vim.filetype.add({
   filename = {
@@ -272,8 +262,6 @@ vim.filetype.add({
     vifm = "vim",
   },
 })
-
-vim.g.mapleader = ","
 
 if vim.env.COLORTERM == "truecolor" then
   vim.opt.termguicolors = true
