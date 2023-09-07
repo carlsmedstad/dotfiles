@@ -24,6 +24,7 @@ require("lazy").setup({
 })
 
 require("options")
+require("keymaps")
 
 vim.filetype.add({
   filename = {
@@ -56,5 +57,3 @@ vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
     vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2164"
   end,
 })
-
-require("keymaps")
