@@ -1,6 +1,3 @@
--- luacheck: globals vim
--- luacheck: max_line_length 120
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
