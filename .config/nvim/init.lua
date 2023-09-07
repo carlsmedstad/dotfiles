@@ -289,8 +289,6 @@ vim.o.textwidth = 79
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 
-vim.o.tags = "./.tags;/" -- look for tags file from pwd to root
-
 vim.api.nvim_create_augroup("init", {})
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
