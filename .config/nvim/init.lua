@@ -323,16 +323,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
-  pattern = "markdown",
-  callback = function()
-    vim.wo.spell = true
-    vim.bo.tabstop = 2
-    vim.bo.shiftwidth = 2
-  end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
-  pattern = "gitcommit",
+  pattern = { "markdown", "gitcommit" },
   callback = function()
     vim.wo.spell = true
   end,
