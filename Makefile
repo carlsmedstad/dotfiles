@@ -48,7 +48,7 @@ bootstrap:
 	./bootstrap/darwin/homebrew
 	./bootstrap/darwin/pkgs
 	git submodule update --recursive --init
-	make install-configs-user
+	PATH=/opt/homebrew/bin:$$PATH make install-configs-user
 	./bootstrap/common/nvim
 
 endif
