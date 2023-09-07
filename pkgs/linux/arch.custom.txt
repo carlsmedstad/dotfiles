@@ -13,7 +13,7 @@ ghq
 gitlint
 globalprotect
 google-earth-pro
-hadolint-bin
+hadolint
 hurl-rs
 ipcalc-redhat
 jfrog-cli

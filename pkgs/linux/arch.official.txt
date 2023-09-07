@@ -99,7 +99,6 @@ meson
 mold
 moreutils
 mpv
-mypy
 namcap
 neofetch
 neovim
