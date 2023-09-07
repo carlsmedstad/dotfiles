@@ -43,7 +43,7 @@ vim.filetype.add({
 vim.api.nvim_create_augroup("init", {})
 vim.api.nvim_create_autocmd("FileType", {
   group = "init",
-  pattern = { "markdown", "gitcommit" },
+  pattern = { "markdown", "gitcommit", "asciidoc" },
   callback = function()
     vim.wo.spell = true
   end,
