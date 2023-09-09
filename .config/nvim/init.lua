@@ -43,6 +43,8 @@ vim.api.nvim_create_autocmd("FileType", {
   group = "init",
   pattern = { "markdown", "gitcommit", "asciidoc" },
   callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
     vim.wo.spell = true
   end,
 })
