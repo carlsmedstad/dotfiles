@@ -6,8 +6,11 @@ import:
 # Selection colors
 colors:
   selection:
-    text: "#11111b" # base
+    text: "#11111b" # crust
     background: "#b4befe" # lavender
+
+  normal:
+    black: "#1e1e2e" # base
 
   # Cattpuccin colors not set by the theme plugin
   indexed_colors:
