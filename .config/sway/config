@@ -129,7 +129,7 @@ bar {
   font pango:monospace 12
   position top
   colors {
-    background $base
+    background $mantle
     separator  $mauve
 
     # target           border    bg         text
