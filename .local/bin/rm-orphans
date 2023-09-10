@@ -1,12 +1,10 @@
 #!/bin/sh -eu
 
-pkg_mgr=paru
-
-pkgs=$($pkg_mgr -Qtdq)
+pkgs=$(pacman -Qtdq)
 if [ "$pkgs" != "" ]; then
   echo "Removing orphans"
   # shellcheck disable=SC2086
-  $pkg_mgr -Rns $pkgs
+  pacman -Rns $pkgs
 else
   echo "No orphan packages"
 fi
