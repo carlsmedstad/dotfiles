@@ -9,6 +9,7 @@
     ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml: .config/alacritty/themes/catppuccin/catppuccin-mocha.yml
     ~/.config/bat/config: .config/bat/config
+    ~/.config/bat/themes/Catppuccin-mocha.tmTheme: .config/bat/themes/Catppuccin-mocha.tmTheme
     ~/.config/black: .config/black
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore

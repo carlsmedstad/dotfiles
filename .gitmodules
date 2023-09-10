@@ -16,3 +16,6 @@
 [submodule ".config/kitty/themes/catppuccin"]
 	path = .config/kitty/themes/catppuccin
 	url = ../../catppuccin/kitty.git
+[submodule ".config/bat/themes"]
+	path = .config/bat/themes
+	url = ../../catppuccin/bat
