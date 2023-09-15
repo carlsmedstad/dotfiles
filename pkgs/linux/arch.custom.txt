@@ -17,6 +17,9 @@ hadolint
 hurl-rs
 ipcalc-redhat
 jfrog-cli
+json-schema-for-humans
+jsonnet
+jsonnet-bundler
 krew
 kubetail
 libinput-gestures
@@ -24,7 +27,6 @@ licensee
 markdown-link-check
 markdownlint-cli
 mkinitcpio-firmware
-paru
 pev2-electron
 pg_activity
 pipes.sh

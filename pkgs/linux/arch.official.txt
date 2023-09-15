@@ -2,7 +2,9 @@ acpilight
 alacritty
 ansible
 ansible-lint
+arch-audit
 asciidoctor
+asciiquarium
 asp
 astyle
 aws-cli-v2
@@ -167,6 +169,8 @@ swayimg
 swaylock
 sysstat
 tcpdump
+terminus-font
+tesseract
 tigervnc
 tlp
 traceroute
