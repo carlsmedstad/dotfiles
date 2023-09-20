@@ -14,19 +14,17 @@ return {
     end,
   },
 
-  { "tpope/vim-commentary" }, -- mappings for commenting code
-  { "tpope/vim-surround" }, -- mappings for paranthesis, brackets etc.
-  { "tpope/vim-repeat" }, -- make . work for plugins
-  { "farmergreg/vim-lastplace" }, -- save cursor pos between sessions
+  { "tpope/vim-commentary" },
+  { "tpope/vim-surround" },
+  { "tpope/vim-repeat" },
+  { "farmergreg/vim-lastplace" },
 
-  -- Git plugin
   {
     "tpope/vim-fugitive",
     lazy = true,
     cmd = { "Git" },
   },
 
-  -- VCS info
   {
     "mhinz/vim-signify",
     config = function()
@@ -36,7 +34,6 @@ return {
     end,
   },
 
-  -- fancier statusline
   {
     "vim-airline/vim-airline",
     config = function()
@@ -58,7 +55,6 @@ return {
 
   { "vim-airline/vim-airline-themes" },
 
-  -- colorscheme
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -71,7 +67,6 @@ return {
     end,
   },
 
-  -- fuzzy finding
   {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -82,6 +77,5 @@ return {
     end,
   },
 
-  -- copilot
   { "github/copilot.vim" },
 }
