@@ -78,4 +78,6 @@ return {
   },
 
   { "github/copilot.vim" },
+
+  { "towolf/vim-helm" },
 }
