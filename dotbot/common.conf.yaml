@@ -23,6 +23,7 @@
     ~/.config/markdownlint/config: .config/markdownlint/config
     ~/.config/nvim/ftplugin/asciidoc.lua: .config/nvim/ftplugin/asciidoc.lua
     ~/.config/nvim/ftplugin/sql.lua: .config/nvim/ftplugin/sql.lua
+    ~/.config/nvim/ftplugin/vue.lua: .config/nvim/ftplugin/vue.lua
     ~/.config/nvim/init.lua: .config/nvim/init.lua
     ~/.config/nvim/lazy-lock.json: .config/nvim/lazy-lock.json
     ~/.config/nvim/lua/keymaps.lua: .config/nvim/lua/keymaps.lua
