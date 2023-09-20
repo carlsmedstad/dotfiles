@@ -12,6 +12,7 @@ GitLab
 Gothenburg
 Homebrew
 IaC
+IdP
 Istio
 JSON
 JWK
@@ -34,6 +35,7 @@ ShellCheck
 UAT
 Vue
 ZNC
+ansible
 composability
 crontab
 focals
