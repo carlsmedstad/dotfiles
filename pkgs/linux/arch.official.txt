@@ -6,7 +6,6 @@ arch-audit
 asciidoctor
 asciiquarium
 asp
-astyle
 aws-cli-v2
 base
 base-devel
@@ -17,7 +16,6 @@ bemenu
 bluez
 bluez-utils
 bottom
-buildah
 busted
 ccache
 checkbashisms
@@ -27,13 +25,11 @@ cloc
 cmake
 cmatrix
 cppcheck
-ctags
 dbeaver
 ddcutil
 devtools
 direnv
 dmidecode
-dnsmasq
 dos2unix
 dust
 entr
@@ -83,7 +79,6 @@ kubectx
 libdisplay-info
 libreoffice-fresh
 libva-utils
-libxslt
 light
 linux
 linux-firmware
@@ -96,7 +91,6 @@ lvm2
 mako
 man-db
 man-pages
-maven
 meson
 mold
 moreutils
@@ -130,7 +124,6 @@ pgformatter
 pipewire-alsa
 pipewire-pulse
 pkgstats
-plantuml
 playerctl
 pnpm
 podman
@@ -140,7 +133,6 @@ postgresql-libs
 prettier
 python-black
 python-openapi-spec-validator
-python-pre-commit
 python-pynvim
 python-pytest
 python-shtab
@@ -151,13 +143,12 @@ reflector
 ripgrep
 rpm-tools
 rsync
-rustup
 shellcheck
 shfmt
+skopeo
 slurp
 smartmontools
 solaar
-sparse
 speedtest-cli
 sqlfluff
 sshpass
@@ -194,7 +185,6 @@ xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xf86-video-vesa
-xmlto
 xorg-fonts-encodings
 xorg-server-common
 xorg-setxkbmap
