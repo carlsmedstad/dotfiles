@@ -16,7 +16,6 @@ bemenu
 bluez
 bluez-utils
 bottom
-busted
 ccache
 checkbashisms
 checksec
@@ -86,7 +85,6 @@ llvm
 lsof
 lua53
 luacheck
-luarocks
 lvm2
 mako
 man-db
@@ -100,7 +98,6 @@ neofetch
 neovim
 net-tools
 nftables
-nicotine+
 ninja
 nmap
 noto-fonts
@@ -110,7 +107,6 @@ ntfs-3g
 openapi-generator
 openbsd-netcat
 openconnect
-opendoas
 opensc
 openssh
 otf-font-awesome
@@ -119,7 +115,6 @@ pamixer
 pandoc-cli
 patchelf
 pcsc-tools
-perl-perl-critic
 pgformatter
 pipewire-alsa
 pipewire-pulse
@@ -170,12 +165,10 @@ transmission-gtk
 tree
 tree-sitter-cli
 ttf-nerd-fonts-symbols-mono
-twine
 udisks2
 upower
 usbutils
 valgrind
-vi
 vifm
 vint
 wget
