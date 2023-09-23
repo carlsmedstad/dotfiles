@@ -11,6 +11,7 @@
     ~/.config/bat/config: .config/bat/config
     ~/.config/bat/themes/Catppuccin-mocha.tmTheme: .config/bat/themes/Catppuccin-mocha.tmTheme
     ~/.config/black: .config/black
+    ~/.config/gdb/gdbinit: .config/gdb/gdbinit
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
     ~/.config/k9s/skin.yml: .config/k9s/themes/catppuccin/dist/mocha.yml

@@ -42,6 +42,7 @@ flatpak
 fwupd
 fzf
 gcovr
+gdb
 git
 git-delta
 git-filter-repo
