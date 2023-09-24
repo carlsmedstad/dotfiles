@@ -80,4 +80,10 @@ return {
   { "github/copilot.vim" },
 
   { "towolf/vim-helm" },
+  {
+    "lifepillar/pgsql.vim",
+    config = function()
+      vim.g.sql_type_default = "pgsql"
+    end,
+  },
 }
