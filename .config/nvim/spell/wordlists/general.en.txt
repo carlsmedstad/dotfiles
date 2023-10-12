@@ -19,6 +19,7 @@ JWK
 JWT
 JWTs
 K8s
+KPI
 Kubernetes
 Lua
 NGINX
