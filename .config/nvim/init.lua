@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.spell = true
   end,
 })
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "init",
   pattern = "*PKGBUILD",
   callback = function()
@@ -56,7 +56,7 @@ vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
     vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2164"
   end,
 })
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "init",
   pattern = "lua",
   callback = function()
