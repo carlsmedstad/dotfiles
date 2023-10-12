@@ -31,7 +31,7 @@ return {
         javascript = { "prettier" },
         json = { "jq" },
         lua = { "stylua" },
-        python = { "black", "isort" },
+        python = { "black", "ruff" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
         sql = { "sqlfluff" },
