@@ -33,6 +33,7 @@ RHEL
 SaaS
 ServiceNow
 ShellCheck
+SonarQube
 UAT
 Vue
 ZNC
@@ -41,6 +42,8 @@ composability
 crontab
 focals
 hostname
+linter
+linters
 mTLS
 onboarding
 pacman
