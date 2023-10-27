@@ -4,8 +4,6 @@ azure-cli-python38
 azure-kubelogin
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
-cmake-format
-cmake-lint
 dotbot
 drawio-desktop
 duc
@@ -31,8 +29,6 @@ pev2-electron
 pg_activity
 pipes.sh
 python38
-rpmlint
-scrape-cli
 slack-electron
 spotify
 symlinks

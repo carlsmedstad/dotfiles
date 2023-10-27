@@ -13,6 +13,7 @@ bash-completion
 bat
 bc
 bemenu
+bitwarden-cli
 bluez
 bluez-utils
 bottom
@@ -137,7 +138,6 @@ qrencode
 realtime-privileges
 reflector
 ripgrep
-rpm-tools
 rsync
 shellcheck
 shfmt
@@ -167,6 +167,7 @@ tree
 tree-sitter-cli
 ttf-nerd-fonts-symbols-mono
 udisks2
+unzip
 upower
 usbutils
 valgrind
