@@ -37,6 +37,7 @@ return {
           "python",
           "regex",
           "rst",
+          "sql",
           "toml",
           "typescript",
           "vim",
