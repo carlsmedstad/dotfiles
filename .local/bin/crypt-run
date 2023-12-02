@@ -3,7 +3,22 @@
 xdg_state_home=${XDG_STATE_HOME:-$HOME/.local/state}
 crypt_file=${CRYPT_FILE:-$xdg_state_home/crypt}
 
-if [ "$(id -u)" = "$(stat -c '%u' "$crypt_file")" ]; then
+get_file_owner_uid() {
+  case "$(uname)" in
+    Linux*)
+      stat -c '%u' "$1"
+      ;;
+    Darwin*)
+      stat -f '%u' "$1"
+      ;;
+    *)
+      echo "Unsupported OS";
+      exit 1
+      ;;
+  esac
+}
+
+if [ "$(id -u)" = "$(get_file_owner_uid "$crypt_file")" ]; then
   eval "$(gpg --decrypt "$crypt_file" 2> /dev/null)"
 fi
 
