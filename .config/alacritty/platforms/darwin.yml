@@ -1,5 +1,9 @@
 # yamllint disable
 
+# Modern bash
+shell:
+  program: "/opt/homebrew/bin/bash"
+
 # Key Bindings
 key_bindings:
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
@@ -77,5 +81,8 @@ key_bindings:
   - { key: Key6,      mods: Alt|Shift, chars: "\x1b^"                       } # Alt + ^
   - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
+
+  # Space does not work on MacOS
+  - { key: V, mods: Control|Shift, action: ToggleViMode }
 
 option_as_alt: Both
