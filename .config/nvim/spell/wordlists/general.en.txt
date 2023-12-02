@@ -19,6 +19,7 @@ JWK
 JWT
 JWTs
 K8s
+KML
 KPI
 Kubernetes
 Lua
@@ -30,6 +31,7 @@ PostgreSQL
 PowerShell
 PyPI
 RHEL
+SQLite
 SaaS
 ServiceNow
 ShellCheck
@@ -42,10 +44,13 @@ composability
 crontab
 focals
 hostname
+hostnames
 linter
 linters
 mTLS
+microservice
 onboarding
 pacman
 rebase
 whitelist
+whitelisting
