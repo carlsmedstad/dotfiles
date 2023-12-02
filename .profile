@@ -40,6 +40,8 @@ PATH=$KREW_ROOT/bin:$PATH
 if [ "$(uname)" = "Darwin" ]; then
   export BASH_SILENCE_DEPRECATION_WARNING=1
 
+  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+
   command -v ruby >> /dev/null && command -v gem >> /dev/null \
     && PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
