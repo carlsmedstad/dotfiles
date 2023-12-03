@@ -1,10 +1,11 @@
-[core]
-output = table
-first_run = yes
-
 [cloud]
 name = AzureCloud
 
-[bicep]
-use_binary_from_path = false
+[local_context]
 
+[core]
+cache_ttl = 10
+first_run = yes
+
+[bicep]
+use_binary_from_path = true
