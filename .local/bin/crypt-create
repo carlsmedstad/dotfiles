@@ -13,7 +13,7 @@ bw sync
   echo "export NUMVERIFY_API_KEY=$(bw get notes NUMVERIFY_API_KEY)"
   echo "export OPENAI_API_KEY=$(bw get notes OPENAI_API_KEY)"
   echo "export IPINFO_API_KEY=$(bw get notes IPINFO_API_KEY)"
-} | gpg --encrypt > "$crypt_file"
+} | gpg --encrypt --recipient 888285CF6ED6758F > "$crypt_file"
 
 unset BW_SESSION
 bw lock

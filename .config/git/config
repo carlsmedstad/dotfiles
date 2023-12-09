@@ -8,7 +8,7 @@
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
-  signingkey = 02973186FA345F2CB9C060BB5EED78D7F779E010
+  signingkey = 49C93367BA86290E
 [credential]
   helper = cache --timeout 3600
 [commit]
