@@ -28,6 +28,7 @@ return {
           "javascript",
           "jq",
           "json",
+          "jsonnet",
           "lua",
           "luadoc",
           "make",
