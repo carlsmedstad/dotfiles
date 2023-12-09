@@ -18,7 +18,7 @@ vim.o.smartcase = true -- ignore case except if uppercase in search phrase
 vim.o.number = true
 vim.o.numberwidth = 5 -- line-number-bar, with width = 3 digits + padding
 vim.o.cursorline = true -- highlight the line under the cursor
-vim.o.colorcolumn = "+2,+4" -- highlighted columns to show too long lines
+vim.o.colorcolumn = "+1,+3" -- highlighted columns to show too long lines
 
 vim.o.list = true
 vim.o.showbreak = "↪"
