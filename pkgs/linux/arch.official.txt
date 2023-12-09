@@ -50,6 +50,7 @@ git-filter-repo
 git-lfs
 github-cli
 glab
+gnome-keyring
 go
 go-yq
 graphviz
@@ -97,6 +98,7 @@ moreutils
 mpv
 namcap
 neofetch
+neomutt
 neovim
 net-tools
 nftables
@@ -131,7 +133,6 @@ prettier
 python-black
 python-openapi-spec-validator
 python-pynvim
-python-pytest
 python-shtab
 python-tox
 qrencode
@@ -148,6 +149,7 @@ solaar
 speedtest-cli
 sqlfluff
 sshpass
+stern
 strace
 stylua
 sway
@@ -158,6 +160,7 @@ sysstat
 tcpdump
 terminus-font
 tesseract
+texlive-fontsrecommended
 tigervnc
 tlp
 traceroute
@@ -173,6 +176,7 @@ usbutils
 valgrind
 vifm
 vint
+wev
 wget
 whois
 wl-clipboard

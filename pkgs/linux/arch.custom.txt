@@ -10,6 +10,7 @@ duc
 ghq
 gitlint
 globalprotect
+gojsontoyaml-git
 google-earth-pro
 hadolint
 hurl-rs
@@ -19,7 +20,6 @@ json-schema-for-humans
 jsonnet
 jsonnet-bundler
 krew
-kubetail
 libinput-gestures
 licensee
 markdown-link-check
@@ -28,13 +28,13 @@ mkinitcpio-firmware
 pev2-electron
 pg_activity
 pipes.sh
+protonmail-bridge
 python38
 slack-electron
 spotify
 symlinks
 tbls
 tiny-irc-client
-wev
 wlsunset
 wob
 znc-backlog-git
