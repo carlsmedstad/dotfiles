@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Slack
+Comment=Slack Desktop
+GenericName=Slack Client for Linux
+Exec=slack -s %u
+Icon=slack
+StartupNotify=true
+Categories=GTK;Network;InstantMessaging;
+MimeType=x-scheme-handler/slack;
+StartupWMClass=slack

@@ -31,7 +31,9 @@
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.Linux
     ~/.local/bin/rm-orphans: .local/bin/rm-orphans
     ~/.local/bin/set-default-applications: .local/bin/set-default-applications
+    ~/.local/bin/slack: .local/bin/slack
     ~/.local/bin/xdg-open: .local/bin/xdg-open
     ~/.local/bin/xterm: .local/bin/xterm
     ~/.local/share/applications/google-earth-pro.desktop: .local/share/applications/google-earth-pro.desktop
+    ~/.local/share/applications/slack.desktop: .local/share/applications/slack.desktop
     ~/.local/share/applications/xeyes.desktop: .local/share/applications/xeyes.desktop
