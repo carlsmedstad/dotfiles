@@ -15,6 +15,7 @@ command -v flatpak >> /dev/null && flatpak update --assumeyes
   && brew upgrade
 
 command -v nvim >> /dev/null && nvim --headless "+Lazy! sync" +qa
+command -v nvim >> /dev/null && nvim --headless "TSUpdate" +qa
 
 dotfiles_repo="$HOME/repos/github.com/carlsmedstad/dotfiles"
 [ -d "$dotfiles_repo" ] \
