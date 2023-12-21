@@ -1,5 +1,6 @@
 azcopy
 azure-kubelogin
+bicep
 cmake-lint
 dotbot
 gitlint
@@ -15,5 +16,6 @@ pg_activity
 protonmail-bridge
 protonmail-bridge-core
 rpmlint
+shell-gpt
 slack-electron
 tbls
