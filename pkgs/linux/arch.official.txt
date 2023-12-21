@@ -126,7 +126,6 @@ pkgstats
 playerctl
 pnpm
 podman
-podman-docker
 postgresql
 postgresql-libs
 prettier

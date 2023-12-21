@@ -1,12 +1,14 @@
 aurutils
 azcopy
-azure-cli-python38
+azure-cli
 azure-kubelogin
+bicep
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 dotbot
 drawio-desktop
 duc
+electron26-bin
 ghq
 gitlint
 globalprotect
@@ -30,6 +32,7 @@ pg_activity
 pipes.sh
 protonmail-bridge
 python38
+shell-gpt
 slack-electron
 spotify
 symlinks
@@ -37,4 +40,5 @@ tbls
 tiny-irc-client
 wlsunset
 wob
+xxd-standalone
 znc-backlog-git
