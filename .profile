@@ -34,7 +34,6 @@ export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
 export GOOGLECSE_CX=f0f0d74a82b79456e
 export GOOGLECSE_MAX_RESULTS=10
 
-PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 PATH=$KREW_ROOT/bin:$PATH
 
 if [ "$(uname)" = "Darwin" ]; then
@@ -52,5 +51,7 @@ if command -v luarocks >> /dev/null; then
   export LUA_PATH
   export LUA_CPATH
 fi
+
+PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 
 export GTK_THEME=Catppuccin-Mocha-Standard-Mauve-dark
