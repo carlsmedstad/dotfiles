@@ -22,5 +22,6 @@ if [ "$(id -u)" = "$(get_file_owner_uid "$crypt_file")" ]; then
   eval "$(gpg --decrypt "$crypt_file" 2> /dev/null)"
 fi
 
-# shellcheck disable=SC2046
-/bin/$(basename "$0") "$@"
+PATH=$(printf %s "$PATH" | tr ':' '\n' | grep -v "$(dirname "$0")" | tr '\n' ':')
+PATH=${PATH%:}
+$(basename "$0") "$@"
