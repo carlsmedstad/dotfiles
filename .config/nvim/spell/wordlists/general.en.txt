@@ -37,6 +37,7 @@ SaaS
 ServiceNow
 ShellCheck
 SonarQube
+TOML
 UAT
 Vue
 ZNC
