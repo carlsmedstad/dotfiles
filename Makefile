@@ -38,9 +38,12 @@ install-configs-user:
 	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/common.conf.yaml
 	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/darwin.conf.yaml
 
+TMP_FILE:=$(shell mktemp)
+
 .PHONY: dump-packages
 dump-packages:
-	brew bundle dump --force --file pkgs/darwin/Brewfile
+	brew bundle dump --force --file $(TMP_FILE)
+	cat $(TMP_FILE) | sort > pkgs/darwin/Brewfile
 
 .PHONY: bootstrap
 bootstrap:
