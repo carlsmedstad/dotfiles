@@ -33,7 +33,6 @@
     ~/.config/nvim/lua/plugins/other.lua: .config/nvim/lua/plugins/other.lua
     ~/.config/nvim/lua/plugins/treesitter.lua: .config/nvim/lua/plugins/treesitter.lua
     ~/.config/nvim/spell/wordlists/general.en.txt: .config/nvim/spell/wordlists/general.en.txt
-    ~/.config/shell_gpt/.sgptrc: .config/shell_gpt/.sgptrc
     ~/.config/stylua.toml: .stylua.toml
     ~/.config/yamllint/config: .config/yamllint/config
     ~/.config/zathura/themes/catppuccin/src/catppuccin-mocha: .config/zathura/themes/catppuccin/src/catppuccin-mocha
