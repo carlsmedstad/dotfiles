@@ -1,0 +1,93 @@
+import = [
+  "~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml",
+  "~/.config/alacritty/platforms/darwin.toml"
+]
+
+
+# Cattpuccin colors not set by the theme plugin
+[[colors.indexed_colors]]
+index = 16
+color = "#fab387" # peach
+
+[[colors.indexed_colors]]
+index = 17
+color = "#f5e0dc" # rosewater
+
+[[colors.indexed_colors]]
+index = 18
+color = "#f2cdcd" # flamingo
+
+[[colors.indexed_colors]]
+index = 19
+color = "#f5c2e7" # pink
+
+[[colors.indexed_colors]]
+index = 20
+color = "#cba6f7" # mauve
+
+[[colors.indexed_colors]]
+index = 21
+color = "#eba0ac" # maroon
+
+[[colors.indexed_colors]]
+index = 22
+color = "#89dceb" # sky
+
+[[colors.indexed_colors]]
+index = 23
+color = "#74c7ec" # sapphire
+
+[[colors.indexed_colors]]
+index = 24
+color = "#b4befe" # lavender
+
+[[colors.indexed_colors]]
+index = 25
+color = "#1e1e2e" # base
+
+[[colors.indexed_colors]]
+index = 26
+color = "#181825" # mantle
+
+[[colors.indexed_colors]]
+index = 27
+color = "#11111b" # crust
+
+
+[colors.normal]
+black = "#1e1e2e"
+
+[colors.selection]
+background = "#b4befe"
+text = "#11111b"
+
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "T"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = 58
+mode = "Vi"
+
+
+[window.padding]
+x = 8
+y = 3

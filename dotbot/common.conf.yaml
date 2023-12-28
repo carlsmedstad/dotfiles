@@ -6,8 +6,8 @@
 - link:
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
-    ~/.config/alacritty/alacritty.yml: .config/alacritty/alacritty.yml
-    ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml: .config/alacritty/themes/catppuccin/catppuccin-mocha.yml
+    ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
+    ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
     ~/.config/bat/config: .config/bat/config
     ~/.config/bat/themes/Catppuccin-mocha.tmTheme: .config/bat/themes/Catppuccin-mocha.tmTheme
     ~/.config/black: .config/black
