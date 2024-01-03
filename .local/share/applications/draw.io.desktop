@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=drawio
+Comment=draw.io desktop
+Exec=draw.io %U
+Terminal=false
+Type=Application
+Icon=draw.io
+StartupWMClass=draw.io
+Categories=Graphics;
+MimeType=application/vnd.jgraph.mxfile;application/vnd.ms-visio.drawing.main+xml;

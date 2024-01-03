@@ -1,7 +1,0 @@
-#!/bin/sh
-
-exec electron26 \
-  --enable-features=WaylandWindowDecorations \
-  --enable-features=WebRTCPipeWireCapturer \
-  --ozone-platform-hint=auto \
-  /usr/lib/slack/app.asar "$@"

@@ -8,7 +8,6 @@ catppuccin-gtk-theme-mocha
 dotbot
 drawio-desktop
 duc
-electron26-bin
 ghq
 gitlint
 globalprotect
