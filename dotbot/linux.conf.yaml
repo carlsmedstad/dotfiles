@@ -7,7 +7,7 @@
     ~/.config/Xresources: .config/Xresources
     ~/.config/aurutils/keep: .config/aurutils/keep
     ~/.config/electron26-flags.conf: .config/electron-flags.conf
-    ~/.config/electron27-flags.conf: .config/electron-flags.conf
+    ~/.config/electron28-flags.conf: .config/electron-flags.conf
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/gtk-3.0/settings.ini: .config/gtk-3.0/settings.ini
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
