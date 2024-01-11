@@ -22,6 +22,7 @@ JWTs
 K8s
 KML
 KPI
+KPIs
 Kubernetes
 Lua
 NGINX
@@ -32,6 +33,7 @@ PostgreSQL
 PowerShell
 PyPI
 RHEL
+S3
 SQLite
 SaaS
 ServiceNow
