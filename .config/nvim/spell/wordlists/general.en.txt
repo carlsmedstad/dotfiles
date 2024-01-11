@@ -2,6 +2,7 @@ AUR
 AWS
 Alacritty
 Artifactory
+B2B
 Base64
 CMake
 CORS
