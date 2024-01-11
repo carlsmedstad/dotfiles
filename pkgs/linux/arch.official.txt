@@ -162,6 +162,8 @@ tcpdump
 terminus-font
 tesseract
 texlive-fontsrecommended
+texlive-latex
+texlive-latexrecommended
 tigervnc
 tlp
 traceroute

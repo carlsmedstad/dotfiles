@@ -26,10 +26,12 @@ licensee
 markdown-link-check
 markdownlint-cli
 mkinitcpio-firmware
+nerd-dictation-git
 pev2-electron
 pg_activity
 pipes.sh
 protonmail-bridge
+python-pytest-json-report
 python38
 shell-gpt
 slack-electron
