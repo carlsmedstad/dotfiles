@@ -16,6 +16,7 @@ pg_activity
 protonmail-bridge
 protonmail-bridge-core
 rpmlint
+sentry-native
 shell-gpt
 slack-electron
 tbls
