@@ -55,3 +55,5 @@ fi
 PATH=$HOME/.local/bin:$GOBIN:$CARGO_HOME/bin:/usr/lib/ccache/bin:$PATH
 
 export GTK_THEME=Catppuccin-Mocha-Standard-Mauve-dark
+
+export AUR_REPO=custom
