@@ -30,6 +30,8 @@ NGINX
 Neovim
 OAuth
 OpenAPI
+PKGBUILD
+PKGBUILDs
 PostgreSQL
 PowerShell
 PyPI
@@ -59,3 +61,5 @@ pacman
 rebase
 whitelist
 whitelisting
+whitespace
+whitespaces
