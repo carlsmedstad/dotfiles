@@ -37,6 +37,7 @@ PowerShell
 PyPI
 RHEL
 S3
+SPDX
 SQLite
 SaaS
 ServiceNow
