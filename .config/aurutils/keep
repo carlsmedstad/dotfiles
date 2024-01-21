@@ -2,6 +2,7 @@ azcopy
 azure-kubelogin
 bicep
 cmake-lint
+commitlint
 dotbot
 gitlint
 hadolint-bin
@@ -15,6 +16,7 @@ pev2-electron
 pg_activity
 protonmail-bridge
 protonmail-bridge-core
+python-instructor
 rpmlint
 sentry-native
 shell-gpt
