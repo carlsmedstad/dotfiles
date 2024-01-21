@@ -29,7 +29,7 @@ alias gitaux='git --git-dir=.gitaux --work-tree=$(pwd)'
 tabs -4
 
 unset HISTFILESIZE
-export HISTSIZE=10000
+export HISTSIZE=100000
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
 
