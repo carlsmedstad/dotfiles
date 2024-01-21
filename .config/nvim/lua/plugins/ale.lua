@@ -31,6 +31,7 @@ return {
         javascript = { "prettier" },
         json = { "jq" },
         lua = { "stylua" },
+        markdown = { "prettier" },
         python = { "black", "ruff" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
