@@ -25,10 +25,12 @@ cloc
 cmake
 cmatrix
 cppcheck
+d2
 dbeaver
 ddcutil
 devtools
 direnv
+dive
 dmidecode
 dos2unix
 dust
@@ -183,6 +185,7 @@ wev
 wget
 whois
 wl-clipboard
+wlsunset
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils

@@ -5,6 +5,8 @@ azure-kubelogin
 bicep
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
+cmake-lint
+commitlint
 dotbot
 drawio-desktop
 duc
@@ -39,7 +41,6 @@ spotify
 symlinks
 tbls
 tiny-irc-client
-wlsunset
 wob
 xxd-standalone
 znc-backlog-git
