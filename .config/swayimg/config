@@ -1,4 +1,7 @@
-window = #1e1e2e
-font = monospace
-font-size = 11
-font-color = #cdd6f4
+[general]
+background = #1e1e2e
+
+[font]
+name = monospace
+size = 11
+color = #cdd6f4
