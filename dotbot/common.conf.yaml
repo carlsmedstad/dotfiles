@@ -14,7 +14,8 @@
     ~/.config/gdb/gdbinit: .config/gdb/gdbinit
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
-    ~/.config/k9s/skin.yml: .config/k9s/themes/catppuccin/dist/catppuccin-mocha.yaml
+    ~/.config/k9s/skins/catppuccin-mocha.yaml: .config/k9s/themes/catppuccin/dist/catppuccin-mocha.yaml
+    ~/.config/k9s/config.yaml: .config/k9s/config.yaml
     ~/.config/kitty/kittens/toggle_scrollback_pager.py: .config/kitty/kittens/toggle_scrollback_pager.py
     ~/.config/kitty/kitty.conf: .config/kitty/kitty.conf
     ~/.config/kitty/pager/init.vim: .config/kitty/pager/init.vim
