@@ -9,7 +9,7 @@ floating_modifier $mod normal
 bindsym $mod+Return exec $TERMINAL
 
 bindsym $mod+Shift+q kill
-bindsym $mod+Shift+g exec swaylock -c 002b36
+bindsym $mod+Shift+g exec swaylock
 
 bindsym $mod+d exec j4-dmenu-desktop \
   --use-xdg-de \

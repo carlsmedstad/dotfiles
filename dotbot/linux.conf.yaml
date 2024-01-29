@@ -25,6 +25,7 @@
     ~/.config/sway/themes/catppuccin/themes/catppuccin-mocha: .config/sway/themes/catppuccin/themes/catppuccin-mocha
     ~/.config/sway/wallpapers/evening-sky.png: .config/sway/wallpapers/evening-sky.png
     ~/.config/swayimg/config: .config/swayimg/config
+    ~/.config/swaylock/config: .config/swaylock/config
     ~/.config/user-dirs.dirs: .config/user-dirs.dirs
     ~/.config/vifm/colors/catppuccin-mocha.vifm: .config/vifm/colors/catppuccin-mocha.vifm
     ~/.config/vifm/include/vifm_devicons/favicons.vifm: .config/vifm/include/vifm_devicons/favicons.vifm
