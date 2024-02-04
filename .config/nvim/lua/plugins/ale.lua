@@ -26,6 +26,7 @@ return {
         cmake = { "cmakeformat" },
         cpp = { "clang-format" },
         css = { "prettier" },
+        fish = { "fish_indent" },
         go = { "gofmt" },
         html = { "prettier" },
         javascript = { "prettier" },

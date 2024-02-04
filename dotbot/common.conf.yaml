@@ -20,6 +20,11 @@
     ~/.config/bat/config: .config/bat/config
     ~/.config/bat/themes/Catppuccin-mocha.tmTheme: .config/bat/themes/Catppuccin-mocha.tmTheme
     ~/.config/black: .config/black
+    ~/.config/fish/aliases.fish: .config/fish/aliases.fish
+    ~/.config/fish/config.fish: .config/fish/config.fish
+    ~/.config/fish/fish_plugins: .config/fish/fish_plugins
+    ~/.config/fish/functions/fish_prompt.fish: .config/fish/functions/fish_prompt.fish
+    ~/.config/fish/gpg-agent.fish: .config/fish/gpg-agent.fish
     ~/.config/gdb/gdbinit: .config/gdb/gdbinit
     ~/.config/git/config: .config/git/config
     ~/.config/git/ignore: .config/git/ignore
