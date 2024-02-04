@@ -53,7 +53,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*PKGBUILD",
   callback = function()
     vim.g.ale_sh_shellcheck_dialect = "bash"
-    vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2164"
+    vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2155,2164"
   end,
 })
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
