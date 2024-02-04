@@ -16,9 +16,10 @@ printf >&2  "%s: local packager: %s\n" "$0" "$local_packager"
 rm -f pkgs/linux/arch.official.txt
 rm -f pkgs/linux/arch.custom.txt
 
-expac -Q "%w,%n,%p" | grep '^explicit' | while read -r line; do
-  name=$(echo "$line" | cut -d , -f 2)
-  packager=$(echo "$line" | cut -d , -f 3)
+expac -Q '%n,%w,%p' | sort | while IFS=, read -r name reason packager; do
+  if [ "$reason" = "dependency" ]; then
+    continue
+  fi
 
   if [ "$packager" = "$local_packager" ]; then
     echo "$name" >> pkgs/linux/arch.custom.txt
