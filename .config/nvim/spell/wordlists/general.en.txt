@@ -61,6 +61,7 @@ onboarding
 pacman
 pasttime
 rebase
+supersection
 whitelist
 whitelisting
 whitespace
