@@ -6,7 +6,7 @@ command -v rustup >> /dev/null && rustup update
 command -v flatpak >> /dev/null && flatpak update --assumeyes
 
 [ -f /etc/os-release ] && grep --quiet 'ID=arch' /etc/os-release && {
-  aur sync --upgrades --sign
+  aur sync --upgrades --sign --remove
   sudo pacman -Syu --noconfirm
 }
 
