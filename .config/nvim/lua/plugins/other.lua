@@ -53,8 +53,6 @@ return {
     end,
   },
 
-  { "vim-airline/vim-airline-themes" },
-
   {
     "catppuccin/nvim",
     name = "catppuccin",
