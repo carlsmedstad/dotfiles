@@ -10,6 +10,7 @@
     ~/.config/aerc/aerc.conf: .config/aerc/aerc.conf
     ~/.config/aerc/binds.conf: .config/aerc/binds.conf
     ~/.config/aerc/signature: .config/aerc/signature
+    ~/.config/aerc/stylesets/catppuccin-mocha: .config/aerc/stylesets/catppuccin-mocha
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
     ~/.config/bat/config: .config/bat/config
