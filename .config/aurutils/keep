@@ -6,7 +6,6 @@ commitlint
 dotbot
 gitlint
 hadolint-bin
-json-schema-for-humans
 krew
 kube-score
 licensee
@@ -14,7 +13,6 @@ markdown-link-check
 markdownlint-cli
 pev2-electron
 pg_activity
-protonmail-bridge
 protonmail-bridge-core
 python-instructor
 rpmlint
