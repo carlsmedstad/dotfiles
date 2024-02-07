@@ -31,8 +31,8 @@ success.fg=#a6e3a1
 
 tab.fg=#6c7086
 tab.bg=#181825
-tab.selected.fg=#cdd6f4
-tab.selected.bg=#1e1e2e
+tab.selected.fg=#181825
+tab.selected.bg=#89b4fa
 tab.selected.bold=true
 
 border.fg=#11111b
@@ -49,8 +49,8 @@ msglist_*.selected.bg=#313244
 dirlist_*.selected.bold=true
 dirlist_*.selected.bg=#313244
 
-statusline_default.fg=#9399b2
-statusline_default.bg=#313244
+statusline_default.fg=#cdd6f4
+statusline_default.bg=#181825
 statusline_error.bold=true
 statusline_success.bold=true
 
