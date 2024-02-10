@@ -53,6 +53,7 @@
     ~/.local/bin/mkspell: .local/bin/mkspell
     ~/.local/bin/nvim: .local/bin/crypt-run
     ~/.local/bin/phoneinfoga: .local/bin/crypt-run
+    ~/.local/bin/protonmail-bridge-start: .local/bin/protonmail-bridge-start
     ~/.local/bin/rm-containers: .local/bin/rm-containers
     ~/.local/bin/sgpt: .local/bin/crypt-run
     ~/.local/bin/update-everything: .local/bin/update-everything
