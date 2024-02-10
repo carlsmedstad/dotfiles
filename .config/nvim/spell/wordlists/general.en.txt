@@ -25,6 +25,7 @@ KML
 KPI
 KPIs
 Kubernetes
+LOC
 Lua
 NGINX
 Neovim
@@ -62,6 +63,8 @@ pacman
 pasttime
 rebase
 supersection
+upstream
+upstream's
 whitelist
 whitelisting
 whitespace
