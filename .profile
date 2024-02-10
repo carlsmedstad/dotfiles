@@ -20,9 +20,6 @@ export JFROG_CLI_HOME_DIR="$XDG_DATA_HOME/jfrog"
 export KREW_ROOT="$XDG_DATA_HOME/krew"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
-export CCACHE_CONFIGPATH="$XDG_CONFIG_HOME/ccache.config"
-export CCACHE_DIR="$XDG_CACHE_HOME/ccache"
-
 export ANSIBLE_STDOUT_CALLBACK=yaml
 
 [ -d "$XDG_STATE_HOME" ] || mkdir -p "$XDG_STATE_HOME"
