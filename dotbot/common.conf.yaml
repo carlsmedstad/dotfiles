@@ -13,6 +13,7 @@
     ~/.config/aerc/stylesets/catppuccin-mocha: .config/aerc/stylesets/catppuccin-mocha
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
+    ~/.config/bashrc.d/darwin.sh: .config/bashrc.d/darwin.sh
     ~/.config/bat/config: .config/bat/config
     ~/.config/bat/themes/Catppuccin-mocha.tmTheme: .config/bat/themes/Catppuccin-mocha.tmTheme
     ~/.config/black: .config/black

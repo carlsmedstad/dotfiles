@@ -34,8 +34,6 @@ fi
 
 [ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
-[ -f /usr/local/opt/fzf/shell/key-bindings.bash ] && . /usr/local/opt/fzf/shell/key-bindings.bash
-[ -f /usr/local/opt/fzf/shell/completion.bash ] && . /usr/local/opt/fzf/shell/completion.bash
 [ -f /usr/share/clang/bash-autocomplete.sh ] && . /usr/share/clang/bash-autocomplete.sh
 
 # shellcheck disable=2154
@@ -47,15 +45,6 @@ if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
 fi
 
 command -v direnv >> /dev/null && eval "$(direnv hook bash)"
-
-[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
-if [ "$(uname)" = "Darwin" ] && command -v brew >> /dev/null; then
-  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] \
-    && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-  # shellcheck source=/dev/null
-  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
