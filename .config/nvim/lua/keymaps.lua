@@ -1,8 +1,6 @@
--- bufswitch remaps for consistency with vimium
-vim.keymap.set("n", "<C-n>", "<S-j>")
-vim.keymap.set("n", "<C-m>", "<S-k>")
-vim.keymap.set("n", "<S-j>", ":bprev<CR>", { silent = true })
-vim.keymap.set("n", "<S-k>", ":bnext<CR>", { silent = true })
+-- bufswitch remaps for consistency with aerc
+vim.keymap.set("n", "<C-p>", ":bprev<CR>", { silent = true })
+vim.keymap.set("n", "<C-n>", ":bnext<CR>", { silent = true })
 
 -- move through display lines instead of actual lines
 vim.keymap.set("n", "j", [[v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj']], { expr = true })
