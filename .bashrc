@@ -1,6 +1,4 @@
-#!/bin/bash
-# shellcheck disable=1091
-
+# shellcheck disable=1091,2154
 # Return here for non-interactive shells
 test ! -t 0 && return
 
