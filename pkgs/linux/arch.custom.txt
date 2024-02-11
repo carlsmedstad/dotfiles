@@ -21,7 +21,6 @@ ipcalc-redhat
 jfrog-cli
 jsonnet-bundler
 jsonnet
-json-schema-for-humans
 krew
 libinput-gestures
 licensee
@@ -32,10 +31,10 @@ nerd-dictation-git
 pev2-electron
 pg_activity
 pipes.sh
-protonmail-bridge
+protonmail-bridge-core
 python38
 shell-gpt
-slack-desktop
+slack-electron
 spotify
 symlinks
 tbls

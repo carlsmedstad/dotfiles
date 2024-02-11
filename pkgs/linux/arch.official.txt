@@ -40,7 +40,6 @@ fzf
 git
 github-cli
 glab
-gnome-keyring
 go-yq
 graphviz
 greetd
@@ -91,6 +90,7 @@ opensc
 openssh
 otf-font-awesome
 pacman-contrib
+pamixer
 patchelf
 pcsc-tools
 pgformatter
