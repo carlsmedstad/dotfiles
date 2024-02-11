@@ -1,4 +1,4 @@
-# shellcheck disable=1091
+# shellcheck shell=bash disable=1091
 
 if [ "$(uname)" = "Darwin" ]; then
   [ -f /opt/homebrew/bin/brew ] \

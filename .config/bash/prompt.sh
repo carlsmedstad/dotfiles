@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 CLR1="\[$(tput setaf 16)\]"
 CLR2="\[$(tput setaf 17)\]"
 RESET="\[$(tput sgr0)\]"

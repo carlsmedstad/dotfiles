@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 alias mv="mv -iv"
 alias cp="cp -riv"
 alias mkdir="mkdir -pv"
