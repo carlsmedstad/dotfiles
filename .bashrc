@@ -36,11 +36,10 @@ fi
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 [ -f /usr/share/clang/bash-autocomplete.sh ] && . /usr/share/clang/bash-autocomplete.sh
 
-# shellcheck disable=2154
-if [ -d "$XDG_CONFIG_HOME/bashrc.d/" ]; then
-  for f in "$XDG_CONFIG_HOME/bashrc.d/"*; do
+if [ -d "$XDG_CONFIG_HOME/bash/" ]; then
+  for file in "$XDG_CONFIG_HOME/bash/"*; do
     # shellcheck source=/dev/null
-    . "$f"
+    . "$file"
   done
 fi
 
