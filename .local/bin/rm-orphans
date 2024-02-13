@@ -2,8 +2,8 @@
 
 if pacman -Qtdq > /dev/null; then
   echo "Removing orphans"
-  # shellcheck disable=SC2086
-  pacman -Rns "$(pacman -Qtdq)"
+  # shellcheck disable=2046
+  pacman -Rns $(pacman -Qtdq)
 else
   echo "No orphan packages"
 fi
