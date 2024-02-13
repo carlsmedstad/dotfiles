@@ -35,7 +35,7 @@ function screenshot
 end
 
 function podrun
-    podman run --rm --interactive --tty --volume "(pwd):/pwd" --workdir /pwd $argv
+    podman run --rm --interactive --tty --volume "$(pwd):/pwd" --workdir /pwd $argv
 end
 
 function rga
