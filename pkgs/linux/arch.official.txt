@@ -3,6 +3,7 @@ alacritty
 ansible
 ansible-lint
 arch-audit
+archlinux-repro
 asciiquarium
 asp
 aws-cli-v2
@@ -21,7 +22,6 @@ clang
 cloc
 cmake
 cmatrix
-d2
 ddcutil
 devtools
 direnv
@@ -67,7 +67,6 @@ linux
 linux-firmware
 llvm
 lsof
-lua53
 luacheck
 lvm2
 mako
@@ -86,6 +85,7 @@ noto-fonts
 ntfs-3g
 nvchecker
 openbsd-netcat
+openconnect
 opensc
 openssh
 otf-font-awesome
@@ -106,6 +106,7 @@ python-black
 python-pynvim
 reflector
 ripgrep
+rpm-tools
 rsync
 shellcheck
 shfmt
@@ -140,7 +141,6 @@ udisks2
 unzip
 usbutils
 vifm
-vint
 wev
 wget
 whois
