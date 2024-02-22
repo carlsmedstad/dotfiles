@@ -106,7 +106,6 @@ python-black
 python-pynvim
 reflector
 ripgrep
-rpm-tools
 rsync
 shellcheck
 shfmt
@@ -149,18 +148,7 @@ wlsunset
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
-xf86-video-vesa
-xorg-fonts-encodings
-xorg-server-common
-xorg-setxkbmap
-xorg-xauth
 xorg-xeyes
-xorg-xinit
-xorg-xkbcomp
-xorg-xmodmap
-xorg-xrandr
-xorg-xrdb
-xorg-xsetroot
 xorg-xwayland
 yamllint
 yubikey-manager

@@ -18,9 +18,11 @@ hurl-rs
 ipcalc-redhat
 jfrog-cli
 libinput-gestures
+maprovision
 markdown-link-check
 markdownlint-cli
 mkinitcpio-firmware
+nwe-agent
 opensc-p11-kit-module
 pev2-electron
 pg_activity
@@ -28,7 +30,6 @@ pipes.sh
 protonmail-bridge-core
 python38
 shell-gpt
-slack-electron
 spotify
 symlinks
 tbls
