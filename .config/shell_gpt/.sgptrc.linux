@@ -16,3 +16,5 @@ ROLE_STORAGE_PATH=/home/carsme/.config/shell_gpt/roles
 SHOW_FUNCTIONS_OUTPUT=false
 SYSTEM_ROLES=false
 API_BASE_URL=default
+PRETTIFY_MARKDOWN=true
+USE_LITELLM=false
