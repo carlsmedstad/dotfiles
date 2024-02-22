@@ -1,3 +1,5 @@
 .mkincl/providers/
 Brewfile.lock.json
 .config/nvim/spell/en.utf-8.add.spl
+*.tar.zst
+*.tar.zst.sig
