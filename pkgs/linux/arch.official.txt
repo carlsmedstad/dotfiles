@@ -1,3 +1,4 @@
+acpilight
 aerc
 alacritty
 ansible
@@ -62,7 +63,6 @@ kondo
 kubectl
 kubectx
 libreoffice-fresh
-light
 linux
 linux-firmware
 llvm
