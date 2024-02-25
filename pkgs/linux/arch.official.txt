@@ -32,7 +32,6 @@ fd
 firefox
 fisher
 fish
-flatpak
 fwupd
 fzf
 git
@@ -49,7 +48,6 @@ i3status-rust
 imagemagick
 inetutils
 intel-ucode
-istio
 iwd
 j4-dmenu-desktop
 jq
@@ -72,19 +70,14 @@ moreutils
 mpv
 namcap
 neofetch
-neomutt
 neovim
-net-tools
 nmap
 noto-fonts-emoji
 noto-fonts
-ntfs-3g
 nvchecker
 openbsd-netcat
 openconnect
-opensc
 openssh
-otf-font-awesome
 pacman-contrib
 pamixer
 patchelf
@@ -106,11 +99,9 @@ shellcheck
 shfmt
 skopeo
 slurp
-smartmontools
 solaar
 speedtest-cli
 sqlfluff
-sshpass
 stern
 strace
 stylua
@@ -118,7 +109,6 @@ sway
 swayidle
 swayimg
 swaylock
-sysstat
 tcpdump
 terminus-font
 texlive-fontsrecommended
@@ -135,7 +125,6 @@ usbutils
 vifm
 wev
 wget
-whois
 wl-clipboard
 wlsunset
 xdg-desktop-portal-wlr

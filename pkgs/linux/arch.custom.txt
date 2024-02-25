@@ -2,6 +2,7 @@ aurutils
 azcopy
 azure-cli
 azure-kubelogin
+benconnect
 bicep
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
@@ -11,7 +12,6 @@ dotbot
 drawio-desktop
 ghq
 gitlint
-globalprotect
 hadolint-bin
 ipcalc-redhat
 jfrog-cli
