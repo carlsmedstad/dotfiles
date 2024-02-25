@@ -178,7 +178,6 @@ mouse_warping none
 set $laptop 'eDP-1'
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
-exec_always ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob

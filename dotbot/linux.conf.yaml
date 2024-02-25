@@ -18,7 +18,6 @@
     ~/.config/shell_gpt/.sgptrc: .config/shell_gpt/.sgptrc.linux
     ~/.config/sway/config: .config/sway/config
     ~/.config/sway/scripts/dmenu-cmd: .config/sway/scripts/dmenu-cmd
-    ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed: .config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
     ~/.config/sway/scripts/printscreen: .config/sway/scripts/printscreen
     ~/.config/sway/themes/catppuccin/themes/catppuccin-mocha: .config/sway/themes/catppuccin/themes/catppuccin-mocha
     ~/.config/sway/wallpapers/evening-sky.png: .config/sway/wallpapers/evening-sky.png
