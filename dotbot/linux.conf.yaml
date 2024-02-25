@@ -20,7 +20,6 @@
     ~/.config/sway/scripts/dmenu-cmd: .config/sway/scripts/dmenu-cmd
     ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed: .config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
     ~/.config/sway/scripts/printscreen: .config/sway/scripts/printscreen
-    ~/.config/sway/scripts/setup-xdg-desktop-portal-wlr: .config/sway/scripts/setup-xdg-desktop-portal-wlr
     ~/.config/sway/themes/catppuccin/themes/catppuccin-mocha: .config/sway/themes/catppuccin/themes/catppuccin-mocha
     ~/.config/sway/wallpapers/evening-sky.png: .config/sway/wallpapers/evening-sky.png
     ~/.config/swayimg/config: .config/swayimg/config

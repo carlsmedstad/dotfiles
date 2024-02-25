@@ -178,6 +178,7 @@ mouse_warping none
 set $laptop 'eDP-1'
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
+exec_always ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec_always rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
@@ -188,5 +189,7 @@ exec mako
 exec swayidle -w \
   timeout 300 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"'
-exec ~/.config/sway/scripts/setup-xdg-desktop-portal-wlr
-exec_always ~/.config/sway/scripts/keep-laptop-display-disabled-when-lid-closed
+
+# Fix screen sharing - Import the WAYLAND_DISPLAY env var from sway into the
+# systemd user session.
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
