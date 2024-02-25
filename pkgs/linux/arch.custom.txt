@@ -12,12 +12,9 @@ drawio-desktop
 ghq
 gitlint
 globalprotect
-google-earth-pro
 hadolint-bin
-hurl-rs
 ipcalc-redhat
 jfrog-cli
-libinput-gestures
 maprovision
 markdown-link-check
 markdownlint-cli
@@ -26,7 +23,6 @@ nwe-agent
 opensc-p11-kit-module
 pev2-electron
 pg_activity
-pipes.sh
 protonmail-bridge-core
 python38
 shell-gpt
@@ -34,7 +30,7 @@ spotify
 symlinks
 tbls
 teams
-tiny-irc-client
+tiny
 wob
 xxd-standalone
 znc-backlog-git

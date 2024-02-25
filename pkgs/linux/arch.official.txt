@@ -5,14 +5,13 @@ ansible
 ansible-lint
 arch-audit
 archlinux-repro
-asciiquarium
 asp
 aws-cli-v2
 base-devel
 base
 bash-completion
 bat
-bemenu
+bemenu-wayland
 bitwarden-cli
 bluez
 bluez-utils
@@ -22,14 +21,12 @@ checksec
 clang
 cloc
 cmake
-cmatrix
 ddcutil
 devtools
 direnv
 dmidecode
 dos2unix
 etckeeper
-exfatprogs
 expac
 fd
 firefox
@@ -65,7 +62,6 @@ kubectx
 libreoffice-fresh
 linux
 linux-firmware
-llvm
 lsof
 luacheck
 lvm2
@@ -93,7 +89,6 @@ pacman-contrib
 pamixer
 patchelf
 pcsc-tools
-pgformatter
 pipewire-pulse
 pkgstats
 playerctl
@@ -134,8 +129,6 @@ tlp
 traceroute
 transmission-cli
 tree
-tree-sitter-cli
-ttf-nerd-fonts-symbols-mono
 udisks2
 unzip
 usbutils
