@@ -78,6 +78,7 @@ nvchecker
 openbsd-netcat
 openconnect
 openssh
+otf-font-awesome
 pacman-contrib
 pamixer
 patchelf
