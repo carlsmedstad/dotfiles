@@ -136,4 +136,3 @@ xorg-xwayland
 yamllint
 yubikey-manager
 zathura-pdf-mupdf
-znc

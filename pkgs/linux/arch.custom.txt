@@ -33,4 +33,3 @@ teams
 tiny
 wob
 xxd-standalone
-znc-backlog-git
