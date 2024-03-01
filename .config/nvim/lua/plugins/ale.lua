@@ -40,6 +40,7 @@ return {
         swift = { "swiftformat" },
         typescript = { "prettier" },
         vue = { "prettier" },
+        yaml = { "prettier" },
         ["*"] = { "remove_trailing_lines", "trim_whitespace" },
       }
 
