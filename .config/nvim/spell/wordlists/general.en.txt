@@ -58,6 +58,7 @@ linter
 linters
 mTLS
 microservice
+multitenancy
 onboarding
 pacman
 pasttime
@@ -67,5 +68,6 @@ upstream
 upstream's
 whitelist
 whitelisting
+whitelists
 whitespace
 whitespaces
