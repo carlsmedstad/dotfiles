@@ -1,3 +1,4 @@
+AIRAC
 AUR
 AWS
 Alacritty
