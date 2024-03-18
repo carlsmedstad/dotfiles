@@ -14,7 +14,6 @@
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
     ~/.config/bash/aliases.sh: .config/bash/aliases.sh
-    ~/.config/bash/darwin.sh: .config/bash/darwin.sh
     ~/.config/bash/gpg-agent.sh: .config/bash/gpg-agent.sh
     ~/.config/bash/prompt.sh: .config/bash/prompt.sh
     ~/.config/bat/config: .config/bat/config
