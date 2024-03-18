@@ -6,6 +6,7 @@
 - link:
     ~/.config/alacritty/platforms/darwin.toml: .config/alacritty/platforms/darwin.toml
     ~/.config/bash/darwin.sh: .config/bash/darwin.sh
+    ~/.config/fish/config.d/darwin.fish: .config/fish/config.d/darwin.fish
     ~/.config/kitty/platforms/darwin.conf: .config/kitty/platforms/darwin.conf
     ~/.config/shell_gpt/.sgptrc: .config/shell_gpt/.sgptrc.darwin
     ~/.gnupg/gpg-agent.conf: .gnupg/gpg-agent.conf.darwin
