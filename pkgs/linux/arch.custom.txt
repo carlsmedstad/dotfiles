@@ -1,6 +1,5 @@
 aurutils
 azcopy
-azure-cli
 azure-kubelogin
 benconnect
 bicep
@@ -15,6 +14,7 @@ gitlint
 hadolint-bin
 ipcalc-redhat
 jfrog-cli
+licensee
 maprovision
 markdown-link-check
 markdownlint-cli

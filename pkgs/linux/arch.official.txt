@@ -7,6 +7,7 @@ arch-audit
 archlinux-repro
 asp
 aws-cli-v2
+azure-cli
 base-devel
 base
 bash-completion
@@ -41,7 +42,7 @@ go-yq
 graphviz
 greetd
 grim
-handlr
+handlr-regex
 helm
 hwinfo
 i3status-rust
