@@ -19,6 +19,7 @@
     ~/.config/bat/config: .config/bat/config
     ~/.config/bat/themes/Catppuccin Mocha.tmTheme: .config/bat/themes/themes/Catppuccin Mocha.tmTheme
     ~/.config/black: .config/black
+    ~/.config/ccache/ccache.conf: .config/ccache/ccache.conf
     ~/.config/fish/conf.d/aliases.fish: .config/fish/conf.d/aliases.fish
     ~/.config/fish/conf.d/gpg-agent.fish: .config/fish/conf.d/gpg-agent.fish
     ~/.config/fish/config.fish: .config/fish/config.fish
