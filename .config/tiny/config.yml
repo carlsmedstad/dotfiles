@@ -8,13 +8,13 @@ servers:
     join:
       - "#archlinux"
       - "#archlinux-aur"
-      - "#archlinux-aurweb"
+      # - "#archlinux-aurweb"
       - "#archlinux-devops"
-      - "#archlinux-nordics"
-      - "#archlinux-offtopic"
+      # - "#archlinux-nordics"
+      # - "#archlinux-offtopic"
       - "#archlinux-projects"
       - "#archlinux-wiki"
-      - "#sway"
+      # - "#sway"
 
     sasl:
       username: "carsme"
