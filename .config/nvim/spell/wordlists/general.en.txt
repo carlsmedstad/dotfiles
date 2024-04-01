@@ -48,6 +48,7 @@ SonarQube
 TOML
 UAT
 Vue
+Yubikey
 ZNC
 ansible
 composability
