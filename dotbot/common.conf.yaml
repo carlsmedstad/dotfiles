@@ -27,6 +27,7 @@
     ~/.config/fish/functions/fish_prompt.fish: .config/fish/functions/fish_prompt.fish
     ~/.config/gdb/gdbinit: .config/gdb/gdbinit
     ~/.config/git/config: .config/git/config
+    ~/.config/git/config_archlinux: .config/git/config_archlinux
     ~/.config/git/ignore: .config/git/ignore
     ~/.config/k9s/config.yaml: .config/k9s/config.yaml
     ~/.config/k9s/skins/catppuccin-mocha.yaml: .config/k9s/themes/catppuccin/dist/catppuccin-mocha.yaml
