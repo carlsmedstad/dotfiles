@@ -78,6 +78,7 @@ noto-fonts
 nvchecker
 openbsd-netcat
 openconnect
+openpgp-card-tools
 openssh
 otf-font-awesome
 pacman-contrib
@@ -97,6 +98,8 @@ python-pynvim
 reflector
 ripgrep
 rsync
+sequoia-keyring-linter
+sequoia-sq
 shellcheck
 shfmt
 skopeo
