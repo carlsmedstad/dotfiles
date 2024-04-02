@@ -9,7 +9,8 @@
     ~/.config/aerc/accounts.conf: .config/aerc/accounts.conf
     ~/.config/aerc/aerc.conf: .config/aerc/aerc.conf
     ~/.config/aerc/binds.conf: .config/aerc/binds.conf
-    ~/.config/aerc/signature: .config/aerc/signature
+    ~/.config/aerc/signatures/archlinux: .config/aerc/signatures/archlinux
+    ~/.config/aerc/signatures/protonmail: .config/aerc/signatures/protonmail
     ~/.config/aerc/stylesets/catppuccin-mocha: .config/aerc/stylesets/catppuccin-mocha
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
