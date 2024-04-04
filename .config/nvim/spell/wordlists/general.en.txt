@@ -65,6 +65,7 @@ onboarding
 pacman
 pasttime
 rebase
+rebased
 supersection
 upstream
 upstream's
