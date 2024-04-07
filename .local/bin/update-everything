@@ -19,7 +19,7 @@ command -v fish >> /dev/null && fish -c "fisher update"
 
 command -v nvim >> /dev/null \
   && nvim --headless "+Lazy! sync" +qa \
-  && nvim --headless "+TSUpdate" +qa
+  && nvim --headless "+TSUpdateSync" +qa
 
 dotfiles_repo="$HOME/repos/github.com/carlsmedstad/dotfiles"
 [ -d "$dotfiles_repo" ] \
