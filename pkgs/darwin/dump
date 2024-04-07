@@ -3,3 +3,4 @@
 brew tap | sort > pkgs/darwin/brew.taps.txt
 brew leaves --installed-on-request | sort > pkgs/darwin/brew.leaves.txt
 brew list --cask | sort > pkgs/darwin/brew.casks.txt
+mas list | awk '{print $1}' | sort > pkgs/darwin/mas.apps.txt

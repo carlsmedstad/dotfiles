@@ -7,6 +7,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
   cat pkgs/darwin/brew.taps.txt | xargs -L1 brew tap
   cat pkgs/darwin/brew.leaves.txt | xargs brew install --quiet
   cat pkgs/darwin/brew.casks.txt | xargs brew install --cask
+  cat pkgs/darwin/mas.apps.txt | xargs mas install
 }
 
 /opt/homebrew/opt/fzf/install \
