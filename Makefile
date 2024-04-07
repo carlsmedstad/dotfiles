@@ -42,8 +42,7 @@ TMP_FILE:=$(shell mktemp)
 
 .PHONY: dump-packages
 dump-packages:
-	brew bundle dump --force --file $(TMP_FILE)
-	cat $(TMP_FILE) | sort > pkgs/darwin/Brewfile
+	./pkgs/darwin/dump
 
 .PHONY: bootstrap
 bootstrap:

@@ -1,0 +1,17 @@
+bitwarden
+firefox
+google-drive
+kitty
+microsoft-auto-update
+microsoft-office
+microsoft-teams
+mpv
+rectangle
+rekordbox
+slack
+spotify
+steam
+transmission
+visual-studio-code
+whatsapp
+yubico-yubikey-manager
