@@ -2,7 +2,6 @@ bash
 bash-completion
 bitwarden-cli
 bottom
-capstone
 cmake
 coreutils
 dotbot
@@ -13,14 +12,12 @@ fzf
 gawk
 ghq
 git
-glog
 gnu-getopt
 gnu-indent
 gnu-sed
 gnu-tar
 gnupg
 grep
-llvm
 local/carlsmedstad/shell-gpt
 make
 mas
