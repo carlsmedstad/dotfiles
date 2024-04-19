@@ -28,6 +28,8 @@ KPIs
 Kubernetes
 LOC
 Lua
+MacBook
+MacBooks
 NGINX
 Neovim
 OAuth
