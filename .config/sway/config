@@ -81,8 +81,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && xbacklight -get > $WOBSOCK
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && xbacklight -get  > $WOBSOCK
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && xbacklight -get > $WOBSOCK
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && xbacklight -get  > $WOBSOCK
 
 bindsym XF86AudioRaiseVolume exec pamixer -ui 5 && pamixer --get-volume > $WOBSOCK
 bindsym $mod+period exec pamixer -ui 5 && pamixer --get-volume > $WOBSOCK
