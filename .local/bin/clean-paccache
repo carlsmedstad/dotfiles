@@ -1,0 +1,4 @@
+#!/bin/sh -eu
+
+sudo paccache --cachedir /var/cache/pacman/pkg/ --keep 1 --remove
+sudo paccache --cachedir /var/cache/pacman/pkg/ --keep 0 --remove --uninstalled
