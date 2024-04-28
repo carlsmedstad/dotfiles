@@ -49,7 +49,7 @@
   root = ~/repos
 [include]
   path = ~/.config/git/config_extra
-[includeIf "gitdir:~/repos/aur.archlinux.org/**"]
+[includeIf "gitdir:~/repos/aur.archlinux.org/"]
   path = ~/.config/git/config_archlinux
-[includeIf "gitdir:~/repos/gitlab.archlinux.org/**"]
+[includeIf "gitdir:~/repos/gitlab.archlinux.org/"]
   path = ~/.config/git/config_archlinux
