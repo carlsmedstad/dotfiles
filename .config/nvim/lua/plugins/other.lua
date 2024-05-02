@@ -75,7 +75,34 @@ return {
     end,
   },
 
-  { "github/copilot.vim" },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    config = function()
+      require("copilot").setup({
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = "<C-f>",
+            next = "<M-f>",
+          },
+        },
+      })
+    end,
+  },
+  {
+    {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      branch = "canary",
+      dependencies = {
+        { "zbirenbaum/copilot.lua" },
+        { "nvim-lua/plenary.nvim" },
+      },
+      opts = {
+        debug = true,
+      },
+    },
+  },
 
   { "towolf/vim-helm" },
 }
