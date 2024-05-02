@@ -36,6 +36,7 @@ OAuth
 OpenAPI
 PKGBUILD
 PKGBUILDs
+POC
 PostgreSQL
 PowerShell
 PyPI
