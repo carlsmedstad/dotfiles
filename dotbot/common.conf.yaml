@@ -56,6 +56,7 @@
     ~/.config/zathura/themes/catppuccin/src/catppuccin-mocha: .config/zathura/themes/catppuccin/src/catppuccin-mocha
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
+    ~/.local/bin/aider: .local/bin/crypt-run
     ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
     ~/.local/bin/chatblade: .local/bin/crypt-run
     ~/.local/bin/crypt-create: .local/bin/crypt-create
