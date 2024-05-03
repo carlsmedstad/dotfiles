@@ -30,6 +30,7 @@ LOC
 Lua
 MacBook
 MacBooks
+Mikael
 NGINX
 Neovim
 OAuth
@@ -49,10 +50,12 @@ ServiceNow
 ShellCheck
 SonarQube
 TOML
+Telenor
 UAT
 Vue
 Yubikey
 ZNC
+Zebastian
 ansible
 composability
 crontab
