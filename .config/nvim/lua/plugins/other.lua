@@ -14,7 +14,6 @@ return {
     end,
   },
 
-  { "tpope/vim-commentary" },
   { "tpope/vim-surround" },
   { "tpope/vim-repeat" },
   { "farmergreg/vim-lastplace" },
