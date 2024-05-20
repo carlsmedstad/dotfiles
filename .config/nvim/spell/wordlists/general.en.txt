@@ -5,11 +5,13 @@ Alacritty
 Artifactory
 B2B
 Base64
+Bo
 CMake
 CORS
 Coverity
 ESLint
 FastAPI
+FedRAMP
 GeoJSON
 GitLab
 Gothenburg
@@ -53,11 +55,13 @@ TOML
 Telenor
 UAT
 Vue
+YAML
 Yubikey
 ZNC
 Zebastian
 ansible
 composability
+composable
 crontab
 focals
 hostname
