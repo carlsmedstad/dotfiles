@@ -8,6 +8,7 @@
     ~/.config/aurutils/keep: .config/aurutils/keep
     ~/.config/containers/storage.conf: .config/containers/storage.conf
     ~/.config/electron28-flags.conf: .config/electron-flags.conf
+    ~/.config/fish/conf.d/linux.fish: .config/fish/conf.d/linux.fish
     ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
     ~/.config/gtk-3.0/settings.ini: .config/gtk-3.0/settings.ini
     ~/.config/i3status-rust/config.toml: .config/i3status-rust/config.toml
