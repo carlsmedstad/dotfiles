@@ -33,7 +33,7 @@ return {
         json = { "jq" },
         lua = { "stylua" },
         markdown = { "prettier" },
-        python = { "black", "ruff" },
+        python = { "ruff", "ruff_format" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
         sql = { "sqlfluff" },
