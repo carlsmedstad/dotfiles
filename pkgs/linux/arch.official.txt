@@ -5,13 +5,14 @@ ansible
 ansible-lint
 arch-audit
 archlinux-repro
+arch-signoff
 asp
-aws-cli-v2
 azure-cli
 base-devel
 base
 bash-completion
 bat
+bc
 bemenu-wayland
 bitwarden-cli
 bluez
@@ -36,7 +37,9 @@ fish
 fwupd
 fzf
 git
+git-filter-repo
 github-cli
+git-lfs
 glab
 go-yq
 graphviz
@@ -49,6 +52,7 @@ i3status-rust
 imagemagick
 inetutils
 intel-ucode
+istio
 iwd
 j4-dmenu-desktop
 jq
@@ -62,6 +66,7 @@ libreoffice-fresh
 linux
 linux-firmware
 lsof
+lua53
 luacheck
 lvm2
 mako
@@ -93,8 +98,10 @@ podman-docker
 podman
 postgresql
 prettier
-python-black
+protonmail-bridge-core
 python-pynvim
+python-ruff
+rebuild-detector
 reflector
 ripgrep
 rsync
@@ -140,3 +147,4 @@ xorg-xwayland
 yamllint
 yubikey-manager
 zathura-pdf-mupdf
+zip

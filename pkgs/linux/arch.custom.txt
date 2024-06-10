@@ -2,13 +2,11 @@ aurutils
 azcopy
 azure-kubelogin
 benconnect
-bicep
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cmake-lint
 commitlint
 dotbot
-drawio-desktop
 ghq
 gitlint
 hadolint-bin
@@ -23,7 +21,6 @@ nwe-agent
 opensc-p11-kit-module
 pev2-electron
 pg_activity
-protonmail-bridge-core
 python38
 shell-gpt
 spotify
