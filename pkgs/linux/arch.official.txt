@@ -18,6 +18,7 @@ bitwarden-cli
 bluez
 bluez-utils
 bottom
+busted
 ccache
 checksec
 clang
@@ -94,7 +95,6 @@ pipewire-pulse
 pkgstats
 playerctl
 pnpm
-podman-docker
 podman
 postgresql
 prettier
