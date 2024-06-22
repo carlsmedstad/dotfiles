@@ -4,6 +4,7 @@ alacritty
 ansible
 ansible-lint
 arch-audit
+archlinux-contrib
 archlinux-repro
 arch-signoff
 asp
@@ -35,6 +36,7 @@ fd
 firefox
 fisher
 fish
+fuse-overlayfs
 fwupd
 fzf
 git
