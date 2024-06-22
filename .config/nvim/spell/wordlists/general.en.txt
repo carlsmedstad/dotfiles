@@ -23,6 +23,7 @@ JSON
 JWK
 JWT
 JWTs
+Jira
 K8s
 KML
 KPI
@@ -44,6 +45,7 @@ PostgreSQL
 PowerShell
 PyPI
 RHEL
+Redis
 S3
 SPDX
 SQLite
