@@ -32,6 +32,7 @@ vim.filetype.add({
   },
   extension = {
     h = "c",
+    mail = "mail",
     props = "xml",
     service = "systemd",
     vifm = "vim",
