@@ -37,6 +37,7 @@ Mikael
 NGINX
 Neovim
 OAuth
+OSS
 OpenAPI
 PKGBUILD
 PKGBUILDs
