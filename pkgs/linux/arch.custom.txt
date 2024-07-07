@@ -2,8 +2,6 @@ aurutils
 azcopy
 azure-kubelogin
 benconnect
-catppuccin-cursors-mocha
-catppuccin-gtk-theme-mocha
 cmake-lint
 commitlint
 dotbot
