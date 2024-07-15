@@ -5,7 +5,6 @@ benconnect
 cmake-lint
 commitlint
 dotbot
-ghq
 gitlint
 hadolint-bin
 ipcalc-redhat
@@ -19,12 +18,9 @@ nwe-agent
 opensc-p11-kit-module
 pev2-electron
 pg_activity
-python38
 shell-gpt
+slack-electron
 spotify
 symlinks
 tbls
 teams
-tiny
-wob
-xxd-standalone
