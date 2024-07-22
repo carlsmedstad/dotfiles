@@ -15,6 +15,7 @@ FedRAMP
 GeoJSON
 GitLab
 Gothenburg
+Grafana
 Homebrew
 IaC
 IdP
@@ -33,7 +34,6 @@ LOC
 Lua
 MacBook
 MacBooks
-Mikael
 NGINX
 Neovim
 OAuth
@@ -57,6 +57,8 @@ SonarQube
 TOML
 Telenor
 UAT
+UUID
+UUIDs
 Vue
 YAML
 Yubikey
