@@ -16,6 +16,7 @@ markdownlint-cli
 mkinitcpio-firmware
 nwe-agent
 opensc-p11-kit-module
+pacman-static
 pev2-electron
 pg_activity
 shell-gpt
