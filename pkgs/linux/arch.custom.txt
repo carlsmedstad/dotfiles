@@ -1,3 +1,4 @@
+aichat
 aurutils
 azcopy
 azure-kubelogin
@@ -5,6 +6,7 @@ benconnect
 cmake-lint
 commitlint
 dotbot
+drawio-desktop
 gitlint
 hadolint-bin
 ipcalc-redhat
@@ -12,7 +14,6 @@ jfrog-cli
 licensee
 maprovision
 markdown-link-check
-markdownlint-cli
 mkinitcpio-firmware
 nwe-agent
 opensc-p11-kit-module
@@ -22,6 +23,5 @@ pg_activity
 shell-gpt
 slack-electron
 spotify
-symlinks
 tbls
 teams
