@@ -16,7 +16,6 @@
     ~/.config/kanshi/config: .config/kanshi/config
     ~/.config/mako/config: .config/mako/config
     ~/.config/pacman/makepkg.conf: .config/pacman/makepkg.conf
-    ~/.config/shell_gpt/.sgptrc: .config/shell_gpt/.sgptrc.linux
     ~/.config/sway/config: .config/sway/config
     ~/.config/sway/scripts/dmenu-cmd: .config/sway/scripts/dmenu-cmd
     ~/.config/sway/scripts/printscreen: .config/sway/scripts/printscreen

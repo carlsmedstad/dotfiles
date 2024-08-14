@@ -1,0 +1,4 @@
+# https://github.com/sigoden/aichat/wiki/Configuration-Guide
+model: openai:gpt-4o
+clients:
+  - type: openai

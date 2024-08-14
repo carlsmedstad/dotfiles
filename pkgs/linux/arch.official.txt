@@ -1,5 +1,6 @@
 acpilight
 aerc
+aichat
 alacritty
 ansible
 ansible-lint
@@ -29,6 +30,7 @@ devtools
 direnv
 dmidecode
 dos2unix
+drawio-desktop
 etckeeper
 expac
 fd

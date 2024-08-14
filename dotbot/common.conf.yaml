@@ -12,6 +12,8 @@
     ~/.config/aerc/signatures/archlinux: .config/aerc/signatures/archlinux
     ~/.config/aerc/signatures/protonmail: .config/aerc/signatures/protonmail
     ~/.config/aerc/stylesets/catppuccin-mocha: .config/aerc/stylesets/catppuccin-mocha
+    ~/.config/aichat/config.yaml: .config/aichat/config.yaml
+    ~/.config/aichat/roles.yaml: .config/aichat/roles.yaml
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
     ~/.config/bash/aliases.sh: .config/bash/aliases.sh
@@ -56,6 +58,7 @@
     ~/.config/zathura/themes/catppuccin/src/catppuccin-mocha: .config/zathura/themes/catppuccin/src/catppuccin-mocha
     ~/.config/zathura/zathurarc: .config/zathura/zathurarc
     ~/.gnupg/gpg.conf: .gnupg/gpg.conf
+    ~/.local/bin/aichat: .local/bin/crypt-run
     ~/.local/bin/aider: .local/bin/crypt-run
     ~/.local/bin/az-update-plugins: .local/bin/az-update-plugins
     ~/.local/bin/chatblade: .local/bin/crypt-run
@@ -67,7 +70,6 @@
     ~/.local/bin/phoneinfoga: .local/bin/crypt-run
     ~/.local/bin/protonmail-bridge-start: .local/bin/protonmail-bridge-start
     ~/.local/bin/rm-containers: .local/bin/rm-containers
-    ~/.local/bin/sgpt: .local/bin/crypt-run
     ~/.local/bin/update-everything: .local/bin/update-everything
     ~/.local/bin/update-repos: .local/bin/update-repos
     ~/.local/share/azure/config: .local/share/azure/config

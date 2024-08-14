@@ -1,4 +1,3 @@
-aichat
 aurutils
 azcopy
 azure-kubelogin
@@ -6,7 +5,6 @@ benconnect
 cmake-lint
 commitlint
 dotbot
-drawio-desktop
 gitlint
 hadolint-bin
 ipcalc-redhat
@@ -20,7 +18,6 @@ opensc-p11-kit-module
 pacman-static
 pev2-electron
 pg_activity
-shell-gpt
 slack-electron
 spotify
 tbls
