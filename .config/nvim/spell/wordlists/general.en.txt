@@ -51,6 +51,7 @@ S3
 SPDX
 SQLite
 SaaS
+Sergey
 ServiceNow
 ShellCheck
 SonarQube
