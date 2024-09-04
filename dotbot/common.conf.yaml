@@ -13,7 +13,7 @@
     ~/.config/aerc/signatures/protonmail: .config/aerc/signatures/protonmail
     ~/.config/aerc/stylesets/catppuccin-mocha: .config/aerc/stylesets/catppuccin-mocha
     ~/.config/aichat/config.yaml: .config/aichat/config.yaml
-    ~/.config/aichat/roles.yaml: .config/aichat/roles.yaml
+    ~/.config/aichat/roles/carsme.md: .config/aichat/roles/carsme.md
     ~/.config/alacritty/alacritty.toml: .config/alacritty/alacritty.toml
     ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml: .config/alacritty/themes/catppuccin/catppuccin-mocha.toml
     ~/.config/bash/aliases.sh: .config/bash/aliases.sh
