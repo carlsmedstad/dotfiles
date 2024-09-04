@@ -48,6 +48,7 @@ PyPI
 RHEL
 Redis
 S3
+SDKs
 SPDX
 SQLite
 SaaS
