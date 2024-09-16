@@ -5,6 +5,7 @@
 
 - link:
     ~/.config/Xresources: .config/Xresources
+    ~/.config/archlinux-repro/repro.conf: .config/archlinux-repro/repro.conf
     ~/.config/aurutils/keep: .config/aurutils/keep
     ~/.config/containers/storage.conf: .config/containers/storage.conf
     ~/.config/electron28-flags.conf: .config/electron-flags.conf
