@@ -8,4 +8,5 @@ cache_ttl = 10
 first_run = yes
 
 [bicep]
-use_binary_from_path = true
+use_binary_from_path = false
+
