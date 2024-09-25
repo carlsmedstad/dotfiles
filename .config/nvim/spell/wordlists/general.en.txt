@@ -10,6 +10,7 @@ CMake
 CORS
 Coverity
 ESLint
+Fargate
 FastAPI
 FedRAMP
 GeoJSON
@@ -58,6 +59,7 @@ ShellCheck
 SonarQube
 TOML
 Telenor
+Terragrunt
 UAT
 UUID
 UUIDs
