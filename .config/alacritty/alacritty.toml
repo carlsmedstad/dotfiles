@@ -1,3 +1,4 @@
+[general]
 import = [
   "~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml",
   "~/.config/alacritty/platforms/darwin.toml"
