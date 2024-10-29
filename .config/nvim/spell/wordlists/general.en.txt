@@ -33,6 +33,7 @@ KPIs
 Kubernetes
 LOC
 Lua
+Ludvig
 MacBook
 MacBooks
 NGINX
@@ -63,6 +64,7 @@ Terragrunt
 UAT
 UUID
 UUIDs
+Vegard
 Vue
 YAML
 Yubikey
