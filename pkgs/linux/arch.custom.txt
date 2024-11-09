@@ -12,6 +12,8 @@ jfrog-cli
 licensee
 maprovision
 markdown-link-check
+mcafeeesp
+mcafeetp
 mkinitcpio-firmware
 nwe-agent
 opensc-p11-kit-module

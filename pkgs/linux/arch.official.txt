@@ -55,7 +55,6 @@ handlr-regex
 helm
 hwinfo
 i3status-rust
-imagemagick
 inetutils
 intel-ucode
 istio
@@ -95,7 +94,6 @@ openssh
 otf-font-awesome
 pacman-contrib
 pamixer
-patchelf
 pcsc-tools
 pipewire-pulse
 pkgstats
