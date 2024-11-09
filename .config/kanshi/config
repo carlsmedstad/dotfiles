@@ -44,3 +44,21 @@ profile {
   output "Dell Inc. DELL P2422HE 4Z3JCN3" mode 1920x1080 position 0,0
   output "Samsung Electric Company S24C450 H4MD703166" mode 1920x1200 position 1920,0
 }
+
+profile {
+  output "Sharp Corporation 0x14E2 Unknown" disable
+  output "Dell Inc. DELL P2422HE DVZJCN3" mode 1920x1080 position 0,0
+  output "Eizo Nanao Corporation EV2456 0x033CD818" mode 1920x1200 position 1920,0
+}
+
+profile {
+  output "Sharp Corporation 0x14E2 Unknown" disable
+  output "Dell Inc. DELL P2422HE 28KJCN3" mode 1920x1080 position 0,0
+  output "Eizo Nanao Corporation EV2456 0x03F513BB" mode 1920x1200 position 1920,0
+}
+
+profile {
+  output "Sharp Corporation 0x14E2 Unknown" disable
+  output "Dell Inc. DELL P2422HE 3VZJCN3" mode 1920x1080 position 0,0
+  output "Eizo Nanao Corporation EV2456 0x03880D93" mode 1920x1200 position 1920,0
+}
