@@ -1,13 +1,10 @@
 aurutils
-azcopy
-azure-kubelogin
 benconnect
 cmake-lint
 commitlint
 dotbot
 gitlint
 hadolint-bin
-ipcalc-redhat
 jfrog-cli
 licensee
 maprovision
@@ -16,7 +13,6 @@ mcafeeesp
 mcafeetp
 mkinitcpio-firmware
 nwe-agent
-opensc-p11-kit-module
 pacman-static
 pev2-electron
 pg_activity

@@ -10,7 +10,9 @@ archlinux-repro
 arch-rebuild-order
 arch-signoff
 asp
+azcopy
 azure-cli
+azure-kubelogin
 base-devel
 base
 bash-completion
@@ -90,6 +92,7 @@ nvchecker
 openbsd-netcat
 openconnect
 openpgp-card-tools
+opensc
 openssh
 otf-font-awesome
 pacman-contrib
