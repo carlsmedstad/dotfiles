@@ -9,5 +9,15 @@ handlr set application/x-yaml nvim.desktop
 handlr set application/json nvim.desktop
 handlr set x-scheme-handler/terminal Alacritty.desktop
 handlr set application/x-zerosize nvim.desktop
+handlr set application/x-extension-htm org.mozilla.firefox.desktop
+handlr set application/x-extension-html org.mozilla.firefox.desktop
+handlr set application/x-extension-shtml org.mozilla.firefox.desktop
+handlr set application/x-extension-xht  org.mozilla.firefox.desktop
+handlr set application/x-extension-xhtml org.mozilla.firefox.desktop
+handlr set application/xhtml+xml org.mozilla.firefox.desktop
+handlr set text/html org.mozilla.firefox.desktop
+handlr set x-scheme-handler/chrome org.mozilla.firefox.desktop
+handlr set x-scheme-handler/http org.mozilla.firefox.desktop
+handlr set x-scheme-handler/https org.mozilla.firefox.desktop
 
 xdg-mime default org.pwmt.zathura.desktop application/pdf
