@@ -27,6 +27,7 @@ JWT
 JWTs
 Jira
 K8s
+KEDA
 KML
 KPI
 KPIs
@@ -82,10 +83,12 @@ linters
 mTLS
 microservice
 multitenancy
+onboarded
 onboarding
 pacman
 pasttime
 persistency
+productify
 rebase
 rebased
 supersection
