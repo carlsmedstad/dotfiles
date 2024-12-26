@@ -10,6 +10,8 @@ vim.o.equalalways = false -- splitting won't default to a 50/50 ratio
 vim.opt.sessionoptions:remove("tabpages") -- only save current tab in session
 vim.opt.sessionoptions:remove("help") -- don't save help windows in session
 
+vim.o.spell = true
+
 vim.o.smartindent = true -- auto-indenting when starting a new line
 vim.o.wildmode = "longest,full" -- tab-completion
 vim.o.ignorecase = true

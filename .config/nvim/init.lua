@@ -46,7 +46,6 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.bo.shiftwidth = 2
     vim.bo.tabstop = 2
-    vim.wo.spell = true
   end,
 })
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
