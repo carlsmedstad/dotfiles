@@ -1,7 +1,6 @@
 function fish_prompt --description 'Write out the prompt'
     set -l last_pipestatus $pipestatus
     set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
-    set -l normal (set_color normal)
     set -q fish_color_status
     or set -g fish_color_status red
 
@@ -18,9 +17,17 @@ function fish_prompt --description 'Write out the prompt'
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
     set -l current_time (date "+%H:%M:%S")
 
-    set -l color_cwd $fish_color_cwd
+    set -l prompt_optional_hostname ""
+    if test "$SSH_CLIENT" -o "$SSH_TTY"
+        set prompt_optional_hostname (hostname -s)"@"
+    end
+
     set -l suffix '$'
 
-    echo -n -s (set_color "#fab387") $current_time " " (set_color $color_cwd) (prompt_pwd) $normal \
-        (fish_vcs_prompt) $normal " "$prompt_status " " $suffix " "
+    echo -n -s \
+        (set_color "#fab387") $current_time " " \
+        (set_color $fish_color_cwd) $prompt_optional_hostname (prompt_pwd) \
+        (set_color normal) (fish_vcs_prompt) \
+        " "$prompt_status " " \
+        $suffix " "
 end
