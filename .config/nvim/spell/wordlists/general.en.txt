@@ -41,6 +41,7 @@ NGINX
 Neovim
 OAuth
 OSS
+Odense
 OpenAPI
 PKGBUILD
 PKGBUILDs
