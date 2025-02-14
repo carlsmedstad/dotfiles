@@ -11,7 +11,7 @@ install-configs-user:
 	cat installer/common.paths.ini installer/linux.paths.ini \
 	  | ./installer/filter-ini \
 	  | while read -r line; do \
-	      ./installer/install-symlinks $$line; \
+	      ./installer/install-symlink $$line; \
 	    done
 
 .PHONY: install-configs-system
@@ -42,7 +42,7 @@ install-configs-user:
 	  && cat installer/common.paths.ini installer/darwin.paths.ini \
 	    | ./installer/filter-ini \
 	    | while read -r line; do \
-	        ./installer/install-symlinks $$line; \
+	        ./installer/install-symlink $$line; \
 	      done
 
 TMP_FILE:=$(shell mktemp)
