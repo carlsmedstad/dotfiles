@@ -157,7 +157,8 @@ exec_always gsettings set org.gnome.desktop.interface cursor-size 32
 input type:keyboard {
   repeat_delay 170
   repeat_rate 50
-  xkb_layout se-us-lctrl-to-return
+  xkb_layout se
+  xkb_variant us
   xkb_options caps:escape
 }
 
