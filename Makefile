@@ -8,8 +8,11 @@ ifeq ($(DETECTED_OS), Linux)
 
 .PHONY: install-configs-user
 install-configs-user:
-	dotbot -d . -c dotbot/common.conf.yaml
-	dotbot -d . -c dotbot/linux.conf.yaml
+	cat installer/common.paths.ini installer/linux.paths.ini \
+	  | ./installer/filter-ini \
+	  | while read -r line; do \
+	      ./installer/install-symlinks $$line; \
+	    done
 
 .PHONY: install-configs-system
 install-configs-system:
@@ -35,8 +38,12 @@ ifeq ($(DETECTED_OS), Darwin)
 
 .PHONY: install-configs-user
 install-configs-user:
-	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/common.conf.yaml
-	eval "$(/opt/homebrew/bin/brew shellenv)" && dotbot -d . -c dotbot/darwin.conf.yaml
+	eval "$(/opt/homebrew/bin/brew shellenv)" \
+	  && cat installer/common.paths.ini installer/darwin.paths.ini \
+	    | ./installer/filter-ini \
+	    | while read -r line; do \
+	        ./installer/install-symlinks $$line; \
+	      done
 
 TMP_FILE:=$(shell mktemp)
 

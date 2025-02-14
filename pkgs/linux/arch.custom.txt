@@ -1,7 +1,6 @@
 aurutils
 benconnect
 commitlint
-dotbot
 hadolint-bin
 jfrog-cli
 licensee

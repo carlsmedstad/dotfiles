@@ -11,8 +11,8 @@ As much as possible is themed with [Catppuccin][].
 
 ## Usage
 
-Deployment can be done using my dotfile manager of choice, [dotbot][], and
-[GNUMake][]:
+Deployment can be done using custom install scripts, invoked via the [GNUMake][]
+target `install-configs-user`:
 
 ```sh
 make install-configs-user
@@ -28,5 +28,4 @@ sudo make install-configs-system
 
 Package lists for both Arch and Brew are located in `pkgs/`.
 
-[dotbot]: https://github.com/anishathalye/dotbot
 [GNUMake]: https://www.gnu.org/software/make/

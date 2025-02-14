@@ -1,0 +1,10 @@
+#!/bin/bash -eu
+
+while IFS= read -r line; do
+  # Skip comments and empty lines
+  [[ "$line" =~ ^#.*$ ]] && continue
+  [[ "$line" =~ ^\;.*$ ]] && continue
+  [ -z "$line" ] && continue
+
+  echo "$line"
+done < /dev/stdin

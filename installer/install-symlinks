@@ -1,0 +1,17 @@
+#!/bin/bash -eu
+# shellcheck disable=2155
+
+reltarget="${1:?}"
+source="${2:-$reltarget}"
+target="$HOME/$reltarget"
+
+[ -e "$source" ] || {
+  printf >&2 'Error: %s does not exist\n' "$source"
+  exit 1
+}
+
+install --verbose --directory --mode 755 "$(dirname "$target")"
+
+ln_args=(--verbose --symbolic --relative)
+[ -L "$target" ] && ln_args+=(--force)
+ln "${ln_args[@]}" "$source" "$target"

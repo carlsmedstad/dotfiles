@@ -3,7 +3,6 @@ azure-kubelogin
 bicep
 cmake-lint
 commitlint
-dotbot
 gitlint
 hadolint-bin
 krew
