@@ -92,3 +92,9 @@ profile {
   output "Dell Inc. DELL P2422HE JNPJCN3" mode 1920x1080 position 0,0
   output "Eizo Nanao Corporation EV2456 0x05AA8C3A" mode 1920x1200 position 1920,0
 }
+
+profile {
+  output "Sharp Corporation 0x14E2 Unknown" disable
+  output "Dell Inc. DELL P2723QE F1CVB14" mode 2560x1440 position 0,0
+  output "Dell Inc. DELL P2723QE G3D5B14" mode 2560x1440 position 2560,0
+}
