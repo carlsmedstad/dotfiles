@@ -1,9 +1,7 @@
 aurutils
 benconnect
-cmake-lint
 commitlint
 dotbot
-gitlint
 hadolint-bin
 jfrog-cli
 licensee
@@ -15,7 +13,6 @@ mkinitcpio-firmware
 nwe-agent
 pacman-static
 pev2-electron
-pg_activity
 slack-electron
 spotify
 tbls
