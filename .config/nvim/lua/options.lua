@@ -23,7 +23,6 @@ vim.o.cursorline = true -- highlight the line under the cursor
 vim.o.colorcolumn = "+1,+3" -- highlighted columns to show too long lines
 
 vim.o.list = true
-vim.o.showbreak = "↪"
 vim.o.listchars = "nbsp:␣,trail:•,extends:⟩,precedes:⟨,tab:  ,"
 vim.o.expandtab = true
 vim.o.textwidth = 79
