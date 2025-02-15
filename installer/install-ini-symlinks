@@ -1,0 +1,10 @@
+#!/bin/bash -eu
+
+for file in "$@"; do
+  # shellcheck disable=2002
+  cat "$file" \
+    | ./installer/filter-ini \
+    | while read -r target source; do
+      ./installer/install-symlink "$target" "$source"
+    done
+done

@@ -8,11 +8,9 @@ ifeq ($(DETECTED_OS), Linux)
 
 .PHONY: install-configs-user
 install-configs-user:
-	cat installer/common.paths.ini installer/linux.paths.ini \
-	  | ./installer/filter-ini \
-	  | while read -r line; do \
-	      ./installer/install-symlink $$line; \
-	    done
+	./installer/install-ini-symlinks \
+	  installer/common.paths.ini \
+	  installer/linux.paths.ini
 
 .PHONY: install-configs-system
 install-configs-system:
@@ -39,11 +37,9 @@ ifeq ($(DETECTED_OS), Darwin)
 .PHONY: install-configs-user
 install-configs-user:
 	eval "$(/opt/homebrew/bin/brew shellenv)" \
-	  && cat installer/common.paths.ini installer/darwin.paths.ini \
-	    | ./installer/filter-ini \
-	    | while read -r line; do \
-	        ./installer/install-symlink $$line; \
-	      done
+	  && ./installer/install-ini-symlinks \
+	    installer/common.paths.ini \
+	    installer/linux.paths.ini
 
 TMP_FILE:=$(shell mktemp)
 
