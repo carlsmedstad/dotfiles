@@ -13,23 +13,3 @@ end
 function ls
     command ls --color=auto --group-directories-first $argv
 end
-
-function nvim
-    command nvim --startuptime /tmp/nvim-startuptime $argv
-end
-
-function gitprune
-    git --no-pager branch --format='%(refname:short)' | xargs -n1 -I{} git branch -d {} 2>/dev/null
-end
-
-function gitfix
-    git diff --name-only | uniq | xargs $EDITOR
-end
-
-function podrun
-    podman run --rm --interactive --tty --volume "$(pwd):/pwd" --workdir /pwd $argv
-end
-
-function rga
-    rg --glob='*' --glob='!.git' --glob='!build' $argv
-end
