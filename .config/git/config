@@ -1,32 +1,35 @@
 [core]
   eol = lf
   pager = less -x1,5
-[merge]
-  conflictstyle = diff3
-[diff]
-  colorMoved = default
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
   signingkey = 688CE83B917CD0CEF52AA14A49C93367BA86290E
-[credential]
-  helper = cache --timeout 3600
 [commit]
   gpgsign = true
 [tag]
   gpgsign = true
+[credential]
+  helper = cache --timeout 3600
+[color]
+  ui = always
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [pull]
   ff = only
 [push]
   autoSetupRemote = true
-[diff]
-  tool = nvimdiff
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [submodule]
   recurse = false
-[color]
-  ui = always
+[rebase]
+  autosquash = true
+[init]
+  defaultBranch = master
 [alias]
   br = branch
   ci = commit
@@ -40,10 +43,6 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[rebase]
-  autosquash = true
-[init]
-  defaultBranch = master
 [ghq]
   vcs = git
   root = ~/repos
