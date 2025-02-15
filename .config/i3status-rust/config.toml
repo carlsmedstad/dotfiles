@@ -9,6 +9,7 @@ icons = "awesome6"
 
 [[block]]
 block = "sound"
+driver = "pulseaudio"
 show_volume_when_muted = true
 max_vol = 100
 format = "  $icon $volume "

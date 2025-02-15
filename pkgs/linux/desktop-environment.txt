@@ -1,0 +1,16 @@
+alacritty
+bemenu-wayland
+greetd
+i3status-rust
+j4-desktop-menu
+mako
+otf-font-awesome
+pamixer
+pipewire-pulse
+sway
+swaybg
+swayidle
+swayimg
+swaylock
+wlsunset
+wob

@@ -1,8 +1,5 @@
 [general]
-import = [
-  "~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml",
-  "~/.config/alacritty/platforms/darwin.toml"
-]
+import = ["~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml"]
 
 
 # Cattpuccin colors not set by the theme plugin
