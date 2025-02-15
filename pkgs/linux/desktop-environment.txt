@@ -1,6 +1,7 @@
 alacritty
 bemenu-wayland
 greetd
+handlr-regex
 i3status-rust
 j4-desktop-menu
 mako
