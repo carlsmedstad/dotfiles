@@ -1,0 +1,2 @@
+aerc
+protonmail-bridge-core
