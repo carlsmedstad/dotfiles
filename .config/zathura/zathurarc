@@ -1,6 +1,0 @@
-include themes/catppuccin/src/catppuccin-mocha
-
-set statusbar-bg "#181825"
-
-set font "monospace normal 11"
-set selection-clipboard clipboard
