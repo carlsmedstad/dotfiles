@@ -1,3 +1,4 @@
+acpilight
 alacritty
 bemenu-wayland
 greetd
@@ -13,5 +14,6 @@ swaybg
 swayidle
 swayimg
 swaylock
+wl-clipboard
 wlsunset
 wob
