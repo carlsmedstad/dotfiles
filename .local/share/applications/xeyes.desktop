@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Version=1.0
-Name=XEyes
-Comment=Follow the mouse/SHAPE extension X demo
-Exec=/usr/bin/xeyes
-Terminal=false
-Categories=Development
