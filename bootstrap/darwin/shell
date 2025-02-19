@@ -1,5 +1,0 @@
-#!/bin/sh -eu
-
-[ "$SHELL" = "/bin/bash" ] && exit 0
-
-chsh -s /bin/bash

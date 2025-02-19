@@ -1,9 +1,0 @@
-#!/bin/sh -eu
-
-if bw login --check; then
-  session_key=$(bw unlock --raw)
-else
-  session_key=$(bw login --raw)
-fi
-
-bw --session "$session_key" get notes gpg-key-2022 | gpg --import --allow-secret-key-import

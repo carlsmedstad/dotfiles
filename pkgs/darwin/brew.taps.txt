@@ -1,3 +1,0 @@
-homebrew/bundle
-koekeishiya/formulae
-local/carlsmedstad
