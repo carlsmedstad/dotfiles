@@ -1,0 +1,4 @@
+archlinux-contrib
+archlinux-repro
+devtools
+pkgstats
