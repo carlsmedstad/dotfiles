@@ -6,6 +6,7 @@ handlr-regex
 i3status-rust
 j4-desktop-menu
 mako
+notify-send
 otf-font-awesome
 pamixer
 pipewire-pulse
@@ -17,3 +18,5 @@ swaylock
 wl-clipboard
 wlsunset
 wob
+xeyes
+xorg-xwayland
