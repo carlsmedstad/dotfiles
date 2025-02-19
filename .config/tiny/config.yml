@@ -19,7 +19,7 @@ servers:
     sasl:
       username: "carsme"
       password:
-        command: "gpg --decrypt --quiet /home/carsme/.config/tiny/creds/irc.libera.chat.gpg"
+        command: "printenv IRC_LIBERA_PASSWORD"
 
 defaults:
   nicks: [carsme]
