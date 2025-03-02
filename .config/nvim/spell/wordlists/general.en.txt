@@ -5,9 +5,11 @@ Alacritty
 Artifactory
 B2B
 Base64
+Bitwarden
 Bo
 CMake
 CORS
+Catppuccin
 Coverity
 ESLint
 Fargate
@@ -70,6 +72,7 @@ Vegard
 Vue
 YAML
 Yubikey
+Yubikeys
 ZNC
 Zebastian
 ansible

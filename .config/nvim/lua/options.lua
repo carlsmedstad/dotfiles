@@ -12,7 +12,6 @@ vim.opt.sessionoptions:remove("help") -- don't save help windows in session
 
 vim.o.spell = true
 
-vim.o.smartindent = true -- auto-indenting when starting a new line
 vim.o.wildmode = "longest,full" -- tab-completion
 vim.o.ignorecase = true
 vim.o.smartcase = true -- ignore case except if uppercase in search phrase
@@ -24,7 +23,3 @@ vim.o.colorcolumn = "+1,+3" -- highlighted columns to show too long lines
 
 vim.o.list = true
 vim.o.listchars = "nbsp:␣,trail:•,extends:⟩,precedes:⟨,tab:  ,"
-vim.o.expandtab = true
-vim.o.textwidth = 79
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2

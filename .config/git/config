@@ -1,32 +1,47 @@
 [core]
   eol = lf
   pager = less -x1,5
-[merge]
-  conflictstyle = diff3
-[diff]
-  colorMoved = default
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
   signingkey = 688CE83B917CD0CEF52AA14A49C93367BA86290E
 [credential]
-  helper = cache --timeout 3600
+  helper = gopass
+[column]
+  ui = auto
+[color]
+  ui = always
+[branch]
+  sort = -committerdate
+[init]
+  defaultBranch = main
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[pull]
+  ff = only
 [commit]
   gpgsign = true
 [tag]
+  sort = version:refname
   gpgsign = true
-[pull]
-  ff = only
 [push]
+  default = simple
   autoSetupRemote = true
-[diff]
-  tool = nvimdiff
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-[submodule]
-  recurse = false
-[color]
-  ui = always
+  followTags = true
+[merge]
+  conflictstyle = zdiff3
+[rebase]
+  autosquash = true
+  updaterefs = true
 [alias]
   br = branch
   ci = commit
@@ -35,15 +50,12 @@
   pushf = push --force-with-lease
   st = status --short --branch
   root = rev-parse --show-toplevel
+  out = "log @{u}.."
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[rebase]
-  autosquash = true
-[init]
-  defaultBranch = master
 [ghq]
   vcs = git
   root = ~/repos

@@ -20,9 +20,6 @@ require("lazy").setup({
   spec = { { import = "plugins" } },
 })
 
-require("options")
-require("keymaps")
-
 vim.filetype.add({
   filename = {
     [".clang-tidy"] = "yaml",
@@ -39,28 +36,6 @@ vim.filetype.add({
   },
 })
 
-vim.api.nvim_create_augroup("init", {})
-vim.api.nvim_create_autocmd("FileType", {
-  group = "init",
-  pattern = { "markdown", "gitcommit", "asciidoc" },
-  callback = function()
-    vim.bo.shiftwidth = 2
-    vim.bo.tabstop = 2
-  end,
-})
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  group = "init",
-  pattern = "*PKGBUILD",
-  callback = function()
-    vim.g.ale_sh_shellcheck_dialect = "bash"
-    vim.g.ale_sh_shellcheck_exclusions = "2034,2128,2154,2155,2164"
-  end,
-})
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  group = "init",
-  pattern = "lua",
-  callback = function()
-    vim.bo.shiftwidth = 2
-    vim.bo.tabstop = 2
-  end,
-})
+require("options")
+require("keymaps")
+require("autocommands")
