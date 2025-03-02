@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -euo pipefail
+
+argv0=lninstall
+config_file="${LNINSTALL_CONFIG:-$PWD/lninstall.ini}"
+install_sections=("$@")
+
+[ ! -f "$config_file" ] && {
+  printf >&2 '%s: %s: does not exist\n' "$argv0" "$config_file"
+  exit 1
+}
+[ ${#install_sections[@]} -eq 0 ] && {
+  printf >&2 '%s: no section specified, installing everything\n' "$argv0"
+}
+
+section=
+while IFS='= ' read -r key value; do
+  [[ -z $key || $key =~ ^# ]] && continue
+  [[ $key =~ ^\[.*\]$ ]] && {
+    section="${key:1:-1}"
+    continue
+  }
+  [ -z "$section" ] && {
+    printf >&2 '%s: %s: entry without section\n' "$argv0" "$key"
+    exit 1
+  }
+
+  [[ ${#install_sections[@]} -eq 0 || " ${install_sections[*]} " =~ $section ]] && {
+    source="$key"
+    target="$value"
+    [ -e "$source" ] || {
+      printf >&2 'Error: %s does not exist\n' "$source"
+      exit 1
+    }
+
+    [ -z "$target" ] && target="$HOME/$source"
+    [ -d "$(dirname "$target")" ] \
+      || install --directory --mode 755 "$(dirname "$target")"
+    ln_args=(--verbose --symbolic --relative)
+    [ -L "$target" ] && ln_args+=(--force)
+    ln "${ln_args[@]}" "$source" "$target"
+  }
+done < "$config_file"
