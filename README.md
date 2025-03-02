@@ -17,3 +17,8 @@ conflicts in the following way:
 
 - If a regular file exists at a target path, the script will exit with a failure.
 - If a symlink exists at a target path, the script will overwrite it.
+
+## Copyright
+
+The contents of this repository are licensed under the
+[Zero-Clause BSD license](https://spdx.org/licenses/0BSD.html).
