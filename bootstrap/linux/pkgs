@@ -1,5 +1,0 @@
-#!/bin/sh -eu
-
-# shellcheck disable=2002
-cat pkgs/linux/arch.official.txt | sudo pacman -S --needed -
-paru -S --needed - < pkgs/linux/arch.aur.txt

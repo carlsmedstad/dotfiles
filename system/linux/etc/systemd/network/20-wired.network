@@ -1,5 +1,0 @@
-[Match]
-Name=enp55s0u2*
-
-[Network]
-DHCP=yes
