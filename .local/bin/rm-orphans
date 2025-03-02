@@ -1,9 +1,0 @@
-#!/bin/sh -eu
-
-if pacman -Qtdq > /dev/null; then
-  echo "Removing orphans"
-  # shellcheck disable=2046
-  pacman -Rns $(pacman -Qtdq)
-else
-  echo "No orphan packages"
-fi

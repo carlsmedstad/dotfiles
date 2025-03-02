@@ -1,4 +1,0 @@
-#!/bin/sh -eu
-
-gpg --quiet --sign --output "$(mktemp --dry-run)" /dev/null
-systemctl --user restart protonmail-bridge.service
