@@ -1,32 +1,19 @@
-# My Dotfiles
+# Dotfiles
 
-These are my dotfiles at the moment.
+These are my dotfiles at the moment. This repository used to contain a lot
+more, but I've migrated large portions of the configurations to _kits_, see
+<https://github.com/carlsmedstad/kits>.
 
-I use these regularly on both MacOS and Arch Linux and aim for them to be
-compatible with both operating systems.
+## Installation
 
-As much as possible is themed with [Catppuccin][].
-
-[Catppuccin]: https://github.com/catppuccin/catppuccin
-
-## Usage
-
-Deployment can be done using my dotfile manager of choice, [dotbot][], and
-[GNUMake][]:
+Configurations can be installed as symlinks by running:
 
 ```sh
-make install-configs-user
+make install
 ```
 
-In `system/` I've put system-wide configuration files deemed valuable to have
-in this repository. These can be deployed in the same manner with the
-`install-system` target:
+Note, the install script which is called underneath, `lninstall`, will handle
+conflicts in the following way:
 
-```sh
-sudo make install-configs-system
-```
-
-Package lists for both Arch and Brew are located in `pkgs/`.
-
-[dotbot]: https://github.com/anishathalye/dotbot
-[GNUMake]: https://www.gnu.org/software/make/
+- If a regular file exists at a target path, the script will exit with a failure.
+- If a symlink exists at a target path, the script will overwrite it.
