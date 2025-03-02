@@ -2,13 +2,6 @@ name: lint
 on: [push]
 
 jobs:
-  shell:
-    runs-on: ubuntu-latest
-    container: ghcr.io/mkincl/shell-provider:v1
-    steps:
-      - uses: actions/checkout@v2
-      - run: make init
-      - run: make lint-shell
   lua:
     runs-on: ubuntu-latest
     container: ghcr.io/mkincl/lua-provider:v1
