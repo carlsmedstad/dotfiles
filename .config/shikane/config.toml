@@ -1,0 +1,16 @@
+[[profile]]
+name = "Office Dual Monitor #1"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search = "v=Dell Inc."
+  enable = true
+  mode = "best"
+  position = "0,0"
+  [[profile.output]]
+  search  = "v=Samsung Electric Company"
+  enable = true
+  mode = "best"
+  position = "1920,0"
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = false
