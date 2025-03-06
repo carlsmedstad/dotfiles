@@ -14,3 +14,20 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   [[profile.output]]
   search  = "eDP-1"
   enable = false
+
+[[profile]]
+name = "Office Dual Monitor #2"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search = "v=Dell Inc."
+  enable = true
+  mode = "best"
+  position = "0,0"
+  [[profile.output]]
+  search  = "v=Eizo Nanao Corporation"
+  enable = true
+  mode = "best"
+  position = "1920,0"
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = false
