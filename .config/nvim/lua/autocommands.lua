@@ -16,6 +16,14 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.expandtab = false
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "init",
+  pattern = { "python" },
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end,
+})
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "init",
   pattern = { "*PKGBUILD", "*PKGBUILD.in" },
