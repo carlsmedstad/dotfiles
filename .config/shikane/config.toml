@@ -31,3 +31,14 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   [[profile.output]]
   search  = "eDP-1"
   enable = false
+
+[[profile]]
+name = "Home"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search = "m=DELL U3821DW"
+  enable = true
+  mode = "best"
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = false
