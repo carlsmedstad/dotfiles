@@ -51,6 +51,7 @@ POC
 PostgreSQL
 PowerShell
 PyPI
+Pydantic
 RHEL
 Redis
 S3
@@ -82,6 +83,7 @@ crontab
 focals
 hostname
 hostnames
+inlined
 linter
 linters
 mTLS
@@ -96,6 +98,7 @@ productify
 rebase
 rebased
 supersection
+toolchain
 upstream
 upstream's
 whitelist
