@@ -1,4 +1,23 @@
 [[profile]]
+name = "No external monitors"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = true
+  mode = "best"
+
+[[profile]]
+name = "Home"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search = "m=DELL U3821DW"
+  enable = true
+  mode = "best"
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = false
+
+[[profile]]
 name = "Office Dual Monitor #1"
 exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   [[profile.output]]
@@ -28,17 +47,6 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   enable = true
   mode = "best"
   position = "1920,0"
-  [[profile.output]]
-  search  = "eDP-1"
-  enable = false
-
-[[profile]]
-name = "Home"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
-  [[profile.output]]
-  search = "m=DELL U3821DW"
-  enable = true
-  mode = "best"
   [[profile.output]]
   search  = "eDP-1"
   enable = false
