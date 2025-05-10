@@ -21,6 +21,8 @@ return {
           "gitcommit",
           "gitignore",
           "go",
+          "gomod",
+          "gosum",
           "helm",
           "html",
           "http",
