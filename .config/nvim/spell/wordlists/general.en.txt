@@ -11,6 +11,8 @@ CMake
 CORS
 Catppuccin
 Coverity
+DX
+Databricks
 ESLint
 Fargate
 FastAPI
@@ -20,6 +22,7 @@ GitLab
 Gothenburg
 Grafana
 Homebrew
+IAM
 IaC
 IdP
 Istio
@@ -69,6 +72,7 @@ Terragrunt
 UAT
 UUID
 UUIDs
+Valkey
 Vegard
 Vue
 YAML
@@ -88,6 +92,7 @@ linter
 linters
 mTLS
 microservice
+misconfiguring
 multitenancy
 onboarded
 onboarding
