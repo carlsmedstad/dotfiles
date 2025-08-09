@@ -4,6 +4,11 @@ return {
     "dense-analysis/ale",
     config = function()
       vim.g.ale_linters = {
+        python = {
+          "mypy",
+          "pyright",
+          "ruff",
+        },
         c = {
           "clangd",
         },
