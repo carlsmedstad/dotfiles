@@ -51,6 +51,7 @@ OpenAPI
 PKGBUILD
 PKGBUILDs
 POC
+PostGIS
 PostgreSQL
 PowerShell
 PyPI
@@ -91,6 +92,7 @@ inlined
 linter
 linters
 mTLS
+macOS
 microservice
 misconfiguring
 multitenancy
