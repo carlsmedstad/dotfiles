@@ -40,7 +40,8 @@
   conflictstyle = zdiff3
 [rebase]
   autosquash = true
-  updaterefs = true
+[rerere]
+  enabled = true
 [alias]
   br = branch
   ci = commit
@@ -50,11 +51,7 @@
   st = status --short --branch
   root = rev-parse --show-toplevel
   out = "log @{u}.."
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+  fix = "!git diff --name-only | uniq | xargs $EDITOR"
 [ghq]
   vcs = git
   root = ~/repos
@@ -64,3 +61,9 @@
   path = ~/.config/git/config_archlinux
 [includeIf "gitdir:~/repos/gitlab.archlinux.org/"]
   path = ~/.config/git/config_archlinux
+[credential "https://github.com"]
+  helper =
+  helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+  helper =
+  helper = !gh auth git-credential
