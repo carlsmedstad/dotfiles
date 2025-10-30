@@ -36,7 +36,9 @@ KEDA
 KML
 KPI
 KPIs
+Kristoffer
 Kubernetes
+LLVM
 LOC
 Lua
 Ludvig
@@ -99,12 +101,15 @@ multitenancy
 onboarded
 onboarding
 pacman
+parsable
 pasttime
 persistency
 productify
 rebase
 rebased
+struct
 supersection
+systemd
 toolchain
 upstream
 upstream's
