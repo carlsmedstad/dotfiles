@@ -9,6 +9,7 @@ Bitwarden
 Bo
 CMake
 CORS
+Catch2
 Catppuccin
 Coverity
 DX
@@ -105,6 +106,7 @@ parsable
 pasttime
 persistency
 productify
+pytest
 rebase
 rebased
 struct
