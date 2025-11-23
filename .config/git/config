@@ -4,7 +4,7 @@
 [user]
   email = carl.smedstad@protonmail.com
   name = Carl Smedstad
-  signingkey = 688CE83B917CD0CEF52AA14A49C93367BA86290E
+  signingkey = 888285CF6ED6758F
 [credential]
   helper = gopass
 [column]
