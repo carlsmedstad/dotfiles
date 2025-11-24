@@ -6,6 +6,11 @@ argv0=lninstall
 config_file="${LNINSTALL_CONFIG:-$PWD/lninstall.ini}"
 install_sections=("$@")
 
+ln_is_gnu=1
+if [ "$(uname)" == "Darwin" ]; then
+  ln_is_gnu=0
+fi
+
 [ ! -f "$config_file" ] && {
   printf >&2 '%s: %s: does not exist\n' "$argv0" "$config_file"
   exit 1
@@ -18,7 +23,8 @@ section=
 while IFS='= ' read -r key value; do
   [[ -z $key || $key =~ ^# ]] && continue
   [[ $key =~ ^\[.*\]$ ]] && {
-    section="${key:1:-1}"
+    section="${key#[}"
+    section="${section%]}"
     continue
   }
   [ -z "$section" ] && {
@@ -26,7 +32,7 @@ while IFS='= ' read -r key value; do
     exit 1
   }
 
-  [[ ${#install_sections[@]} -eq 0 || " ${install_sections[*]} " =~ $section ]] && {
+  [[ ${#install_sections[@]} -eq 0 || " ${install_sections[*]} " =~ " $section " ]] && {
     source="$key"
     target="$value"
     [ -e "$source" ] || {
@@ -36,9 +42,14 @@ while IFS='= ' read -r key value; do
 
     [ -z "$target" ] && target="$HOME/$source"
     [ -d "$(dirname "$target")" ] \
-      || install --directory --mode 755 "$(dirname "$target")"
-    ln_args=(--verbose --symbolic --relative)
-    [ -L "$target" ] && ln_args+=(--force)
-    ln "${ln_args[@]}" "$source" "$target"
+      || mkdir -p "$(dirname "$target")"
+
+    if [ "$ln_is_gnu" -eq 1 ]; then
+      ln -s --relative -f "$source" "$target"
+    else
+      ln -s -f "$PWD/$source" "$target"
+    fi
+
+    printf '%s -> %s\n' "$target" "$source"
   }
 done < "$config_file"

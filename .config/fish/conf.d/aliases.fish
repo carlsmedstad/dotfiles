@@ -10,6 +10,8 @@ function mkdir
     command mkdir -pv $argv
 end
 
-function ls
-    command ls --color=auto --group-directories-first $argv
+if test (uname) != Darwin
+    function ls
+        command ls --color=auto --group-directories-first $argv
+    end
 end
