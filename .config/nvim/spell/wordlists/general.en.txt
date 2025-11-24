@@ -84,10 +84,12 @@ Yubikey
 Yubikeys
 ZNC
 Zebastian
+allowlist
 ansible
 composability
 composable
 crontab
+denylist
 focals
 hostname
 hostnames
