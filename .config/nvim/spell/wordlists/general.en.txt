@@ -60,6 +60,7 @@ PowerShell
 PyPI
 Pydantic
 RHEL
+RabbitMQ
 Redis
 S3
 SDKs
