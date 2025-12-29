@@ -7,12 +7,24 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   mode = "best"
 
 [[profile]]
-name = "Home"
+name = "Home #1"
 exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
   [[profile.output]]
   search = "m=DELL U3821DW"
   enable = true
   mode = "best"
+  [[profile.output]]
+  search  = "eDP-1"
+  enable = false
+
+[[profile]]
+name = "Home #2"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME applied\""]
+  [[profile.output]]
+  search = "m=DELL U4025QW"
+  enable = true
+  mode = "best"
+  scale = 1.1
   [[profile.output]]
   search  = "eDP-1"
   enable = false
