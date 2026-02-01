@@ -7,6 +7,7 @@
       "Bash(cmake --build:*)",
       "Bash(cmake --preset:*)",
       "Bash(cmake --workflow:*)",
+      "Bash(command:*)",
       "Bash(ctest:*)",
       "Bash(echo:*)",
       "Bash(find:*)",
@@ -19,9 +20,15 @@
       "Bash(glab ci list:*)",
       "Bash(glab ci status:*)",
       "Bash(glab ci view:*)",
+      "Bash(glab issue list:*)",
+      "Bash(glab issue view:*)",
       "Bash(glab mr list:*)",
       "Bash(glab mr view:*)",
       "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(makepkg --nobuild --nodeps:*)",
+      "Bash(pactree:*)",
+      "Bash(readlink:*)",
       "Bash(run-clang-tidy:*)",
       "Bash(tee:*)",
       "Bash(tree:*)",
@@ -31,8 +38,9 @@
     "ask": []
   },
   "model": "opus",
-  "alwaysThinkingEnabled": true,
   "enabledPlugins": {
-    "clangd-lsp@claude-plugins-official": true
-  }
+    "clangd-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": true
 }
