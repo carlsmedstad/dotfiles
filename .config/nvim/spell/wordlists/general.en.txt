@@ -39,6 +39,7 @@ KPI
 KPIs
 Kristoffer
 Kubernetes
+LLM
 LLVM
 LOC
 Lua
@@ -85,12 +86,14 @@ Yubikey
 Yubikeys
 ZNC
 Zebastian
+agentic
 allowlist
 ansible
 composability
 composable
 crontab
 denylist
+disambiguous
 focals
 hostname
 hostnames
@@ -116,6 +119,7 @@ struct
 supersection
 systemd
 toolchain
+toolset
 upstream
 upstream's
 whitelist
