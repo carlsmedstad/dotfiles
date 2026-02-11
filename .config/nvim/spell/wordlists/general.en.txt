@@ -42,6 +42,7 @@ Kubernetes
 LLM
 LLVM
 LOC
+LTO
 Lua
 Ludvig
 MacBook
@@ -122,6 +123,7 @@ toolchain
 toolset
 upstream
 upstream's
+vendoring
 whitelist
 whitelisting
 whitelists
