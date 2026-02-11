@@ -17,6 +17,8 @@ All repositories are organized by hostname under `~/repos/`:
 
 ## Version control
 
+- Assume the default branch is main, not master.
+
 - Keep lines in commit messages no longer than 80 characters.
 
 - NEVER AMEND COMMITS IF NOT INSTRUCTED TO. Use fixup commits instead.
