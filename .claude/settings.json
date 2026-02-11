@@ -12,6 +12,8 @@
       "Bash(echo *)",
       "Bash(find *)",
       "Bash(gh repo view *)",
+      "Bash(gh run list *)",
+      "Bash(gh run view *)",
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git diff *)",
@@ -37,7 +39,6 @@
     "deny": [],
     "ask": []
   },
-  "model": "opus",
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true
