@@ -20,6 +20,7 @@ FastAPI
 FedRAMP
 GeoJSON
 GitLab
+GitOps
 Gothenburg
 Grafana
 Homebrew
@@ -40,6 +41,7 @@ KPIs
 Kristoffer
 Kubernetes
 LLM
+LLMs
 LLVM
 LOC
 LTO
@@ -50,9 +52,11 @@ MacBooks
 NGINX
 Neovim
 OAuth
+OIDC
 OSS
 Odense
 OpenAPI
+OpenTofu
 PKGBUILD
 PKGBUILDs
 POC
@@ -116,6 +120,7 @@ productify
 pytest
 rebase
 rebased
+serverless
 struct
 supersection
 systemd
