@@ -28,6 +28,7 @@
   pruneTags = true
 [pull]
   ff = only
+  rebase = merges
 [commit]
   gpgsign = true
 [tag]
