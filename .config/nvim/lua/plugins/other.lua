@@ -34,21 +34,24 @@ return {
   },
 
   {
-    "vim-airline/vim-airline",
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "catppuccin/nvim" },
     config = function()
-      vim.g.airline_theme = "catppuccin"
-
-      if vim.env.DISPLAY ~= nil then
-        -- Looks horrible with ttf-nerd-fonts-symbols-mono installed
-        -- vim.g.airline_powerline_fonts = 1
-        vim.g.airline_symbols_ascii = 1
-      else
-        vim.g.airline_symbols_ascii = 1
-      end
-
-      vim.api.nvim_set_var("airline#extensions#tabline#enabled", 1)
-      vim.api.nvim_set_var("airline#extensions#ale#enabled", 1)
-      vim.g.airline_section_z = "%3p%% %4l:%3v" -- line/column number section
+      require("lualine").setup({
+        options = {
+          theme = "catppuccin-mocha",
+          icons_enabled = false,
+          section_separators = "",
+          component_separators = "",
+        },
+        sections = {
+          lualine_z = { "%3p%% %4l:%3v" },
+        },
+        tabline = {
+          lualine_a = { "buffers" },
+        },
+        extensions = { "fugitive" },
+      })
     end,
   },
 
