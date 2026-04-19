@@ -19,6 +19,14 @@ All repositories are organized by hostname under `~/repos/`:
 
 - Assume the default branch is main, not master.
 
-- Keep lines in commit messages no longer than 80 characters.
+- Wrap commit message subject lines at 72 characters and body lines at
+  80 characters.
+
+- Do not add `Co-Authored-By:` trailers. Follow the Linux kernel
+  coding-assistants policy
+  (<https://docs.kernel.org/process/coding-assistants.html>) and use an
+  `Assisted-by:` trailer with the full model name, e.g.:
+
+      Assisted-by: Claude Opus 4.7 <noreply@anthropic.com>
 
 - NEVER AMEND COMMITS IF NOT INSTRUCTED TO. Use fixup commits instead.
