@@ -54,7 +54,8 @@ return {
         "vue",
         "yaml",
       }
-      local to_install = vim.iter(wanted)
+      local to_install = vim
+        .iter(wanted)
         :filter(function(p)
           return not vim.tbl_contains(installed, p)
         end)
