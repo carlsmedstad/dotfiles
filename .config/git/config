@@ -74,3 +74,19 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[hook "git-agent-applypatch-msg"]
+	command = /home/carsme/.local/bin/git-agent hook applypatch-msg
+	event = applypatch-msg
+	managedBy = git-agent
+[hook "git-agent-prepare-commit-msg"]
+	command = /home/carsme/.local/bin/git-agent hook prepare-commit-msg
+	event = prepare-commit-msg
+	managedBy = git-agent
+[hook "git-agent-commit-msg"]
+	command = /home/carsme/.local/bin/git-agent hook commit-msg
+	event = commit-msg
+	managedBy = git-agent
+[hook "git-agent-post-commit"]
+	command = /home/carsme/.local/bin/git-agent hook post-commit
+	event = post-commit
+	managedBy = git-agent
