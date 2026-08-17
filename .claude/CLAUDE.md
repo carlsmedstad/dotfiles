@@ -22,11 +22,9 @@ All repositories are organized by hostname under `~/repos/`:
 - Wrap commit message subject lines at 72 characters and body lines at
   80 characters.
 
-- Do not add `Co-Authored-By:` trailers. Follow the Linux kernel
-  coding-assistants policy
-  (<https://docs.kernel.org/process/coding-assistants.html>) and use an
-  `Assisted-by:` trailer with the full model name, e.g.:
-
-      Assisted-by: Claude Opus 4.7 <noreply@anthropic.com>
-
 - NEVER AMEND COMMITS IF NOT INSTRUCTED TO. Use fixup commits instead.
+
+## GitHub
+
+Never wrap lines in issues, comments or PR descriptions. This renders poorly,
+let GitHub's Markdown rendered do the wrapping.
