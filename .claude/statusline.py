@@ -25,6 +25,7 @@ import os
 import subprocess
 import sys
 import time
+from datetime import datetime
 
 DEBUG_TRIGGER = os.path.expanduser("~/.claude/statusline-debug")
 
@@ -162,16 +163,48 @@ def seg_cache(data: dict) -> str | None:
     return f"{paint('cache', DIM)} {paint(f'{pct:.1f}%', color)}"
 
 
+def last_entry_time(path: str) -> float | None:
+    """When the newest transcript entry was written, in epoch seconds.
+
+    Not the file's mtime: Claude Code rewrites the transcript well after the
+    last entry was appended, so on an idle session the mtime can run over an
+    hour ahead of the newest timestamp inside it. Scan the tail instead,
+    widening once in case a single large entry fills the first window.
+    """
+    try:
+        size = os.path.getsize(path)
+    except OSError:
+        return None
+    for window in (65536, 1 << 20):
+        try:
+            with open(path, "rb") as fh:
+                fh.seek(max(0, size - window))
+                lines = fh.read().split(b"\n")
+        except OSError:
+            return None
+        if size > window:
+            del lines[0]  # partial, its start lies before the window
+        for raw in reversed(lines):
+            try:
+                return datetime.fromisoformat(json.loads(raw)["timestamp"]).timestamp()
+            except (ValueError, TypeError, KeyError):
+                continue
+        if size <= window:
+            break
+    return None
+
+
 def seg_idle(data: dict) -> str | None:
     """Age of the newest transcript entry, as a proxy for cache entry age.
 
     Every request appends to the transcript and refreshes the cache TTL, so
-    the file's mtime is when the current cache entry was written.
+    the newest entry dates the cache entry currently in play.
     """
-    try:
-        age = time.time() - os.path.getmtime(data["transcript_path"])
-    except (KeyError, OSError, TypeError):
+    path = data.get("transcript_path")
+    stamp = last_entry_time(path) if path else None
+    if stamp is None:
         return None
+    age = time.time() - stamp
     frac = age / CACHE_TTL
     color = DIM if frac < 0.5 else YELLOW if frac < 0.8 else RED
     minutes = int(age // 60)
