@@ -24,8 +24,15 @@ import json
 import os
 import subprocess
 import sys
+import time
 
 DEBUG_TRIGGER = os.path.expanduser("~/.claude/statusline-debug")
+
+# Prompt cache entries expire this long after the request that wrote them, so
+# an idle stretch approaching it means the next turn re-uploads the whole
+# prefix. Claude Code asks for the 1h tier; it falls back to 5m under usage
+# overage, which the payload gives no way to detect.
+CACHE_TTL = 3600
 
 RESET = "\033[0m"
 DIM = "\033[2m"
@@ -155,6 +162,23 @@ def seg_cache(data: dict) -> str | None:
     return f"{paint('cache', DIM)} {paint(f'{pct:.1f}%', color)}"
 
 
+def seg_idle(data: dict) -> str | None:
+    """Age of the newest transcript entry, as a proxy for cache entry age.
+
+    Every request appends to the transcript and refreshes the cache TTL, so
+    the file's mtime is when the current cache entry was written.
+    """
+    try:
+        age = time.time() - os.path.getmtime(data["transcript_path"])
+    except (KeyError, OSError, TypeError):
+        return None
+    frac = age / CACHE_TTL
+    color = DIM if frac < 0.5 else YELLOW if frac < 0.8 else RED
+    minutes = int(age // 60)
+    text = f"{minutes // 60}h{minutes % 60:02d}m" if minutes >= 60 else f"{minutes}m"
+    return f"{paint('idle', DIM)} {paint(text if minutes else '<1m', color)}"
+
+
 def main() -> None:
     try:
         data = json.load(sys.stdin)
@@ -169,7 +193,13 @@ def main() -> None:
         except OSError:
             pass
 
-    segments = (seg_model(data), seg_dir(data), seg_context(data), seg_cache(data))
+    segments = (
+        seg_model(data),
+        seg_dir(data),
+        seg_context(data),
+        seg_cache(data),
+        seg_idle(data),
+    )
     print(paint(" | ", DIM).join(s for s in segments if s))
 
 

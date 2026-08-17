@@ -1,7 +1,56 @@
 {
-  "agentPushNotifEnabled": true,
+  "permissions": {
+    "allow": [],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "auto"
+  },
+  "model": "opus[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/carsme/.local/bin/git-agent pretooluse claude"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "/home/carsme/.claude/statusline.py",
+    "padding": 0,
+    "refreshInterval": 30
+  },
+  "enabledPlugins": {
+    "foreman@foreman": true
+  },
+  "extraKnownMarketplaces": {
+    "foreman": {
+      "source": {
+        "source": "github",
+        "repo": "carlsmedstad/foreman"
+      }
+    },
+    "multi-agent": {
+      "source": {
+        "source": "github",
+        "repo": "carlsmedstad/multi-agent"
+      }
+    }
+  },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "theme": "dark",
+  "verbose": false,
+  "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
@@ -29,53 +78,5 @@
       "**Org-specific CLIs**: None configured",
       "No 'routine under <user>/ prefix' qualifiers found"
     ]
-  },
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "foreman@foreman": true
-  },
-  "extraKnownMarketplaces": {
-    "foreman": {
-      "source": {
-        "repo": "carlsmedstad/foreman",
-        "source": "github"
-      }
-    },
-    "multi-agent": {
-      "source": {
-        "repo": "carlsmedstad/multi-agent",
-        "source": "github"
-      }
-    }
-  },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "/home/carsme/.local/bin/git-agent pretooluse claude",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ]
-  },
-  "inputNeededNotifEnabled": true,
-  "model": "opus[1m]",
-  "permissions": {
-    "allow": [],
-    "ask": [],
-    "defaultMode": "auto",
-    "deny": []
-  },
-  "preferredNotifChannel": "auto",
-  "remoteControlAtStartup": true,
-  "statusLine": {
-    "command": "/home/carsme/.claude/statusline.py",
-    "padding": 0,
-    "type": "command"
-  },
-  "theme": "dark",
-  "verbose": false
+  }
 }
