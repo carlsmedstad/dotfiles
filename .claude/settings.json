@@ -34,12 +34,6 @@
         "source": "github",
         "repo": "carlsmedstad/foreman"
       }
-    },
-    "multi-agent": {
-      "source": {
-        "source": "github",
-        "repo": "carlsmedstad/multi-agent"
-      }
     }
   },
   "alwaysThinkingEnabled": true,
