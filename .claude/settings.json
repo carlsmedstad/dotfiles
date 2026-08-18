@@ -21,7 +21,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "/home/carsme/.claude/statusline.py",
+    "command": "$HOME/.claude/statusline.py",
     "padding": 0,
     "refreshInterval": 30
   },
