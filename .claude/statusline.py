@@ -147,7 +147,7 @@ def seg_context(data: dict) -> str | None:
     if not used or not size:
         return None
     pct = 100.0 * used / size
-    color = GREEN if pct < 60 else YELLOW if pct < 85 else RED
+    color = GREEN if pct < 40 else YELLOW if pct < 60 else RED
     return f"{paint('ctx', DIM)} {paint(human(used), color)}"
 
 

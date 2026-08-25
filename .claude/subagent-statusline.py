@@ -67,7 +67,7 @@ def row(task: dict) -> str:
     used, size = task.get("tokenCount") or 0, task.get("contextWindowSize")
     if used and size:
         pct = 100.0 * used / size
-        color = GREEN if pct < 60 else YELLOW if pct < 85 else RED
+        color = GREEN if pct < 40 else YELLOW if pct < 60 else RED
         bits.append(f"{paint('ctx', DIM)} {paint(human(used), color)}")
     age = elapsed(task.get("startTime"))
     if age:
