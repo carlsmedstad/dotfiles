@@ -148,7 +148,7 @@ def seg_context(data: dict) -> str | None:
         return None
     pct = 100.0 * used / size
     color = GREEN if pct < 60 else YELLOW if pct < 85 else RED
-    return f"{paint('ctx', DIM)} {paint(f'{human(used)}/{human(size)}', color)}"
+    return f"{paint('ctx', DIM)} {paint(human(used), color)}"
 
 
 def seg_cache(data: dict) -> str | None:
