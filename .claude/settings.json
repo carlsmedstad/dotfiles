@@ -5,7 +5,7 @@
     "ask": [],
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -50,13 +50,13 @@
       "### Org-wide",
       "**Organization**: None configured",
       "**Cloud provider(s)**: None configured",
-      "**Repository visibility**: private (carlsmedstad/clerk2, confirmed via gh)",
+      "**Repository visibility**: mixed across carlsmedstad/* — per-repo, not uniform; confirm with gh before treating any repo as private",
       "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
       "**Secrets management**: None configured",
       "**Default / protected branches**: main (default); no classic branch protection listed — rulesets not queryable here, treat as unknown/possibly protected rather than unprotected",
       "**CI/CD deploy targets**: None configured",
       "**Network posture**: None configured",
-      "**Source control**: The trusted repo (carlsmedstad/clerk2) and its origin remote (github.com/carlsmedstad/clerk2) only",
+      "**Source control**: repositories under /home/carsme/repos/github.com/carlsmedstad/ and their origin remotes on github.com/carlsmedstad/ only",
       "**Trusted internal domains**: None configured",
       "**Trusted cloud buckets**: None configured",
       "**Key internal services**: None configured",
@@ -68,11 +68,13 @@
       "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
       "### User-specific",
       "**Primary use of Claude Code**: software development (Go project, clerk2 — linting, building, packaging)",
-      "**Trusted repo**: /home/carsme/repos/github.com/carlsmedstad/clerk2 (origin: https://github.com/carlsmedstad/clerk2.git, private) — confidential material OK to commit here; content ported from outside this session's repo is not this repo's own work",
+      "**Trusted repo**: any repository under /home/carsme/repos/github.com/carlsmedstad/ whose origin remote is github.com/carlsmedstad/<name>; confidential material is OK to commit only where that repo is private, so verify visibility before committing anything sensitive; content ported from outside the session's repo is not that repo's own work",
       "**Org-specific CLIs**: None configured",
       "No 'routine under <user>/ prefix' qualifiers found"
     ]
   },
+  "autoUpdatesChannel": "stable",
+  "minimumVersion": "2.1.241",
   "subagentStatusLine": {
     "type": "command",
     "command": "$HOME/.claude/subagent-statusline.py"
