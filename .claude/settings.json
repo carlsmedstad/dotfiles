@@ -72,5 +72,9 @@
       "**Org-specific CLIs**: None configured",
       "No 'routine under <user>/ prefix' qualifiers found"
     ]
+  },
+  "subagentStatusLine": {
+    "type": "command",
+    "command": "$HOME/.claude/subagent-statusline.py"
   }
 }
