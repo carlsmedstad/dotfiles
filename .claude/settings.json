@@ -1,11 +1,22 @@
 {
   "permissions": {
-    "allow": [],
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git branch --merged *)",
+      "Bash(git commit *)",
+      "Bash(git config --get*)",
+      "Bash(git diff *)",
+      "Bash(git fetch *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git status *)",
+      "Bash(git worktree *)"
+    ],
     "deny": [],
     "ask": [],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "claude-fable-5-1",
   "hooks": {
     "PreToolUse": [
       {
@@ -25,6 +36,10 @@
     "padding": 0,
     "refreshInterval": 30
   },
+  "subagentStatusLine": {
+    "type": "command",
+    "command": "$HOME/.claude/subagent-statusline.py"
+  },
   "enabledPlugins": {
     "foreman@foreman": true
   },
@@ -38,6 +53,8 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "minimumVersion": "2.1.241",
   "theme": "dark",
   "verbose": false,
   "preferredNotifChannel": "auto",
@@ -72,11 +89,5 @@
       "**Org-specific CLIs**: None configured",
       "No 'routine under <user>/ prefix' qualifiers found"
     ]
-  },
-  "autoUpdatesChannel": "stable",
-  "minimumVersion": "2.1.241",
-  "subagentStatusLine": {
-    "type": "command",
-    "command": "$HOME/.claude/subagent-statusline.py"
   }
 }
