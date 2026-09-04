@@ -51,6 +51,8 @@
       }
     }
   },
+  "promptCacheTtl": "1h",
+  "subagentPromptCacheTtl": "1h",
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
