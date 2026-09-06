@@ -22,7 +22,6 @@ status_line = [
   "current-dir",
   "git-branch",
   "context-remaining",
-  "five-hour-limit",
 ]
 
 [tui.model_availability_nux]
