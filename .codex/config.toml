@@ -23,7 +23,6 @@ status_line = [
   "git-branch",
   "context-remaining",
   "five-hour-limit",
-  "weekly-limit",
 ]
 
 [tui.model_availability_nux]
