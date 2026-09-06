@@ -119,8 +119,6 @@ def seg_model(data: dict) -> str | None:
         bits.append(paint(effort, DIM))
     if data.get("fast_mode"):
         bits.append(paint("fast", YELLOW))
-    if (data.get("thinking") or {}).get("enabled"):
-        bits.append(paint("think", DIM))
     return " ".join(bits)
 
 
