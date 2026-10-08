@@ -41,7 +41,6 @@ BOLD = "\033[1m"
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
-BLUE = "\033[34m"
 MAGENTA = "\033[35m"
 CYAN = "\033[36m"
 
@@ -156,8 +155,6 @@ def seg_dir(data: dict) -> str | None:
         out += f" @{clip(branch)}"
     if wt.get("name") and wt["name"] != branch:
         out += " " + paint(f"[wt:{clip(wt['name'])}]", YELLOW)
-    if (data.get("pr") or {}).get("number"):
-        out += " " + paint(f"#{data['pr']['number']}", BLUE)
     return out
 
 
