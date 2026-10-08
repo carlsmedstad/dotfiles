@@ -153,7 +153,7 @@ def seg_dir(data: dict) -> str | None:
     wt = data.get("worktree") or {}
     branch = wt.get("branch") or git_branch(cwd)
     if branch:
-        out += " " + paint(f"@{clip(branch)}", DIM)
+        out += f" @{clip(branch)}"
     if wt.get("name") and wt["name"] != branch:
         out += " " + paint(f"[wt:{clip(wt['name'])}]", YELLOW)
     if (data.get("pr") or {}).get("number"):
@@ -226,10 +226,12 @@ def seg_idle(data: dict) -> str | None:
         return None
     age = time.time() - stamp
     frac = age / CACHE_TTL
-    color = DIM if frac < 0.5 else YELLOW if frac < 0.8 else RED
     minutes = int(age // 60)
     text = f"{minutes // 60}h{minutes % 60:02d}m" if minutes >= 60 else f"{minutes}m"
-    return f"{paint('idle', DIM)} {paint(text if minutes else '<1m', color)}"
+    text = text if minutes else "<1m"
+    if frac >= 0.5:
+        text = paint(text, YELLOW if frac < 0.8 else RED)
+    return f"{paint('idle', DIM)} {text}"
 
 
 def main() -> None:
