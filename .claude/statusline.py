@@ -105,6 +105,28 @@ def git_branch(cwd: str) -> str | None:
     return branch
 
 
+def worktree_path(cwd: str) -> str | None:
+    """Render a linked worktree's cwd as `repo/sub/dir`, `repo` its main repo.
+
+    A linked worktree's own directory name is usually its branch (or some
+    `.claude/worktrees/<name>` deep below the repo), which the branch segment
+    already shows; naming the repository it belongs to says more.
+    """
+    out = _git(cwd, "rev-parse", "--path-format=absolute", "--show-toplevel", "--git-common-dir")
+    if not out or len(lines := out.splitlines()) != 2:
+        return None
+    toplevel, common = lines
+    if os.path.dirname(common.rstrip("/")) == toplevel:  # the main worktree
+        return None
+    repo = os.path.basename(os.path.dirname(common.rstrip("/")))
+    rest = os.path.relpath(cwd, toplevel)
+    return _elide([repo] + ([] if rest == "." else rest.split("/")))
+
+
+def clip(text: str, width: int = 32) -> str:
+    return text if len(text) <= width else text[: width - 1] + "…"
+
+
 # --- segments -------------------------------------------------------------
 
 
@@ -127,13 +149,13 @@ def seg_dir(data: dict) -> str | None:
     cwd = ws.get("current_dir") or data.get("cwd")
     if not cwd:
         return None
-    out = paint(shorten_path(cwd, ws.get("project_dir")), CYAN)
+    out = paint(worktree_path(cwd) or shorten_path(cwd, ws.get("project_dir")), CYAN)
     wt = data.get("worktree") or {}
     branch = wt.get("branch") or git_branch(cwd)
     if branch:
-        out += " " + paint(f"@{branch}", DIM)
-    if wt.get("name"):
-        out += " " + paint(f"[wt:{wt['name']}]", YELLOW)
+        out += " " + paint(f"@{clip(branch)}", DIM)
+    if wt.get("name") and wt["name"] != branch:
+        out += " " + paint(f"[wt:{clip(wt['name'])}]", YELLOW)
     if (data.get("pr") or {}).get("number"):
         out += " " + paint(f"#{data['pr']['number']}", BLUE)
     return out
