@@ -130,7 +130,7 @@ def worktree_path(cwd: str) -> str | None:
 
 
 # The status line never fetches, so counts against a remote-tracking ref are
-# only as fresh as the last fetch: past this age they carry a `?`.
+# only as fresh as the last fetch: past this age they lose their colour.
 FETCH_STALE = 12 * 3600
 
 
@@ -165,12 +165,11 @@ def ahead_behind(cwd: str) -> str | None:
     if not counts:
         return None
     behind, ahead = (int(n) for n in counts.split())
-    mark = "?" if stale else ""
     bits = []
     if ahead:
-        bits.append(paint(f"↑{ahead}{mark}", GREEN))
+        bits.append(f"↑{ahead}" if stale else paint(f"↑{ahead}", GREEN))
     if behind:
-        bits.append(paint(f"↓{behind}{mark}", RED))
+        bits.append(f"↓{behind}" if stale else paint(f"↓{behind}", RED))
     return " ".join(bits) or None
 
 
