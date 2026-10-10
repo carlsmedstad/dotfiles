@@ -42,8 +42,10 @@
   conflictstyle = zdiff3
 [rebase]
   autosquash = true
+  updateRefs = true
 [rerere]
   enabled = true
+  autoUpdate = true
 [alias]
   br = branch
   ci = commit
