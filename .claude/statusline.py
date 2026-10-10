@@ -155,8 +155,35 @@ def default_base(cwd: str) -> tuple[str, bool] | None:
     return remote, age > FETCH_STALE
 
 
+def conflicts(cwd: str, ref: str) -> int | None:
+    """How many files merging HEAD with `ref` would leave conflicted.
+
+    A merge of the two tips, not a replay of each commit, so a rebase can stop
+    where this finds nothing and the other way round; close enough for a hint.
+    merge-tree writes the merged trees into the object store, but the same two
+    commits always give the same objects.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "-C", cwd, "merge-tree", "--write-tree", "--name-only", "--no-messages", ref, "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=1,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if out.returncode not in (0, 1):
+        return None
+    return len([line for line in out.stdout.splitlines()[1:] if line])
+
+
 def ahead_behind(cwd: str) -> str | None:
-    """`↑ahead ↓behind` against the remote's default branch, zeros left out."""
+    """`↑ahead ↓behind ✗conflicts` against the remote's default branch.
+
+    Zeros are left out, and the conflicts are counted only when the two have
+    diverged: a branch only behind fast-forwards, one only ahead replays
+    onto what it already has.
+    """
     base = default_base(cwd)
     if not base:
         return None
@@ -166,10 +193,13 @@ def ahead_behind(cwd: str) -> str | None:
         return None
     behind, ahead = (int(n) for n in counts.split())
     bits = []
-    if ahead:
-        bits.append(f"↑{ahead}" if stale else paint(f"↑{ahead}", GREEN))
-    if behind:
-        bits.append(f"↓{behind}" if stale else paint(f"↓{behind}", RED))
+    for count, glyph, colour in (
+        (ahead, "↑", GREEN),
+        (behind, "↓", YELLOW),
+        (behind and ahead and conflicts(cwd, ref), "✗", RED),
+    ):
+        if count:
+            bits.append(f"{glyph}{count}" if stale else paint(f"{glyph}{count}", colour))
     return " ".join(bits) or None
 
 
