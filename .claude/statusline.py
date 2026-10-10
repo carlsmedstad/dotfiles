@@ -97,6 +97,13 @@ def _git(cwd: str, *args: str) -> str | None:
     return out.stdout.strip() or None if out.returncode == 0 else None
 
 
+def _git_ok(cwd: str, *args: str) -> bool:
+    try:
+        return subprocess.run(["git", "-C", cwd, *args], capture_output=True, timeout=1).returncode == 0
+    except (OSError, subprocess.SubprocessError):
+        return False
+
+
 def git_branch(cwd: str) -> str | None:
     branch = _git(cwd, "rev-parse", "--abbrev-ref", "HEAD")
     if branch == "HEAD":  # detached
@@ -120,6 +127,50 @@ def worktree_path(cwd: str) -> str | None:
     repo = os.path.basename(os.path.dirname(common.rstrip("/")))
     rest = os.path.relpath(cwd, toplevel)
     return _elide([repo] + ([] if rest == "." else rest.split("/")))
+
+
+# The status line never fetches, so counts against a remote-tracking ref are
+# only as fresh as the last fetch: past this age they are dimmed.
+FETCH_STALE = 12 * 3600
+
+
+def default_base(cwd: str) -> tuple[str, bool] | None:
+    """The remote's default branch to count against, and whether it is stale.
+
+    `git maintenance start` prefetches hourly into refs/prefetch/remotes/
+    without moving origin/*, so a prefetched ref that descends from the
+    remote-tracking one is the fresher of the two.
+    """
+    remote = _git(cwd, "symbolic-ref", "--quiet", "refs/remotes/origin/HEAD")
+    if not remote:
+        return None
+    prefetch = remote.replace("refs/remotes/", "refs/prefetch/remotes/", 1)
+    if _git_ok(cwd, "merge-base", "--is-ancestor", remote, prefetch):
+        return prefetch, False
+    common = _git(cwd, "rev-parse", "--path-format=absolute", "--git-common-dir")
+    try:
+        age = time.time() - os.path.getmtime(os.path.join(common or "", "FETCH_HEAD"))
+    except OSError:
+        return remote, True
+    return remote, age > FETCH_STALE
+
+
+def ahead_behind(cwd: str) -> str | None:
+    """`↑ahead ↓behind` against the remote's default branch, zeros left out."""
+    base = default_base(cwd)
+    if not base:
+        return None
+    ref, stale = base
+    counts = _git(cwd, "rev-list", "--left-right", "--count", f"{ref}...HEAD")
+    if not counts:
+        return None
+    behind, ahead = (int(n) for n in counts.split())
+    bits = []
+    if ahead:
+        bits.append(paint(f"↑{ahead}", DIM) if stale else f"↑{ahead}")
+    if behind:
+        bits.append(paint(f"↓{behind}", DIM if stale else YELLOW))
+    return " ".join(bits) or None
 
 
 def clip(text: str, width: int = 32) -> str:
@@ -153,6 +204,8 @@ def seg_dir(data: dict) -> str | None:
     branch = wt.get("branch") or git_branch(cwd)
     if branch:
         out += f" @{clip(branch)}"
+        if counts := ahead_behind(cwd):
+            out += f" {counts}"
     if wt.get("name") and wt["name"] != branch:
         out += " " + paint(f"[wt:{clip(wt['name'])}]", YELLOW)
     return out
