@@ -1,6 +1,13 @@
 {
   "permissions": {
     "allow": [
+      "Bash(gh issue comment *)",
+      "Bash(gh pr checks *)",
+      "Bash(gh pr comment *)",
+      "Bash(gh pr create *)",
+      "Bash(gh pr edit *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh pr ready *)",
       "Bash(git add *)",
       "Bash(git branch --merged *)",
       "Bash(git commit *)",
@@ -8,9 +15,12 @@
       "Bash(git diff *)",
       "Bash(git fetch *)",
       "Bash(git log *)",
+      "Bash(git push *)",
       "Bash(git show *)",
       "Bash(git status *)",
-      "Bash(git worktree *)"
+      "Bash(git worktree *)",
+      "Bash(make -C * publish*)",
+      "Bash(make publish*)"
     ],
     "deny": [],
     "ask": [],
