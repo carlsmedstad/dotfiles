@@ -22,7 +22,8 @@ All repositories are organized by hostname under `~/repos/`:
 - Wrap commit message subject lines at 72 characters and body lines at
   80 characters.
 
-- NEVER AMEND COMMITS IF NOT INSTRUCTED TO. Use fixup commits instead.
+- Only amend commits to reword them, never to change the diff. Use fixup commits
+  instead.
 
 ## GitHub
 
