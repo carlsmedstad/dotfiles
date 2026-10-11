@@ -20,6 +20,8 @@ a given Claude Code version actually hands the status line.
 
 from __future__ import annotations
 
+import glob
+import importlib.util
 import json
 import os
 import subprocess
@@ -28,6 +30,7 @@ import time
 from datetime import datetime
 
 DEBUG_TRIGGER = os.path.expanduser("~/.claude/statusline-debug")
+SEGMENT_DIR = os.path.expanduser("~/.claude/statusline.d")
 
 # Prompt cache entries expire this long after the request that wrote them, so
 # an idle stretch approaching it means the next turn re-uploads the whole
@@ -263,6 +266,28 @@ def seg_cache(data: dict) -> str | None:
     return f"{paint('cache', DIM)} {paint(f'{pct:.1f}%', color)}"
 
 
+def seg_extra(data: dict) -> list[str]:
+    """Segments from ~/.claude/statusline.d/*.py, in file-name order.
+
+    Each file defines `segment(data)`, taking the payload and returning its
+    text or None. These are kept outside the dotfiles for segments that do
+    not belong in a public repository; one that fails is left out.
+    """
+    out = []
+    for path in sorted(glob.glob(os.path.join(SEGMENT_DIR, "*.py"))):
+        name = os.path.splitext(os.path.basename(path))[0]
+        try:
+            spec = importlib.util.spec_from_file_location(f"statusline_segment_{name}", path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            text = module.segment(data)
+        except Exception:  # noqa: BLE001 - a broken segment must not break the line
+            continue
+        if text:
+            out.append(text)
+    return out
+
+
 def last_entry_time(path: str) -> float | None:
     """When the newest transcript entry was written, in epoch seconds.
 
@@ -331,6 +356,7 @@ def main() -> None:
     segments = (
         seg_model(data),
         seg_dir(data),
+        *seg_extra(data),
         seg_context(data),
         seg_cache(data),
         seg_idle(data),
