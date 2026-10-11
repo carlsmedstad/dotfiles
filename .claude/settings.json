@@ -37,6 +37,9 @@
     "type": "command",
     "command": "$HOME/.claude/subagent-statusline.py"
   },
+  "enabledPlugins": {
+    "playwright@claude-plugins-official": true
+  },
   "promptCacheTtl": "1h",
   "subagentPromptCacheTtl": "1h",
   "alwaysThinkingEnabled": true,
