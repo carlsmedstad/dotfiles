@@ -26,7 +26,7 @@
     "ask": [],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5-1",
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.py",
@@ -41,6 +41,11 @@
   "subagentPromptCacheTtl": "1h",
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-fable-5-1": {
+      "effortLevel": "xhigh"
+    }
+  },
   "autoUpdatesChannel": "latest",
   "minimumVersion": "2.1.241",
   "theme": "dark",
