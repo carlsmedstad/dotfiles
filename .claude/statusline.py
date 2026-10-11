@@ -28,6 +28,7 @@ import subprocess
 import sys
 import time
 from datetime import datetime
+from urllib.parse import urlsplit
 
 DEBUG_TRIGGER = os.path.expanduser("~/.claude/statusline-debug")
 SEGMENT_DIR = os.path.expanduser("~/.claude/statusline.d")
@@ -50,6 +51,11 @@ CYAN = "\033[36m"
 
 def paint(text: str, *codes: str) -> str:
     return "".join(codes) + text + RESET
+
+
+def link(text: str, url: str | None) -> str:
+    """`text` as an OSC 8 hyperlink to `url`, or plain without one."""
+    return f"\033]8;;{url}\033\\{text}\033]8;;\033\\" if url else text
 
 
 def human(n: float) -> str:
@@ -130,6 +136,29 @@ def worktree_path(cwd: str) -> str | None:
     repo = os.path.basename(os.path.dirname(common.rstrip("/")))
     rest = os.path.relpath(cwd, toplevel)
     return _elide([repo] + ([] if rest == "." else rest.split("/")))
+
+
+def web_url(remote: str) -> str | None:
+    """The https page of a remote URL: scp-like, ssh://, git:// or http(s)://.
+
+    The web side never runs on the SSH port, so an ssh:// port is dropped.
+    """
+    remote = remote.strip().removesuffix("/").removesuffix(".git")
+    if "://" in remote:
+        parts = urlsplit(remote)
+        host = parts.netloc.rsplit("@", 1)[-1] if parts.scheme in ("http", "https") else parts.hostname
+        path = parts.path
+    elif ":" in remote.split("/", 1)[0]:
+        host, path = remote.split(":", 1)
+        host = host.rsplit("@", 1)[-1]
+    else:
+        return None
+    path = path.strip("/")
+    return f"https://{host}/{path}" if host and path else None
+
+
+def repo_url(cwd: str) -> str | None:
+    return web_url(_git(cwd, "remote", "get-url", "origin") or "")
 
 
 # The status line never fetches, so counts against a remote-tracking ref are
@@ -232,7 +261,7 @@ def seg_dir(data: dict) -> str | None:
     cwd = ws.get("current_dir") or data.get("cwd")
     if not cwd:
         return None
-    out = paint(worktree_path(cwd) or shorten_path(cwd, ws.get("project_dir")), CYAN)
+    out = link(paint(worktree_path(cwd) or shorten_path(cwd, ws.get("project_dir")), CYAN), repo_url(cwd))
     wt = data.get("worktree") or {}
     branch = wt.get("branch") or git_branch(cwd)
     if branch:
