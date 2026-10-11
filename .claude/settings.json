@@ -17,19 +17,6 @@
     "defaultMode": "auto"
   },
   "model": "claude-fable-5-1",
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/carsme/.local/bin/git-agent pretooluse claude"
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "$HOME/.claude/statusline.py",
@@ -39,17 +26,6 @@
   "subagentStatusLine": {
     "type": "command",
     "command": "$HOME/.claude/subagent-statusline.py"
-  },
-  "enabledPlugins": {
-    "foreman@foreman": true
-  },
-  "extraKnownMarketplaces": {
-    "foreman": {
-      "source": {
-        "source": "github",
-        "repo": "carlsmedstad/foreman"
-      }
-    }
   },
   "promptCacheTtl": "1h",
   "subagentPromptCacheTtl": "1h",
