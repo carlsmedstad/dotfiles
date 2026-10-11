@@ -25,6 +25,8 @@ All repositories are organized by hostname under `~/repos/`:
 - Only amend commits to reword them, never to change the diff. Use fixup commits
   instead.
 
+- Worktrees should be created as `$REPO_ROOT/.claude/worktrees/$branch_name`.
+
 ## GitHub
 
 Never wrap lines in issues, comments or PR descriptions. This renders poorly,
